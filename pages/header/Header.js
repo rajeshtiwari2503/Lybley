@@ -4,7 +4,8 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 const Header = () => {
   return (
     <div>
-        <div className="row bg-dark text-white">
+        <div className="bg-dark text-white">
+        <div className="row w-100 ">
             <div className="col-12 col-md-6 col-lg-6"></div>
             <div className="col-12 col-md-5 col-lg-5">
                 <div className='d-flex justify-content-around'>
@@ -15,7 +16,9 @@ const Header = () => {
                     </div>
             </div>
         </div>
-        <div className="row shadow">
+        </div>
+        <div className='container '>
+        <div className="row ">
             <div className="col-5 text-center p-4">
                 <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold'>REQUEST SERVICE</small></button>
                 <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>CHECK CLAIM STATUS</small>
@@ -29,6 +32,7 @@ const Header = () => {
                 <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS SUPER</small> 
                 <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
             </div>
+        </div>
         </div>
     </div>
   )
