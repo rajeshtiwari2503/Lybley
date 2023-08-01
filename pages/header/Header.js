@@ -3,11 +3,11 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 
 const Header = () => {
   return (
-    <div>
+    <div className='sticky-top'>
         <div className="bg-dark text-white">
         <div className="row w-100 ">
-            <div className="col-12 col-md-6 col-lg-6"></div>
-            <div className="col-12 col-md-5 col-lg-5">
+            <div className="col-12 col-md-3 col-lg-3"></div>
+            <div className="col-12 col-md-6 col-lg-6">
                 <div className='d-flex justify-content-around'>
                     <small className='hover fw-bold p-2'>HOMEOWNER</small>
                     <small className='hover fw-bold p-2'>REALTOR</small>
@@ -15,6 +15,7 @@ const Header = () => {
                     <small className='hover fw-bold p-2'>TIPS</small>                
                     </div>
             </div>
+            <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
         </div>
         <div className='container '>
