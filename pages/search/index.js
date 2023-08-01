@@ -10,14 +10,14 @@ const Search = () => {
 
     return (
         <>
-            <div >
+            {/* <div >
                 <Carousel>
                     <Carousel.Item >
                         <img
                             className={`${style.imgBannerHeight} d-block w-100}`}
                             src={'https://static.vecteezy.com/system/resources/thumbnails/002/437/377/small/horizontal-yellow-and-orange-grunge-texture-cement-or-concrete-wall-banner-blank-background-free-photo.jpg'} />
                         <Carousel.Caption>
-                            {/* <h3>First Demo </h3>   */}
+                            
                         </Carousel.Caption>
                     </Carousel.Item  >
                     <Carousel.Item>
@@ -25,7 +25,7 @@ const Search = () => {
                             className={`${style.imgBannerHeight} d-block w-100}`}
                             src={'https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=600'} />
                         <Carousel.Caption>
-                            {/* <h3>Second Demo</h3>   */}
+                            
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -33,11 +33,11 @@ const Search = () => {
                             className={`${style.imgBannerHeight} d-block w-100}`}
                             src={'https://images.pexels.com/photos/268966/pexels-photo-268966.jpeg?auto=compress&cs=tinysrgb&w=600'} />
                         <Carousel.Caption>
-                            {/* <h3>Third Demo</h3>   */}
+                        
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-            </div> 
+            </div>  */}
             <div className={`${style.searchBody} `}>
       
       <div className=''>
