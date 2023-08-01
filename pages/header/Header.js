@@ -18,6 +18,7 @@ const Header = () => {
             <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
         </div>
+        <div style={{backgroundColor:"#c8d8e4"}}>
         <div className='container '>
         <div className="row ">
             <div className="col-5 text-center p-4">
@@ -30,11 +31,12 @@ const Header = () => {
               <div className='space fw-bold'>L3BLEY</div>
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
-                <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS SUPER</small> 
+                <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS L3BLEY</small> 
                 <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
             </div>
         </div>
         </div>
+    </div>
     </div>
   )
 }
