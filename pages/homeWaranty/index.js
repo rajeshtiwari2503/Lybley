@@ -4,7 +4,7 @@ const Waranty = () => {
     return (
         <div className='container'>
             <div className='fw-bold fs-2 text-center mt-5 mb-5'>Our service is more than a home warranty</div>
-            <div className='row mb-5 d-flex justify-content-center  '>
+            <div className='row  mb-5 d-flex justify-content-center  '>
                 <div className='col-12 col-md-4 col-lg-4 '>
                     <div className='p-5 shadowCard '>
                     <div className='fw-bold fs-1 text-center'> 3 % </div>
