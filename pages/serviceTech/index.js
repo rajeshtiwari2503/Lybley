@@ -4,7 +4,7 @@ import React from 'react'
 const ServiceTech = () => {
     return (
         <>
-            <h2 className='text-center'>Our service techs have a heart</h2>
+            <h2 className='text-center pt-5'>Our service techs have a heart</h2>
 
 
             <div className='row '>
@@ -13,7 +13,7 @@ const ServiceTech = () => {
                         <div className='  mb-5 d-flex'>
                             <div className='col-12 col-md-4 col-lg-4 mt-5 w-50'>
                                 <div className='d-flex align-items-center '>
-                                    <Image className='rounded' src="https://serviceservotech.com/wp-content/uploads/2023/06/Professional-Home-Appliance-Repair-800x576.webp" height={200} width={200} alt='' />
+                                    <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={200} width={200} alt='' />
                                     <div >
                                         <div className='ps-5'>
                                             <h3>Hi , I'm Raj</h3>
@@ -25,7 +25,7 @@ const ServiceTech = () => {
                             </div>
                             <div className='col-12 col-md-4 col-lg-4 mt-5 w-50'>
                                 <div className='d-flex align-items-center '>
-                                    <Image src="https://serviceservotech.com/wp-content/uploads/2023/06/Professional-Home-Appliance-Repair-800x576.webp" height={200} width={200} alt='' />
+                                    <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={200} width={200} alt='' />
                                     <div>
                                         <div className='ps-5'>
                                             <h3>Hi , I'm Raj</h3>
@@ -37,7 +37,7 @@ const ServiceTech = () => {
                             </div>
                             <div className='col-12 col-md-4 col-lg-4 mt-5 w-50'>
                                 <div className='d-flex align-items-center '>
-                                    <Image src="https://serviceservotech.com/wp-content/uploads/2023/06/Professional-Home-Appliance-Repair-800x576.webp" height={200} width={200} alt='' />
+                                    <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={200} width={200} alt='' />
                                     <div>
                                         <div className='ps-5'>
                                             <h3>Hi , I'm Raj</h3>
