@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Search from './search'
 import Works from './works'
 import Waranty from './homeWaranty'
+import Mobile from './mobile'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Search />
       <Works />
       <Waranty />
+      <Mobile />
       </main>
     </>
   )
