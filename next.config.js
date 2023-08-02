@@ -3,10 +3,5 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
 
-module.exports = {
-  images: {
-    domains: ['serviceservotech.com'],
-  },
-};
+module.exports =nextConfig
