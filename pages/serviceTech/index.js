@@ -7,7 +7,7 @@ const ServiceTech = () => {
             <h2 className='text-center'>Our service techs have a heart</h2>
 
 
-            <div className='row '>
+            <div className='row w-100 '>
                 <div className='marquee'>
                     <div className='content'>
                         <div className='  mb-5 d-flex'>
