@@ -106,6 +106,34 @@ a {
   }
 } */
 
+/* Marquee.module.css */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+.content {
+  /* display:flex; */
+  /* padding-left: 20%;   */
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }  
+}
+
+
+.shadowCard{
+  cursor: pointer;
+  border-radius: 5%;
+  box-shadow: 0px 2px 40px red !important;
+}
+.shadowCard:hover{
+  box-shadow: 0px 2px 40px green !important;
+}
 .hover:hover{
       color: black;
       background-color: #c8d8e4;

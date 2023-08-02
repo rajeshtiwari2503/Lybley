@@ -19,7 +19,7 @@ const Works = () => {
               <p>Lybley is subscription care for the home that covers our members' repair or replacement of appliances or systems. Pick your plan, sign-up, and rest easy knowing that we've got it from here. After all, the last thing you need when something breaks is a bunch of drama.</p>
             </div>
         </div>
-        <div className="row w-100 text-center pb-5 mt-5">
+        <div className="row w-100 text-center pt-5 pb-5 mt-5">
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
             <SystemSecurityUpdateGoodIcon color='primary' fontSize='large' />
             <h5 className='p-2'>Sign Up</h5>
@@ -34,7 +34,7 @@ const Works = () => {
          </div>
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
         <InputIcon color='primary' fontSize='large' />
-        <h5 className='p-2'>
+        <h5 className='p-2'> 
             We're ready
         </h5>
         <p>Log in to your account or launch the Super app, let us know what's happening, and schedule.</p>
