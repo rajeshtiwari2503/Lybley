@@ -1,5 +1,6 @@
 import React from 'react'
 import DraftsIcon from '@mui/icons-material/Drafts';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -32,7 +33,9 @@ const Header = () => {
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
                 <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS L3BLEY</small> 
-                <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
+                <Link className='text-decoration-none' href={"/login"}>
+                  <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
+                </Link>
             </div>
         </div>
         </div>

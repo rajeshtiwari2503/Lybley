@@ -6,7 +6,7 @@ import InputIcon from '@mui/icons-material/Input';
 
 const Works = () => {
   return (
-    <div class="" style={{backgroundColor:"#D4E2D4"}}>
+    <div style={{backgroundColor:"#D4E2D4"}}>
     <div className='container pt-5'>
         <div className="row w-100">
             <div className="col-12 col-md-6 col-lg-6">
