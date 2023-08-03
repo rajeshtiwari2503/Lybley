@@ -13,14 +13,14 @@ import Link from 'next/link';
 const Login = () => {
     return (
         <>
-            <div className="text-center ">
+            <div className="text-center">
                  
-                <div className='row bg-danger'>
+                <div className='row py-5 w-100'>
                     <div className='col-12 col-md-4 col-lg-4 '>
 
                     </div>
                     
-                    <div  className='col-12 col-md-4 col-lg-4  '>
+                    <div  className='col-12 col-md-4 col-lg-4 shadow rounded '>
                     
                         <Box
                             sx={{
