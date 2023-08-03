@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { TextField } from '@mui/material';
+ 
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -82,8 +83,9 @@ const Header = () => {
               </button>
             </div>
             <div className="col-2 text-center d-flex flex-column justify-content-center align-items-center">
-              <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
-              <div className='space fw-bold'>L3BLEY</div>
+              {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
+              <div className='space fw-bold'>L3BLEY</div> */}
+              <img className='card-img-top1' height={70} width={100} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
               <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS L3BLEY</small>
