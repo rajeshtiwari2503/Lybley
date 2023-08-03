@@ -73,7 +73,9 @@ const Header = () => {
       </div>
       <div style={{ backgroundColor: "#c8d8e4" }}>
         <div className='container '>
-          <div className="row ">
+ 
+        <div className="row w-100 ">
+ 
             <div className="col-5 text-center p-4">
               <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold'>REQUEST SERVICE</small></button>
               <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold'>CHECK CLAIM STATUS</small>

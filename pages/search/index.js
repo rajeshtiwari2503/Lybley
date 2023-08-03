@@ -35,7 +35,7 @@ const Search = () => {
           <Carousel.Item >
             <img
               className={`${style.imgBannerHeight} d-block w-100}`}
-              src={'https://static.vecteezy.com/system/resources/thumbnails/002/437/377/small/horizontal-yellow-and-orange-grunge-texture-cement-or-concrete-wall-banner-blank-background-free-photo.jpg'} />
+              src={'https://www.dghelp.com/wp-content/uploads/2021/08/Samsung_2000x600-HA-banners-150821-.jpg'} />
             <Carousel.Caption>
 
             </Carousel.Caption>
@@ -43,7 +43,7 @@ const Search = () => {
           <Carousel.Item>
             <img
               className={`${style.imgBannerHeight} d-block w-100}`}
-              src={'https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=600'} />
+              src={'https://scontent.fdel27-1.fna.fbcdn.net/v/t39.30808-6/300679834_380426854246168_1466790699520245960_n.jpg?stp=dst-jpg_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=zVM1WWDqpnIAX_0-nbH&_nc_ht=scontent.fdel27-1.fna&oh=00_AfBQfF0ooCu2pEkgm0nP73LoWzwL9m3ntD66KsEE3hGlQw&oe=64D07F7B'} />
             <Carousel.Caption>
 
             </Carousel.Caption>
@@ -51,7 +51,7 @@ const Search = () => {
           <Carousel.Item>
             <img
               className={`${style.imgBannerHeight} d-block w-100}`}
-              src={'https://images.pexels.com/photos/268966/pexels-photo-268966.jpeg?auto=compress&cs=tinysrgb&w=600'} />
+              src={'https://www.totallyrepair.in/images/banner1.jpg'} />
             <Carousel.Caption>
 
             </Carousel.Caption>
