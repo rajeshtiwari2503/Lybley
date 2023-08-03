@@ -9,6 +9,8 @@ import Mobile from './mobile'
 
 import ServiceTech from './serviceTech'
 import Available from './available'
+import Subscription from './subscription'
+import Faqs from './faqs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +28,9 @@ export default function Home() {
       <Works />
       <Waranty />
       <ServiceTech />
+      <Subscription />
       <Mobile />
+      <Faqs />
       <Available />
       </main>
     </>
