@@ -35,7 +35,7 @@ const Available = () => {
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
                                Hapur
                             </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
