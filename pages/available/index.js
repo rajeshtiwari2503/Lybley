@@ -2,40 +2,40 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import style from "../footer/footer.module.css"
- 
+
 const Available = () => {
-  const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("");
 
     return (
-        <div >
-            
-            <div  style={{width:"100vw"}} className={`${style.searchBody} mt-5 row  `} >
-            <div >
-                <h1 className='text-center mt-5'>Where is Super available?</h1>
-            </div>
+        <div style={{ background: "#c8d8e4" }}>
+
+            <div className={`  mt-5 row  w-100`} >
+                <div >
+                    <h1 className='text-center mt-5'>Where is Super available?</h1>
+                </div>
                 <div className='marquee '>
                     <div className='content'>
 
-                       <div className='d-flex mt-5 mb-5'>
+                        <div className='d-flex mt-5 mb-5'>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                                Noida  
+                                Noida
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                               Gurugram
+                                Gurugram
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5 '>
-                              Delhi
+                                Delhi
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                               Punjab
+                                Punjab
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                               Gaziabad
+                                Gaziabad
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                               Hapur
+                                Hapur
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const Available = () => {
                         <div className='ps-2' >  Noida</div>
                         <div className='ps-2' > Gurugram</div>
                         <div className='ps-2' > Delhi</div>
-                         
+
                     </div>
                         : ""
                     }
