@@ -1,0 +1,25 @@
+.planWd{
+    height: 1000px;
+    margin-bottom: 100px;
+}
+.bg_black{
+    background-color: black;
+    height: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.popUp{
+ 
+   background-color: #7177ed !important;
+    height: 850px;
+    width: 1100px;
+    position: absolute;
+    top: 200px;
+    border: 2px gray;
+    border-radius: 15px;
+}  
+.second_col{
+    height: 800px;
+    border-radius: 0px 20px 0px 0px;
+}

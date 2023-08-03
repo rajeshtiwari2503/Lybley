@@ -15,18 +15,26 @@ const Available = () => {
             </div>
                 <div className='marquee '>
                     <div className='content'>
-                        <div className='d-flex text-center fw-bold '>
-                            <div className='col-12 col-md-3 col-lg-3 mt-5  '>
-                                Noida
+
+                       <div className='d-flex mt-5 mb-5'>
+                            <div className='col-12 col-md-2 col-lg-2 mt-5  '>
+                                Noida  
                             </div>
-                            <div className='col-12 col-md-3 col-lg-3 mt-5  '>
-                                Gurugram
+                            <div className='col-12 col-md-2 col-lg-2 mt-5  '>
+                               Gurugram
                             </div>
-                            <div className='col-12 col-md-3 col-lg-3 mt-5 '>
-                                Delhi
+                            <div className='col-12 col-md-2 col-lg-2 mt-5 '>
+                              Delhi
                             </div>
-                            <div className='col-12 col-md-3 col-lg-3 mt-5  '>
-                                Punjab
+                            <div className='col-12 col-md-2 col-lg-2 mt-5  '>
+                               Punjab
+                            </div>
+                            <div className='col-12 col-md-2 col-lg-2 mt-5  '>
+                               Gaziabad
+                            </div>
+                            <div className='col-12 col-md-2 col-lg-2 mt-5  '>
+                               Hapur
+                            </div>
                             </div>
                         </div>
                     </div>
