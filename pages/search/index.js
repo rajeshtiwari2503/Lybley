@@ -57,7 +57,7 @@ const Search = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel> */}
-        <img className='card-img-top'  src='https://img.freepik.com/premium-photo/indian-family-father-mother-son-daughter-holding-3d-paper-model-home-real-istate-concept-india_466689-8007.jpg' />
+        <img className='card-img-top'  src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
       </div>
     </>
   )
