@@ -31,7 +31,7 @@ const Search = () => {
         </div>
       </div>
       <div >
-        <Carousel>
+        {/* <Carousel>
           <Carousel.Item >
             <img
               className={`${style.imgBannerHeight} d-block w-100}`}
@@ -56,7 +56,8 @@ const Search = () => {
 
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
+        <img className='card-img-top'  src='https://img.freepik.com/premium-photo/indian-family-father-mother-son-daughter-holding-3d-paper-model-home-real-istate-concept-india_466689-8007.jpg' />
       </div>
     </>
   )
