@@ -5,9 +5,9 @@ const RequestService = () => {
 
   return (
     <div>
-        <div className='bg-dark'>
+        <div className=''>
             <div className='container p-5'>
-                 <div className='row bg-secondary'>
+                 <div className='row bg-secondary rounded shadow'>
                     <div className='col-12 col-md-6 col-lg-6 ps-5 pe-5 mt-5 mb-5 border-end border-2 text-white '>
                         <div> 
                             <div className='fw-bold fs-2 text-white'>Find My Warranty</div>

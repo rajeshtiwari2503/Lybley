@@ -94,7 +94,7 @@ const Header = () => {
             <div className="col-2 text-center d-flex flex-column justify-content-center align-items-center">
               {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
               <div className='space fw-bold'>L3BLEY</div> */}
-              <img className='card-img-top1' height={70} width={100} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
+              <img className='card-img-top1 rounded' height={70} width={100} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
               <small className='fw-bold' style={{cursor: "pointer"}}
@@ -116,14 +116,14 @@ const Header = () => {
       </div>
       <div>
       <Collapse in={open} 
-      
+      style={{position:"absolute",backgroundColor: "#c8d8e4",width:"100%"}}
       >
-        <div style={{ backgroundColor: "#c8d8e4" }} id="collapse-example" 
+        <div id="collapse-example" 
         onMouseLeave={()=> setOpen(false)}
         aria-controls="collapse-example"
         aria-expanded={open}
         >
-          <div className="container">
+          <div className="container" >
            <div className="row p-4">
             <div className="col-4 p-4 border-end border-1 border-dark">
               <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
@@ -148,11 +148,15 @@ const Header = () => {
           </div>
         </div>
       </Collapse>
-      <Collapse in={open1}>
-        <div style={{ backgroundColor: "#c8d8e4" }} id="collapse-example1"
+      <Collapse in={open1} 
+      style={{position:"absolute",backgroundColor: "#c8d8e4",width:"100%"}}
+      >
+
+        <div id="collapse-example1"
         onMouseLeave={()=> setOpen1(false)}
         aria-controls="collapse-example1"
         aria-expanded={open1}
+
         >
           <div className="container">
            <div className="row p-4">
