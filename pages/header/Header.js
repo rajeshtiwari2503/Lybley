@@ -78,7 +78,9 @@ const Header = () => {
         <div className="row w-100 ">
  
             <div className="col-5 text-center p-4">
-              <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold'>REQUEST SERVICE</small></button>
+             <Link className='text-decoration-none' href={"/requestService"}>
+               <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold'>REQUEST SERVICE</small></button>
+             </Link>
               <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold'>CHECK CLAIM STATUS</small>
               </button>
             </div>
@@ -90,7 +92,7 @@ const Header = () => {
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
               <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS L3BLEY</small>
               <Link className='text-decoration-none' href={"/login"}>
-                <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
+                <button className='header-btn py-1 me-2 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
               </Link>
             </div>
           </div>
