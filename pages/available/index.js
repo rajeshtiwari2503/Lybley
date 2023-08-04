@@ -11,7 +11,7 @@ const Available = () => {
 
             <div className={`  mt-5 row  w-100`} >
                 <div >
-                    <h1 className='text-center mt-5'>Where is Super available?</h1>
+                    <h1 className='text-center mt-5'>Where is Lybley available?</h1>
                 </div>
                 <div className='marquee '>
                     <div className='content'>

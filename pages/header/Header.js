@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { TextField } from '@mui/material';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Collapse } from 'react-bootstrap';
+
  
 
 function MyVerticallyCenteredModal(props) {
@@ -56,6 +59,10 @@ function MyVerticallyCenteredModal(props) {
 }
 const Header = () => {
   const [modalShow, setModalShow] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+
+
   return (
     <div className='sticky-top'>
       <div className="bg-dark text-white">
@@ -88,7 +95,16 @@ const Header = () => {
               <img className='card-img-top1' height={70} width={100} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
-              <small className='fw-bold'>PLANS</small> <small className='fw-bold'>WHAT IS L3BLEY</small>
+              <small className='fw-bold' style={{cursor: "pointer"}}
+               onClick={() =>{setOpen1(false); setOpen(!open); }}
+               aria-controls="collapse-example"
+               aria-expanded={open}
+              >PLANS</small>
+              <small className='fw-bold' style={{cursor: "pointer"}} 
+              onClick={() =>{setOpen(false); setOpen1(!open1); }}
+              aria-controls="collapse-example1"
+              aria-expanded={open1}
+              >WHAT IS L3BLEY</small>
               <Link className='text-decoration-none' href={"/login"}>
                 <button className='header-btn py-1 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
               </Link>
@@ -96,6 +112,95 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <div>
+      <Collapse in={open} 
+      
+      >
+        <div style={{ backgroundColor: "#c8d8e4" }} id="collapse-example" 
+        onMouseLeave={()=> setOpen(false)}
+        aria-controls="collapse-example"
+        aria-expanded={open}
+        >
+          <div className="container">
+           <div className="row p-4">
+            <div className="col-4 p-4 border-end border-1 border-dark">
+              <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
+              <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, asperiores expedita reprehenderit autem alias doloremque, ex tempore maxime vel labore aperiam architecto eos perspiciatis culpa?</h6>
+            </div>
+            <div className="col-4 p-4 text-center border-end border-1 border-dark">
+              <h6>Simple</h6>
+              <small>Your plan for protecting vital home system</small>
+              <h6 className='mt-3'>Signature</h6>
+              <small>Just the right coverage for extra busy home</small>
+              <h6 className='mt-3'>Lux</h6>
+              <small>Maximum coverage for major peace of mind</small>
+              <button className='mt-4 btn btn-outline-primary rounded-pill'>SEE PLAN</button>
+            </div>
+            <div className="col-4 p-4">
+              <h6>Testimonial</h6>
+              <iframe width="250" height="140" src="https://www.youtube.com/embed/P36YNPR6RDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br/>
+              <small>Lybley's subscribers tell us how our service is a trusted part of their day-to-day lives.</small> <br/>
+              <a href="#" className='text-decoration-none'>See More</a>
+            </div>
+           </div>
+          </div>
+        </div>
+      </Collapse>
+      <Collapse in={open1}>
+        <div style={{ backgroundColor: "#c8d8e4" }} id="collapse-example1"
+        onMouseLeave={()=> setOpen1(false)}
+        aria-controls="collapse-example1"
+        aria-expanded={open1}
+        >
+          <div className="container">
+           <div className="row p-4">
+            <div className="col-4 p-4 border-end border-1 border-dark">
+              <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
+              <ul>
+                <li>Expert and respected service techs</li>
+                <li>Phenomenal customer service</li>
+                <li>Robust technology</li>
+                <li>Budget friendly</li>
+              </ul>
+            </div>
+            <div className="col-4 p-4 border-end pb-0 border-1 border-dark">
+             <div className="row">
+              <div className="col-6">
+                <h6 className='p-0 m-0'>About Us</h6>
+                <small>We're a technology company that offer subscribers care for the home</small> <br/>
+                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+              </div>
+              <div className="col-6">
+              <h6 className='p-0 m-0'>Tips</h6>
+                <small>Top winter pruning tips for healthy trees and shrubs</small> <br/>
+                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+              </div>
+             </div>
+             <div className="row mt-2">
+              <div className="col-6">
+                <h6 className='p-0 m-0'>FAQs</h6>
+                <h6>What is Lybley?</h6>
+                <small>Lybley is subcription care for the home that covers the cost of repair or replacement...</small> <br/>
+                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+              </div>
+              <div className="col-6">
+              <h6 className='p-0 m-0'>News</h6>
+                <small>08/04/2023</small> - <small className='fw-bold'>Lybley continues growth momentum with acquisitions of theree home warrenty business</small> <br/>
+                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+              </div>
+             </div>
+            </div>
+            <div className="col-4 p-4">
+              <h6>Testimonial</h6>
+              <iframe width="250" height="140" src="https://www.youtube.com/embed/P36YNPR6RDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br/>
+              <small>Lybley's subscribers tell us how our service is a trusted part of their day-to-day lives.</small> <br/>
+              <a href="#" className='text-decoration-none'>See More</a>
+            </div>
+           </div>
+          </div>
+        </div>
+      </Collapse>
+    </div>
       <>
 
         <MyVerticallyCenteredModal
