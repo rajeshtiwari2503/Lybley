@@ -94,7 +94,7 @@ const Header = () => {
             <div className="col-2 text-center d-flex flex-column justify-content-center align-items-center">
               {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
               <div className='space fw-bold'>L3BLEY</div> */}
-              <img className='card-img-top1 rounded' height={70} width={100} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
+              <img className='card-img-top1 rounded' height={70} width={70} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
             <div className="col-5 d-flex p-4 justify-content-around align-items-center">
               <small className='fw-bold' style={{cursor: "pointer"}}
@@ -116,7 +116,7 @@ const Header = () => {
       </div>
       <div>
       <Collapse in={open} 
-      style={{position:"absolute",backgroundColor: "#c8d8e4",width:"100%"}}
+      style={{position:"absolute",backgroundColor: "white",width:"100%"}}
       >
         <div id="collapse-example" 
         onMouseLeave={()=> setOpen(false)}
@@ -149,7 +149,7 @@ const Header = () => {
         </div>
       </Collapse>
       <Collapse in={open1} 
-      style={{position:"absolute",backgroundColor: "#c8d8e4",width:"100%"}}
+      style={{position:"absolute",backgroundColor: "white",width:"100%"}}
       >
 
         <div id="collapse-example1"
