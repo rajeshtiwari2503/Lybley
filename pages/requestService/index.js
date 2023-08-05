@@ -6,9 +6,9 @@ const RequestService = () => {
   return (
     <div>
         <div className=''>
-            <div className='container p-5'>
-                 <div className='row bg-secondary rounded shadow'>
-                    <div className='col-12 col-md-6 col-lg-6 ps-5 pe-5 mt-5 mb-5 border-end border-2 text-white '>
+            <div className='container   p-md-5'>
+                 <div className='row   bg-secondary rounded shadow'>
+                    <div className='col-12 col-md-6 col-lg-6  ps-md-5 pe-lg-5 mt-5 mb-5 border-end border-2 text-white '>
                         <div> 
                             <div className='fw-bold fs-2 text-white'>Find My Warranty</div>
                             <div className='fw-bold mt-3 text-white'>Look up your warranty to create your service request. Please provide one of the following:</div>
@@ -30,7 +30,7 @@ const RequestService = () => {
                           </div>
                         </div>
                     </div>
-                    <div className='col-12 col-md-6 col-lg-6 ps-5 pe-5 mt-5 mb-5'>
+                    <div className='col-12 col-md-6 col-lg-6 ps-md-5 pe-lg-5 mt-md-5 mb-5'>
                         <div> 
                             <div className='fw-bold fs-2 text-white'>Log In</div>
                             <div className='fw-bold mt-3 text-white'>Easily submit service requests by entering your email address and password.</div>

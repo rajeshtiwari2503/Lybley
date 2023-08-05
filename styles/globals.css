@@ -161,3 +161,10 @@ a {
   color: white;
 
 }
+
+@media only screen and (max-width: 768px) {
+.headerNavFont{
+  font-size: 11px;
+}
+
+}

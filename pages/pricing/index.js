@@ -3,14 +3,14 @@ import React from 'react'
 const Pricing = () => {
   return (
     <div className='container'> 
-        <div className='row w-100'>
+        <div className='row '>
             <div className='col-12 col-md-3  col-lg-3'></div>
             <div className='col-12 col-md-6 col-lg-6 bg-info'>
                 <div className='row p-5'>
-                    <div className='col-12 col-md-8 col-lg-8 '>
+                    <div className='col-8 col-md-8 col-lg-8 '>
                     <input type='text' className='form-control' placeholder='Enter Location' />       
                     </div>
-                    <div className='col-12 col-md-4 col-lg-4 '>
+                    <div className='col-4 col-md-4 col-lg-4 '>
                     <input type='number' className='form-control' placeholder='Unit' />       
                     </div>
                     <div className='col-12 col-md-6 col-lg-6 mt-4'>
