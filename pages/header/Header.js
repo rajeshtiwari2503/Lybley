@@ -64,6 +64,7 @@ const Header = () => {
 
 
   return (
+    <>
     <div className='sticky-top'>
       <div className="bg-dark text-white ">
         <div className="row w-100 ">
@@ -79,7 +80,9 @@ const Header = () => {
           <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
       </div>
-      <div style={{ backgroundColor: "#c8d8e4",  }}>
+      </div>
+      <div>
+      <div className='' style={{ backgroundColor: "#c8d8e4", }}>
         <div className='container '>
  
         <div className="row  d-flex justify-content-center ">
@@ -226,6 +229,7 @@ const Header = () => {
         />
       </>
     </div>
+    </>
   )
 }
 
