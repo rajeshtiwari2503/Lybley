@@ -65,7 +65,7 @@ const Header = () => {
 
   return (
     <div className='sticky-top'>
-      <div className="bg-dark text-white">
+      <div className="bg-dark text-white ">
         <div className="row w-100 ">
           <div className="col-12 col-md-3 col-lg-3"></div>
           <div className="col-12 col-md-6 col-lg-6">
@@ -79,37 +79,48 @@ const Header = () => {
           <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
       </div>
-      <div style={{ backgroundColor: "#c8d8e4" }}>
+      <div style={{ backgroundColor: "#c8d8e4",  }}>
         <div className='container '>
  
-        <div className="row w-100 ">
+        <div className="row  d-flex justify-content-center ">
  
-            <div className="col-5 text-center p-4">
+            <div className="col-12 col-md-5 col-lg-5 d-flex text-center p-4">
              <Link className='text-decoration-none' href={"/requestService"}>
-               <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold'>REQUEST SERVICE</small></button>
+               <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold headerNavFont'>REQUEST SERVICE</small></button>
              </Link>
-              <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold'>CHECK CLAIM STATUS</small>
+              <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold headerNavFont'>CHECK CLAIM STATUS</small>
               </button>
             </div>
-            <div className="col-2 text-center d-flex flex-column justify-content-center align-items-center">
+            <div className="col-12 col-md-2 col-lg-2 text-center d-flex flex-column justify-content-center align-items-center">
               {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
               <div className='space fw-bold'>L3BLEY</div> */}
               <img className='card-img-top1 rounded' height={70} width={70} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
-            <div className="col-5 d-flex p-4 justify-content-around align-items-center">
-              <small className='fw-bold' style={{cursor: "pointer"}}
+            <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-between align-items-center">
+              <div className='d-flex'>
+              <div className='pe-2'>
+              <small className='fw-bold headerNavFont' style={{cursor: "pointer"}}
                onClick={() =>{setOpen1(false); setOpen(!open); }}
                aria-controls="collapse-example"
                aria-expanded={open}
               >PLANS</small>
-              <small className='fw-bold' style={{cursor: "pointer"}} 
+              </div>
+              <div>
+              <small className='fw-bold headerNavFont' style={{cursor: "pointer",}} 
               onClick={() =>{setOpen(false); setOpen1(!open1); }}
               aria-controls="collapse-example1"
               aria-expanded={open1}
               >WHAT IS L3BLEY</small>
+              </div>
+              <div className='d-flex' >
               <Link className='text-decoration-none' href={"/login"}>
-                <button className='header-btn py-1 me-2 rounded-pill'><small className='fw-bold'>LOGIN</small></button> <button className='py-1 price-btn rounded-pill'><small className='fw-bold'>SEE PRICING</small></button>
+                <button className='header-btn py-1 ms-2 me-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                </Link>
+                <Link className='text-decoration-none' href={"/pricing"}>
+                  <button className='py-1 price-btn rounded-pill'><small className='fw-bold headerNavFont'>SEE PRICING</small></button>
               </Link>
+              </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,11 +136,11 @@ const Header = () => {
         >
           <div className="container" >
            <div className="row p-4">
-            <div className="col-4 p-4 border-end border-1 border-dark">
+            <div className="col-12 col-md-4 col-lg-4 p-4 border-end border-1 border-dark">
               <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
               <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, asperiores expedita reprehenderit autem alias doloremque, ex tempore maxime vel labore aperiam architecto eos perspiciatis culpa?</h6>
             </div>
-            <div className="col-4 p-4 text-center border-end border-1 border-dark">
+            <div className="col-12 col-md-4 col-lg-4 p-4 text-center border-end border-1 border-dark">
               <h6>Simple</h6>
               <small>Your plan for protecting vital home system</small>
               <h6 className='mt-3'>Signature</h6>
@@ -138,7 +149,7 @@ const Header = () => {
               <small>Maximum coverage for major peace of mind</small>
               <button className='mt-4 btn btn-outline-primary rounded-pill'>SEE PLAN</button>
             </div>
-            <div className="col-4 p-4">
+            <div className="col-12 col-md-4 col-lg-4 p-4">
               <h6>Testimonial</h6>
               <iframe width="250" height="140" src="https://www.youtube.com/embed/P36YNPR6RDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br/>
               <small>Lybley's subscribers tell us how our service is a trusted part of their day-to-day lives.</small> <br/>
@@ -160,7 +171,7 @@ const Header = () => {
         >
           <div className="container">
            <div className="row p-4">
-            <div className="col-4 p-4 border-end border-1 border-dark">
+            <div className="col-12 col-md-4 col-lg-4 p-4 border-end border-1 border-dark">
               <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
               <ul>
                 <li>Expert and respected service techs</li>
@@ -169,7 +180,7 @@ const Header = () => {
                 <li>Budget friendly</li>
               </ul>
             </div>
-            <div className="col-4 p-4 border-end pb-0 border-1 border-dark">
+            <div className="col-12 col-md-4 col-lg-4 p-4 border-end pb-0 border-1 border-dark">
              <div className="row">
               <div className="col-6">
                 <h6 className='p-0 m-0'>About Us</h6>
