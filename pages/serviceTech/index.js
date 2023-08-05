@@ -5,8 +5,6 @@ const ServiceTech = () => {
     return (
         <>
             <h2 className='text-center pt-5'>Our service techs have a heart</h2>
-
-
             <div className='row w-100 '>
                 <div className='marquee'>
                     <div className='content'>
