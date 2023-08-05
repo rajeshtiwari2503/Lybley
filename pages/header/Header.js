@@ -69,7 +69,7 @@ const Header = () => {
         <div className="row w-100 ">
           <div className="col-12 col-md-3 col-lg-3"></div>
           <div className="col-12 col-md-6 col-lg-6">
-            <div className='d-flex justify-content-around'>
+            <div className='d-flex justify-content-around text-center ms-4'>
               <small className='hover fw-bold p-2'>HOMEOWNER</small>
               <small className='hover fw-bold p-2'>REALTOR</small>
               <small className='hover fw-bold p-2'>SERVICER</small>
@@ -84,19 +84,19 @@ const Header = () => {
  
         <div className="row  d-flex justify-content-center ">
  
-            <div className="col-12 col-md-5 col-lg-5 d-flex text-center p-4">
+            <div className="col-12 col-md-5 col-lg-5 d-flex justify-content-center p-4">
              <Link className='text-decoration-none' href={"/requestService"}>
                <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold headerNavFont'>REQUEST SERVICE</small></button>
              </Link>
               <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold headerNavFont'>CHECK CLAIM STATUS</small>
               </button>
             </div>
-            <div className="col-12 col-md-2 col-lg-2 text-center d-flex flex-column justify-content-center align-items-center">
+            <div className="col-12 col-md-2 col-lg-2 justify-content-center d-flex flex-column justify-content-center align-items-center">
               {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
               <div className='space fw-bold'>L3BLEY</div> */}
               <img className='card-img-top1 rounded' height={70} width={70} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
             </div>
-            <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-between align-items-center">
+            <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-center align-items-center">
               <div className='d-flex'>
               <div className='pe-2'>
               <small className='fw-bold headerNavFont' style={{cursor: "pointer"}}

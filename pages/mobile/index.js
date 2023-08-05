@@ -4,7 +4,7 @@ const Mobile= () => {
   return (
     <div className='' style={{backgroundColor:"#FFFCE1"}}>
          <div className="container" >
-                <div className="row w-100">
+                <div className="row ">
                     <div className="col-12 col-md-6 py-5">
                         <div className="ps-5">
                         <h1>Home maintenance meets high tech</h1>
