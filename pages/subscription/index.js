@@ -4,9 +4,9 @@ const Subscription = () => {
     return (
         <div className='container'>
             <h1 className='text-center mt-5 mb-5'>Some love from our subscribers</h1>
-            <div className='row w-100 mb-5'>
+            <div className='row mb-5'>
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
-                    <div className='shadow p-3'>
+                    <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
                         <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={60} width={60} alt='' />
                         <div >
@@ -22,7 +22,7 @@ const Subscription = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
-                    <div className='shadow p-3'>
+                    <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
                         <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={60} width={60} alt='' />
                         <div >
@@ -38,7 +38,7 @@ const Subscription = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
-                    <div className='shadow p-3'>
+                    <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
                         <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={60} width={60} alt='' />
                         <div >
@@ -54,7 +54,7 @@ const Subscription = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
-                    <div className='shadow p-3'>
+                    <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
                         <img className='rounded-circle' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" height={60} width={60} alt='' />
                         <div >

@@ -57,7 +57,7 @@ const Search = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel> */}
-        <img className='card-img-top'  src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
+        <img className={`card-img-top ${style.bannerHome}`}   src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
       </div>
     </>
   )

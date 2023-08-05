@@ -13,9 +13,9 @@ import Link from 'next/link';
 const Login = () => {
     return (
         <>
-            <div className="text-center">
+            <div className="text-center container">
                  
-                <div className='row py-5 w-100'>
+                <div className='row py-5 m-2'>
                     <div className='col-12 col-md-4 col-lg-4 '>
 
                     </div>
@@ -30,6 +30,7 @@ const Login = () => {
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
+                                justifyContent:"center"
                             }}
                            
                         >
@@ -81,14 +82,14 @@ const Login = () => {
                                 >
                                     Sign In
                                 </Button>
-                                <Grid container>
+                                <Grid justifyContent={"center"} container>
                                     <Grid item xs>
                                         <Link href="#" variant="body2">
                                             Forgot password?
                                         </Link>
                                     </Grid>
-                                    <Grid item>
-                                        <Link href="/sign-up" variant="body2">
+                                    <Grid  item>
+                                        <Link href="/sign-up"  variant="body2">
                                             {"Don't have an account? Sign Up"}
                                         </Link>
                                     </Grid>

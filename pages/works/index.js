@@ -8,7 +8,7 @@ const Works = () => {
   return (
     <div style={{backgroundColor:"#D4E2D4"}}>
     <div className='container pt-5'>
-        <div className="row w-100">
+        <div className="row">
             <div className="col-12 col-md-6 col-lg-6">
             <div className='text-center'>
              <img src="https://serviceservotech.com/wp-content/uploads/2023/06/Professional-Home-Appliance-Repair-800x576.webp" alt="..." className='img-fluid' width="400px" height="400px" />
@@ -19,7 +19,7 @@ const Works = () => {
               <p>Lybley is subscription care for the home that covers our members' repair or replacement of appliances or systems. Pick your plan, sign-up, and rest easy knowing that we've got it from here. After all, the last thing you need when something breaks is a bunch of drama.</p>
             </div>
         </div>
-        <div className="row w-100 text-center pt-5 pb-5 mt-2 mt-md-5 mt-lg-5">
+        <div className="row text-center pt-5 pb-5 mt-2 mt-md-5 mt-lg-5">
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
             <SystemSecurityUpdateGoodIcon color='primary' fontSize='large' />
             <h5 className='p-2'>Sign Up</h5>
