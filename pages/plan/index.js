@@ -10,7 +10,7 @@ const Plan = () => {
                 <div className={`${style.bg_black}`}>
                     <div className="text-white text-center mt-5">
                     <h2 className="">We have a plan (for your home)</h2>
-                    <div className="row  mt-3">
+                    <div className="row w-100 mt-3">
                         <div className="col-12 col-md-3 col-lg-3"></div>
                         <div className="col-12 col-md-6 col-lg-6">
                     <p className="">Cover your home's most essential appliances and systems, or your just about everything on the property with Super's range of subscriptions for your home. Take a look around your home, think about what level fits you, and start the easy sign-up process.</p>

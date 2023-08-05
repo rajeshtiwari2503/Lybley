@@ -114,6 +114,9 @@ a {
   /* white-space: nowrap; */
 }
 
+.headerSticky{
+  position: fixed;
+}
 .content {
   /* display:flex; */
   /* padding-left: 20%;   */
@@ -172,5 +175,7 @@ a {
 .headerNavFont{
   font-size: 11px;
 }
-
+.headerSticky{
+  position: relative;
+}
 }
