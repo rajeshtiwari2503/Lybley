@@ -28,7 +28,7 @@ const Plan = () => {
                         </div>
                          <div className="container">
                         <div className="row text-white mt-5 w-100 m-0">
-                           <div className="col-12 col-md-6 d-flex justify-content-end align-items-center col-lg-6">
+                           <div className="col-12 col-md-6  d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                               <h6>Stovetop</h6>
                               
@@ -39,7 +39,7 @@ const Plan = () => {
                                 </div>
                                 <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
                            </div>
-                           <div className="col-12 col-md-6 d-flex justify-content-start align-items-center col-lg-6">
+                           <div className="col-12 col-md-6 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
                            <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -64,7 +64,7 @@ const Plan = () => {
                                 </div>
                                 <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
                            </div>
-                           <div className="col-12 col-md-6 d-flex justify-content-start align-items-center col-lg-6">
+                           <div className="col-12 col-md-6 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
                            <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">

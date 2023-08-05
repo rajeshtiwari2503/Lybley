@@ -26,12 +26,12 @@
 @media only screen and (max-width: 800px) {
      
     .planWd{
-        height: 1970px;
+        height: 1450px;
 
     }
     .bg_black{
         background-color: black;
-        height: 400px;
+        height: 800px;
         /* position: relative; */
         display: flex;
         justify-content: center;
@@ -39,10 +39,10 @@
     .popUp{
      
        background-color: white;
-        height: 800px;
+        height: 1250px;
         width: 360px;
         /* position: absolute; */
-        top: 100px;
+        top: 260px;
         border: 2px gray;
         border-radius: 15px;
     }
