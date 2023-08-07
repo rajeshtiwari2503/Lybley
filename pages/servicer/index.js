@@ -18,13 +18,13 @@ const Servicer = () => {
                 <div style={{ backgroundColor: "#15939a" }}>
                     <div className='container'>
                         <div className='row align-items-center p-5 text-white'>
-                            <div className='col-12 col-md-6 col-lg-6 p-3'>
-                                <div>
-                                    <img style={{ width: "500px", height: "400px" }} className='img-card-top' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
+                            <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
+                                <div className='text-center'>
+                                    <img  className='img-card-top  servicerImgWdth' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
                                 </div>
                             </div>
-                            <div className='col-12 col-md-6 col-lg-6 p-3'>
-                                <div className='ps-5'>
+                            <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
+                                <div className='ps-md-5 '>
                                     <div className='fw-bold fs-2'>
                                         Check Your Crawl Space for Mold and Leaks
                                     </div>

@@ -12,18 +12,18 @@ const Tips = () => {
                                 Colder temperatures and shorter days mean that your deciduous trees and shrubs are dormant for the winter. This is the perfect time to prune your plants so they can heal thoroughly and put on lush new growth in the spring. Here's what you need to know about which plants to prune in winter, why the timing is so important and how to get started.
                             </div>
                             <div >
-                                <img style={{ width: "500px", height: "550px" }} className='img-card-top' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
+                                <img   className='img-card-top servicerImgWdth' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
                             </div>
                         </div>
                     </div>
                     <div className='col-12 col-md-6 col-lg-6'>
                         <div className='row'>
-                            <div className='col-12 p-3'>
+                            <div className='col-12 p-md-3'>
                                 <div className='mt-5 d-flex align-items-center'>
                                     <div >
                                         <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                                     </div>
-                                    <div className='ps-5 fw-bold fs-4'>
+                                    <div className='ps-md-5 ps-3 fw-bold fs-6'>
                                         Install New Weatherstripping to Keep Your Home Toasty
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@ const Tips = () => {
                                     <div >
                                         <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                                     </div>
-                                    <div className='ps-5 fw-bold fs-4'>
+                                    <div className='ps-md-5 ps-3 fw-bold fs-6'>
                                         Grease Your Garage Door to Keep It Opening and Closing Smoothly
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@ const Tips = () => {
                                     <div >
                                         <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                                     </div>
-                                    <div className='ps-5 fw-bold fs-4'>
+                                    <div className='ps-md-5 ps-3 fw-bold fs-6'>
                                         Check Your Oven to Prevent Breakdowns
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ const Tips = () => {
                                     <div >
                                         <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                                     </div>
-                                    <div className='ps-5 fw-bold fs-4'>
+                                    <div className='ps-md-5 ps-3 fw-bold fs-6'>
                                         How to Waterproof Your Basement
                                     </div>
                                 </div>
@@ -65,14 +65,14 @@ const Tips = () => {
             </div>
             <div style={{backgroundColor:"#d4e2d4"}}>
                 <div className='container'>
-                    <div className='row align-items-center p-5 '>
+                    <div className='row align-items-center p-md-5 p-3'>
                         <div className='col-12 col-md-6 col-lg-6 p-3'>
-                            <div>
-                                <img style={{ width: "500px", height: "400px" }} className='img-card-top' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
+                            <div className='text-center'>
+                                <img   className='img-card-top servicerImgWdth' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
                             </div>
                         </div>
                         <div className='col-12 col-md-6 col-lg-6 p-3'>
-                            <div className='ps-5'>
+                            <div className='ps-md-5 ps-2'>
                                 <div className='fw-bold fs-2'>
                                     Check Your Crawl Space for Mold and Leaks
                                 </div>
@@ -91,7 +91,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             4 Reasons to Cut Bleach from Your Cleaning Routine
                             </div>
                         </div>
@@ -101,7 +101,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             8 Things You Need to Know About Your Microwave
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             Power Wash Your Driveway for Fewer Cracks
                             </div>
                         </div>
@@ -121,7 +121,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             Unclog Your Tub Drain
                             </div>
                         </div>
@@ -131,7 +131,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             Fix Your Faucet Flow
                             </div>
                         </div>
@@ -141,7 +141,7 @@ const Tips = () => {
                             <div >
                                 <img className='img-card-top' style={{ width: "200px", height: "150px" }} src='https://www.shutterstock.com/image-vector/appliances-set-colored-icons-collection-260nw-282445358.jpg' alt='tips' />
                             </div>
-                            <div className='ps-5 fw-bold fs-4'>
+                            <div className='ps-md-5 ps-2 fw-bold fs-6'>
                             Is Your Washer a Flood Risk?
                             </div>
                         </div>
