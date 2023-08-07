@@ -73,8 +73,8 @@ const Header = () => {
             <div className='d-flex justify-content-around text-center ms-4'>
               <small className='hover fw-bold p-2'>HOMEOWNER</small>
               <small className='hover fw-bold p-2'>REALTOR</small>
-              <small className='hover fw-bold p-2'>SERVICER</small>
-              <small className='hover fw-bold p-2'>TIPS</small>
+              <Link href={"/servicer"} className='text-decoration-none hover fw-bold p-2 text-white' > <small className='hover fw-bold p-2'>SERVICER</small></Link>
+             <Link href={"/tips"} className='text-decoration-none hover fw-bold p-2 text-white' > <small className=''>TIPS</small></Link>
             </div>
           </div>
           <div className="col-12 col-md-3 col-lg-3"></div>

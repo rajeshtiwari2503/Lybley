@@ -144,7 +144,7 @@ a {
   transition: 0.4s;
 }
 .hover:hover{
-      color: black;
+      color: black !important;
       background-color: #c8d8e4;
       cursor: pointer;
 }
