@@ -143,8 +143,13 @@ a {
   transform: scale(1.05);
   transition: 0.4s;
 }
+.selectNav{
+  color: black !important;
+  background-color: #c8d8e4;
+  cursor: pointer;
+}
 .hover:hover{
-      color: black;
+      color: black !important;
       background-color: #c8d8e4;
       cursor: pointer;
 }
