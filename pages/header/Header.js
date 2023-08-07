@@ -6,10 +6,15 @@ import Modal from 'react-bootstrap/Modal';
 import { TextField } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse } from 'react-bootstrap';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
  
 
 function MyVerticallyCenteredModal(props) {
+
+
+
   return (
     <Modal
       {...props}
@@ -58,11 +63,14 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 const Header = () => {
+
+  const router=useRouter()
   const [modalShow, setModalShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
+   
 
-
+ 
   return (
     <>
     <div className='sticky-top'>
@@ -71,17 +79,16 @@ const Header = () => {
           <div className="col-12 col-md-3 col-lg-3"></div>
           <div className="col-12 col-md-6 col-lg-6">
             <div className='d-flex justify-content-around text-center ms-4'>
-              <small className='hover fw-bold p-2'>HOMEOWNER</small>
+            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>HOMEOWNER</small></Link>
               <small className='hover fw-bold p-2'>REALTOR</small>
-              <Link href={"/servicer"} className='text-decoration-none hover fw-bold p-2 text-white' > <small className='hover fw-bold p-2'>SERVICER</small></Link>
-             <Link href={"/tips"} className='text-decoration-none hover fw-bold p-2 text-white' > <small className=''>TIPS</small></Link>
+              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>SERVICER</small></Link>
+             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className=''>TIPS</small></Link>
             </div>
           </div>
           <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
       </div>
-      </div>
-      <div>
+      
       <div className='' style={{ backgroundColor: "#c8d8e4", }}>
         <div className='container '>
  
