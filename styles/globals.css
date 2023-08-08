@@ -108,6 +108,14 @@ a {
 
 /* Marquee.module.css */
 
+body{
+  font-family: "Proxima Nova",sans-serif !important;
+}
+
+.servicerImgWdth{
+  width:500px ;
+  height: 400px;
+}
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -193,5 +201,9 @@ a {
 .headerSticky{
   position: relative;
  
+}
+.servicerImgWdth{
+  width:270px ;
+  height: 200px;
 }
 }
