@@ -10,6 +10,7 @@ import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import Faqs from '../faqs';
 import Available from '../available';
+import style from "./price.module.css";
 
 const Pricing = () => {
     return (
@@ -244,6 +245,8 @@ const Pricing = () => {
             <Faqs />
             <div className="container mt-5" >
                 <h2 className='text-center fw-bold'>What's Covered</h2>
+                <div className={`${style.scrollmenu}`}>
+                    <div className={style.textDiv}>
                 <div className="row border mt-4">
                     <div className="col-6 border p-4"><h5>Appliance</h5></div>
                     <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
@@ -285,6 +288,8 @@ const Pricing = () => {
                     <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
                     <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
                     <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                </div>
                 </div>
                 <div className="row border mt-4">
                     <div className="col-6 border p-4"><h5>Systems</h5></div>
@@ -346,6 +351,7 @@ const Pricing = () => {
                     <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
                     <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
                 </div>
+                
                 <div className="row border mt-4">
                     <div className="col-6 border p-4"><h5>Additional Items</h5></div>
                     <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
