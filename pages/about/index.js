@@ -41,7 +41,7 @@ const About = () => {
             </div>
             <h6 className='text-primary mt-4 text-center'><small>OUR COMPANY VALUES</small></h6>
             <div className="container">
-                <div className="row text-center pt-5 pb-5 mt-2 mt-md-5 mt-lg-5">
+                <div className="row text-center pt-5 pb-md-5 pb-lg-5 mt-2 mt-md-5 mt-lg-5">
                     <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                         <CheckCircleIcon color='primary' fontSize='large' />
                         <h5 className='fw-bold p-2'>#GreatPeople</h5>
@@ -62,7 +62,7 @@ const About = () => {
                         <p><small>Since we’re pushing to evolve the home care business, we constantly and optimistically pursue opportunities for innovation and growth.</small></p>
                     </div>
                 </div>
-                <div className="row text-center pt-2 pb-5 mt-2 mt-md-5 mt-lg-5">
+                <div className="row text-center pt-md-2 pt-lg-2 pb-5 mt-md-5 mt-lg-5">
                     <div className="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center col-lg-2">
                     </div>
                     <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
@@ -82,14 +82,14 @@ const About = () => {
                 </div>
             </div>
             <h6 className='text-primary mt-4 text-center'><small>OUR PEOPLE</small></h6>
-            <div class="container">
+            <div className="container mt-5">
                 <div className='row'  >
                     
                         <div className='row align-items-center '>
-                            <div className='col-12  d-flex'>
-                                <img className='rounded-circle serviceTechImg' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            <div className='col-12 d-flex align-items-center'>
+                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
                             
-                                <div className=' p-3 ps-md-2 mt-md-0 mt-3 text-md-start text-center'>
+                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
                                     <h3>Hi , I'm Raj</h3>
                                     <h3> I'm  Certified LY3LEY</h3>
                                     <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
@@ -98,6 +98,46 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                <div className='row mt-3'  >
+                    
+                        <div className='row align-items-center '>
+                            <div className='col-12 d-flex align-items-center'>
+                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            
+                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
+                                    <h3>Hi , I'm Raj</h3>
+                                    <h3> I'm  Certified LY3LEY</h3>
+                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='row mt-3'  >
+                    
+                        <div className='row align-items-center '>
+                            <div className='col-12 d-flex align-items-center'>
+                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            
+                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
+                                    <h3>Hi , I'm Raj</h3>
+                                    <h3> I'm  Certified LY3LEY</h3>
+                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='row p-4' style={{ backgroundColor: "#c8d8e4", }}>
+                <div class="col-12 col-md-3 col-lg-3"></div>
+                <div class="col-12 col-md-6 col-lg-6">
+                
+            <h6 className='text-primary mt-4 text-center'><small>LOCATIONS</small></h6>
+            <h3 className='fw-bold text-center py-3'>Where you can find us</h3>
+                <div className='text-center'>Lybley headquarters are in San Francisco, California. The company has additional offices in Phoenix, Arizona, and Belgrade, Serbia. We currently offer services in 14 regions across eight states.</div>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3"></div>
             </div>
         </div>
     )

@@ -110,7 +110,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-6">
                 <h5 className="text-white mb-3">About</h5>
                 <ul className="list-unstyled text-muted">
-                    <Link className={`${style.footerLink} text-decoration-none text-muted`}  href="/aboutUs"> <li style={{color:"#acabad"}} className={`${style.footerLink}`}>About Us</li></Link>
+                    <Link className={`${style.footerLink} text-decoration-none text-muted`}  href="/about"> <li style={{color:"#acabad"}} className={`${style.footerLink}`}>About Us</li></Link>
                     <div className={`${style.footerLink}`}onClick={() => setModalShow(true)}><li style={{color:"#acabad",cursor:"pointer"}}> Contact Us</li></div>
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/faqs" ><li style={{color:"#acabad"}}>FAQs</li></Link>
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/career" > <li style={{color:"#acabad"}}> Careers </li></Link>
