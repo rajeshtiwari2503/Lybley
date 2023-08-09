@@ -1,7 +1,93 @@
 import React from 'react'
 import style from "./footer.module.css"
 import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import CloseIcon from '@mui/icons-material/Close';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import CallIcon from '@mui/icons-material/Call';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+function MyVerticallyCenteredModal(props) {
+
+
+
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        
+      >
+        <div className='text-center' >
+        <div className='text-end pe-md-2 pe-1'>
+          <CloseIcon className='hover' fontSize='large' onClick={props.onHide}/>
+          </div>
+        <div className='text-center  '>
+          
+          <div className='fw-bold fs-3' >
+          Contact Help Center
+          </div>
+          <Modal.Body   >
+            <div className='row '>
+                <div className='col-12 col-md-4 col-lg-4'>
+                    <div>
+                        <div className='mt-3 mb-5'>
+                            <PersonAddIcon style={{fontSize:"40px"}} />
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <div className='fw-bold fs-5 ms-5 me-5'>Sign up with Lubley</div>
+                        </div>
+                        <div>
+                        Do you need to add Super to your home?
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <button className='btn btn-primary'>6446644646464</button>
+                        </div>
+                    </div>
+                </div>
+                <div className='col-12 col-md-4 col-lg-4'>
+                    <div>
+                        <div  className='mt-3 mb-5'>
+                            <CallIcon style={{fontSize:"40px"}} />
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <div className='fw-bold fs-5'>Any questions about your plan?</div>
+                        </div>
+                        <div>
+                        Do you have questions about your Super policy?
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <button className='btn btn-primary'>6446644646464</button>
+                        </div>
+                    </div>
+                </div>
+                <div className='col-12 col-md-4 col-lg-4'>
+                    <div>
+                        <div  className='mt-3 mb-5'>
+                            <ManageAccountsIcon style={{fontSize:"40px"}} />
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <div className='fw-bold fs-5 ms-5 me-5'>Request service</div>
+                        </div>
+                        <div>
+                        Need help with a breakdown or maintenance?
+                        </div>
+                        <div className='mt-3 mb-3'>
+                            <button className='btn btn-primary'>Request service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </Modal.Body>
+        </div >
+        </div>
+      </Modal >
+    );
+  }
 const Footer = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <footer className="w-100 py-4 flex-shrink fixed-bottom1 bg-dark"  >
     <div className="container">
@@ -25,12 +111,12 @@ const Footer = () => {
                 <h5 className="text-white mb-3">About</h5>
                 <ul className="list-unstyled text-muted">
                     <Link className={`${style.footerLink} text-decoration-none text-muted`}  href="/aboutUs"> <li style={{color:"#acabad"}} className={`${style.footerLink}`}>About Us</li></Link>
-                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/contactUs" ><li style={{color:"#acabad"}}> Contact Us</li></Link>
+                    <div className={`${style.footerLink}`}onClick={() => setModalShow(true)}><li style={{color:"#acabad",cursor:"pointer"}}> Contact Us</li></div>
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/faqs" ><li style={{color:"#acabad"}}>FAQs</li></Link>
-                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/carrier" > <li style={{color:"#acabad"}}> Carees </li></Link>
+                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/career" > <li style={{color:"#acabad"}}> Careers </li></Link>
 
                     <li style={{color:"#acabad"}}>Investor Relations </li>
-                </ul>
+                </ul> 
             </div>
             <div className="col-lg-3 col-md-6 col-6">
                 <h5 className="text-white mb-3">Policy</h5>
@@ -61,7 +147,10 @@ const Footer = () => {
         </form> */}
             </div>
         </div>
-
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
     </div>
     <div className="text-white text-center"><p className="small mb-0" style={{color:"#acabad"}}>&copy; Copyrights. All rights reserved. <a className="text-primary text-decoration-none" href="/"> lybley.in </a></p></div>
 </footer>
