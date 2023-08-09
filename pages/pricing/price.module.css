@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    .scrollmenu {
+        background-color: #b6e6fa;
+        overflow: auto;
+        /* white-space: nowrap; */
+      }
+    .textDiv {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+      }
+}
