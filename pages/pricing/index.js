@@ -11,8 +11,26 @@ import UpgradeIcon from '@mui/icons-material/Upgrade';
 import Faqs from '../faqs';
 import Available from '../available';
 import style from "./price.module.css";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import { makeStyles } from '@mui/styles';
+
+// const useStyles = makeStyles({
+//   customAccordion: {
+//     border: 'none',
+//     boxShadow: 'none',
+//     '&:before': {
+//       display: 'none',
+//     },
+//   },
+// });
+
 
 const Pricing = () => {
+    // const classes=useStyles();
     return (
         <div className=''>
             <div className='container'>
@@ -79,6 +97,86 @@ const Pricing = () => {
                                 <div className="mt-2 d-flex text-muted justify-content-around">
                                     <CancelIcon /> <h6>Max Limits Upgrade</h6><InfoIcon />
                                 </div>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                            <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
+                                            <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
+                                            <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
+                                            <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
+                                            <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
+                                            <div className='text-muted'> <CheckCircleIcon />  Kitchen Refrigerator w/ Ice Maker & Dispenser </div>
+                                            <div className='text-muted'> <CheckCircleIcon />  Clothes Washer </div>
+                                            <div className='text-muted'> <CheckCircleIcon />  Clothes Dryer </div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div><CheckCircleIcon color='primary' /> Air Conditioning </div>
+                                            <div><CheckCircleIcon color='primary' /> Heating System / Heat Pump</div>
+                                            <div><CheckCircleIcon color='primary' /> Ductwork</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Plumbing</div>
+                                            <div><CheckCircleIcon color='primary' /> Plumbing Stoppages</div>
+                                            <div><CheckCircleIcon color='primary' /> Water Heater</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Electrical</div>
+                                            <div><CheckCircleIcon color='primary' /> Ceiling Fans</div>
+                                            <div><CheckCircleIcon color='primary' /> Central Vacuum</div>
+                                            <div><CheckCircleIcon color='primary' /> Garage Door Openers</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div className='text-muted'><CancelIcon /> Gas Fireplaces & Outdoor Gas Fire Pots/Pits</div>
+                                            <div className='text-muted'><CancelIcon /> Landscape Lighting</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                           <div className='text-muted'><CancelIcon /> Smart Home Devices</div>
+                                           <div className='text-muted'><CancelIcon /> Warming & Cooling Drawers</div>
+                                           <div className='text-muted'><CancelIcon /> Enhanced Plumbing Upgrade</div>
+                                           <div className='text-muted'><CancelIcon /> It's Covered upgrade</div>
+                                           <div className='text-muted'><CancelIcon /> Washer & Dryer</div>
+                                           <div className='text-muted'><CancelIcon /> Kitchen Refrigerator w/ Ice Maker & Dispenser</div>
+                                           <div className='text-muted'><CancelIcon /> Water Softener and Reverse Osmosis</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
                                 <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
@@ -102,6 +200,86 @@ const Pricing = () => {
                                 <div className="mt-2 d-flex text-secondary justify-content-around">
                                     <CancelIcon /> <h6>Max Limits Upgrade</h6><InfoIcon />
                                 </div>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                            <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
+                                            <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
+                                            <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
+                                            <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
+                                            <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
+                                            <div> <CheckCircleIcon color='primary' />  Kitchen Refrigerator w/ Ice Maker & Dispenser </div>
+                                            <div> <CheckCircleIcon color='primary' />  Clothes Washer </div>
+                                            <div> <CheckCircleIcon color='primary' />  Clothes Dryer </div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div><CheckCircleIcon color='primary' /> Air Conditioning </div>
+                                            <div><CheckCircleIcon color='primary' /> Heating System / Heat Pump</div>
+                                            <div><CheckCircleIcon color='primary' /> Ductwork</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Plumbing</div>
+                                            <div><CheckCircleIcon color='primary' /> Plumbing Stoppages</div>
+                                            <div><CheckCircleIcon color='primary' /> Water Heater</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Electrical</div>
+                                            <div><CheckCircleIcon color='primary' /> Ceiling Fans</div>
+                                            <div><CheckCircleIcon color='primary' /> Central Vacuum</div>
+                                            <div><CheckCircleIcon color='primary' /> Garage Door Openers</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div className='text-secondary'><CancelIcon /> Gas Fireplaces & Outdoor Gas Fire Pots/Pits</div>
+                                            <div className='text-secondary'><CancelIcon /> Landscape Lighting</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                           <div className='text-secondary'><CancelIcon /> Smart Home Devices</div>
+                                           <div className='text-secondary'><CancelIcon /> Warming & Cooling Drawers </div>
+                                           <div className='text-secondary'><CancelIcon /> Enhanced Plumbing Upgrade</div>
+                                           <div><CheckCircleIcon color='primary' /> It's Covered upgrade</div>
+                                          <div><CheckCircleIcon color='primary' />  Washer & Dryer</div>
+                                           <div><CheckCircleIcon color='primary' /> Kitchen Refrigerator w/ Ice Maker & Dispenser</div>
+                                           <div className='text-secondary'><CancelIcon /> Water Softener and Reverse Osmosis </div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
                                 <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
@@ -124,6 +302,87 @@ const Pricing = () => {
                                 <div className="mt-2 d-flex justify-content-around">
                                     <CheckCircleIcon color='primary' /> <h6>Max Limits Upgrade</h6><InfoIcon />
                                 </div>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                            <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
+                                            <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
+                                            <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
+                                            <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
+                                            <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
+                                            <div> <CheckCircleIcon color='primary' />  Kitchen Refrigerator w/ Ice Maker & Dispenser </div>
+                                            <div> <CheckCircleIcon color='primary' />  Clothes Washer </div>
+                                            <div> <CheckCircleIcon color='primary' />  Clothes Dryer </div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }} >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div><CheckCircleIcon color='primary' /> Air Conditioning </div>
+                                            <div><CheckCircleIcon color='primary' /> Heating System / Heat Pump</div>
+                                            <div><CheckCircleIcon color='primary' /> Ductwork</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Plumbing</div>
+                                            <div><CheckCircleIcon color='primary' /> Plumbing Stoppages</div>
+                                            <div><CheckCircleIcon color='primary' /> Water Heater</div>
+                                            <div><CheckCircleIcon color='primary' /> Interior Electrical</div>
+                                            <div><CheckCircleIcon color='primary' /> Ceiling Fans</div>
+                                            <div><CheckCircleIcon color='primary' /> Central Vacuum</div>
+                                            <div><CheckCircleIcon color='primary' /> Garage Door Openers</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            <div><CheckCircleIcon color='primary' /> Gas Fireplaces & Outdoor Gas Fire Pots/Pits</div>
+                                            <div><CheckCircleIcon color='primary' /> Landscape Lighting</div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                           <div><CheckCircleIcon color='primary' /> Smart Home Devices</div>
+                                           <div><CheckCircleIcon color='primary' /> Warming & Cooling Drawers</div>
+                                           <div><CheckCircleIcon color='primary' /> Enhanced Plumbing Upgrade</div>
+                                           <div><CheckCircleIcon color='primary' /> It's Covered upgrade</div>
+                                           <div><CheckCircleIcon color='primary' /> Washer & Dryer</div>
+                                           <div><CheckCircleIcon color='primary' /> Kitchen Refrigerator w/ Ice Maker & Dispenser</div>
+                                           <div><CheckCircleIcon color='primary' /> Water Softener and Reverse Osmosis </div>
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
                                 <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
                                 <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
@@ -247,49 +506,49 @@ const Pricing = () => {
                 <h2 className='text-center fw-bold'>What's Covered</h2>
                 <div className={`${style.scrollmenu}`}>
                     <div className={style.textDiv}>
-                <div className="row border mt-4">
-                    <div className="col-6 border p-4"><h5>Appliance</h5></div>
-                    <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
-                    <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Signature</h5></div>
-                    <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Lux</h5></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                <div className="row border">
-                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
-                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
-                </div>
-                </div>
+                        <div className="row border mt-4">
+                            <div className="col-6 border p-4"><h5>Appliance</h5></div>
+                            <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
+                            <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Signature</h5></div>
+                            <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Lux</h5></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                    </div>
                 </div>
                 <div className="row border mt-4">
                     <div className="col-6 border p-4"><h5>Systems</h5></div>
@@ -351,7 +610,7 @@ const Pricing = () => {
                     <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
                     <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
                 </div>
-                
+
                 <div className="row border mt-4">
                     <div className="col-6 border p-4"><h5>Additional Items</h5></div>
                     <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
@@ -375,7 +634,7 @@ const Pricing = () => {
                 </div>
             </div>
             <div className="container mt-5">
-                <div className="row pt-3 pb-3" style={{backgroundColor:"#F5DEB3"}}>
+                <div className="row pt-3 pb-3" style={{ backgroundColor: "#F5DEB3" }}>
                     <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                         <UpgradeIcon fontSize='large' />
                         <h2 className='py-2'>It's Covered Upgrade</h2>
@@ -384,7 +643,7 @@ const Pricing = () => {
                     <div className="col-6 col-md-4 col-lg-4">
                         <h6>Heating</h6>
                         <h6 className='pt-1'>Indoor Plumbing</h6>
-                        <h6 className='pt-5' style={{paddingTop:"2px"}}>Water Heater</h6>
+                        <h6 className='pt-5' style={{ paddingTop: "2px" }}>Water Heater</h6>
                         <h6 className='pt-3'>Enhanced Stoppage Coverage</h6>
                         <h6 className='pt-1'>Indoor Electrical</h6>
                         <h6 className='pt-4'>Range/Cooktop/Oven</h6>
@@ -399,23 +658,23 @@ const Pricing = () => {
                     <div className="col-6 col-md-4 col-lg-4">
                         <div>Registers and grills</div>
                         <div className='pt-1'>Faucets and shower-heads, pressure regulators, instant hot water dispensers, sewage ejectors, toilets of like quality, and costs to locate</div>
-                        <div style={{paddingTop:"3px"}}>
-Expansion tanks and problems caused by sediment</div>
+                        <div style={{ paddingTop: "3px" }}>
+                            Expansion tanks and problems caused by sediment</div>
                         <div className='pt-4'>
-Built-in lighting fixtures, smoke detectors, and doorbells</div>
+                            Built-in lighting fixtures, smoke detectors, and doorbells</div>
                         <div className='pt-2'>Rotisseries, racks, handles, knobs, dials, and interior</div>
-                        <div style={{paddingTop:"25px"}}>Racks, rollers, and baskets</div>
+                        <div style={{ paddingTop: "25px" }}>Racks, rollers, and baskets</div>
                         <div className='pt-2'>Door glass, interior linings, and shelves</div>
-                        <div style={{paddingTop:"10px"}}>Springs, hinges, and remote transmitters</div>
+                        <div style={{ paddingTop: "10px" }}>Springs, hinges, and remote transmitters</div>
                         <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
-                        <div style={{paddingTop:"100px"}}>To accomodate replacement equipment</div>
+                        <div style={{ paddingTop: "100px" }}>To accomodate replacement equipment</div>
                     </div>
                 </div>
             </div>
-          <Available />
+            <Available />
         </div>
     )
 }
