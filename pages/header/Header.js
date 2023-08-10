@@ -120,7 +120,7 @@ const Header = () => {
               onClick={() =>{setOpen(false); setOpen1(!open1); }}
               aria-controls="collapse-example1"
               aria-expanded={open1}
-              >WHAT IS L3BLEY</small>
+              >WHAT IS LYBLEY</small>
               </div>
               <div className='d-flex' >
               <Link className='text-decoration-none' href={"/login"}>

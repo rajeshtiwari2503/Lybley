@@ -141,6 +141,20 @@ body{
   transition: 0.5s;
 }
 
+.scrollable-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+   white-space: nowrap; /*Prevent line breaks between columns */
+}
+
+/* Media query for mobile devices */
+/* @media (max-width: 767px) { */
+  .scrollable-container1 {
+    display: inline-block; /* Maintain content as a single line */
+    white-space: nowrap; /* Prevent line breaks within content */
+    width: 100%; /* Occupy full width */
+  }
+/* } */
+
 .shadowCard{
   cursor: pointer;
   border-radius: 5%;

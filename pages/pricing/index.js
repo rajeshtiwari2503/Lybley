@@ -502,10 +502,10 @@ const Pricing = () => {
                 <button className='btn btn-primary rounded-pill mt-4'><small>GET STARTED</small></button>
             </div>
             <Faqs />
-            <div className="container mt-5" >
+            <div className="container d-md-block d-none mt-5" >
                 <h2 className='text-center fw-bold'>What's Covered</h2>
-                <div className={`${style.scrollmenu}`}>
-                    <div className={style.textDiv}>
+                <div className="">
+                    <div className="">
                         <div className="row border mt-4">
                             <div className="col-6 border p-4"><h5>Appliance</h5></div>
                             <div className="col-2 border p-4 text-center" style={{ backgroundColor: "#5396B9" }}><h5>Simple</h5></div>
@@ -631,6 +631,137 @@ const Pricing = () => {
                     <div className="col-2 border p-4 text-center"><div>See below</div></div>
                     <div className="col-2 border p-4 text-center"><div>See below</div></div>
                     <div className="col-2 border p-4 text-center"><div>Fill out the form</div></div>
+                </div>
+            </div>
+            <div className="container d-md-none d-block mt-5" >
+                <h2 className='text-center fw-bold'>What's Covered</h2>
+                <div className="" style={{fontSize:"10px"}}>
+                    <div className="">
+                        <div className="row border mt-4">
+                            <div className="col-6 border p-4"><div>Appliance</div></div>
+                            <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Simple</div></div>
+                            <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Signature</div></div>
+                            <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Lux</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                        <div className="row border">
+                            <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                            <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row border mt-4" style={{fontSize:"10px" ,fontWeight:"bold"}}>
+                    <div className="col-6 border p-4"><div>Systems</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Simple</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Signature</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Lux</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border"style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border"style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+                <div className="row border" style={{fontSize:"10px"}}>
+                    <div className="col-6 border p-4"><div>Dishwasher</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>3000 INR</div></div>
+                    <div className="col-2 border p-4 text-center" ><div>10000 INR</div></div>
+                </div>
+
+                <div className="row border mt-4" style={{fontSize:"10px" ,fontWeight:"bold"}}>
+                    <div className="col-6 border p-4"><div>Additional Items</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Simple</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Signature</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Lux</div></div>
+                </div>
+                <h2 className='text-center mt-5 fw-bold'>Optional Coverage</h2>
+                <div className="row border mt-4" style={{fontSize:"10px" ,fontWeight:"bold"}}>
+                    <div className="col-3 border p-4"><div>Optional Coverage</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Simple</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Signature</div></div>
+                    <div className="col-2 border pt-4 text-center" style={{ backgroundColor: "#5396B9" }}><div>Lux</div></div>
+                    <div className="col-3 border pt-4 text-center"><div>Price</div></div>
+                </div>
+                <div className="row border"style={{fontSize:"10px"}}>
+                    <div className="col-3 border p-4"><div>It's Covered upgrade</div></div>
+                    <div className="col-2 border p-4 text-center"><div>See below</div></div>
+                    <div className="col-2 border p-4 text-center"><div>See below</div></div>
+                    <div className="col-2 border p-4 text-center"><div>See below</div></div>
+                    <div className="col-3 border p-4 text-center"><div>Fill out the form</div></div>
                 </div>
             </div>
             <div className="container mt-5">
