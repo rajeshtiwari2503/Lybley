@@ -10,7 +10,7 @@ import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import Faqs from '../faqs';
 import Available from '../available';
-import style from "./price.module.css";
+// import style from "./price.module.css";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -32,7 +32,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const Pricing = () => {
     // const classes=useStyles();
     return (
-        <div className=''>
+        <>
+        <div  >
             <div className='container'>
                 <div className='row pt-5'>
                     <div className='col-12 col-md-3  col-lg-3'></div>
@@ -81,21 +82,21 @@ const Pricing = () => {
                     <div className="col-12 col-md-8 col-lg-8">
                         <div className="row">
 
-                            <div className="col-12 col-md-4 col-lg-4 shadow bg-white rounded-4">
+                            <div className="col-12 col-md-4 col-lg-4 mt-5 shadow bg-white rounded-4">
                                 <h5 className='text-center mt-2'>Simple</h5>
                                 <div className='text-center'>our plan for protecting vital home systems</div>
                                 <div className="p-3">
                                     <div className='rounded mt-3 bg-light rounded-5 pt-3'>
-                                        <h6 className='text-center'> Want to see your price?</h6>
+                                        <h5 className='text-center'> Want to see your price?</h5>
                                         <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                         <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                     </div>
                                 </div>
                                 <div className=" mt-3 d-flex text-muted justify-content-around">
-                                    <CancelIcon /> <h6>It's Covered upgrade</h6><InfoIcon />
+                                    <CancelIcon /> <div>It's Covered upgrade</div><InfoIcon />
                                 </div>
-                                <div className="mt-2 d-flex text-muted justify-content-around">
-                                    <CancelIcon /> <h6>Max Limits Upgrade</h6><InfoIcon />
+                                <div className="mt-2 d-flex text-muted pb-3 justify-content-around">
+                                    <CancelIcon /> <div>Max Limits Upgrade</div><InfoIcon />
                                 </div>
                                 <Accordion style={{ border: "0px", boxShadow: "none" }}>
                                     <AccordionSummary
@@ -103,7 +104,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -125,7 +126,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Systems</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -148,7 +149,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Outdoor</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -163,7 +164,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -177,28 +178,29 @@ const Pricing = () => {
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
-                                <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
+                                <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                                 <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
-                                <div className="p-3"> <div className='bg-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                                <div className='text-center'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                                <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            
+                                <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                             </div>
                             <div className="col-12 col-md-4 text-white col-lg-4 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
-                                <div className="px-4"><h6 className='fw-bold text-center bg-warning p-2 text-dark rounded-bottom '>MOST POPULER</h6></div>
+                                <div className="px-4"><h5 className='fw-bold text-center bg-warning p-2 text-dark rounded-bottom '>MOST POPULER</h5></div>
                                 <h5 className='text-center mt-2'>Signature</h5>
                                 <div className='text-center'>Just the right coverage for extra busy homes</div>
                                 <div className="p-3">
-                                    <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
-                                        <h6 className='text-center'> Want to see your price?</h6>
+                                    <div className='rounded mt-3 bg-secondary rounded-5 pt-4'>
+                                        <h5 className='text-center'> Want to see your price?</h5>
                                         <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                         <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                     </div>
                                 </div>
                                 <div className=" mt-3 d-flex justify-content-around">
-                                    <CheckCircleIcon color='primary' /> <h6>It's Covered upgrade</h6><InfoIcon />
+                                    <CheckCircleIcon color='primary' /> <div>It's Covered upgrade</div><InfoIcon />
                                 </div>
-                                <div className="mt-2 d-flex text-secondary justify-content-around">
-                                    <CancelIcon /> <h6>Max Limits Upgrade</h6><InfoIcon />
+                                <div className="mt-2 d-flex text-secondary pb-3 justify-content-around">
+                                    <CancelIcon /> <div>Max Limits Upgrade</div><InfoIcon />
                                 </div>
                                 <Accordion style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
                                     <AccordionSummary
@@ -206,7 +208,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -228,7 +230,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Systems</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -251,7 +253,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Outdoor</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -266,7 +268,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -280,27 +282,27 @@ const Pricing = () => {
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
-                                <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
-                                <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                                <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                                <div className='ps-2 '><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
-                                <div className="p-3"> <div className='bg-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                                <div className='text-center'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                                <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                                <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                             </div>
-                            <div className="col-12 col-md-4 col-lg-4 mt-3 mt-md-0 mt-lg-0 shadow bg-white rounded-4">
+                            <div className="col-12 col-md-4 col-lg-4 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
                                 <h5 className='text-center mt-2'>Lux</h5>
                                 <div className='text-center'>Maximum coverage for major peace of mind</div>
                                 <div className="p-3">
                                     <div className='rounded mt-3 bg-light rounded-5 pt-3'>
-                                        <h6 className='text-center'> Want to see your price?</h6>
+                                        <h5 className='text-center'> Want to see your price?</h5>
                                         <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                         <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                     </div>
                                 </div>
                                 <div className=" mt-3 d-flex justify-content-around">
-                                    <CheckCircleIcon color='primary' /> <h6>It's Covered upgrade</h6><InfoIcon />
+                                    <CheckCircleIcon color='primary' /> <div>It's Covered upgrade</div><InfoIcon />
                                 </div>
-                                <div className="mt-2 d-flex justify-content-around">
-                                    <CheckCircleIcon color='primary' /> <h6>Max Limits Upgrade</h6><InfoIcon />
+                                <div className="mt-2 d-flex pb-3 justify-content-around">
+                                    <CheckCircleIcon color='primary' /> <div>Max Limits Upgrade</div><InfoIcon />
                                 </div>
                                 <Accordion style={{ border: "0px", boxShadow: "none" }}>
                                     <AccordionSummary
@@ -308,7 +310,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Appliances</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -330,7 +332,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Systems</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Systems</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -354,7 +356,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Outdoor</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Outdoor</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -369,7 +371,7 @@ const Pricing = () => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        <Typography><h6 className='fw-bold'>Plus</h6></Typography>
+                                        <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <Typography>
@@ -383,14 +385,15 @@ const Pricing = () => {
                                         </Typography>
                                     </AccordionDetails>
                                 </Accordion>
-                                <h6 className='fw-bold ps-2 mt-2'>Optional Coverage</h6>
+                                <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                                 <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                                 <hr />
-                                <div className="p-3"> <div className='bg-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                                <div className='text-center'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                                <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+            
+                                <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                             </div>
-                            <div className='shadow mt-4 rounded-4 text-center p-3'><h6>A $95 copay applies to covered services and is payable at the time a service appointment is scheduled.</h6></div>
-                            <div className='shadow mt-3 rounded-4 text-center p-3'><h6>Real Estate Agent?  <a href="" className='text-decoration-none'>Click here</a></h6></div>
+                            <div className='shadow mt-4 rounded-4 text-center p-3'><h5>A $95 copay applies to covered services and is payable at the time a service appointment is scheduled.</h5></div>
+                            <div className='shadow mt-3 rounded-4 text-center p-3'><h5>Real Estate Agent?  <a href="" className='text-decoration-none'>Click here</a></h5></div>
 
                         </div>
                     </div>
@@ -835,6 +838,7 @@ To accomodate replacement equipment</div>
             </div>
             <Available />
         </div>
+        </>
     )
 }
 
