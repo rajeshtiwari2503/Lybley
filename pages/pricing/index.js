@@ -769,43 +769,71 @@ const Pricing = () => {
             </div>
             <div className="container mt-5">
                 <div className="row pt-3 pb-3" style={{ backgroundColor: "#F5DEB3" }}>
-                    <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
+                    <div className="col-12 col-md-5 d-flex flex-column justify-content-center align-items-center col-lg-5">
                         <UpgradeIcon fontSize='large' />
                         <h2 className='py-2'>It's Covered Upgrade</h2>
-                        <div>Rest easy knowing that every part needed for your repair is handled with the It's Covered upgrade.</div>
+                        <div className='text-center'>Rest easy knowing that every part needed for your repair is handled with the It's Covered upgrade.</div>
                     </div>
-                    <div className="col-6 col-md-4 col-lg-4">
-                        <h5>Heating</h5>
-                        <h5 className='pt-1'>Indoor Plumbing</h5>
-                        <h5 className='pt-5' style={{ paddingTop: "2px" }}>Water Heater</h5>
-                        <h5 className='pt-3'>Enhanced Stoppage Coverage</h5>
-                        <h5 className='pt-1'>Indoor Electrical</h5>
-                        <h5 className='pt-4'>Range/Cooktop/Oven</h5>
-                        <h5 className='pt-5'>Lining Dishwasher</h5>
-                        <h5 className='pt-1'>Microwave Oven</h5>
-                        <h5 className='pt-1'>Garage Door</h5>
-                        <h5 className='pt-1'>Permits & Code Upgrades</h5>
-                        <h5 className='pt-1'>Refrigerant Recapture & disposal</h5>
-                        <h5 className='pt-1'>Equipment Disposal</h5>
-                        <h5 className='pt-1'>Structural Modification</h5>
-                    </div>
-                    <div className="col-6 col-md-4 col-lg-4">
-                        <div>Registers and grills</div>
-                        <div className='pt-1'>Faucets and shower-heads, pressure regulators, instant hot water dispensers, sewage ejectors, toilets of like quality, and costs to locate</div>
-                        <div style={{ paddingTop: "3px" }}>
-                            Expansion tanks and problems caused by sediment</div>
-                        <div className='pt-4'>
-                            Built-in lighting fixtures, smoke detectors, and doorbells</div>
-                        <div className='pt-2'>Rotisseries, racks, handles, knobs, dials, and interior</div>
-                        <div style={{ paddingTop: "25px" }}>Racks, rollers, and baskets</div>
-                        <div className='pt-2'>Door glass, interior linings, and shelves</div>
-                        <div style={{ paddingTop: "10px" }}>Springs, hinges, and remote transmitters</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div style={{ paddingTop: "100px" }}>To accomodate replacement equipment</div>
-                    </div>
+                    <div className="col-12 mt-md-0 mt-lg-0 mt-4 col-md-7 col-lg-7">
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Heating</h6>
+                        <div className="col-6">Registers and grills</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Indoor Plumbing</h6>
+                        <div className="col-6">Faucets and shower-heads, pressure regulators, instant hot water dispensers, sewage ejectors, toilets of like quality, and costs to locate</div>
+                     </div>
+                    
+                    <div className="row">
+                        <h6 className="col-6 fw-bold">Water Heater</h6>
+                        <div className="col-6">Expansion tanks and problems caused by sediment</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Enhanced Stoppage Coverage</h6>
+                        <div className="col-6"></div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Indoor Electrical</h6>
+                        <div className="col-6">Built-in lighting fixtures, smoke detectors, and doorbells</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Range/Cooktop/Oven</h6>
+                        <div className="col-6">Rotisseries, racks, handles, knobs, dials, and interior</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Lining Dishwasher</h6>
+                        <div className="col-6">
+Racks, rollers, and baskets</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Microwave Oven</h6>
+                        <div className="col-6">
+Door glass, interior linings, and shelves</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Garage Door</h6>
+                        <div className="col-6">
+Springs, hinges, and remote transmitters</div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Permits & Code Upgrades</h6>
+                        <div className="col-6"></div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Refrigerant Recapture & disposal
+</h6>
+                        <div className="col-6"></div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Equipment Disposal</h6>
+                        <div className="col-6"></div>
+                     </div>
+                     <div className="row">
+                        <h6 className="col-6 fw-bold">Structural Modification</h6>
+                        <div className="col-6">
+To accomodate replacement equipment</div>
+                     </div>
+                </div>
                 </div>
             </div>
             <Available />
