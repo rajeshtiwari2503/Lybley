@@ -25,15 +25,15 @@ function MyVerticallyCenteredModal(props) {
           </div>
         <div className='text-center  '>
           
-          <div className='fw-bold fs-3' >
-          Contact Help Center
+          <div className='fw-bold   fs-3' >
+         <span className='fw-bold bg-primary text-white p-2 rounded '>Contact Help Center</span> 
           </div>
           <Modal.Body   >
             <div className='row '>
                 <div className='col-12 col-md-4 col-lg-4'>
                     <div>
                         <div className='mt-3 mb-5'>
-                            <PersonAddIcon style={{fontSize:"40px"}} />
+                            <PersonAddIcon color='primary' style={{fontSize:"40px"}} />
                         </div>
                         <div className='mt-3 mb-3'>
                             <div className='fw-bold fs-5 ms-5 me-5'>Sign up with Lubley</div>
@@ -49,7 +49,7 @@ function MyVerticallyCenteredModal(props) {
                 <div className='col-12 col-md-4 col-lg-4'>
                     <div>
                         <div  className='mt-3 mb-5'>
-                            <CallIcon style={{fontSize:"40px"}} />
+                            <CallIcon color='primary' style={{fontSize:"40px"}} />
                         </div>
                         <div className='mt-3 mb-3'>
                             <div className='fw-bold fs-5'>Any questions about your plan?</div>
@@ -65,7 +65,7 @@ function MyVerticallyCenteredModal(props) {
                 <div className='col-12 col-md-4 col-lg-4'>
                     <div>
                         <div  className='mt-3 mb-5'>
-                            <ManageAccountsIcon style={{fontSize:"40px"}} />
+                            <ManageAccountsIcon color='primary'style={{fontSize:"40px"}} />
                         </div>
                         <div className='mt-3 mb-3'>
                             <div className='fw-bold fs-5 ms-5 me-5'>Request service</div>
