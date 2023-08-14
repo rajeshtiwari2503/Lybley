@@ -43,7 +43,7 @@ const Sidebar = () => {
                 <div id="navbar-wrapper">
                     <nav className="navbar navbar-inverse">
                         <div className="container-fluid">
-                            <div style={{ height: "55px",backgroundColor:"black" }} className='w-100 align-items-center ps-3 pe-3 d-flex justify-content-between'>
+                            <div style={{ height: "55px",backgroundColor:"#7177ed" }} className='w-100 align-items-center ps-3 pe-3 d-flex justify-content-between'>
                                 <div>
                                     <button className="border border-2 rounded-2" type="button" onClick={handleSideBar}
                                     >
