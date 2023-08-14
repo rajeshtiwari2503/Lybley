@@ -275,7 +275,7 @@ body {
   margin-left: -250px;
   overflow-y: auto;
   overflow-x: hidden;
-  background: black;
+  background: #7177ed;
   transition: all 0.5s ease;
 }
   /* 
@@ -389,7 +389,8 @@ body {
   color: #757575;
 }
 #navbar-wrapper .navbar .anchor:hover {
-  color: #F8BE12;
+  /* color: #F8BE12; */
+  color: black;
 }
 
 #content-wrapper {

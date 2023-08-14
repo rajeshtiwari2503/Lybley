@@ -35,12 +35,12 @@ const CRMHeader = () => {
   return (
     <div>
       <div className="d-flex align-items-center">
-        <div className="px-2 ">
+        {/* <div className="px-2 ">
       <InfoIcon fontSize='large' style={{cursor:"pointer",color:"white"}} />
       </div>
       <div className="px-2">
       <NotificationsIcon fontSize='large' style={{cursor:"pointer",color:"white"}} />
-      </div>
+      </div> */}
       <div className="px-2 d-flex">
      {user &&  <div className='text-white me-2 '>{user.name}</div>}
       <AccountCircleIcon fontSize='large' style={{cursor:"pointer",color:"white"}} onClick={handleClick} />

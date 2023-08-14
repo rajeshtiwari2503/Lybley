@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <div>
       <h2 className='text-center mt-2'>Dashboard</h2>
-      <h4 className='mt-5'>Complaint as per status</h4>
+      {/* <h4 className='mt-5'>Complaint as per status</h4>
       <div className="row mt-2">
         <div className="col-6 fw-bold text-center col-md-2 col-lg-2">
           <div className="card py-4 shadow " style={{backgroundColor:"#E6E6FA"}}> 0 Pen / 90</div>
@@ -173,7 +173,7 @@ const Dashboard = () => {
         <div className="col-6 fw-bold text-center col-md-2 col-lg-2">
         <div className="card py-4 shadow" style={{backgroundColor:"#E6E6FA"}}> calls TAT</div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
