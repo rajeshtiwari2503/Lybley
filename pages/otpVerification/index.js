@@ -15,13 +15,13 @@ const OtpVerification = () => {
 
                     </div>
 
-                    <div className='col-12 col-md-4 col-lg-4 shadow rounded '>
+                    <div className='col-12 col-md-4 col-lg-4 shadow rounded ' style={{ backgroundColor: "#caaef3" }}>
 
                         <Box
                             sx={{
                                 my: 8,
                                 px: 4,
-                                background: "white",
+                                // background: "white",
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
