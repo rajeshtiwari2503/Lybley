@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../common/Sidebar';
 import { useRouter } from 'next/router';
 import Header from '@/pages/header/Header';
@@ -7,7 +7,14 @@ import Footer from '@/pages/footer/Footer';
 const AdminLayout = ({ children }) => {
   const router = useRouter();
   const showSidebar = router.pathname.startsWith('/admin');
+  const [user,setUser]=useState("");
 
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //       const user=localStorage.getItem("user");
+  //       setUser(user);
+  //   }
+  // },[]);
   return (
     <div>
       {showSidebar && <Sidebar />} {/* Render the sidebar if showSidebar is true */}
@@ -23,8 +30,8 @@ const AdminLayout = ({ children }) => {
         </div>
         :
         <div>
-          <Header />
-          {children} {/* Render the content of the specific page */}
+         <Header />
+         {children}
           <Footer />
         </div>}
     </div>

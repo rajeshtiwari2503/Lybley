@@ -1,33 +1,110 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import style from "../footer/footer.module.css"
 import SearchIcon from '@mui/icons-material/Search';
-import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { TextField } from '@mui/material';
+import HouseIcon from '@mui/icons-material/House';
+import httpCommon from '@/http-common';
+import axios from 'axios';
+import { Router, useRouter } from 'next/router';
 
+function MyVerticallyCenteredModal(props) {
+
+
+
+  return (
+    <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <div className='text-center pt-3 rounded' style={{ backgroundColor: "aliceblue" }}>
+        <HouseIcon style={{ fontSize: "100px" }} />
+        <Modal.Body className='p-4'>
+          <div className='fw-bold fs-4'>Lybley is not available in your area (10011) yet</div>
+          <div className='mt-4'>Please share your contact information and you will be notified when Super is available in your area.</div>
+          <div className='mt-4'> <button className='btn btn-primary rounded-pill me-3'><small>GET NOTIFIED</small></button><button className='btn btn-secondary rounded-pill' onClick={() => props.setModalShow(false)}><small>CLOSE</small></button></div>
+
+        </Modal.Body>
+      </div >
+    </Modal >
+  );
+}
 const Search = () => {
 
   const [search, setSearch] = useState("");
+  const [unit, setUnit] = useState("");
+  const [modalShow, setModalShow] = useState(false);
+  const [showUnit,setShowUnit]=useState(false);
+  const [city, setCity] = useState([])
+  const router=useRouter();
+  // const getAllCity=async()=>{
+  //      try{
+  //       let response=await axios.get("https://backstage.taboola.com/backstage/api/1.0/resources/countries/us/cities");
+  //       let {data}=response;
+  //       setCity(data);
+  //      }catch(err){
+  //       console.log(err);
+  //      }
+  // }
+
+  // useEffect(()=>{
+  //     getAllCity();
+  // },[]);
+
+  const handlePrice=()=>{
+    if(search.toUpperCase() === "NOIDA" && unit){
+      router.push("/pricing");
+    }
+  }
+
+  const handleEnter=(e)=>{
+    if(e.key==="Enter"){
+      handleSearch();
+    }
+  }
+
+  const handleSearch = (e) => {
+    if (search.toUpperCase() !== "NOIDA") {
+      setModalShow(true);
+      setShowUnit(false);
+    } else {
+      setShowUnit(true);
+    }
+  }
 
   return (
     <>
 
       <div className={`${style.searchBody} `}>
 
-        <div className=''>
-          <div className={`${search ? style.searchBoxClick : style.searchBox} shadow`}>
-            <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="Search..." />
+        <div className='container'>
+          <div className="d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0">
+            
+            <div className={`${style.searchBox} shadow col-12 col-md-9 col-lg-9 text-center`}>
+              <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="City" onKeyPress={handleEnter} />
 
-            <SearchIcon className='me-2' fontSize='medium' />
+              <SearchIcon className='me-2' fontSize='medium' onClick={handleSearch} />
 
+            </div>
+            {showUnit ? <div className={`${style.unitBox} shadow mx-2 col-12 col-md-1 col-lg-1`}>
+              <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)} value={unit} type="number" placeholder="Unit" />
+            </div> : " " }
+            <div className={`${!showUnit ? "ms-2" : ""} col-12 col-md-2 col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
+              <button className='btn btn-primary rounded-pill p-3' onClick={handlePrice}>GET QUOTE</button>
+            </div>
           </div>
-          {search ? <div className={`${style.categoryList} shadow`}>
+          {/* {search ? <div className={`${style.categoryList} shadow`}>
             <div className='ps-2' > Fan</div>
             <div className='ps-2' > Cooler</div>
             <div className='ps-2' > Mixer</div>
             <div className='ps-2' > Search Results</div>
           </div>
             : ""
-          }
+          } */}
         </div>
       </div>
       <div >
@@ -57,8 +134,13 @@ const Search = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel> */}
-        <img className={`card-img-top ${style.bannerHome}`}   src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
+        <img className={`card-img-top ${style.bannerHome}`} src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
       </div>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        // onHide={() => setModalShow(false)}
+        setModalShow={setModalShow}
+      />
     </>
   )
 }

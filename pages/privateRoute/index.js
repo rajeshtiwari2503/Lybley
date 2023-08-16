@@ -11,16 +11,18 @@ const [user,setUser]=useState("")
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        const user=localStorage.getItem("user1");
-        // setUser(user);
-        // if (user!=="ABC") {
-        //     router.push('/sign-in'); // Redirect to the login page if the user is not authenticated.
-        //     localStorage.removeItem("user1");
-        //   }
+        const user=localStorage.getItem("user");
+        setUser(user);
+        if (!user) {
+            router.push('/login'); // Redirect to the login page if the user is not authenticated.
+            localStorage.removeItem("user");
+          }
       }
   }, [router]);
 
-    return <>{children}</>;
+    return (<>
+    {children}
+    </>);
 
    // Render the children (e.g., the "/checkout" page) if the user is authenticated.
 };
