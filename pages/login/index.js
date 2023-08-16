@@ -45,20 +45,21 @@ const Login = () => {
                                 component="form"
                                 noValidate
                                 // onSubmit={handleSubmit}
-                                sx={{ mt: 1 }}
+                                sx={{ mt: 3 }}
                             >
                                 <TextField
                                     margin="normal"
                                     required
                                     fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
+                                    id="mobileNo"
+                                    label="Mobile Number"
+                                    name="mobileNo"
+                                    type='number'
+                                    autoComplete="mobileNo"
                                     autoFocus
                                     // onChange={handleChange}
                                 />
-                                <TextField
+                                {/* <TextField
                                     margin="normal"
                                     required
                                     fullWidth
@@ -69,7 +70,7 @@ const Login = () => {
                                     autoComplete="current-password"
                                     // onChange={handleChange}
                                     // onKeyPress={handleEnter}
-                                />
+                                /> */}
                                 {/* <FormControlLabel   
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"

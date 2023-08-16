@@ -37,7 +37,17 @@ const Sidebar = () => {
                              Dashboard
                                </Link>
                         </li>
+                        <li className={currentPath.startsWith("/admin/user") ? "active" : ""}>
+                       
+                       <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                               <DashboardIcon />
+                            User
+                              </Link>
+                       </li>
+             
                     </ul>
+               
+                     
                 </aside>
 
                 <div id="navbar-wrapper">
