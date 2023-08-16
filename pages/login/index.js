@@ -13,52 +13,54 @@ import Link from 'next/link';
 const Login = () => {
     return (
         <>
-            <div className="text-center container">
-                 
+            <div className="text-center container" >
+
                 <div className='row py-5 m-2'>
                     <div className='col-12 col-md-4 col-lg-4 '>
 
                     </div>
-                    
-                    <div  className='col-12 col-md-4 col-lg-4 shadow rounded '>
-                    
+
+                    <div className='col-12 col-md-4 col-lg-4 shadow rounded ' style={{ backgroundColor: "#caaef3" }}>
+
                         <Box
                             sx={{
                                 my: 8,
                                 px: 4,
-                               background:"white",
+                                //    background:"white",
+                                
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
-                                justifyContent:"center"
+                                justifyContent: "center"
                             }}
-                           
+
                         >
-                            <div  className='mt-3 mb-3'>
-                            <Typography  component="h1" variant="h5">
-                                Sign in
-                            </Typography>
-                            {/* <Typography color="red" component="h4" variant="h6">
+                            <div className='mt-3 mb-3'>
+                                <Typography component="h1" variant="h5">
+                                    Sign in
+                                </Typography>
+                                {/* <Typography color="red" component="h4" variant="h6">
                                 {error?.length > 0 ? error : ""}
                             </Typography> */}
-                            <Box
-                                component="form"
-                                noValidate
-                                // onSubmit={handleSubmit}
-                                sx={{ mt: 1 }}
-                            >
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
-                                    autoFocus
+                                <Box
+                                    component="form"
+                                    noValidate
+                                    // onSubmit={handleSubmit}
+                                    sx={{ mt: 3 }}
+                                >
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        id="mobileNo"
+                                        label="Mobile Number"
+                                        name="mobileNo"
+                                        type='number'
+                                        autoComplete="mobileNo"
+                                        autoFocus
                                     // onChange={handleChange}
-                                />
-                                <TextField
+                                    />
+                                    {/* <TextField
                                     margin="normal"
                                     required
                                     fullWidth
@@ -69,36 +71,36 @@ const Login = () => {
                                     autoComplete="current-password"
                                     // onChange={handleChange}
                                     // onKeyPress={handleEnter}
-                                />
-                                {/* <FormControlLabel   
+                                /> */}
+                                    {/* <FormControlLabel   
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
                                 /> */}
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}
-                                >
-                                    Sign In
-                                </Button>
-                                <Grid justifyContent={"center"} container>
-                                    <Grid item xs>
-                                        <Link href="#" variant="body2">
-                                            Forgot password?
-                                        </Link>
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        sx={{ mt: 3, mb: 2 }}
+                                    >
+                                        Sign In
+                                    </Button>
+                                    <Grid justifyContent={"center"} container>
+                                        <Grid item xs>
+                                            <Link href="#" variant="body2">
+                                                Forgot password?
+                                            </Link>
+                                        </Grid>
+                                        <Grid item>
+                                            <Link href="/sign-up" variant="body2">
+                                                {"Don't have an account? Sign Up"}
+                                            </Link>
+                                        </Grid>
                                     </Grid>
-                                    <Grid  item>
-                                        <Link href="/sign-up"  variant="body2">
-                                            {"Don't have an account? Sign Up"}
-                                        </Link>
-                                    </Grid>
-                                </Grid>
-                                
-                            </Box>
+
+                                </Box>
                             </div>
                         </Box>
-                        
+
                     </div>
                     <div className='col-12 col-md-4 col-lg-4  '>
 
