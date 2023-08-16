@@ -17,6 +17,6 @@ const Admin = () => {
 export default () => (
   <PrivateRoute>
         <Admin />
-        </PrivateRoute>
+    </PrivateRoute>
     
   );
