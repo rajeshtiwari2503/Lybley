@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -10,7 +10,26 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Link from 'next/link';
+import httpCommon from '@/http-common';
+import { useRouter } from 'next/router';
 const Login = () => {
+    const router = useRouter();
+    const [login, setLogin] = useState("")
+    const [error, setError] = useState("")
+    const handleLogin = async () => {
+        let logData = { contact: +login }
+        
+        try {
+            let response = await httpCommon.post("/login", logData)
+            let { data } = response;
+            if (data?.status === true) {
+                router.push("/otpVerification")
+            }
+        }
+        catch (err) {
+            setError(err?.response?.data?.msg)
+        }
+    }
     return (
         <>
             <div className="text-center container" >
@@ -27,7 +46,7 @@ const Login = () => {
                                 my: 8,
                                 px: 4,
                                 //    background:"white",
-                                
+
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
@@ -48,6 +67,7 @@ const Login = () => {
                                     // onSubmit={handleSubmit}
                                     sx={{ mt: 3 }}
                                 >
+                                    <div className='text-danger'>{error}</div>
                                     <TextField
                                         margin="normal"
                                         required
@@ -58,7 +78,7 @@ const Login = () => {
                                         type='number'
                                         autoComplete="mobileNo"
                                         autoFocus
-                                    // onChange={handleChange}
+                                        onChange={(e) => setLogin(e.currentTarget.value)}
                                     />
                                     {/* <TextField
                                     margin="normal"
@@ -77,10 +97,11 @@ const Login = () => {
                                     label="Remember me"
                                 /> */}
                                     <Button
-                                        type="submit"
+                                        type="button"
                                         fullWidth
                                         variant="contained"
                                         sx={{ mt: 3, mb: 2 }}
+                                        onClick={handleLogin}
                                     >
                                         Sign In
                                     </Button>
