@@ -28,7 +28,7 @@ const Plan = () => {
                         </div>
                          <div className="container">
                         <div className="row text-white mt-5  m-0">
-                           <div className="col-12 col-md-6  d-flex justify-content-end align-items-center col-lg-6">
+                           <div className="col-12 col-md-6 pe-1  d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                               <h6>Stovetop</h6>
                               
@@ -37,13 +37,13 @@ const Plan = () => {
                                 </small>
                             
                                 </div>
-                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
+                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" height="200px"  alt="..." />
                            </div>
-                           <div className="col-12 col-md-6 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
-                           <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
+                           <div className="col-12 col-md-6 mt-4 ps-1 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
+                           <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="200px" height="200px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                              <h6>Stovetop</h6>
+                              <h6>Refrigerator</h6>
                               
                               <small>Replacement cost: $2,500 <br/>
                                 Super cost: $65/month
@@ -53,22 +53,22 @@ const Plan = () => {
                            </div>
                         </div>
                         <div className="row   text-white py-4 m-0">
-                           <div className="col-12 col-md-6 d-flex justify-content-end align-items-center col-lg-6">
+                           <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                              <h6>Stovetop</h6>
+                              <h6>Air Cooler</h6>
                               
                               <small>Replacement cost: $2,500 <br/>
                                 Super cost: $65/month
                                 </small>
                             
                                 </div>
-                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
+                                <img src="https://m.media-amazon.com/images/I/51+085ENXjL._AC_UF894,1000_QL80_.jpg" width="200px" height="200px" alt="..." />
                            </div>
-                           <div className="col-12 col-md-6 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
-                           <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" alt="..." />
+                           <div className="col-12 col-md-6 ps-1 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
+                           <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="200px" height="200px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                              <h6>Stovetop</h6>
+                              <h6>Geyser</h6>
                               
                               <small>Replacement cost: $2,500 <br/>
                                 Super cost: $65/month
