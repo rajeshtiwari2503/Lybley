@@ -28,9 +28,11 @@ const Plan = () => {
                             <div className="col-12 col-md-6 col-lg-6"></div>
                         </div>
                          <div className="container">
-                        <div className="row text-white mt-3  m-0">
+                        <div className="row text-white mt-5  m-0">
                         <div className="col-12 d-flex justify-content-center">
-                            <div className={`${style.upArrow} text-center`}></div>
+                            <div className={`${style.upArrow} text-center`}>
+                                {/* <img className={`${style.upArrow} text-center`} src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png" width="100px" height="" alt="" /> */}
+                            </div>
                             </div>
                            <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -41,10 +43,10 @@ const Plan = () => {
                                 </small>
                             
                                 </div>
-                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" height="200px"  alt="..." />
+                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" height="180px"  alt="..." />
                            </div>
                            <div className="col-12 col-md-6 mt-4 ps-1 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
-                           <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="200px" height="200px" alt="..." />
+                           <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="200px" height="180px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                               <h6>Refrigerator</h6>
@@ -66,10 +68,10 @@ const Plan = () => {
                                 </small>
                             
                                 </div>
-                                <img src="https://m.media-amazon.com/images/I/51+085ENXjL._AC_UF894,1000_QL80_.jpg" width="200px" height="200px" alt="..." />
+                                <img src="https://m.media-amazon.com/images/I/51+085ENXjL._AC_UF894,1000_QL80_.jpg" width="200px" height="180px" alt="..." />
                            </div>
                            <div className="col-12 col-md-6 ps-1 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
-                           <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="200px" height="200px" alt="..." />
+                           <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="200px" height="180px" alt="..." />
 
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                               <h6>Geyser</h6>
@@ -82,7 +84,7 @@ const Plan = () => {
                            </div>
                         </div>
                         </div>
-                        <div className="text-end px-3">
+                        <div className="text-end px-3 mt-4 me-5">
                         <button className="btn btn-warning rounded-pill px-3">Learn More</button>
                     </div>
                     </div>
