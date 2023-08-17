@@ -28,9 +28,11 @@ const Plan = () => {
                             <div className="col-12 col-md-6 col-lg-6"></div>
                         </div>
                          <div className="container">
-                        <div className="row text-white mt-3  m-0">
+                        <div className="row text-white mt-5  m-0">
                         <div className="col-12 d-flex justify-content-center">
-                            <div className={`${style.upArrow} text-center`}></div>
+                            <div className={`${style.upArrow} text-center`}>
+                                {/* <img className={`${style.upArrow} text-center`} src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png" width="100px" height="" alt="" /> */}
+                            </div>
                             </div>
                            <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -82,7 +84,7 @@ const Plan = () => {
                            </div>
                         </div>
                         </div>
-                        <div className="text-end px-3">
+                        <div className="text-end px-3 mt-4 me-5">
                         <button className="btn btn-warning rounded-pill px-3">Learn More</button>
                     </div>
                     </div>
