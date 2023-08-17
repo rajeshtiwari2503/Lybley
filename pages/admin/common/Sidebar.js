@@ -10,6 +10,10 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import PersonIcon from '@mui/icons-material/Person';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import PeopleIcon from '@mui/icons-material/People';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import StoreIcon from '@mui/icons-material/Store';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 const Sidebar = () => {
     const router=useRouter();
@@ -30,6 +34,9 @@ const Sidebar = () => {
 
                     </div>
                     <ul className="sidebar-nav ">
+                 
+                       
+                       
                         <li className={currentPath.startsWith("/admin/dashboard") ? "active" : ""}>
                        
                         <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -37,14 +44,33 @@ const Sidebar = () => {
                              Dashboard
                                </Link>
                         </li>
+                        <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
+                        <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                               <StoreIcon />
+                            Plan
+                              </Link>
+                       </li>
                         <li className={currentPath.startsWith("/admin/user") ? "active" : ""}>
                        
-                       <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                               <DashboardIcon />
+                       <Link href="/admin/user" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                               <PeopleIcon />
                             User
                               </Link>
                        </li>
-             
+                       <li className={currentPath.startsWith("/admin/technician") ? "active" : ""}>
+                       
+                       <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                               <ConstructionIcon />
+                            Technician
+                              </Link>
+                       </li>
+                       <li className={currentPath.startsWith("/admin/technician1") ? "active" : ""}>
+                       
+                       <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                               <ShoppingBagIcon />
+                            Plan Subscribers
+                              </Link>
+                       </li>
                     </ul>
                
                      
