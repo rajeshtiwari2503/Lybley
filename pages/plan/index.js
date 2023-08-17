@@ -30,9 +30,9 @@ const Plan = () => {
                          <div className="container">
                         <div className="row text-white mt-3  m-0">
                         <div className="col-12 d-flex justify-content-center">
-                            <div className="upArrow text-center"></div>
+                            <div className={`${style.upArrow} text-center`}></div>
                             </div>
-                           <div className="col-12 col-md-6  d-flex justify-content-end align-items-center col-lg-6">
+                           <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                             <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                               <h6>Stovetop</h6>
                               

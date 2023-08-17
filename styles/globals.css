@@ -606,11 +606,3 @@ body {
   }
 }
  
-.upArrow {
-  width: 0;
-	height: 0;
-	border-left: 210px solid transparent;
-	border-right: 210px solid transparent;
-	border-bottom: 150px solid white;
-  margin-bottom: 10px;
-  }
