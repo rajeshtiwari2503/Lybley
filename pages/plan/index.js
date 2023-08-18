@@ -27,19 +27,32 @@ const Plan = () => {
 
                             <div className="col-12 col-md-6 col-lg-6"></div>
                         </div>
-                        <div className="container">
+                        <div className="container d-none d-md-block d-lg-block">
                             <div className="row text-white mt-5  m-0">
                                 <div className="col-12 d-flex justify-content-center">
                                     <div className={`${style.upArrow} text-center`}>
 
                                     </div>
                                 </div>
+                                           
                                 <div style={{marginTop:"-100px"}} className="col-12 d-flex justify-content-center" >
                                     <img   src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png" width="100px" height="" alt="" />
+                                
                                 </div>
+                                    <div style={{marginTop:"-100px" ,marginLeft:"300px"}}className="col-12 ">
+                                    <div className="d-flex justify-content-end align-items-center flex-column">
+                                        <h5>AC</h5>
+
+                                        <small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month
+                                        </small>
+
+                                    
+                                    </div>
+                                    </div>
                                 <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h6>Stovetop</h6>
+                                        <h5>Stovetop</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
@@ -52,7 +65,7 @@ const Plan = () => {
                                     <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="200px" height="180px" alt="..." />
 
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h6>Refrigerator</h6>
+                                        <h5>Refrigerator</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
@@ -64,7 +77,7 @@ const Plan = () => {
                             <div className="row   text-white py-2 m-0">
                                 <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h6>Air Cooler</h6>
+                                        <h5>Air Cooler</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
@@ -77,7 +90,7 @@ const Plan = () => {
                                     <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="200px" height="180px" alt="..." />
 
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h6>Geyser</h6>
+                                        <h5>Geyser</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
@@ -86,6 +99,75 @@ const Plan = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="d-block d-md-none d-lg-none">
+                            <div className="row">
+                            <div className="col-12 d-flex justify-content-center">
+                                    <div className={`${style.upArrow} text-center`}>
+
+                                    </div>
+                                </div>
+                                <div style={{marginTop:"-100px"}} className="col-12 d-flex justify-content-center" >
+                                    <img   src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png" width="100px" height="" alt="" />
+                                
+                                </div>
+                                <div className="col-6 text-end pe-1">
+                                <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="150px" height="130px" alt="..." />
+                                </div>
+                                <div className="col-6 text-start ps-1">
+                                <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="150px" height="130px" alt="..." />
+                                </div>
+                            </div>
+                            <div className="row mt-2">
+                                <div className="col-6 text-end pe-1">
+                                <img src="https://m.media-amazon.com/images/I/51+085ENXjL._AC_UF894,1000_QL80_.jpg" width="150px" height="130px" alt="..." />
+
+                                </div>
+                                <div className="col-6 text-start ps-1">
+                                <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="150px" height="130px" alt="..." />
+
+                                </div>
+                            </div>
+                            <div className="row text-white mt-3">
+                                <div className="col-5 text-end">
+                                        <h4 className="fw-bold mt-2">AC</h4>
+                                        </div>
+                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month</small>
+                                        </div>  
+                             </div>
+                             <div className="row text-white mt-2">
+                                <div className="col-5 text-end">
+                                        <h4 className="fw-bold mt-2">Stovetop</h4>
+                                        </div>
+                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month</small>
+                                        </div>  
+                             </div>
+                             <div className="row text-white mt-2">
+                                <div className="col-5 text-end">
+                                        <h4 className="fw-bold mt-2">Refrigerator</h4>
+                                        </div>
+                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month</small>
+                                        </div>  
+                             </div>
+                             <div className="row text-white mt-2">
+                                <div className="col-5 text-end">
+                                        <h4 className="fw-bold mt-2">Air Cooler</h4>
+                                        </div>
+                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month</small>
+                                        </div>  
+                             </div>
+                             <div className="row text-white mt-2">
+                                <div className="col-5 text-end">
+                                        <h4 className="fw-bold mt-2">Geyser</h4>
+                                        </div>
+                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
+                                            Super cost: $65/month</small>
+                                        </div>  
+                             </div>
                         </div>
                         <div className="text-end px-3 mt-4 me-5">
                             <button className="btn btn-warning rounded-pill px-3">Learn More</button>
