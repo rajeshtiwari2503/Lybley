@@ -32,9 +32,16 @@
     margin-bottom: 8px;
     }
 @media only screen and (max-width: 800px) {
-     
+    .upArrow {
+        width: 0;
+          height: 0;
+          border-left: 153px solid transparent;
+          border-right: 153px solid transparent;
+          border-bottom: 130px solid white;
+        margin-bottom: 8px;
+        }
     .planWd{
-        height: 1450px;
+        height: 1200px;
 
     }
     .bg_black{
@@ -47,7 +54,7 @@
     .popUp{
      
        background-color: white;
-        height: 1250px;
+        height: 1000px;
         width: 360px;
         /* position: absolute; */
         top: 260px;

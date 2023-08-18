@@ -147,12 +147,12 @@ const Pricing = () => {
                 </div>
             </div>
             <div className="row mt-5">
-                <div className="col-12 col-md-2 col-lg-2"></div>
-                <div className="col-12 col-md-8 col-lg-8">
+                <div className="col-12 col-md-1 col-lg-1"></div>
+                <div className="col-12 col-md-10 col-lg-10">
                     <div className="row">
 
-                        <div className="col-12 col-md-4 col-lg-4 mt-5 shadow bg-white rounded-4">
-                            <h5 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Simple</h5>
+                        <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                            <h5 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Lite</h5>
                             <div className='text-center'>our plan for protecting vital home systems</div>
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
@@ -162,10 +162,10 @@ const Pricing = () => {
                                 </div>
                             </div>
                             <div className=" mt-3 d-flex text-muted justify-content-around">
-                                <CancelIcon /> <div>It's Covered upgrade</div><InfoIcon />
+                                <CancelIcon /> <div>In Upgraded</div><InfoIcon />
                             </div>
                             <div className="mt-2 d-flex text-muted pb-3 justify-content-around">
-                                <CancelIcon /> <div>Max Limits Upgrade</div><InfoIcon />
+                                <CancelIcon /> <div>Brand for Brand</div><InfoIcon />
                             </div>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
                                 <AccordionSummary
@@ -178,14 +178,15 @@ const Pricing = () => {
                                 <AccordionDetails>
                                     <Typography>
                                         <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
-                                        <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
-                                        <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
-                                        <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
-                                        <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
-                                        <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
-                                        <div className='text-muted d-flex'> <CheckCircleIcon /><div className='ps-1'>  Kitchen Refrigerator w/ Ice Maker & Dispenser </div></div>
-                                        <div className='text-muted'> <CheckCircleIcon />  Clothes Washer </div>
-                                        <div className='text-muted'> <CheckCircleIcon />  Clothes Dryer </div>
+                                        <div> <CheckCircleIcon color='primary' />  Gas Stove</div>
+                                        <div> <CheckCircleIcon color='primary' /> Chimney </div>
+                                        <div> <CheckCircleIcon color='primary' /> Washing Machine </div>
+                                        <div>  <CheckCircleIcon color='primary' /> RO </div>
+                                        <div> <CheckCircleIcon color='primary' />  Ceiling Fan </div>
+                                        <div> <CheckCircleIcon color="primary" />  Mixer </div>
+                                        <div> <CheckCircleIcon color="primary" />  Induction </div>
+                                        <div> <CheckCircleIcon color="primary" />  Taster </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -240,7 +241,97 @@ const Pricing = () => {
 
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
-                        <div className="col-12 col-md-4 text-white col-lg-4 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
+                        <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                            <h5 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Lite</h5>
+                            <div className='text-center'>our plan for protecting vital home systems</div>
+                            <div className="p-3">
+                                <div className='rounded mt-3 bg-light rounded-5 pt-3'>
+                                    <h5 className='text-center'> Want to see your price?</h5>
+                                    <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                    <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                </div>
+                            </div>
+                            <div className=" mt-3 d-flex text-muted justify-content-around">
+                                <CancelIcon /> <div>In Upgraded</div><InfoIcon />
+                            </div>
+                            <div className="mt-2 d-flex text-muted pb-3 justify-content-around">
+                                <CancelIcon /> <div>Brand for Brand</div><InfoIcon />
+                            </div>
+                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                        <div> <CheckCircleIcon color='primary' />  Gas Stove</div>
+                                        <div> <CheckCircleIcon color='primary' /> Chimney </div>
+                                        <div> <CheckCircleIcon color='primary' /> Washing Machine </div>
+                                        <div>  <CheckCircleIcon color='primary' /> RO </div>
+                                        <div> <CheckCircleIcon color='primary' />  Ceiling Fan </div>
+                                        <div> <CheckCircleIcon color="primary" />  Mixer </div>
+                                        <div> <CheckCircleIcon color="primary" />  Induction </div>
+                                        <div> <CheckCircleIcon color="primary" />  Taster </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Accordion expanded={expanded2 === 'panel2'} onChange={handleChange('panel2')} style={{ border: "0px", boxShadow: "none" }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography><h5 className='fw-bold'>Systems</h5></Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div><CheckCircleIcon color='primary' /> Air Conditioning </div>
+                                        <div className='d-flex'><CheckCircleIcon color='primary' /><div className='ps-1'> Heating System / Heat Pump</div></div>
+                                        <div><CheckCircleIcon color='primary' /> Ductwork</div>
+                                        <div><CheckCircleIcon color='primary' /> Interior Plumbing</div>
+                                        <div><CheckCircleIcon color='primary' /> Plumbing Stoppages</div>
+                                        <div><CheckCircleIcon color='primary' /> Water Heater</div>
+                                        <div><CheckCircleIcon color='primary' /> Interior Electrical</div>
+                                        <div><CheckCircleIcon color='primary' /> Ceiling Fans</div>
+                                        <div><CheckCircleIcon color='primary' /> Central Vacuum</div>
+                                        <div><CheckCircleIcon color='primary' /> Garage Door Openers</div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+
+                            <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        <div className='text-muted'><CancelIcon /> Smart Home Devices</div>
+                                        <div className='text-muted d-flex'><CancelIcon /> <div className='ps-1'> Warming & Cooling Drawers</div></div>
+                                        <div className='text-muted d-flex'><CancelIcon /> <div className='ps-1'> Enhanced Plumbing Upgrade</div></div>
+                                        <div className='text-muted'><CancelIcon /> It's Covered upgrade</div>
+                                        <div className='text-muted'><CancelIcon /> Washer & Dryer</div>
+                                        <div className='text-muted d-flex'><CancelIcon /> <div className='ps-1'> Kitchen Refrigerator w/ Ice Maker & Dispenser</div></div>
+                                        <div className='text-muted d-flex'><CancelIcon /> <div className='ps-1'>Water Softener and Reverse Osmosis</div></div>
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                            <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                            <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                            <hr />
+                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+
+                            <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                        </div>
+                        <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
                             <div className="px-4"><h5 className='fw-bold text-center bg-warning p-2 text-dark rounded-bottom '>MOST POPULER</h5></div>
                             <h5 className='text-center  pb-2 pt-2'>Signature</h5>
                             <div className='text-center'>Just the right coverage for extra busy homes</div>
@@ -267,15 +358,16 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
-                                        <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
-                                        <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
-                                        <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
-                                        <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
-                                        <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
-                                        <div className='d-flex'> <CheckCircleIcon color='primary' /> <div className='ps-1'> Kitchen Refrigerator w/ Ice Maker & Dispenser </div></div>
-                                        <div> <CheckCircleIcon color='primary' />  Clothes Washer </div>
-                                        <div> <CheckCircleIcon color='primary' />  Clothes Dryer </div>
+                                    <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                        <div> <CheckCircleIcon color='primary' />  Gas Stove</div>
+                                        <div> <CheckCircleIcon color='primary' /> Chimney </div>
+                                        <div> <CheckCircleIcon color='primary' /> Washing Machine </div>
+                                        <div>  <CheckCircleIcon color='primary' /> RO </div>
+                                        <div> <CheckCircleIcon color='primary' />  Ceiling Fan </div>
+                                        <div> <CheckCircleIcon color="primary" />  Mixer </div>
+                                        <div> <CheckCircleIcon color="primary" />  Induction </div>
+                                        <div> <CheckCircleIcon color="primary" />  Taster </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -329,7 +421,7 @@ const Pricing = () => {
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
-                        <div className="col-12 col-md-4 col-lg-4 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
+                        <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
                             <h5 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Lux</h5>
                             <div className='text-center'>Maximum coverage for major peace of mind</div>
                             <div className="p-3">
@@ -355,15 +447,16 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
-                                        <div> <CheckCircleIcon color='primary' />  Range/Oven/Cooktop</div>
-                                        <div> <CheckCircleIcon color='primary' /> Built-in Microwave </div>
-                                        <div> <CheckCircleIcon color='primary' /> Garbage Disposal </div>
-                                        <div>  <CheckCircleIcon color='primary' /> Trash Compactor </div>
-                                        <div> <CheckCircleIcon color='primary' />  Range Exhaust Fan </div>
-                                        <div className='d-flex'> <CheckCircleIcon color='primary' />  <div className='ps-1'> Kitchen Refrigerator w/ Ice Maker & Dispenser </div></div>
-                                        <div> <CheckCircleIcon color='primary' />  Clothes Washer </div>
-                                        <div> <CheckCircleIcon color='primary' />  Clothes Dryer </div>
+                                    <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
+                                        <div> <CheckCircleIcon color='primary' />  Gas Stove</div>
+                                        <div> <CheckCircleIcon color='primary' /> Chimney </div>
+                                        <div> <CheckCircleIcon color='primary' /> Washing Machine </div>
+                                        <div>  <CheckCircleIcon color='primary' /> RO </div>
+                                        <div> <CheckCircleIcon color='primary' />  Ceiling Fan </div>
+                                        <div> <CheckCircleIcon color="primary" />  Mixer </div>
+                                        <div> <CheckCircleIcon color="primary" />  Induction </div>
+                                        <div> <CheckCircleIcon color="primary" />  Taster </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -440,7 +533,7 @@ const Pricing = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-12 col-md-2 col-lg-2"></div>
+            <div className="col-12 col-md-1 col-lg-1"></div>
 
         </div >
                 <Subscription />
