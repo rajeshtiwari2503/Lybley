@@ -79,10 +79,10 @@ const Search = () => {
   return (
     <>
 
-      <div className={`${style.searchBody} `}>
+      <div className={`${style.searchBody}  `}>
 
         <div className='container'>
-          <div className="d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0">
+          <div style={{width:"100%"}} className="d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
             
             <div className={`${style.searchBox} shadow col-12 col-md-9 col-lg-9 text-center`}>
               
