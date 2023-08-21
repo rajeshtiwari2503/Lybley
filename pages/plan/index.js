@@ -39,7 +39,7 @@ const Plan = () => {
                                     <img  className="card-img-top" style={{width:"200px",height:"134px"}} src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png"    alt="" />
                                 
                                 </div>
-                                    <div style={{marginTop:"-140px" ,marginLeft:"300px"}}className="col-12 ">
+                                    <div style={{marginTop:"-140px" ,paddingLeft:"620px"}}className="col-12 ">
                                     <div className="d-flex justify-content-end align-items-center flex-column">
                                         <h5>AC</h5>
 
