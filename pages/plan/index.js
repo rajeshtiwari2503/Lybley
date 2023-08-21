@@ -35,11 +35,11 @@ const Plan = () => {
                                     </div>
                                 </div>
                                            
-                                <div style={{marginTop:"-100px"}} className="col-12 d-flex justify-content-center" >
-                                    <img   src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png" width="100px" height="" alt="" />
+                                <div style={{marginTop:"-110px"}} className="col-12 d-flex justify-content-center" >
+                                    <img  className="card-img-top" style={{width:"200px",height:"134px"}} src="https://consumer.bluestarindia.com/pub/media/catalog/product/cache/306dd014bf4d3bf54df1536b8c4e0b54/i/a/ia318tku-gallery-images-01.png"    alt="" />
                                 
                                 </div>
-                                    <div style={{marginTop:"-100px" ,marginLeft:"300px"}}className="col-12 ">
+                                    <div style={{marginTop:"-140px" ,marginLeft:"300px"}}className="col-12 ">
                                     <div className="d-flex justify-content-end align-items-center flex-column">
                                         <h5>AC</h5>
 
@@ -50,18 +50,20 @@ const Plan = () => {
                                     
                                     </div>
                                     </div>
-                                <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
+                                <div style={{marginTop:"-25px"}} className="col-12 col-md-6 pe-1  d-flex justify-content-end align-items-center col-lg-6">
+                      
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h5>Stovetop</h5>
+                                        <h5>Washing Machine</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
                                         </small>
 
                                     </div>
-                                    <img src="https://cdn.moglix.com/p/rXhRvvqtb7uKB-xxlarge.jpg" width="200px" height="180px" alt="..." />
+                                    <img src="https://jamesandco.in/cdn/shop/products/220_d2a97d5a-5762-48cd-bb2c-eb0cda803c1e.jpg?v=1666345325" width="200px" height="180px" alt="..." />
                                 </div>
-                                <div className="col-12 col-md-6 mt-4 ps-1 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
+                                
+                                <div style={{marginTop:"-25px"}}  className="col-12 col-md-6    ps-1   d-flex justify-content-start align-items-center col-lg-6">
                                     <img src="https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/3-door-french-door/pdp/rf27t5501sg-aa/360/RF27T5501SG-01.jpg?$product-details-jpg$" width="200px" height="180px" alt="..." />
 
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -77,14 +79,14 @@ const Plan = () => {
                             <div className="row   text-white py-2 m-0">
                                 <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
-                                        <h5>Air Cooler</h5>
+                                        <h5>Microwave</h5>
 
                                         <small>Replacement cost: $2,500 <br />
                                             Super cost: $65/month
                                         </small>
 
                                     </div>
-                                    <img src="https://m.media-amazon.com/images/I/51+085ENXjL._AC_UF894,1000_QL80_.jpg" width="200px" height="180px" alt="..." />
+                                    <img src="https://img.freepik.com/free-vector/microwave-oven-with-light-inside-isolated-white-background-kitchen-appliances_134830-658.jpg?w=2000" width="200px" height="180px" alt="..." />
                                 </div>
                                 <div className="col-12 col-md-6 ps-1 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
                                     <img src="https://www.zebrs.com/uploads/zebrs/products/havells-3-l-instant-water-geyser-instanio-white-mustard-150685_l.jpg" width="200px" height="180px" alt="..." />
