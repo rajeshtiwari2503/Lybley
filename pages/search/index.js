@@ -85,16 +85,17 @@ const Search = () => {
           <div className="d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0">
             
             <div className={`${style.searchBox} shadow col-12 col-md-9 col-lg-9 text-center`}>
+              
               <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="City" onKeyPress={handleEnter} />
 
-              <SearchIcon className='me-2' fontSize='medium' onClick={handleSearch} />
-
+              <SearchIcon className='me-md-2' fontSize='medium' onClick={handleSearch} />
+             
             </div>
             {showUnit ? <div className={`${style.unitBox} shadow mx-2 col-12 col-md-1 col-lg-1`}>
               <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)} value={unit} type="number" placeholder="Unit" />
             </div> : " " }
             <div className={`${!showUnit ? "ms-2" : ""} col-12 col-md-2 col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-              <button className='btn btn-primary rounded-pill p-3' onClick={handlePrice}>GET QUOTE</button>
+              <button className='btn btn-outline-dark rounded-pill p-3' onClick={handlePrice}>GET QUOTE</button>
             </div>
           </div>
           {/* {search ? <div className={`${style.categoryList} shadow`}>
@@ -107,7 +108,7 @@ const Search = () => {
           } */}
         </div>
       </div>
-      <div >
+      <div  >
         {/* <Carousel>
           <Carousel.Item >
             <img
@@ -134,7 +135,7 @@ const Search = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel> */}
-        <img className={`card-img-top ${style.bannerHome}`} src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' />
+        {/* <img className={`card-img-top ${style.bannerHome}`} src='https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg' /> */}
       </div>
       <MyVerticallyCenteredModal
         show={modalShow}
