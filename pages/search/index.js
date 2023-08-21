@@ -86,7 +86,7 @@ const Search = () => {
             
             <div className={`${style.searchBox} shadow col-12 col-md-9 col-lg-9 text-center`}>
               
-              <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="City" onKeyPress={handleEnter} />
+              <input   onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="City" onKeyPress={handleEnter} />
 
               <SearchIcon className='me-md-2' fontSize='medium' onClick={handleSearch} />
              
