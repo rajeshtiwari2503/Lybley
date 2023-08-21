@@ -95,7 +95,7 @@ const Search = () => {
               <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)} value={unit} type="number" placeholder="Unit" />
             </div> : " " }
             <div className={`${!showUnit ? "ms-2" : ""} col-12 col-md-2 col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-              <button className='btn btn-outline-dark rounded-pill p-3' onClick={handlePrice}>GET QUOTE</button>
+              <button style={{border:"1px solid black"}} className='btn   rounded-pill p-3' onClick={handlePrice}><span  style={{color:"black"}}>GET QUOTE</span></button>
             </div>
           </div>
           {/* {search ? <div className={`${style.categoryList} shadow`}>
