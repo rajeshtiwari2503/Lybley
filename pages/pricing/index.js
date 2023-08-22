@@ -20,6 +20,7 @@ import httpCommon from '@/http-common';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import { useDataContext } from '../api/userData';
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -34,8 +35,8 @@ import * as Yup from 'yup';
 
 
 const Pricing = () => {
-    // const classes=useStyles();
-
+    const { data } = useDataContext();
+ console.log("data",data);
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
@@ -97,11 +98,11 @@ const Pricing = () => {
                             
                                 <div className='row p-5'>
                                     <div className='col-8 col-md-8 col-lg-8 '>
-                                        <input type='text' className='form-control' placeholder='Enter Location' name="location" {...register('location')} />
+                                        <input type='text' className='form-control' placeholder='Enter Location'value={data?.city} name="location" {...register('location')} />
                                         <div className='text-danger'> {errors.location?.message}</div>
                                     </div>
                                     <div className='col-4 col-md-4 col-lg-4 '>
-                                        <input type='number' className='form-control' placeholder='Unit' name="unit" {...register('unit')} />
+                                        <input type='number' className='form-control' placeholder='Unit' value={data?.unit} name="unit" {...register('unit')} />
                                         <div className='text-danger'> {errors.unit?.message}</div>
                                     </div>
                                     <div className='col-12 col-md-6 col-lg-6 mt-4'>
