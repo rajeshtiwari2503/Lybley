@@ -20,13 +20,13 @@ import Modal from 'react-bootstrap/Modal';
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="profile-block text-center w220 mx-auto">
+                    <div className="profile-block text-center  ">
 
-                        <img src="https://img.freepik.com/free-vector/red-exclamation-mark-symbol-attention-caution-sign-icon-alert-danger-problem_40876-3505.jpg?size=626&ext=jpg&ga=GA1.1.1565121225.1680255264&semt=ais" alt="brandLogo" className="avatar xl rounded img-thumbnail shadow-sm" />
+                        <img width={150} height={200} src="https://img.freepik.com/free-vector/red-exclamation-mark-symbol-attention-caution-sign-icon-alert-danger-problem_40876-3505.jpg?size=626&ext=jpg&ga=GA1.1.1565121225.1680255264&semt=ais" alt="brandLogo" className="avatar xl rounded img-thumbnail shadow-sm" />
 
 
                     </div>
-                    <h4 className='text-center'>
+                    <h4 className='text-center mt-2'>
                         Your data will be deleted permanently!
                     </h4>
                     <p className='text-center' >Are you sure to proceed?</p>
