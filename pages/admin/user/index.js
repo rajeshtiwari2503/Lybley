@@ -4,15 +4,40 @@ import DataTable from 'react-data-table-component';
 import httpCommon from '@/http-common';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ConfirmBox from '../common/ConfirmBox';
+import ToastMessage from '../common/ToastMessage';
 const User = () => {
 
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
+  const [randomValue, setRandomValue] = useState("");
+  const [userId, setUserId] = useState("");
+  const [confirmBoxView, setConfirmBoxView] = useState(false);
 
   useEffect(() => {
     allUsers()
-  }, [])
-
+  }, [randomValue])
+  const handleUser = (id) => {
+    setUserId(id)
+    setConfirmBoxView(true);
+}
+const deleteUser = async () => {
+  try {
+      let response = await httpCommon.deleteData(`/deleteUser/${userId}`);
+      let { data } = response;
+      setConfirmBoxView(false);
+      ToastMessage(data);
+      setRandomValue(data);
+    
+  } catch (err) {
+      console.log(err);
+  }
+}
+const handleUserEdit = (id) => {
+    const findData = data?.find(obj => {
+        return obj._id === id
+    })
+  }
   const columns = () => {
 
     return [
@@ -61,8 +86,8 @@ const User = () => {
         name: "ACTION",
         selector: (row) => { },
         cell: (row) => <div className="d-flex justify-content-between"  >
-        <EditIcon  style={{cursor:"pointer"}} color='success' />
-        <DeleteIcon className='ms-3' style={{cursor:"pointer"}} color='error'/>
+        <EditIcon onClick={() => { handleUserEdit(row?._id) }}  style={{cursor:"pointer"}} color='success' />
+        <DeleteIcon onClick={() => { handleUser(row?._id) }} className='ms-3' style={{cursor:"pointer"}} color='error'/>
        </div>,
         sortable: true,width:"100px"
        
@@ -84,8 +109,11 @@ const User = () => {
 
     }
   }
+const rvsData=data?.reverse();
 
-  const srData=data?.map((item,i)=>({ ...item, i: i + 1 }))
+ 
+  const srData=rvsData?.map((item,i)=>({ ...item, i: i + 1 }))
+  
   return (
     <div  className="body d-flex  py-lg-3 py-md-2">
       <div className="container-xxl">
@@ -114,6 +142,7 @@ const User = () => {
             }
           </div>
         </div>
+        <ConfirmBox bool={confirmBoxView} setConfirmBoxView={setConfirmBoxView} onSubmit={deleteUser} />
       </div>
     </div>
   )
