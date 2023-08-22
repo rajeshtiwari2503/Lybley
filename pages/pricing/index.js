@@ -21,6 +21,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { useDataContext } from '../api/userData';
+import ToastMessage from '../admin/common/ToastMessage';
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -36,7 +37,7 @@ import { useDataContext } from '../api/userData';
 
 const Pricing = () => {
     const { data } = useDataContext();
- console.log("data",data);
+  
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
@@ -83,6 +84,7 @@ const Pricing = () => {
              
             let response = await httpCommon.post("/registration",regData)
             let { data } = response;
+            ToastMessage(data)
         }
         catch (err) {
             console.log(err)

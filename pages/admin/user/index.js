@@ -84,8 +84,11 @@ const User = () => {
 
     }
   }
+const rvsData=data?.reverse();
 
-  const srData=data?.map((item,i)=>({ ...item, i: i + 1 }))
+console.log(rvsData);
+  const srData=rvsData?.map((item,i)=>({ ...item, i: i + 1 }))
+  
   return (
     <div  className="body d-flex  py-lg-3 py-md-2">
       <div className="container-xxl">

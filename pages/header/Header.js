@@ -108,7 +108,7 @@ const Header = () => {
             </div>
             <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-center align-items-center">
               <div className='d-flex'>
-              <div className='pe-2'>
+              <div className='pe-4'>
               <small className='fw-bold headerNavFont' style={{cursor: "pointer"}}
                onClick={() =>{setOpen1(false); setOpen(!open); }}
                aria-controls="collapse-example"
@@ -116,7 +116,7 @@ const Header = () => {
               >PLANS</small>
               </div>
               <div>
-              <small className='fw-bold headerNavFont' style={{cursor: "pointer",}} 
+              <small className='fw-bold headerNavFont me-2' style={{cursor: "pointer",}} 
               onClick={() =>{setOpen(false); setOpen1(!open1); }}
               aria-controls="collapse-example1"
               aria-expanded={open1}
@@ -124,7 +124,7 @@ const Header = () => {
               </div>
               <div className='d-flex' >
               <Link className='text-decoration-none' href={"/login"}>
-                <button className='header-btn py-1 ms-2 me-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                <button className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
                 </Link>
                 <Link className='text-decoration-none' href={"/pricing"}>
                   <button className='py-1 price-btn rounded-pill'><small className='fw-bold headerNavFont'>SEE PRICING</small></button>
