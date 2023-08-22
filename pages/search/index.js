@@ -9,10 +9,11 @@ import HouseIcon from '@mui/icons-material/House';
 import httpCommon from '@/http-common';
 import axios from 'axios';
 import { Router, useRouter } from 'next/router';
+import { useDataContext } from '../api/userData';
 
 function MyVerticallyCenteredModal(props) {
 
-
+ 
 
   return (
     <Modal
@@ -35,11 +36,13 @@ function MyVerticallyCenteredModal(props) {
 }
 const Search = () => {
 
+  const { saveData } = useDataContext();
+
   const [search, setSearch] = useState("");
   const [unit, setUnit] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [showUnit,setShowUnit]=useState(false);
-  const [city, setCity] = useState([])
+ 
   const router=useRouter();
   // const getAllCity=async()=>{
   //      try{
@@ -57,6 +60,8 @@ const Search = () => {
 
   const handlePrice=()=>{
     if(search.toUpperCase() === "NOIDA" && unit){
+      const newData = {city:search,unit:unit} ;
+      saveData(newData);  
       router.push("/pricing");
     }
   }
@@ -66,6 +71,7 @@ const Search = () => {
       handleSearch();
     }
   }
+ 
 
   const handleSearch = (e) => {
     if (search.toUpperCase() !== "NOIDA") {
@@ -73,6 +79,7 @@ const Search = () => {
       setShowUnit(false);
     } else {
       setShowUnit(true);
+     
     }
   }
 
@@ -86,16 +93,16 @@ const Search = () => {
             
             <div className={`${style.searchBox} shadow col-12 col-md-9 col-lg-9 text-center`}>
               
-              <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' value={search} type="text" placeholder="City" onKeyPress={handleEnter} />
+              <input   onChange={(e) => setSearch(e.currentTarget.value)} name='search'   type="text" placeholder="City" onKeyPress={handleEnter} />
 
-              <SearchIcon className='me-md-2' fontSize='medium' onClick={handleSearch} />
+              <SearchIcon style={{color:"black" ,cursor:"pointer"}} className='me-md-2' fontSize='large' onClick={handleSearch} />
              
             </div>
             {showUnit ? <div className={`${style.unitBox} shadow mx-2 col-12 col-md-1 col-lg-1`}>
-              <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)} value={unit} type="number" placeholder="Unit" />
+              <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)}   type="number" placeholder="Unit" />
             </div> : " " }
             <div className={`${!showUnit ? "ms-2" : ""} col-12 col-md-2 col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-              <button className='btn btn-outline-dark rounded-pill p-3' onClick={handlePrice}>GET QUOTE</button>
+              <button style={{border:"1px solid black"}} className='btn   rounded-pill p-3' onClick={handlePrice}><span  style={{color:"black"}}>GET QUOTE</span></button>
             </div>
           </div>
           {/* {search ? <div className={`${style.categoryList} shadow`}>
