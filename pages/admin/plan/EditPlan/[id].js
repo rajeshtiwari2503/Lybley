@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { useRouter } from 'next/router';
+import AddPlan from '../AddPlan';
 
 const EditPlan = () => {
     const [plan,setPlan]=useState({});
