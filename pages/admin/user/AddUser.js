@@ -17,7 +17,7 @@ const AddUser = (props) => {
     const handleRegistration = async (obj) => {
         try {
             setLoading(true)
-            let regData = { location: data?.location, unit: +data?.unit, name: data?.firstName + " " + data?.lastName, email: data?.email, contact: +data?.contact, }
+            let regData = { location: data?.location, unit: +data?.unit, name: data?.name, email: data?.email, contact: +data?.contact, }
             let response = await httpCommon.post("/registration", regData)
             let { data } = response
 
@@ -35,7 +35,7 @@ const AddUser = (props) => {
 
     const handleEdit = async (obj) => {
         try {
-            let response = await httpCommon.patch(`/editBrandBy/${props?.id}`, obj);
+            let response = await httpCommon.patch(`/editUserBy/${props?.id}`, obj);
             let { data } = response;
             router.push(`/admin/user`);
         } catch (err) {
@@ -48,14 +48,11 @@ const AddUser = (props) => {
             .required('location is required')
             .min(4, 'location must be at least 4 characters')
             .max(40, 'location must not exceed 40 characters'),
-        firstName: Yup.string()
+        name: Yup.string()
             .required('firstName is required')
             .min(3, 'firstName must be at least 3 characters')
             .max(40, 'firstName must not exceed 40 characters'),
-        lastName: Yup.string()
-            .required('lastName is required')
-            .min(3, 'lastName must be at least 3 characters')
-            .max(40, 'lastName must not exceed 40 characters'),
+    
         unit: Yup.string().required("unit number is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
 
         email: Yup.string()
@@ -81,7 +78,7 @@ const AddUser = (props) => {
     }
     useEffect(() => {
         reset(user);
-    }, [user, reset]);
+    }, [user, reset]);  
     return (
         <div>
             <DashboardHeader pagetitle={edit ? "Edit Brand" : "Add Brand"} />
@@ -95,18 +92,10 @@ const AddUser = (props) => {
                     <div className='text-danger'> {errors.unit?.message}</div>
                 </div>
                 <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                    <input type='text' className='form-control' placeholder='First Name' defaultValue={edit ? user?.name : ""} name="firstName"  {...register('firstName')} />
-                    <div className='text-danger'> {errors.firstName?.message}</div>
+                    <input type='text' className='form-control' placeholder='Name' defaultValue={edit ? user?.name : ""} name="name"  {...register('name')} />
+                    <div className='text-danger'> {errors.name?.message}</div>
                 </div>
-                <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                    <input type='text' className='form-control' defaultValue={edit ? user?.name : ""} placeholder='Last Name' name="lastName"
-                        {...register('lastName')}
-                    />
-
-                    <div className='text-danger'> {errors.lastName?.message}</div>
-
-
-                </div>
+                
                 <div className='col-12 col-md-6 col-lg-6 mt-4'>
                     <input type='email' className='form-control' defaultValue={edit ? user?.email : ""} placeholder=' Enter Email address' name="email"{...register('email')} />
                     <div className='text-danger'> {errors.email?.message}</div>

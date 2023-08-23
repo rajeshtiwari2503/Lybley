@@ -9,6 +9,7 @@ import ToastMessage from '../common/ToastMessage';
 import DashboardHeader from '../common/DashboardHeader';
 import Link from 'next/link';
 import AddIcon from '@mui/icons-material/Add';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 const User = () => {
 
   const [data, setData] = useState([])
@@ -92,7 +93,10 @@ const User = () => {
           <Link href={`/admin/user/EditUser/${row?._id}`} >
           <EditIcon onClick={() => { handleUserEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link>
-          <DeleteIcon onClick={() => { handleUser(row?._id) }} className='ms-3' style={{ cursor: "pointer" }} color='error' />
+          <Link href={`/admin/user/UserDetails/${row?._id}`}>
+          <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
+          </Link>
+          <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' />
         </div>,
         sortable: true, width: "100px"
 
