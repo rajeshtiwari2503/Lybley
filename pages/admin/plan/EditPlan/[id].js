@@ -21,7 +21,7 @@ const EditPlan = () => {
     }
     return (
       <div>
-          <AddPlan edit={true} id={id} brand={brand} />
+          <AddPlan edit={true} id={id} plan={plan} />
       </div>
     )
   }
