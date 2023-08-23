@@ -1,8 +1,11 @@
 import React from 'react'
+import MyPlan from './Plan'
 
 const Plan = () => {
   return (
-    <div>Plan</div>
+    <div> 
+      <MyPlan />
+    </div>
   )
 }
 

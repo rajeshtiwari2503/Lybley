@@ -6,6 +6,9 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ConfirmBox from '../common/ConfirmBox';
 import ToastMessage from '../common/ToastMessage';
+import DashboardHeader from '../common/DashboardHeader';
+import Link from 'next/link';
+import AddIcon from '@mui/icons-material/Add';
 const User = () => {
 
   const [data, setData] = useState([])
@@ -20,22 +23,22 @@ const User = () => {
   const handleUser = (id) => {
     setUserId(id)
     setConfirmBoxView(true);
-}
-const deleteUser = async () => {
-  try {
+  }
+  const deleteUser = async () => {
+    try {
       let response = await httpCommon.deleteData(`/deleteUser/${userId}`);
       let { data } = response;
       setConfirmBoxView(false);
       ToastMessage(data);
       setRandomValue(data);
-    
-  } catch (err) {
+
+    } catch (err) {
       console.log(err);
+    }
   }
-}
-const handleUserEdit = (id) => {
+  const handleUserEdit = (id) => {
     const findData = data?.find(obj => {
-        return obj._id === id
+      return obj._id === id
     })
   }
   const columns = () => {
@@ -44,7 +47,7 @@ const handleUserEdit = (id) => {
       {
         name: "SR No.",
         selector: (row) => row.i,
-        sortable: true,width:"90px"
+        sortable: true, width: "90px"
       },
       {
         name: "USER",
@@ -61,17 +64,17 @@ const handleUserEdit = (id) => {
       {
         name: "LOCATION",
         selector: (row) => row.location,
-        sortable: true,width:"110px"
+        sortable: true, width: "110px"
       },
       {
         name: "UNIT",
         selector: (row) => row.unit,
-        sortable: true,width:"80px"
+        sortable: true, width: "80px"
       },
       {
         name: "CONTACT",
         selector: (row) => row.contact,
-        sortable: true,width: "110px"
+        sortable: true, width: "110px"
       },
 
       {
@@ -81,16 +84,18 @@ const handleUserEdit = (id) => {
 
       },
 
-      
+
       {
         name: "ACTION",
         selector: (row) => { },
         cell: (row) => <div className="d-flex justify-content-between"  >
-        <EditIcon onClick={() => { handleUserEdit(row?._id) }}  style={{cursor:"pointer"}} color='success' />
-        <DeleteIcon onClick={() => { handleUser(row?._id) }} className='ms-3' style={{cursor:"pointer"}} color='error'/>
-       </div>,
-        sortable: true,width:"100px"
-       
+          <Link href={`/admin/user/EditUser/${row?._id}`} >
+          <EditIcon onClick={() => { handleUserEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
+          </Link>
+          <DeleteIcon onClick={() => { handleUser(row?._id) }} className='ms-3' style={{ cursor: "pointer" }} color='error' />
+        </div>,
+        sortable: true, width: "100px"
+
       }
     ]
   }
@@ -109,14 +114,22 @@ const handleUserEdit = (id) => {
 
     }
   }
-const rvsData=data?.reverse();
+  const rvsData = data?.reverse();
 
- 
-  const srData=rvsData?.map((item,i)=>({ ...item, i: i + 1 }))
-  
+
+  const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
+
   return (
-    <div  className="body d-flex  py-lg-3 py-md-2">
+    <div className="body d-flex  py-lg-3 py-md-2">
       <div className="container-xxl">
+        <DashboardHeader pagetitle={"Users"}
+          modalbutton={() => {
+            return <div className="col-auto d-flex w-sm-100">
+              <Link href={"/admin/user/AddUser"} className='text-decoration-none'>
+                <button type="button" className="btn btn-primary btn-set-task w-sm-100"  > <AddIcon className='me-1' fontSize='large' />Add User</button>
+              </Link>
+            </div>
+          }} />
         <div className="row clearfix g-3">
           <div className="col-sm-12">
             {loading ? <div className='d-flex justify-content-center align-items-center' > <Loader /> </div> :
