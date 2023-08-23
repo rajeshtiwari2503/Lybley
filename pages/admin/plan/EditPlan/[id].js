@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { useRouter } from 'next/router';
+import AddPlan from '../AddPlan';
 
 const EditPlan = () => {
     const [plan,setPlan]=useState({});
@@ -20,7 +21,7 @@ const EditPlan = () => {
     }
     return (
       <div>
-          <AddPlan edit={true} id={id} brand={brand} />
+          <AddPlan edit={true} id={id} plan={plan} />
       </div>
     )
   }
