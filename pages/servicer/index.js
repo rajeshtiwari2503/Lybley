@@ -23,7 +23,7 @@ const Servicer = () => {
                     </div>
                 </div>
                 <div>
-                    <Works />
+                    <Works servicer={true} />
                 </div>
                 <div style={{ backgroundColor: "#15939a" }}>
                     <div className='container'>
@@ -35,11 +35,8 @@ const Servicer = () => {
                             </div>
                             <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
                                 <div className='ps-md-5 '>
-                                    <div className='fw-bold fs-2'>
-                                        Check Your Crawl Space for Mold and Leaks
-                                    </div>
-                                    <div className='mt-5'>
-                                        That not-really-a-basement spot under your home that serves as a foundation? That’s your crawl space, not some forbidden zone lurking under the floorboards. It’s a part of your home, and you have to defend it. Take your crawl space from sketchy to solid by checking it for ...
+                                    <div className='fw-bold fs-3'>
+                                    Don't just take our word for it — hear from one of our Certified Lybley service technicians:
                                     </div>
                                 </div>
                             </div>
@@ -52,12 +49,10 @@ const Servicer = () => {
                             <div className='col-12 col-md-2 col-lg-2'></div>
                             <div className='col-12 col-md-8 col-lg-8 text-center'>
                                 <div className='fw-bold fs-2 '>
-                                    Is Super right for me?
+                                    Is Lybley right for me?
                                 </div>
                                 <div>
-                                    Great question. Service techs from around the country tell us that Super is the easiest way they’ve
-                                    grown their business. They save time and money on marketing and reduce time and risk on collections
-                                    because we handle all those things.
+                                An excellent query. Service technicians across the nation affirm that Lybley is the most seamless method they've employed to expand their business. It streamlines their marketing efforts, saving both time and money, while also minimizing collection-related challenges and risks, since we manage these aspects comprehensively.
                                 </div>
                             </div>
                             <div className='col-12 col-md-2 col-lg-2'></div>
@@ -73,7 +68,7 @@ const Servicer = () => {
                                     Larger payouts
                                 </div>
                                 <div className='mt-2'>
-                                    Our business model of never asking you to offer a discount for your expertise and charging more for superior service enables our Certified Super service techs to earn more money from job one. Stop accepting the poor rates from home warranty companies.
+                                Our distinctive business approach, which refrains from requesting discounts on your expertise and values higher compensation for exceptional service, empowers our Certified Lybley service technicians to earn more right from their first job. Put an end to settling for inadequate rates from home warranty companies.
                                 </div>
                             </div>
                             <div className='col-12 col-md-4 col-lg-4 text-center'>
@@ -84,7 +79,7 @@ const Servicer = () => {
                                     Retail rate jobs
                                 </div>
                                 <div className='mt-2'>
-                                    We deliver retail rate jobs to you, in addition to the regular repair and replacement appointments from our subscribers, as another way to make money. Plus, because you don’t have to advertise for these services, you lower the cost of running your business.
+                                We provide you with retail-rate assignments, alongside the usual repair and replacement appointments from our subscribers, serving as an additional income source. Furthermore, since you're not required to advertise for these services, your business operational costs are reduced.
                                 </div>
                             </div>
                             <div className='col-12 col-md-4 col-lg-4 text-center'>
@@ -95,7 +90,7 @@ const Servicer = () => {
                                     No claims submissions
                                 </div>
                                 <div className='mt-2'>
-                                    Traditional home warranty companies make more from providers who fail to submit claims properly. Here’s our deal — you do great work, we handle the scheduling and payouts. We might ask a question or two, but our goal is to reduce your administrative burden.
+                                Conventional home warranty firms often capitalize on providers who struggle with submitting claims accurately. However, our approach is different. You excel in your craft, while we manage the scheduling and payouts. Occasionally, we might seek some information, but our main aim is to alleviate your administrative workload.
                                 </div>
                             </div>
                         </div>
@@ -110,7 +105,7 @@ const Servicer = () => {
                                     How do I get started?
                                 </div>
                                 <div className='mt-3'>
-                                    It's pretty simple — click on the button below, let us know where you are and what type of work you do. We'll talk about a few things and contact you when needed. All we ask is that you show up on time, do a good job, and give us a fair rate. We promise to do the same.
+                                The process is straightforward. Just click the button below, share your location and the nature of your work. We'll have a discussion about some details and reach out to you as required. Our only request is that you maintain punctuality, deliver quality work, and offer a reasonable rate. In return, we commit to reciprocating the same level of dedication.
                                 </div>
                                 <div className='mt-5 mb-5'>
                                     <button className='btn btn-light rounded' >SIGN UP FOR A FREE ACCOUNT</button>
@@ -123,7 +118,7 @@ const Servicer = () => {
                 <div  style={{ backgroundColor: "#b6e6fa" }} className='d-md-block d-none '>
                     <div className='container pb-5'>
                         <div className='pt-5 fw-bold fs-2 text-center'>
-                            How does Super compare?
+                            How does Lybley compare?
                         </div>
                         <div className={`  row  m-0 p-0 `} >
                             <div  className='  col-5 bg-white m-0 p-0 pt-5 mt-5 rounded-4 '>

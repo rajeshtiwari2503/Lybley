@@ -145,7 +145,7 @@ const Pricing = () => {
             <div className='row mt-2'>
                 <div className="col-md-3 col-lg-3 col-12"></div>
                 <div className="col-md-6 col-lg-6 col-12 text-center">
-                    <small> By clicking SHOW PRICES, you agree to be contacted by Super Home Inc. via calls, emails and/or text messages, and accept our Terms and Conditions & Privacy Policy. Messaging and data rates may apply.</small>
+                    <small>By clicking SHOW PRICES, you consent to receiving communication from Lybley Home Inc. through calls, emails, and/or text messages, and acknowledge your acceptance of our Terms and Conditions & Privacy Policy. Standard messaging and data rates may apply.</small>
                     <div className="col-md-3 col-lg-3 col-12"></div>
                 </div>
             </div>
@@ -480,7 +480,7 @@ const Pricing = () => {
                                 </div>
                                 <div className="row">
                                     <div class="col-12 col-md-2 col-lg-2"></div>
-                                    <div class="col-12 col-md-8 col-lg-8 text-center">Super's subscription care for your home is a new way of ensuring peace of mind in homeownership with our Certified Super service techs, helpful maintenance reminders, the Maintenance Marketplace, and the Maintenance Rewards program. We can't wait for you to experience Super.</div>
+                                    <div class="col-12 col-md-8 col-lg-8 text-center">Lybley's subscription-based home care introduces a fresh approach to guaranteeing homeownership tranquility. Our Certified Lybley service technicians, along with beneficial maintenance reminders, the Maintenance Marketplace, and the Maintenance Rewards program, collectively provide this assurance. We're excited for you to immerse yourself in the Lybley experience.</div>
                                     <div class="col-12 col-md-2 col-lg-2"></div>
                                 </div>
                             </div>
@@ -489,13 +489,13 @@ const Pricing = () => {
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                                 <MonetizationOnIcon color='primary' fontSize='large' />
                                 <h5 className='p-2'>Copay</h5>
-                                <p>Pay a standard copay when you book service for a covered repair. There's only one charge per claim, no matter how long the tech is at your home or if the repair takes more than one service visit.</p>
+                                <p>When scheduling service for a covered repair, a standard copay is applicable. Irrespective of the duration the technician spends at your residence or whether the repair necessitates multiple visits, only one charge per claim will be incurred.</p>
                             </div>
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                                 <EventIcon color='primary' fontSize='large' />
                                 <h5 className='p-2'>Reminders</h5>
                                 <p>
-                                    Look, a lot is going on in your world. We get it. We post regular maintenance reminders on our Tips page to help you keep on top of things like when it's time to change an air filter or clean your dryer vent. DIY or tap into our Maintenance Marketplace for help.
+                                Amidst your busy life, we're here to help. Regular maintenance reminders on our Tips page cover tasks like air filter changes and dryer vent cleaning. Choose between DIY or tapping into our Maintenance Marketplace for assistance.
                                 </p>
                             </div>
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
@@ -503,7 +503,7 @@ const Pricing = () => {
                                 <h5 className='p-2'>
                                     Maintenance Rewards
                                 </h5>
-                                <p>There's a lot of Super to go around, and we're here to thank you for referring friends, family, and neighbors to our home warranty subscription solution. We apply Maintenance Rewards to your account when you send us a referral.</p>
+                                <p>Spread the Lybley love, and we're here to show our gratitude when you refer friends, family, or neighbors to our home warranty subscription. Your referrals earn you Maintenance Rewards applied directly to your account.</p>
                             </div>
                         </div>
                         <div className="row">
@@ -514,7 +514,7 @@ const Pricing = () => {
                                 <h5 className='text-center p-2'>Maintenance Marketplace</h5>
                                 <div className="row">
                                     <div class="col-12 col-md-2 col-lg-2"></div>
-                                    <div class="col-12 col-md-8 col-lg-8 text-center">Our Super Certified service techs are available to come out and help with the things you need to keep your home in top condition and prevent costly problems down the line. Here's what we can do*:</div>
+                                    <div class="col-12 col-md-8 col-lg-8 text-center">Count on our Lybley Certified technicians to assist with tasks essential for maintaining your home's prime condition and preventing future expensive issues. Here's a glimpse of what we offer*:</div>
                                     <div class="col-12 col-md-2 col-lg-2"></div>
                                 </div>
                             </div>
@@ -560,9 +560,9 @@ const Pricing = () => {
                             </div>
                             <div className="col-12 col-md-6 d-flex justify-content-center flex-column col-lg-6">
                                 <h2 className='py-3'>Congratulations on your new home!</h2>
-                                <p>Whether you're moving into your first house or your next one, Super's In the Clear plan will help take away the worry of finding a broken appliance or system that wasn't disclosed during the purchase process.</p>
-                                <p>Signing up for In the Clear is easy: submit the home inspection report you got when buying the house and we'll check it over for eligible appliances and systems that passed inspection.</p>
-                                <p>Subscribers who find a broken appliance or system that's not covered with their plan shouldn't worry. We add $50 in Maintenance Rewards to your account.</p>
+                                <p>Whether you're embarking on the journey of homeownership for the first time or stepping into your next abode, Lybley's In the Clear plan is designed to alleviate the apprehension of encountering hidden appliance or system complications that might have slipped through the cracks during the purchase process.</p>
+                                <p>Opting for the In the Clear plan is a seamless process: share the home inspection report you acquired during the house purchase, and our team will meticulously review it to identify the eligible appliances and systems that successfully passed inspection.</p>
+                                <p>For subscribers who come across malfunctioning appliances or systems not covered by their existing plan, there's no need for undue concern. We generously augment your account with 50 INR in Maintenance Rewards, underscoring our commitment to providing a worry-free experience.</p>
                             </div>
                         </div>
                     </div>

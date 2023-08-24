@@ -13,7 +13,7 @@ const Plan = () => {
                         <div className="row w-100 mt-3">
                             <div className="col-12 col-md-3 col-lg-3"></div>
                             <div className="col-12 col-md-6 col-lg-6">
-                                <p className="">Cover your home's most essential appliances and systems, or your just about everything on the property with Super's range of subscriptions for your home. Take a look around your home, think about what level fits you, and start the easy sign-up process.</p>
+                                <p className="">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
                             </div>
                             <div className="col-12 col-md-3 col-lg-3"></div>
                         </div>
@@ -22,7 +22,7 @@ const Plan = () => {
                         <h5 className="text-center text-white mt-4">Saving Estimator</h5>
                         <div className="row text-white mt-3 ">
                             <div className="col-12 col-md-6 col-lg-6">
-                                <h1 className="text-center">Save an average of $499</h1>
+                                <h1 className="text-center">Save an average of 8 INR</h1>
                                 <h1 className="text-center">with a Lybley Signature plan.</h1></div>
 
                             <div className="col-12 col-md-6 col-lg-6"></div>
@@ -43,8 +43,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-end align-items-center flex-column">
                                         <h5>AC</h5>
 
-                                        <small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month
+                                        <small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month
                                         </small>
 
                                     
@@ -55,8 +55,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Washing Machine</h5>
 
-                                        <small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month
+                                        <small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month
                                         </small>
 
                                     </div>
@@ -69,8 +69,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Refrigerator</h5>
 
-                                        <small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month
+                                        <small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month
                                         </small>
 
                                     </div>
@@ -81,8 +81,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Microwave</h5>
 
-                                        <small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month
+                                        <small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month
                                         </small>
 
                                     </div>
@@ -94,8 +94,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Geyser</h5>
 
-                                        <small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month
+                                        <small>Replacement cost: 2,500 INR <br />
+                                            Super cost: 65 INR/month
                                         </small>
 
                                     </div>
@@ -134,40 +134,40 @@ const Plan = () => {
                                 <div className="col-5 text-end">
                                         <h4 className="fw-bold mt-2">AC</h4>
                                         </div>
-                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month</small>
+                                        <div className="col-7 text-start"><small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
                              <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                         <h4 className="fw-bold mt-2">Stovetop</h4>
                                         </div>
-                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month</small>
+                                        <div className="col-7 text-start"><small>Replacement cost: 2,500 INR <br />
+                                            Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
                              <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                         <h4 className="fw-bold mt-2">Refrigerator</h4>
                                         </div>
-                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month</small>
+                                        <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
+                                            Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
                              <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                         <h4 className="fw-bold mt-2">Air Cooler</h4>
                                         </div>
-                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month</small>
+                                        <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
+                                            Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
                              <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                         <h4 className="fw-bold mt-2">Geyser</h4>
                                         </div>
-                                        <div className="col-7 text-start"><small>Replacement cost: $2,500 <br />
-                                            Super cost: $65/month</small>
+                                        <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
+                                            Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
                         </div>

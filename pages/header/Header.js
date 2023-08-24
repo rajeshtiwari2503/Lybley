@@ -147,8 +147,8 @@ const Header = () => {
           <div className="container" >
            <div className="row p-4">
             <div className="col-12 col-md-4 col-lg-4 p-4 border-end border-1 border-dark">
-              <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
-              <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, asperiores expedita reprehenderit autem alias doloremque, ex tempore maxime vel labore aperiam architecto eos perspiciatis culpa?</h6>
+              <h6>Lybley's home subscription care offers homeowners a trifecta of predictability, reliability, and comfort.</h6>
+              <h6>Irrespective of the plan you select, our certified Lybley service technicians stand prepared to swiftly repair or replace your home's appliances and systems whenever unexpected issues arise.</h6>
             </div>
             <div className="col-12 col-md-4 col-lg-4 p-4 text-center border-end border-1 border-dark">
               <h6>Simple</h6>
@@ -182,7 +182,7 @@ const Header = () => {
           <div className="container">
            <div className="row p-4">
             <div className="col-12 col-md-4 col-lg-4 p-4 border-end border-1 border-dark">
-              <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum eveniet nulla laboriosam. Maxime consectetur officia a facere dolorum ducimus, doloremque maiores.</h6>
+              <h6>For homeowners seeking steadfast service, consistent expenses, and a sense of security, Lybley presents subscription care tailored to the needs of your home.</h6>
               <ul>
                 <li>Expert and respected service techs</li>
                 <li>Phenomenal customer service</li>

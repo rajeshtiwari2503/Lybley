@@ -8,7 +8,8 @@ const Mobile= () => {
                     <div className="col-12 col-md-6 py-5">
                         <div className="ps-5">
                         <h1>Home maintenance meets high tech</h1>
-                        <p className='mt-5'>We deliver the promise of Super through an easy-to-use app and website portal that are intuitive, clear, and friendly. Whether you're requesting service through the App or on the website, we'll ask how we can help, where you need us, and when you need us. Then we dispatch a Super Certified professional, and you're on your way to easy living again.</p>
+                        <p className='mt-5'>
+We bring the commitment of Lybley to life via a user-friendly app and website portal designed for clarity, ease, and friendliness. Whether you're seeking assistance through the app or the website, we'll inquire about your needs, location, and preferred timeframe. Following this, a Lybley Certified expert will be dispatched, swiftly restoring a hassle-free living experience.</p>
                         {/* <div className="form-group d-flex">
                             <input type="text" name="number" className='shadow form-control rounded-end-0 w-50 ps-3' placeholder='Enter Mobile Number' /><button className='shadow btn btn-primary rounded-start-0'>GET APP LINK</button>
                         </div>
@@ -26,7 +27,7 @@ const Mobile= () => {
                     </div>
                     <div className="col-12 col-md-6 py-5">
                         <img src="https://crdms.images.consumerreports.org/prod/products/cr/models/407621-smartphones-apple-iphone-14-pro-10032754.png" className='card-img-top' width="600px" alt="" />
-                        <p className='mt-4'>The Super app makes scheduling service or getting some help with a project a breeze. Simply let us know what type of service you need and where and when you need us. It's that easy.</p>
+                        <p className='mt-4'>Effortlessly schedule services or seek assistance for projects through the Lybley app. Just inform us about the service you require, along with the location and preferred time, and experience the convenience firsthand. It's as simple as that.</p>
                         <div className="pb-4 text-center mt-4">
                             <h6 className='fw-bold'><i> DOWNLOAD LY3LEY APP</i></h6>
                             <div>
