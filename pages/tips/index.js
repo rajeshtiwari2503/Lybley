@@ -9,7 +9,7 @@ const Tips = () => {
                         <div className='p-3'>
                             <h1>Top Winter Pruning Tips for Healthy Trees and Shrubs</h1>
                             <div className='mt-4'>
-                                Colder temperatures and shorter days mean that your deciduous trees and shrubs are dormant for the winter. This is the perfect time to prune your plants so they can heal thoroughly and put on lush new growth in the spring. Here's what you need to know about which plants to prune in winter, why the timing is so important and how to get started.
+                            With the arrival of colder temperatures and shorter days, your deciduous trees and shrubs enter a dormant phase during winter. Seizing this opportunity to prune your plants is ideal, as it allows for thorough healing and encourages vibrant new growth come spring. Delve into understanding which plants are best pruned during winter, the significance of timing, and how to embark on this process effectively.
                             </div>
                             <div >
                                 <img   className='img-card-top servicerImgWdth' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
@@ -77,7 +77,7 @@ const Tips = () => {
                                     Check Your Crawl Space for Mold and Leaks
                                 </div>
                                 <div className='mt-5'>
-                                    That not-really-a-basement spot under your home that serves as a foundation? That’s your crawl space, not some forbidden zone lurking under the floorboards. It’s a part of your home, and you have to defend it. Take your crawl space from sketchy to solid by checking it for ...
+                                That area beneath your home that may not quite qualify as a basement but functions as a foundation? That's your crawl space – it's not a mysterious realm hidden beneath your floorboards. It's a legitimate component of your home, and it's your responsibility to look after it. Transform your crawl space from dubious to dependable by examining it for...
                                 </div>
                             </div>
                         </div>
