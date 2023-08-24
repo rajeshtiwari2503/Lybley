@@ -80,7 +80,7 @@ const Header = () => {
           <div className="col-12 col-md-6 col-lg-6">
             <div className='d-flex justify-content-around text-center ms-4'>
             <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>HOMEOWNER</small></Link>
-              <small className='hover fw-bold p-2'>REALTOR</small>
+              {/* <small className='hover fw-bold p-2'>REALTOR</small> */}
               <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>SERVICER</small></Link>
              <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className=''>TIPS</small></Link>
             </div>

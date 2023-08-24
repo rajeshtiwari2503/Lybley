@@ -14,7 +14,7 @@ const Servicer = () => {
             <div>
                 <div className={`${style.whatHead}`}>
                     <div className='align-items-center text-center'>
-                        <div className={`${style.whatText} pt-5 `}  >
+                        <div className={`${style.whatText} pt-5 text-white`}  >
                             WHAT A TEAM
                         </div>
                         <div>
@@ -25,12 +25,15 @@ const Servicer = () => {
                 <div>
                     <Works servicer={true} />
                 </div>
-                <div style={{ backgroundColor: "#15939a" }}>
+                <div 
+                className='bg-dark'
+                // style={{ backgroundColor: "#15939a" }}
+                >
                     <div className='container'>
                         <div className='row align-items-center p-5 text-white'>
                             <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
                                 <div className='text-center'>
-                                    <img className='img-card-top  servicerImgWdth' src='https://e0.pxfuel.com/wallpapers/414/230/desktop-wallpaper-appliance-recalls-archives-home-appliances.jpg' alt='tips' />
+                                    <img className='img-card-top  servicerImgWdth' src='https://image.similarpng.com/very-thumbnail/2020/08/Man-hollding-air-conditioner-on-transparent-PNG.png' alt='tips' />
                                 </div>
                             </div>
                             <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
@@ -96,15 +99,18 @@ const Servicer = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#caaef3" }}>
+                <div
+                className='bg-dark'
+                //  style={{ backgroundColor: "#caaef3" }}
+                 >
                     <div className='container'>
                         <div className='row pt-5 '>
                             <div className='col-12 col-md-2 col-lg-2'></div>
                             <div className='col-12 col-md-8 col-lg-8 text-center'>
-                                <div className='fw-bold fs-2 '>
+                                <div className='fw-bold fs-2 text-white '>
                                     How do I get started?
                                 </div>
-                                <div className='mt-3'>
+                                <div className='mt-3 text-white'>
                                 The process is straightforward. Just click the button below, share your location and the nature of your work. We'll have a discussion about some details and reach out to you as required. Our only request is that you maintain punctuality, deliver quality work, and offer a reasonable rate. In return, we commit to reciprocating the same level of dedication.
                                 </div>
                                 <div className='mt-5 mb-5'>
@@ -153,7 +159,9 @@ const Servicer = () => {
                                 </div>
 
                             </div>
-                            <div className='  col-2 pt-3 text-center rounded-4' style={{ background: "#f5881f" }}>
+                            <div className='  col-2 pt-3 text-center rounded-4' 
+                             style={{ background: "#f4f4f4" }}
+                            >
                                 <div className='fw-bold fs-2 pt-3'>
                                     <img className='card-img-top rounded' style={{ width: "80px", height: "80px" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s' alt='logo' />
                                 </div>
