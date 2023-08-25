@@ -33,7 +33,7 @@ const Servicer = () => {
                         <div className='row align-items-center p-5 text-white'>
                             <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
                                 <div className='text-center'>
-                                    <img className='img-card-top  servicerImgWdth' src='https://image.similarpng.com/very-thumbnail/2020/08/Man-hollding-air-conditioner-on-transparent-PNG.png' alt='tips' />
+                                    <img className='img-card-top  servicerImgWdth' src='https://e7.pngegg.com/pngimages/400/819/png-clipart-car-maintenance-automobile-repair-shop-motor-vehicle-service-air-conditioning-professional-tshirt-swimming-pool.png' alt='tips' />
                                 </div>
                             </div>
                             <div className='col-12 col-md-6 col-lg-6 p-md-3 p-1'>
