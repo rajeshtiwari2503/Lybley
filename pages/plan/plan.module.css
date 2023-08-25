@@ -47,6 +47,7 @@
     .bg_black{
         background-color: black;
         height: 800px;
+        width: 100%;
         /* position: relative; */
         display: flex;
         justify-content: center;
@@ -54,7 +55,7 @@
     .popUp{
      
        background-color: white;
-        height: 1000px;
+        height: 1100px;
         width: 360px;
         /* position: absolute; */
         top: 280px;
