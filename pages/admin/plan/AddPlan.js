@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import DashboardHeader from '../common/DashboardHeader';
+import httpCommon from '@/http-common';
 
 const AddPlan = (props) => {
   const { edit, plan } = props;
@@ -22,6 +23,9 @@ const AddPlan = (props) => {
   // }
   const [appliances, setAppliances] = useState([]);
   const [plus, setPlus] = useState([]);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  
   
   const addFormField = () => {
     setAppliances([...appliances, {  value: '', checked: false }]);
@@ -63,22 +67,31 @@ const AddPlan = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    addPlan();
     // Process and submit the form data, which is stored in 'formData'
   };
-
+  const addPlan=async()=>{
+    try{
+       let response=await httpCommon.post("/addPlan",{planName:name,price:+price,appliances:appliances,plus:plus});
+       let {data}=response;
+       router.push("/admin/plan");
+    }catch(err){
+        console.log(err);
+    }
+  }
   return (
     <div>
       <DashboardHeader pagetitle={edit ? "Edit Plan" : "Add Plan"} />
       <div className='row'>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Name </div>
-          <input type='text' className='form-control' placeholder='Plan Name' name="planName" />
+          <input type='text' className='form-control' placeholder='Plan Name' name="name" value={name} onChange={(e)=>setName(e.currentTarget.value)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
         <div className='col-6  '></div>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Price </div>
-          <input type='number' className='form-control' placeholder='Plan Price' name="Price" />
+          <input type='number' className='form-control' placeholder='Plan Price' name="price" value={price} onChange={(e)=>setPrice(e.currentTarget.value)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
       </div>
