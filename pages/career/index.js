@@ -80,7 +80,7 @@ const Career = () => {
                         <CheckCircleIcon color='primary' fontSize='large' />
                         <h5 className='fw-bold p-2'>#EveryoneIsAnOwner</h5>
                         <p>
-                            <small> Super is the sum of us all. We believe that everyone is responsible for the success of our company and charged with solving problems directly and efficiently.</small>
+                            <small> Lybley is the sum of us all. We believe that everyone is responsible for the success of our company and charged with solving problems directly and efficiently.</small>
                         </p>
                     </div>
                     <div className="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center col-lg-2">
@@ -151,7 +151,7 @@ const Career = () => {
                                 We value diversity here and know that diverse workplaces lead to a culture of innovation and more powerful business outcomes. Therefore, we always treat all employees and job applicants based on merit, qualifications, competence, and talent. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.
                             </div>
                             <div className='mt-4'>
-                                We will consider for employment qualified applicants with criminal histories in a manner consistent with the requirements of the San Francisco Fair Chance Ordinance. Applicants in need of special assistance or accommodation during the interview process or in accessing our website may contact us by sending an email to assistance(at)hellosuper.com. We will treat your request as confidentially as possible. In your email, please include your name and preferred method of contact, and we will respond as soon as possible.
+                                We will consider for employment qualified applicants with criminal histories in a manner consistent with the requirements of the San Francisco Fair Chance Ordinance. Applicants in need of special assistance or accommodation during the interview process or in accessing our website may contact us by sending an email to assistance(at)helloLybley.com. We will treat your request as confidentially as possible. In your email, please include your name and preferred method of contact, and we will respond as soon as possible.
                             </div>
                         </div>
                         <div className='col-12 col-md-2'></div>

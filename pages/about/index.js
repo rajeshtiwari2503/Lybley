@@ -21,9 +21,9 @@ const About = () => {
                     <div className="col-12 col-md-6 p-5 col-lg-6">
                         <div>
                             <small>
-                                Super offers subscription services to help owners care for their homes. We do that with phenomenal customer service, robust technologies, and partnerships with the best local service techs available. We’re committed to providing premium service quality for all homeowners at a predictable, reasonable cost.
+                                Lybley offers subscription services to help owners care for their homes. We do that with phenomenal customer service, robust technologies, and partnerships with the best local service techs available. We’re committed to providing premium service quality for all homeowners at a predictable, reasonable cost.
 
-                                Established in 2015, Super is on pace to increase its market share by adding subscribers, service techs, and regions. Each step of growth is deliberate, strategic, and careful.
+                                Established in 2015, Lybley is on pace to increase its market share by adding subscribers, service techs, and regions. Each step of growth is deliberate, strategic, and careful.
 
                                 The company features a collaborative, dynamic, and data-driven team and a seasoned leadership team with a winning track record.
                             </small>
@@ -74,7 +74,7 @@ const About = () => {
                         <CheckCircleIcon color='primary' fontSize='large' />
                         <h5 className='fw-bold p-2'>#EveryoneIsAnOwner</h5>
                         <p>
-                            <small> Super is the sum of us all. We believe that everyone is responsible for the success of our company and charged with solving problems directly and efficiently.</small>
+                            <small> Lybley is the sum of us all. We believe that everyone is responsible for the success of our company and charged with solving problems directly and efficiently.</small>
                         </p>
                     </div>
                     <div className="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center col-lg-2">
@@ -92,7 +92,7 @@ const About = () => {
                                 <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
                                     <h3>Hi , I'm Raj</h3>
                                     <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
                                
                             </div>
                         </div>
@@ -107,7 +107,7 @@ const About = () => {
                                 <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
                                     <h3>Hi , I'm Raj</h3>
                                     <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
                                
                             </div>
                         </div>
@@ -122,7 +122,7 @@ const About = () => {
                                 <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
                                     <h3>Hi , I'm Raj</h3>
                                     <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Super, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
                                
                             </div>
                         </div>

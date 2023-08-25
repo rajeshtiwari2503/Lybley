@@ -43,7 +43,7 @@ const Works = (props) => {
        <> <div className="row">
             <div className="col-12 col-md-6 col-lg-6">
             <div className='text-center'>
-             <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202207/godrej_appliances_0-sixteen_nine.png?size=948:533" alt="..." className='img-fluid' width="400px" height="400px" />
+             <img src="https://www.nicepng.com/png/detail/182-1827086_home-appliances-transparent-images-panasonic-ne-1054f-1000w.png" alt="..." className='img-fluid' width="400px" height="400px" />
             </div>
             </div>
             <div className="col-12 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-center flex-column col-md-6 col-lg-6">

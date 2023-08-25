@@ -36,10 +36,10 @@ function MyVerticallyCenteredModal(props) {
                             <PersonAddIcon color='primary' style={{fontSize:"40px"}} />
                         </div>
                         <div className='mt-3 mb-3'>
-                            <div className='fw-bold fs-5 ms-5 me-5'>Sign up with Lubley</div>
+                            <div className='fw-bold fs-5 ms-5 me-5'>Sign up with Lybley</div>
                         </div>
                         <div>
-                        Do you need to add Super to your home?
+                        Do you need to add Lybley to your home?
                         </div>
                         <div className='mt-3 mb-3'>
                             <button className='btn btn-primary'>6446644646464</button>
@@ -55,7 +55,7 @@ function MyVerticallyCenteredModal(props) {
                             <div className='fw-bold fs-5'>Any questions about your plan?</div>
                         </div>
                         <div>
-                        Do you have questions about your Super policy?
+                        Do you have questions about your Lybley policy?
                         </div>
                         <div className='mt-3 mb-3'>
                             <button className='btn btn-primary'>6446644646464</button>
