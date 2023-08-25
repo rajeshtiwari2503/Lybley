@@ -16,7 +16,7 @@ const Available = () => {
                 <div className='marquee '>
                     <div className='content'>
 
-                        <div className='d-flex mt-1 mb-1'>
+                        <div className='d-flex mt-1 mb-5'>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
                                 Noida
                             </div>
@@ -40,7 +40,7 @@ const Available = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${style.searchBody} `}>
+            {/* <div className={`${style.searchBody} `}>
 
                 <div className=''>
                     <div className={`${search ? style.searchBoxClick : style.searchBox} shadow`}>
@@ -58,7 +58,7 @@ const Available = () => {
                         : ""
                     }
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
