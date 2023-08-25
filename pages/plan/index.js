@@ -50,7 +50,7 @@ const Plan = () => {
                                     
                                     </div>
                                     </div>
-                                <div style={{marginTop:"-25px"}} className="col-12 col-md-6 pe-1  d-flex justify-content-end align-items-center col-lg-6">
+                                <div style={{marginTop:"-26px",marginLeft:"3px"}} className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                       
                                     <div className="d-flex justify-content-center px-2 align-items-center flex-column">
                                         <h5>Washing Machine</h5>
@@ -63,7 +63,7 @@ const Plan = () => {
                                     <img src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-washing-machine-icon-design-template-vector-isolated-png-image_872540.jpg" width="200px" height="180px" alt="..." />
                                 </div>
                                 
-                                <div style={{marginTop:"-25px"}}  className="col-12 col-md-6    ps-1   d-flex justify-content-start align-items-center col-lg-6">
+                                <div style={{marginTop:"-26px",marginLeft:"-6px"}}  className="col-12 col-md-6    ps-1   d-flex justify-content-start align-items-center col-lg-6">
                                     <img src="https://static.vecteezy.com/system/resources/previews/014/551/133/non_2x/food-fridge-icon-outline-style-vector.jpg" width="200px" height="180px" alt="..." />
 
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -76,8 +76,8 @@ const Plan = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="row text-white py-1 m-0" >
-                                <div className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
+                            <div className="row text-white " style={{marginTop:"1.5px"}}>
+                                <div style={{marginLeft:"3px"}} className="col-12 col-md-6 pe-1 d-flex justify-content-end align-items-center col-lg-6">
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Microwave</h5>
 
@@ -88,7 +88,7 @@ const Plan = () => {
                                     </div>
                                     <img src="https://thumbs.dreamstime.com/b/microwave-oven-safe-isolated-white-background-icon-cookware-ink-style-vector-illustration-design-240374098.jpg" width="200px" height="180px" alt="..." />
                                 </div>
-                                <div className="col-12 col-md-6 ps-1 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
+                                <div style={{marginLeft:"-14px"}} className="col-12 col-md-6   mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
                                     <img src="https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-geyser-icon-abstract-black-and-png-image_5115582.png" width="200px" height="180px" alt="..." />
 
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
@@ -102,10 +102,10 @@ const Plan = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="container d-block d-md-none d-lg-none">
-                            <div className="row w-100">
-                            <div className="col-12 d-flex justify-content-center">
-                                    <div className={`${style.upArrow} text-center`}>
+                        <div className=" container  text-center d-block d-md-none d-lg-none">
+                            <div className="row text-center">
+                            <div className="col-12 d-flex  ">
+                                    <div className={`${style.upArrow}  `}>
 
                                     </div>
                                 </div>
@@ -113,19 +113,19 @@ const Plan = () => {
                                     <img   src="https://cdn-icons-png.flaticon.com/512/2648/2648885.png" width="100px" height="" alt="" />
                                 
                                 </div>
-                                <div className="col-6 text-end pe-1">
+                                <div className="col-6 text-end  " style={{marginTop:"-6px"}}>
                                 <img src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-washing-machine-icon-design-template-vector-isolated-png-image_872540.jpg" width="150px" height="130px" alt="..." />
                                 </div>
-                                <div className="col-6 text-start ps-1">
+                                <div className="col-6 text-start " style={{marginLeft:"-19px",marginTop:"-6px"}}>
                                 <img src="https://static.vecteezy.com/system/resources/previews/014/551/133/non_2x/food-fridge-icon-outline-style-vector.jpg" width="150px" height="130px" alt="..." />
                                 </div>
                             </div>
-                            <div className="row w-100 mt-2">
-                                <div className="col-6 text-end pe-1">
+                            <div className="row  " style={{marginTop:"2px"}}>
+                                <div className="col-6 text-end  ">
                                 <img src="https://thumbs.dreamstime.com/b/microwave-oven-safe-isolated-white-background-icon-cookware-ink-style-vector-illustration-design-240374098.jpg" width="150px" height="130px" alt="..." />
 
                                 </div>
-                                <div className="col-6 text-start ps-1">
+                                <div className="col-6 text-start  "style={{marginLeft:"-19px"}}>
                                 <img src="https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-geyser-icon-abstract-black-and-png-image_5115582.png" width="150px" height="130px" alt="..." />
 
                                 </div>
