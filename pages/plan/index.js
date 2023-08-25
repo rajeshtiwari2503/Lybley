@@ -10,7 +10,7 @@ const Plan = () => {
                 <div className={`${style.bg_black}`}>
                     <div className="text-white text-center mt-5">
                         <h2 className="">We have a plan (for your home)</h2>
-                        <div className="row w-100 mt-3">
+                        <div className="row w-100  mt-3">
                             <div className="col-12 col-md-3 col-lg-3"></div>
                             <div className="col-12 col-md-6 col-lg-6">
                                 <p className="">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
@@ -102,8 +102,8 @@ const Plan = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="d-block d-md-none d-lg-none">
-                            <div className="row">
+                        <div className="container d-block d-md-none d-lg-none">
+                            <div className="row ">
                             <div className="col-12 d-flex justify-content-center">
                                     <div className={`${style.upArrow} text-center`}>
 
@@ -170,8 +170,11 @@ const Plan = () => {
                                             Lybley cost: 65 INR/month</small>
                                         </div>  
                              </div>
+                             <div className="d-block d-md-none d-lg-none text-end px-3 mt-4 me-5">
+                            <button className="btn btn-warning rounded-pill px-3">Learn More</button>
                         </div>
-                        <div className="text-end px-3 mt-4 me-5">
+                        </div>
+                        <div className="d-none d-md-block d-lg-block text-end px-3 mt-4 me-5">
                             <button className="btn btn-warning rounded-pill px-3">Learn More</button>
                         </div>
                     </div>
