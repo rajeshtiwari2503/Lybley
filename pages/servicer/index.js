@@ -8,6 +8,7 @@ import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly';
 import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from '@mui/icons-material/Close';
 import style from "./servicer.module.css"
+import Link from 'next/link'
 const Servicer = () => {
     return (
         <div>
@@ -18,7 +19,7 @@ const Servicer = () => {
                             WHAT A TEAM
                         </div>
                         <div>
-                            <button className='btn btn-primary'>GET STARTED</button>
+                    <Link href={"/servicer-signup"}>     <button className='btn btn-primary'>GET STARTED</button></Link>
                         </div>
                     </div>
                 </div>
@@ -114,7 +115,7 @@ const Servicer = () => {
                                 The process is straightforward. Just click the button below, share your location and the nature of your work. We'll have a discussion about some details and reach out to you as required. Our only request is that you maintain punctuality, deliver quality work, and offer a reasonable rate. In return, we commit to reciprocating the same level of dedication.
                                 </div>
                                 <div className='mt-5 mb-5'>
-                                    <button className='btn btn-light rounded' >SIGN UP FOR A FREE ACCOUNT</button>
+                                <Link href={"/servicer-signup"}>   <button className='btn btn-light rounded' >SIGN UP FOR A FREE ACCOUNT</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +275,7 @@ const Servicer = () => {
                             How does Super compare?
                         </div>
                         <div className={`  d-flex  m-0 p-0 `} >
-                            <div style={{width:"250px",textAlign:"left",fontSize:"10px"}} className='  ps-2  bg-white m-0 p-0 pt-5 mt-5 rounded-4 '>
+                            <div style={{width:"250px",textAlign:"left",fontSize:"10px"}} className='ps-2 bg-white m-0 p-0 pt-5 mt-5 rounded-4'>
 
                                 <div className='pt-5'></div>
                                 <div  className='border-top pe-2  pt-2 pb-2'>
@@ -306,7 +307,7 @@ const Servicer = () => {
                                 </div>
 
                             </div>
-                            <div className='   pt-3 text-center rounded-4' style={{ background: "#f5881f" }}>
+                            <div className='   pt-3 text-center rounded-4' style={{ background: "#f4f4f4" }}>
                                 <div className='fw-bold fs-2 pt-3'>
                                     <img className='card-img-top rounded' style={{ width: "80px", height: "80px" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s' alt='logo' />
                                 </div>
