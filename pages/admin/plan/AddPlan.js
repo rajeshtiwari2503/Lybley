@@ -65,33 +65,45 @@ const AddPlan = (props) => {
     updatedFormData[index].checked = !updatedFormData[index].checked;
     setPlus(updatedFormData);
   };
+  const handleEdit = async (obj) => {
+    try {
+        let response = await httpCommon.patch(`/updatePlan/${props?.id}`, obj);
+        let { data } = response;
+        router.push(`/admin/user`);
+    } catch (err) {
+        console.log(err);
+    }
+}
   const handleSubmit = (e) => {
     e.preventDefault();
-    addPlan();
+   edit ? handleEdit() : addPlan();
     // Process and submit the form data, which is stored in 'formData'
   };
   const addPlan=async()=>{
     try{
-       let response=await httpCommon.post("/addPlan",{planName:name,price:+price,appliances:appliances,plus:plus});
+     
+       let response=await httpCommon.post("/addPlan",{planName:name,price:+price,appliances :appliances,plus:plus});
        let {data}=response;
        router.push("/admin/plan");
     }catch(err){
         console.log(err);
     }
   }
+  
+
   return (
     <div>
       <DashboardHeader pagetitle={edit ? "Edit Plan" : "Add Plan"} />
       <div className='row'>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Name </div>
-          <input type='text' className='form-control' placeholder='Plan Name' name="name" value={name} onChange={(e)=>setName(e.currentTarget.value)} />
+          <input type='text' className='form-control' placeholder='Plan Name' name="name" value={edit ?plan?.planName : name} onChange={(e)=>setName(e.currentTarget.value)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
         <div className='col-6  '></div>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Price </div>
-          <input type='number' className='form-control' placeholder='Plan Price' name="price" value={price} onChange={(e)=>setPrice(e.currentTarget.value)} />
+          <input type='number' className='form-control' placeholder='Plan Price' name="price" value={edit ? plan?.price : price} onChange={(e)=>setPrice(e.currentTarget.value)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
       </div>
@@ -99,7 +111,7 @@ const AddPlan = (props) => {
         <div className='mt-3 mb-2'>Appliances </div>
         <div>
           <div  >
-            {appliances?.map((field, index) => (
+            {(edit ? plan?.appliances :appliances)?.map((field, index) => (
               <div className='d-flex mb-3'>
                 <div key={index}>
                   <input
@@ -130,7 +142,7 @@ const AddPlan = (props) => {
         <div className='mt-5 mb-2'>Plus </div>
         <div>
           <div  >
-            {plus?.map((field, index) => (
+            {(edit ? plan?.plus : plus)?.map((field, index) => (
               <div className='d-flex mb-3'>
                 <div key={index}>
                   <input

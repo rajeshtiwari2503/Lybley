@@ -12,7 +12,7 @@ import AddIcon from '@mui/icons-material/Add';
 import VisibilityIcon from '@mui/icons-material/Visibility';
  
 
-const MyPlan = () => {
+const MyTechnician = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [randomValue, setRandomValue] = useState("");
@@ -20,7 +20,7 @@ const MyPlan = () => {
   const [confirmBoxView, setConfirmBoxView] = useState(false);
 
   useEffect(() => {
-    getPlans()
+    getTechnician()
   }, [randomValue])
   const handleUser = (id) => {
     setUserId(id)
@@ -52,7 +52,7 @@ const MyPlan = () => {
         sortable: true, width: "90px"
       },
       {
-        name: "PLAN NAME",
+        name: "TECHNICIAN NAME",
         selector: (row) => row?.planName,
         cell: row => row?.planName,
         sortable: true, width: "150px"
@@ -65,13 +65,16 @@ const MyPlan = () => {
 
       {
         name: "APPLIANCES",
-        selector: (row) => row.location,
+        selector: (row) => row?.appliances,
         sortable: true,  
+         cell:(row) =>  
+            {row?.appliances.map((item,i)=><div>{item} </div>)}
+        
       },
       
       {
         name: "PLUS",
-        selector: (row) => row.location,
+        selector: (row) => row.plus,
         sortable: true, 
       },
       
@@ -101,10 +104,10 @@ const MyPlan = () => {
     ]
   }
 
-  const getPlans = async () => {
+  const getTechnician = async () => {
     try {
       setLoading(true)
-      let response = await httpCommon.get("/getPlans");
+      let response = await httpCommon.get("/getAllservicer");
       let { data } = response;
       console.log("dnh",data);
       setData(data);
@@ -122,11 +125,11 @@ const MyPlan = () => {
   const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
-        <DashboardHeader pagetitle={"Plans"}
+        <DashboardHeader pagetitle={"Technician"}
                 modalbutton={() => {
                     return <div className="col-auto d-flex w-sm-100">
-                        <Link href={"/admin/plan/AddPlan"} className='text-decoration-none'>
-                            <button type="button" className="btn btn-primary btn-set-task w-sm-100"  > <AddIcon className='me-1' fontSize='large'/>Add Plan</button>
+                        <Link href={"/admin/technician/AddTechnician"} className='text-decoration-none'>
+                            <button type="button" className="btn btn-primary btn-set-task w-sm-100"  > <AddIcon className='me-1' fontSize='large'/>Add Technician</button>
                         </Link>
                     </div>
                 }} />
@@ -160,4 +163,4 @@ const MyPlan = () => {
   )
 }
 
-export default MyPlan
+export default MyTechnician
