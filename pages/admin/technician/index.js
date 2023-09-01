@@ -1,8 +1,11 @@
 import React from 'react'
+import MyTechnician from './technician'
 
 const Technician = () => {
   return (
-    <div>Technician</div>
+    <div> 
+      <MyTechnician />
+    </div>
   )
 }
 

@@ -1,30 +1,30 @@
 import React,{useState,useEffect} from 'react'
 import { useRouter } from 'next/router';
-import AddPlan from '../AddPlan';
 import httpCommon from '@/http-common';
+import AddTechnician from '../AddTechnician';
 
-const EditPlan = () => {
-    const [plan,setPlan]=useState({});
+const EditTechnician = () => {
+    const [technician,setTechnician]=useState({});
     const router=useRouter();
     const {id}=router.query;
     useEffect(()=>{
-      getPlan();
+      getTechnician();
     },[id]);
   
-    const getPlan=async()=>{
+    const getTechnician=async()=>{
          try{
           let response = await httpCommon.get(`/getPlanBy/${id}`);
           let {data}=response;
-          setPlan(data);
+          setTechnician(data);
          }catch(err){
           console.log(err);
          }
     }
     return (
       <div>
-          <AddPlan edit={true} id={id} plan={plan} />
+          <AddTechnician edit={true} id={id} plan={technician} />
       </div>
     )
   }
   
-export default EditPlan
+export default EditTechnician
