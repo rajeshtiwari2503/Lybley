@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CancelIcon from '@mui/icons-material/Cancel';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -11,6 +11,7 @@ import UpgradeIcon from '@mui/icons-material/Upgrade';
 import Faqs from '../faqs';
 import Available from '../available';
 // import style from "./price.module.css";
+import Modal from 'react-bootstrap/Modal';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -22,6 +23,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { useDataContext } from '../api/userData';
 import ToastMessage from '../admin/common/ToastMessage';
+import Link from 'next/link';
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -33,11 +35,34 @@ import ToastMessage from '../admin/common/ToastMessage';
 //     },
 //   },
 // });
+function MyVerticallyCenteredModal(props) {
 
+ 
+
+    return (
+      <Modal
+        {...props}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <div className='text-center pt-3 rounded' style={{ backgroundColor: "aliceblue" }}>
+          <Modal.Body className='p-4'>
+           {props.showMax ?<> <div className='fw-bold fs-4 text-center'>Max Limits Upgrade</div>
+            <div className='mt-4'>Increased coverage limits for all major appliances and key systems.</div> </>:
+           <> <div className='fw-bold fs-4 text-center'>It's Covered upgrade</div>
+            <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></>}
+            <div className='mt-4'><button className='btn btn-primary rounded-pill' onClick={() =>{ props.setModalShow(false); props.setShowMax(false)}}><small>GOT IT</small></button></div>
+  
+          </Modal.Body>
+        </div >
+      </Modal >
+    );
+  }
 
 const Pricing = () => {
     const { data } = useDataContext();
-  
+    const [homeData,setHomeData]=React.useState({});
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
@@ -46,22 +71,29 @@ const Pricing = () => {
         panel === "panel1" ? setExpanded(newExpanded ? panel : false) : panel === "panel2" ? setExpanded2(newExpanded ? panel : false) : setExpanded3(newExpanded ? panel : false);
     };
   
-    
+    const [modalShow, setModalShow] = useState(false);
+    const [showMax,setShowMax]=useState(false);
+
+    const openModel=()=>{
+        setShowMax(true)
+        setModalShow(true);
+    }
+
     const validationSchema = Yup.object().shape({
         location: Yup.string()
-        .required('location is required')
+        .required('Location is required')
         .min(4, 'location must be at least 4 characters')
         .max(40, 'location must not exceed 40 characters'),
         firstName: Yup.string()
-        .required('firstName is required')
+        .required('FirstName is required')
         .min(3, 'firstName must be at least 3 characters')
         .max(40, 'firstName must not exceed 40 characters'),
         lastName: Yup.string()
-        .required('lastName is required')
+        .required('LastName is required')
         .min(3, 'lastName must be at least 3 characters')
         .max(40, 'lastName must not exceed 40 characters'),
-        unit: Yup.string().required("unit number is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
-
+        unit: Yup.string().required("Unit number is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
+        homeSize:Yup.string().required("Home Size is required in sqft"),
         email: Yup.string()
             .required('Email is required')
             .email('Email is invalid'),
@@ -79,22 +111,25 @@ const Pricing = () => {
     });
     
       const handleRegistration = async (data) => {
-        let regData={location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,}
-        try {
+
+        setHomeData(data);
+        // alert(data.homeSize);
+        // let regData={location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,}
+        // try {
              
-            let response = await httpCommon.post("/registration",regData)
-            let { data } = response;
-            ToastMessage(data)
-        }
-        catch (err) {
-            console.log(err)
-        }
+        //     let response = await httpCommon.post("/registration",regData)
+        //     let { data } = response;
+        //     ToastMessage(data)
+        // }
+        // catch (err) {
+        //     console.log(err)
+        // }
     }
     return (
         <>
             <div  >
                 <div className='container'>
-                    <div className='row pt-5'>
+                   {!(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?  <div className='row pt-5'>
                         <div className='col-12 col-md-3  col-lg-3'></div>
                         <div className='col-12 col-md-6 col-lg-6 shadow rounded' style={{ backgroundColor: "#5396B9" }}>
                             
@@ -106,6 +141,10 @@ const Pricing = () => {
                                     <div className='col-4 col-md-4 col-lg-4 '>
                                         <input type='number' className='form-control' placeholder='Unit' value={data?.unit} name="unit" {...register('unit')} />
                                         <div className='text-danger'> {errors.unit?.message}</div>
+                                    </div>
+                                    <div className='col-12 mt-4'>
+                                        <input type='number' className='form-control' placeholder='Home Size in sqft' name="homeSize"  {...register('homeSize')}/>
+                                        <div className='text-danger'> {errors.homeSize?.message}</div>
                                     </div>
                                     <div className='col-12 col-md-6 col-lg-6 mt-4'>
                                         <input type='text' className='form-control' placeholder='First Name' name="firstName"  {...register('firstName')}/>
@@ -141,14 +180,22 @@ const Pricing = () => {
  
                 </div>
                 <div className='col-12 col-md-3  col-lg-3'></div>
+            </div> :
+            <div className="text-center mt-3">
+            <h4 >{homeData?.location || homeData?.city}</h4>
+            <div><small>Home size: {homeData?.homeSize} sq ft</small></div>
+            <div><small>More than 100 Lybley subscribers already in your neigborhood </small> </div>
+            <h4>{homeData?.firstName}, here are plans tailored for your home in {homeData?.location || homeData?.city}</h4>
             </div>
+            }
+            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ? "" :
             <div className='row mt-2'>
                 <div className="col-md-3 col-lg-3 col-12"></div>
                 <div className="col-md-6 col-lg-6 col-12 text-center">
                     <small>By clicking SHOW PRICES, you consent to receiving communication from Lybley Home Inc. through calls, emails, and/or text messages, and acknowledge your acceptance of our Terms and Conditions & Privacy Policy. Standard messaging and data rates may apply.</small>
                     <div className="col-md-3 col-lg-3 col-12"></div>
                 </div>
-            </div>
+            </div>}
             <div className="row mt-5">
                 <div className="col-12 col-md-1 col-lg-1"></div>
                 <div className="col-12 col-md-10 col-lg-10">
@@ -157,6 +204,16 @@ const Pricing = () => {
                         <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
                             <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Lite</h6>
                             <div className='text-center'>our plan for protecting vital home systems</div>
+                             
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                            <div className='pt-3'>
+                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <div className='text-center'><small>paid monthly</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='p-3'>
+                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            </div></div>
+                                  :
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                     <h5 className='text-center'> Want to see your price?</h5>
@@ -164,11 +221,12 @@ const Pricing = () => {
                                     <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                 </div>
                             </div>
+}
                             <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon />
+                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={()=>setModalShow(true)} />
                             </div>
                             <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon />
+                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
                             </div>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
                                 <AccordionSummary
@@ -239,25 +297,38 @@ const Pricing = () => {
                             <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
-                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
 
+                           :
+                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            }
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
                         <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield  </h6>
+                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Basic </h6>
                             <div className='text-center'>our plan for protecting vital home systems</div>
+
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                            <div className='pt-3'>
+                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <div className='text-center'><small>paid monthly</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='p-3'>
+                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            </div></div> :
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                     <h5 className='text-center'> Want to see your price?</h5>
                                     <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                     <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                 </div>
-                            </div>
+                            </div>}
                             <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon />
+                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={()=>setModalShow(true)} />
                             </div>
                             <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon />
+                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
                             </div>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
                                 <AccordionSummary
@@ -306,7 +377,12 @@ const Pricing = () => {
                             <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+
+                           :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            }
 
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
@@ -314,18 +390,26 @@ const Pricing = () => {
                             <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
                             <h6 className='text-center  pb-2 pt-3'>Home shield Plus</h6>
                             <div className='text-center'>Just the right coverage for extra busy homes</div>
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                            <div className='pt-3'>
+                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <div className='text-center'><small>paid monthly</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='p-3'>
+                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            </div></div>:
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
                                     <h5 className='text-center'> Want to see your price?</h5>
                                     <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                     <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                 </div>
-                            </div>
+                            </div>}
                             <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2 text-white'>In Upgraded</div><InfoIcon color='disabled'/>
+                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2 text-white'>In Upgraded</div><InfoIcon color='disabled' onClick={()=>setModalShow(true)}/>
                             </div>
                             <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled'/>
+                                <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled' onClick={openModel}/>
                             </div>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
                                 <AccordionSummary
@@ -374,24 +458,37 @@ const Pricing = () => {
                             <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                             <div className='ps-2 '><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+
+                           :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            }
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
                         <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
                             <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Pro Plus</h6>
                             <div className='text-center'>Maximum coverage for major peace of mind</div>
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                            <div className='pt-3'>
+                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <div className='text-center'><small>paid monthly</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='p-3'>
+                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            </div></div> :
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                     <h5 className='text-center'> Want to see your price?</h5>
                                     <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
                                     <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
                                 </div>
-                            </div>
+                            </div>}
                             <div className=" mt-3 d-flex justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>In Upgrade</div><InfoIcon />
+                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>In Upgrade</div><InfoIcon onClick={()=>setModalShow(true)} />
                             </div>
                             <div className="mt-2 d-flex pb-3 justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon />
+                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon onClick={openModel} />
                             </div>
                             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
                                 <AccordionSummary
@@ -455,7 +552,12 @@ const Pricing = () => {
                             <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
+                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+
+                           :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                            }
 
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
@@ -905,6 +1007,13 @@ const Pricing = () => {
                 </div>
                 <Available />
             </div >
+            <MyVerticallyCenteredModal
+           show={modalShow}
+        // onHide={() => setModalShow(false)}
+        showMax={showMax}
+        setShowMax={setShowMax}
+           setModalShow={setModalShow}
+      />
         </>
     )
 }
