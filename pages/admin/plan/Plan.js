@@ -90,9 +90,9 @@ const MyPlan = () => {
           <Link href={`/admin/plan/EditPlan/${row?._id}`} >
           <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link>
-          {/* <Link href={`/admin/user/UserDetails/${row?._id}`}>
+          <Link href={`/admin/plan/PlanDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
-          </Link> */}
+          </Link>
           <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' />
         </div>,
         sortable: true, width: "100px"
