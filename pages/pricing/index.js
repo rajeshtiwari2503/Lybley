@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CancelIcon from '@mui/icons-material/Cancel';
 import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -63,6 +63,7 @@ function MyVerticallyCenteredModal(props) {
 const Pricing = () => {
     const { data } = useDataContext();
     const [homeData,setHomeData]=React.useState({});
+    const [plans,setPlans]=React.useState([]);
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
@@ -73,7 +74,9 @@ const Pricing = () => {
   
     const [modalShow, setModalShow] = useState(false);
     const [showMax,setShowMax]=useState(false);
-
+    useEffect(()=>{
+     getPlans();
+    },[]);
     const openModel=()=>{
         setShowMax(true)
         setModalShow(true);
@@ -110,6 +113,7 @@ const Pricing = () => {
         resolver: yupResolver(validationSchema)
     });
     
+
       const handleRegistration = async (data) => {
 
         setHomeData(data);
@@ -125,6 +129,21 @@ const Pricing = () => {
         //     console.log(err)
         // }
     }
+
+    const getPlans=async()=>{
+        try{
+          let response=await httpCommon.get("/getPlans");
+          let {data}=response;
+          setPlans(data);
+        }catch(err){
+          console.log(err);
+        }
+    }
+    let homeShieldLite=plans?.find(p1=>p1?.planName==="Home Shield Lite");
+    let homeShieldBasic=plans?.find(p1=>p1?.planName==="Home Shield Basic");
+    let homeShieldPlus=plans?.find(p1=>p1?.planName==="Home Shield Plus");
+    let homeShieldProPlus=plans?.find(p1=>p1?.planName==="Home Shield Pro Plus");
+    
     return (
         <>
             <div  >
@@ -202,14 +221,14 @@ const Pricing = () => {
                     <div className="row">
 
                         <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Lite</h6>
+                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName}</h6>
                             <div className='text-center'>our plan for protecting vital home systems</div>
                              
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                             <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0)} INR</h2>
                             <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldLite?.price))} INR paid annually</small></div>
                             <div className='p-3'>
                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
                             </div></div>
@@ -238,7 +257,12 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
+                                     { homeShieldLite?.appliances?.map(a1=>
+                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                     )
+                                     }
+                                    {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
                                     <div className='text-muted'> <CancelIcon   /> Refrigerator</div> 
                                     <div className='text-muted'> <CancelIcon   /> T V</div>
                                         <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -250,7 +274,7 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Mixer </div>
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
-                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -288,9 +312,11 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div className='d-flex'><CheckCircleIcon color='primary'/><div className='ps-1'> Smart Home Devices</div></div>
-                                        <div className='text-muted'><CancelIcon /> Plumbering</div>
-                                        <div className='text-muted'><CancelIcon /> Electrician work</div> 
+                                    { homeShieldLite?.plus?.map(a1=>
+                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                     )
+                                     }
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -306,14 +332,14 @@ const Pricing = () => {
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
                         <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Basic </h6>
+                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
                             <div className='text-center'>our plan for protecting vital home systems</div>
 
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                             <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0)} INR</h2>
                             <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldBasic?.price))} INR paid annually</small></div>
                             <div className='p-3'>
                             <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
                             </div></div> :
@@ -340,7 +366,12 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
+                                    { homeShieldBasic?.appliances?.map(a1=>
+                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                     )
+                                     }
+                                    {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
                                     <div className='text-muted'> <CancelIcon   /> Refrigerator</div> 
                                     <div className='text-muted'> <CancelIcon   /> T V</div> 
                                         <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -352,7 +383,7 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Mixer </div>
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
-                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -368,9 +399,11 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div className='d-flex'><CheckCircleIcon color='primary'/><div className='ps-1'> Smart Home Devices</div></div>
-                                        <div className='text-muted'><CancelIcon /> Plumbering</div>
-                                        <div className='text-muted'><CancelIcon /> Electrician work</div> 
+                                    { homeShieldBasic?.plus?.map(a1=>
+                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                     )
+                                     }
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -388,13 +421,13 @@ const Pricing = () => {
                         </div>
                         <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
                             <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
-                            <h6 className='text-center  pb-2 pt-3'>Home shield Plus</h6>
+                            <h6 className='text-center  pb-2 pt-3'>{homeShieldPlus?.planName}</h6>
                             <div className='text-center'>Just the right coverage for extra busy homes</div>
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                             <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0)} INR</h2>
                             <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldPlus?.price))} INR paid annually</small></div>
                             <div className='p-3'>
                             <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
                             </div></div>:
@@ -421,7 +454,12 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
+                                    { homeShieldPlus?.appliances?.map(a1=>
+                                     a1?.checked===false ? <div> <CancelIcon color='disable'  />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                     )
+                                     }
+                                    {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
                                     <div> <CancelIcon color='disable' /> Refrigerator</div> 
                                     <div> <CancelIcon color='disable' /> T V</div> 
                                      <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -433,7 +471,7 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Mixer </div>
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
-                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -449,9 +487,11 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div className='d-flex'><CheckCircleIcon color='primary'/><div className='ps-1'> Smart Home Devices</div></div>
-                                        <div className=' '><CancelIcon /> Plumbering</div>
-                                        <div className=' '><CancelIcon /> Electrician work</div> 
+                                    { homeShieldPlus?.plus?.map(a1=>
+                                     a1?.checked===false ? <div> <CancelIcon color='disable'   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                     )
+                                     }
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -467,13 +507,13 @@ const Pricing = () => {
                             <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                         </div>
                         <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>Home Shield Pro Plus</h6>
+                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldProPlus?.planName}</h6>
                             <div className='text-center'>Maximum coverage for major peace of mind</div>
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                             <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*10)/12).toFixed(0)} INR</h2>
+                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0)} INR</h2>
                             <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*10)} INR paid annually</small></div>
+                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldProPlus?.price))} INR paid annually</small></div>
                             <div className='p-3'>
                             <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
                             </div></div> :
@@ -500,7 +540,11 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                    <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
+                                    { homeShieldProPlus?.appliances?.map(a1=>
+                                     (a1?.checked && <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>)
+                                     )
+                                     }
+                                    {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
                                     <div> <CheckCircleIcon color='primary' /> Refrigerator</div> 
                                     <div> <CheckCircleIcon color='primary' /> T V</div> 
                                     <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -512,7 +556,7 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Mixer </div>
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
-                                        <div> <CheckCircleIcon color="primary" />  Geyser </div>
+                                        <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -543,9 +587,11 @@ const Pricing = () => {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        <div className='d-flex'><CheckCircleIcon color='primary'/><div className='ps-1'> Smart Home Devices</div></div>
-                                        <div className='text-muted'><CheckCircleIcon color='primary'/> Plumbering</div>
-                                        <div className='text-muted'><CheckCircleIcon color='primary'/> Electrician work</div> 
+                                    { homeShieldProPlus?.plus?.map(a1=>
+                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
+                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                     )
+                                     }
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
