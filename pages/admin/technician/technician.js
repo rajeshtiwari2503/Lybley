@@ -22,13 +22,13 @@ const MyTechnician = () => {
   useEffect(() => {
     getTechnician()
   }, [randomValue])
-  const handleUser = (id) => {
+  const handleTechnician = (id) => {
     setUserId(id)
     setConfirmBoxView(true);
   }
-  const deletePlan = async () => {
+  const deleteTechnician = async () => {
     try {
-      let response = await httpCommon.deleteData(`/deletePlan/${userId}`);
+      let response = await httpCommon.deleteData(`/deleteServicerBy/${userId}`);
       let { data } = response;
       setConfirmBoxView(false);
       ToastMessage(data);
@@ -38,7 +38,7 @@ const MyTechnician = () => {
       console.log(err);
     }
   }
-  const handlePlanEdit = (id) => {
+  const handleTechnicianEdit = (id) => {
     const findData = data?.find(obj => {
       return obj._id === id
     })
@@ -53,33 +53,38 @@ const MyTechnician = () => {
       },
       {
         name: "TECHNICIAN NAME",
-        selector: (row) => row?.planName,
-        cell: row => row?.planName,
-        sortable: true, width: "150px"
+        selector: (row) => row?.servicerName,
+        cell: row => row?.servicerName,
+        sortable: true, width: "160px"
       },
       {
-        name: "PRICE",
-        selector: (row) => row?.price,
-        sortable: true
+        name: "CONTACT",
+        selector: (row) => row?.businessPhone,
+        cell: row => row?.businessPhone,
+        sortable: true, width: "110px"
+      },
+      {
+        name: "BUSINESS ADDRESS",
+        selector: (row) => row?.businessAddress,
+        cell: row => row?.businessAddress,
+        sortable: true,  
+      },
+      {
+        name: "TECHNICIAN WEBSITE",
+        selector: (row) => row?.servicerWebsite,
+        cell: row => row?.servicerWebsite,
+        sortable: true,  
+      },
+      {
+        name: "YEAR OF START BUSINESS",
+        selector: (row) => row?.yearOfStartBusniess,
+        cell: row => row?.yearOfStartBusniess,
+        sortable: true,  
       },
 
-      {
-        name: "APPLIANCES",
-        selector: (row) => row?.appliances,
-        sortable: true,  
-         cell:(row) =>  
-            {row?.appliances.map((item,i)=><div>{item} </div>)}
-        
-      },
       
       {
-        name: "PLUS",
-        selector: (row) => row.plus,
-        sortable: true, 
-      },
-      
-      {
-        name: "REG DATE",
+        name: "CREATEDAT",
         selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),
         sortable: true,  
 
@@ -90,13 +95,13 @@ const MyTechnician = () => {
         name: "ACTION",
         selector: (row) => { },
         cell: (row) => <div className="d-flex justify-content-between"  >
-          <Link href={`/admin/plan/EditPlan/${row?._id}`} >
-          <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
+          <Link href={`/admin/technician/EditTechnician/${row?._id}`} >
+          <EditIcon onClick={() => { handleTechnicianEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link>
-          {/* <Link href={`/admin/user/UserDetails/${row?._id}`}>
+          <Link href={`/admin/technician/TechnicianDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
-          </Link> */}
-          <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' />
+          </Link>
+          <DeleteIcon onClick={() => { handleTechnician(row?._id) }} style={{ cursor: "pointer" }} color='error' />
         </div>,
         sortable: true, width: "100px"
 
@@ -158,7 +163,7 @@ const MyTechnician = () => {
             }
           </div>
         </div>
-        <ConfirmBox bool={confirmBoxView} setConfirmBoxView={setConfirmBoxView} onSubmit={deletePlan} />
+        <ConfirmBox bool={confirmBoxView} setConfirmBoxView={setConfirmBoxView} onSubmit={deleteTechnician} />
     </div>
   )
 }
