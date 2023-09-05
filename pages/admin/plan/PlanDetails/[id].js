@@ -22,7 +22,7 @@ const PlanDetail = () => {
           console.log(err);
          }
     }
- console.log("ddd",plan);
+ 
   return (
     <div> 
         <DashboardHeader pagetitle={ "Plan Details "} 
