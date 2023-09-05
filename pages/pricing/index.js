@@ -314,7 +314,7 @@ const Pricing = () => {
                                     <Typography>
                                     { homeShieldLite?.plus?.map(a1=>
                                      a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
                                      )
                                      }
                                     </Typography>
@@ -401,7 +401,7 @@ const Pricing = () => {
                                     <Typography>
                                     { homeShieldBasic?.plus?.map(a1=>
                                      a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
                                      )
                                      }
                                     </Typography>
@@ -489,7 +489,7 @@ const Pricing = () => {
                                     <Typography>
                                     { homeShieldPlus?.plus?.map(a1=>
                                      a1?.checked===false ? <div> <CancelIcon color='disable'   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
                                      )
                                      }
                                     </Typography>
@@ -589,7 +589,7 @@ const Pricing = () => {
                                     <Typography>
                                     { homeShieldProPlus?.plus?.map(a1=>
                                      a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' /><div className='ps-1'>{a1?.value}</div></div>
+                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
                                      )
                                      }
                                     </Typography>
