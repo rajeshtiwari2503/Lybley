@@ -64,9 +64,9 @@ const Sidebar = () => {
                             Technician
                               </Link>
                        </li>
-                       <li className={currentPath.startsWith("/admin/technician1") ? "active" : ""}>
+                       <li className={currentPath.startsWith("/admin/subscriber") ? "active" : ""}>
                        
-                       <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                       <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                <ShoppingBagIcon />
                             Plan Subscribers
                               </Link>
