@@ -24,6 +24,7 @@ import * as Yup from 'yup';
 import { useDataContext } from '../api/userData';
 import ToastMessage from '../admin/common/ToastMessage';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -67,6 +68,8 @@ const Pricing = () => {
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
+
+    const router=useRouter();
 
     const handleChange = (panel) => (event, newExpanded) => {
         panel === "panel1" ? setExpanded(newExpanded ? panel : false) : panel === "panel2" ? setExpanded2(newExpanded ? panel : false) : setExpanded3(newExpanded ? panel : false);
@@ -128,6 +131,11 @@ const Pricing = () => {
         // catch (err) {
         //     console.log(err)
         // }
+    }
+
+    const handlePlan=(planName,price)=>{
+       let data={...homeData,planName:planName,price:price};
+       router.push("/servicer-signup");
     }
 
     const getPlans=async()=>{
@@ -230,7 +238,7 @@ const Pricing = () => {
                             <div className='text-center'><small>paid monthly</small></div>
                             <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldLite?.price))} INR paid annually</small></div>
                             <div className='p-3'>
-                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldLite?.planName,((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
                             </div></div>
                                   :
                             <div className="p-3">
@@ -324,7 +332,7 @@ const Pricing = () => {
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                           <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldLite?.planName,((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
                            :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
@@ -341,7 +349,7 @@ const Pricing = () => {
                             <div className='text-center'><small>paid monthly</small></div>
                             <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldBasic?.price))} INR paid annually</small></div>
                             <div className='p-3'>
-                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldBasic?.planName,((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
                             </div></div> :
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
@@ -411,7 +419,7 @@ const Pricing = () => {
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                           <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldBasic?.planName,((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
                            :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
@@ -429,7 +437,7 @@ const Pricing = () => {
                             <div className='text-center'><small>paid monthly</small></div>
                             <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldPlus?.price))} INR paid annually</small></div>
                             <div className='p-3'>
-                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                         <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldPlus?.planName,((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
                             </div></div>:
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
@@ -499,7 +507,7 @@ const Pricing = () => {
                             <div className='ps-2 '><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                         <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldPlus?.planName,((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
                            :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
@@ -515,7 +523,7 @@ const Pricing = () => {
                             <div className='text-center'><small>paid monthly</small></div>
                             <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldProPlus?.price))} INR paid annually</small></div>
                             <div className='p-3'>
-                            <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                             <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldProPlus?.planName,((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
                             </div></div> :
                             <div className="p-3">
                                 <div className='rounded mt-3 bg-light rounded-5 pt-3'>
@@ -599,7 +607,7 @@ const Pricing = () => {
                             <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
                             <hr />
                             {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <Link href="/subscriber-signup" className='text-decoration-none'> <div className='bg-primary rounded-5 text-center text-white p-2'><small>SELECT PLAN</small></div></Link>
+                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldProPlus?.planName,((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
                            :
                             <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
