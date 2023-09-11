@@ -43,7 +43,7 @@ function MyVerticallyCenteredModal(props) {
               autoFocus
             // onChange={handleChange}
             />
-             <TextField
+             {/* <TextField
               margin="normal"
               required
               fullWidth
@@ -51,9 +51,8 @@ function MyVerticallyCenteredModal(props) {
               label="Email Address"
               name="email"
               autoComplete="email"
-              // autoFocus
-            // onChange={handleChange}
-            />
+              
+            /> */}
           </div>
           <Button onClick={props.onHide}>Submit</Button>
 
@@ -157,7 +156,7 @@ const Header = () => {
               <small>Just the right coverage for extra busy home</small>
               <h6 className='mt-3'>Lux</h6>
               <small>Maximum coverage for major peace of mind</small>
-              <button className='mt-4 btn btn-outline-primary rounded-pill'>SEE PLAN</button>
+              <button className='mt-4 btn btn-outline-primary rounded-pill'onClick={()=> setOpen(false)}><Link href={"pricing"} className='text-decoration-none' >SEE PLAN</Link> </button>
             </div>
             <div className="col-12 col-md-4 col-lg-4 p-4">
               <h6>Testimonial</h6>
@@ -195,12 +194,12 @@ const Header = () => {
               <div className="col-6">
                 <h6 className='p-0 m-0'>About Us</h6>
                 <small>We're a technology company that offer subscribers care for the home</small> <br/>
-                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+                <Link href="about" className='text-decoration-none'><small onClick={()=> setOpen1(false)}>Read More</small></Link>
               </div>
               <div className="col-6">
               <h6 className='p-0 m-0'>Tips</h6>
                 <small>Top winter pruning tips for healthy trees and shrubs</small> <br/>
-                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+                <Link href="tips" className='text-decoration-none'><small onClick={()=> setOpen1(false)}>Read More</small></Link>
               </div>
              </div>
              <div className="row mt-2">
@@ -208,7 +207,7 @@ const Header = () => {
                 <h6 className='p-0 m-0'>FAQs</h6>
                 <h6>What is Lybley?</h6>
                 <small>Lybley is subcription care for the home that covers the cost of repair or replacement...</small> <br/>
-                <a href="#" className='text-decoration-none'><small>Read More</small></a>
+                <Link href="faqs" className='text-decoration-none'><small onClick={()=> setOpen1(false)}>Read More</small></Link>
               </div>
               <div className="col-6">
               <h6 className='p-0 m-0'>News</h6>

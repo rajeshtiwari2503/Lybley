@@ -39,7 +39,9 @@ const Login = () => {
 
                     </div>
 
-                    <div className='col-12 col-md-4 col-lg-4 shadow rounded ' style={{ backgroundColor: "#caaef3" }}>
+                    <div className='col-12 col-md-4 col-lg-4 shadow rounded '
+                    //  style={{ backgroundColor: "#caaef3" }}
+                    >
 
                         <Box
                             sx={{
@@ -105,8 +107,8 @@ const Login = () => {
                                     >
                                         Sign In
                                     </Button>
-                                    <Grid justifyContent={"center"} container>
-                                        <Grid item xs>
+                                    <Grid justifyContent={"start"} container>
+                                        <Grid item >
                                             <Link href="#" variant="body2">
                                                 Forgot password?
                                             </Link>
