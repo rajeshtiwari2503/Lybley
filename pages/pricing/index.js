@@ -25,6 +25,7 @@ import { useDataContext } from '../api/userData';
 import ToastMessage from '../admin/common/ToastMessage';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+ 
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -70,6 +71,11 @@ const Pricing = () => {
     const [expanded3, setExpanded3] = React.useState('panel3');
 
     const router=useRouter();
+
+
+    const { saveData } = useDataContext();
+
+
 
     const handleChange = (panel) => (event, newExpanded) => {
         panel === "panel1" ? setExpanded(newExpanded ? panel : false) : panel === "panel2" ? setExpanded2(newExpanded ? panel : false) : setExpanded3(newExpanded ? panel : false);
@@ -135,6 +141,7 @@ const Pricing = () => {
 
     const handlePlan=(planName,price)=>{
        let data={...homeData,planName:planName,price:price};
+       saveData(data);
        router.push("/servicer-signup");
     }
 

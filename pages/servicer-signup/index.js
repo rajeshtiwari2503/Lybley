@@ -1,8 +1,10 @@
 import httpCommon from '@/http-common'
 import React, { useState } from 'react'
+import { useDataContext } from '../api/userData';
 
 const ServicerSignup = () => {
-
+  const { data } = useDataContext();
+  console.log("ddd",data);
   const [formData,setFormData]=useState({
     servicerName:"",
     businessPhone:"",
