@@ -55,7 +55,7 @@ const MyPlan = () => {
         name: "PLAN NAME",
         selector: (row) => row?.planName,
         cell: row => row?.planName,
-        sortable: true, width: "150px"
+        sortable: true,  
       },
       {
         name: "PRICE",
@@ -63,20 +63,20 @@ const MyPlan = () => {
         sortable: true
       },
 
-      {
-        name: "APPLIANCES",
-        selector: (row) => row.location,
-        sortable: true,  
-      },
+      // {
+      //   name: "APPLIANCES",
+      //   selector: (row) => row.location,
+      //   sortable: true,  
+      // },
+      
+      // {
+      //   name: "PLUS",
+      //   selector: (row) => row.location,
+      //   sortable: true, 
+      // },
       
       {
-        name: "PLUS",
-        selector: (row) => row.location,
-        sortable: true, 
-      },
-      
-      {
-        name: "REG DATE",
+        name: "CREATEDAT",
         selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),
         sortable: true,  
 

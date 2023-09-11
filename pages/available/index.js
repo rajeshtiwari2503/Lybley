@@ -27,13 +27,13 @@ const Available = () => {
                                 Delhi
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                                Punjab
+                                Pune
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                                Gaziabad
+                                Haidrabad
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                                Hapur
+                                Lucknow
                             </div>
 
                         </div>
