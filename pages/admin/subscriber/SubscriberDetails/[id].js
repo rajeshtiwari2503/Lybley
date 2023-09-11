@@ -15,7 +15,7 @@ const SubscriberDetail = () => {
   
     const getSubscriber=async()=>{
          try{
-          let response = await httpCommon.get(`/getSubscriptionBys/${id}`);
+          let response = await httpCommon.get(`/getSubscriptionBy/${id}`);
           let {data}=response;
           setSubscriber(data);
          }catch(err){

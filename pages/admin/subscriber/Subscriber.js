@@ -51,38 +51,38 @@ const MySubscribers = () => {
         selector: (row) => row.i,
         sortable: true, width: "90px"
       },
-      {
-        name: "USER ID",
-        selector: (row) => row?.subscriberName,
-        cell: row => row?.subscriberName,
-        sortable: true, width: "150px"
-      },
+      // {
+      //   name: "USER ID",
+      //   selector: (row) => row?.userId,
+      //   cell: row => row?.userId,
+      //   sortable: true, width: "150px"
+      // },
       {
         name: "USER NAME",
-        selector: (row) => row?.subscriberName,
-        cell: row => row?.subscriberName,
+        selector: (row) => row?.name,
+        cell: row => row?.name,
         sortable: true, width: "150px"
       },
       {
         name: "CONTACT",
-        selector: (row) => row?.subscriberName,
-        cell: row => row?.subscriberName,
-        sortable: true, width: "150px"
+        selector: (row) => row?.contact,
+        cell: row => row?.contact,
+        sortable: true,  
       },
       {
         name: "LOCATION",
-        selector: (row) => row?.subscriberName,
-        cell: row => row?.subscriberName,
-        sortable: true, width: "150px"
+        selector: (row) => row?.location,
+        cell: row => row?.location,
+        sortable: true,  
       },
       {
-        name: "subscriber NAME",
-        selector: (row) => row?.price,
+        name: "PLAN NAME",
+        selector: (row) => row?.planName,
         sortable: true
       },
       {
-        name: "subscriber PRICE",
-        selector: (row) => row?.price,
+        name: " PRICE",
+        selector: (row) => row?.planPrice,
         sortable: true
       },
 
@@ -131,7 +131,7 @@ const MySubscribers = () => {
   }
   const rvsData = data?.reverse();
 
-
+console.log(data);
   const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
