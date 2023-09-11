@@ -140,9 +140,9 @@ const Pricing = () => {
     }
 
     const handlePlan=(planName,price)=>{
-       let data={...homeData,planName:planName,price:price};
+       let data={...homeData,planName:planName,planPrice:price};
        saveData(data);
-       router.push("/servicer-signup");
+       router.push("/subscriber-signup");
     }
 
     const getPlans=async()=>{
