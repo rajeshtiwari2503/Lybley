@@ -131,7 +131,7 @@ const MySubscribers = () => {
   }
   const rvsData = data?.reverse();
 
-console.log(data);
+ 
   const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
