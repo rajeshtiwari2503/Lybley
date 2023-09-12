@@ -152,7 +152,7 @@ const Footer = () => {
           onHide={() => setModalShow(false)}
         />
     </div>
-    <div className="text-white text-center"><p className="small mb-0" style={{color:"#acabad"}}>&copy; Copyrights. All rights reserved. <a className="text-primary text-decoration-none" href="/"> lybley.in </a></p></div>
+    <div className="text-white text-center"><p className="small mb-0" style={{color:"#acabad"}}>&copy; Copyrights. All rights reserved. <a className="text-primary text-decoration-none" href="/"> Lybley.com </a></p></div>
 </footer>
   )
 }

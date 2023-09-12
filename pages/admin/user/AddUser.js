@@ -81,7 +81,7 @@ const AddUser = (props) => {
     }, [user, reset]);  
     return (
         <div>
-            <DashboardHeader pagetitle={edit ? "Edit Brand" : "Add Brand"} />
+            <DashboardHeader pagetitle={edit ? "Edit User" : "Add User"} />
             <div className='row'>
                 <div className='col-8 col-md-8 col-lg-8 '>
                     <input type='text' className='form-control' placeholder='Enter Location' defaultValue={edit ? user?.location : ""} name="location" {...register('location')} />
