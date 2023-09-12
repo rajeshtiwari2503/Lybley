@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Mobile= () => {
+const Mobile= (props) => {
   return (
     <div className='' style={{backgroundColor:"#FFFCE1"}}>
          <div className="container" >
@@ -21,7 +21,9 @@ We bring the commitment of Lybley to life via a user-friendly app and website po
                             </div>
                         </div> */}
                         <div className="text-center">
-                        <img src="https://www.seekpng.com/png/full/388-3885990_man-looking-at-a-phone-looking-at-phone.png" width="225px" alt=".."/>
+                       {props?.servicer ?<img src="/technician.png" width="250px" alt=".."/>
+                       : <img src="https://www.seekpng.com/png/full/388-3885990_man-looking-at-a-phone-looking-at-phone.png" width="225px" alt=".."/>
+                    } 
                         </div>
                         </div>
                     </div>
