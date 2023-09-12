@@ -28,55 +28,62 @@ const AddPlan = (props) => {
   
   
   const addFormField = () => {
-    setAppliances([...appliances, {  value: '', checked: false }]);
+   edit ? props?.setPlan({...plan,appliances:[...plan?.appliances, {  value: '', checked: false }]}) : setAppliances([...appliances, {  value: '', checked: false }]);
   };
+   const handleName=(e)=>{
+     edit ? props?.setPlan({...plan,planName:e.currentTarget.value}) : setName(e.currentTarget.value);
+   }
+   const handlePrice=(e)=>{
+    edit ? props?.setPlan({...plan,price:e.currentTarget.value}) : setPrice(e.currentTarget.value);
+  }
   const handleFieldChange = (index, event) => {
-    const updatedFormData = [...appliances];
-    updatedFormData[index].value = event.target.value;
-    setAppliances(updatedFormData);
+    const updatedFormData =edit ? [...plan?.appliances] : [...appliances];
+    edit ? updatedFormData[index].value = event.target.value : updatedFormData[index].value = event.target.value;
+    edit ? props?.setPlan({...plan,appliances:updatedFormData}) : setAppliances(updatedFormData);
   };
   const removeFormField = (index) => {
-    const updatedFormData = [...appliances];
-    updatedFormData.splice(index, 1);
-    setAppliances(updatedFormData);
+    const updatedFormData =edit ? [...plan?.appliances] : [...appliances];
+   edit ? updatedFormData.splice(index, 1) : updatedFormData.splice(index, 1);
+   edit ? props?.setPlan({...plan,appliances:updatedFormData}) : setAppliances(updatedFormData);
   };
 
   const handleCheckboxChange = (index) => {
-    const updatedFormData = [...appliances];
+    const updatedFormData =edit ? [...plan?.appliances] :  [...appliances];
     updatedFormData[index].checked = !updatedFormData[index].checked;
-    setAppliances(updatedFormData);
+    edit ? props?.setPlan({...plan,appliances:updatedFormData}) : setAppliances(updatedFormData);
   };
   const addFormField1 = () => {
-    setPlus([...plus, {   value: '', checked: false }]);
+    edit ? props?.setPlan({...plan,plus:[...plan?.plus, {  value: '', checked: false }]}) : setPlus([...plus, {   value: '', checked: false }]);
   };
   const handleFieldChange1 = (index, event) => {
-    const updatedFormData = [...plus];
-    updatedFormData[index].value = event.target.value;
-    setPlus(updatedFormData);
+    const updatedFormData = edit ? [...plan?.plus] : [...plus];
+    edit ? updatedFormData[index].value = event.target.value : updatedFormData[index].value = event.target.value;
+    edit ? props?.setPlan({...plan,plus:updatedFormData}) : setPlus(updatedFormData);
   };
   const removeFormField1 = (index) => {
-    const updatedFormData = [...plus];
-    updatedFormData.splice(index, 1);
-    setPlus(updatedFormData);
+    const updatedFormData =edit ? [...plan?.plus] : [...plus];
+    edit ? updatedFormData.splice(index, 1): updatedFormData.splice(index, 1);
+    edit ? props?.setPlan({...plan,plus:updatedFormData}) : setPlus(updatedFormData);
   };
 
   const handleCheckboxChange1 = (index) => {
-    const updatedFormData = [...plus];
+    const updatedFormData =edit ? [...plan?.plus] : [...plus];
     updatedFormData[index].checked = !updatedFormData[index].checked;
-    setPlus(updatedFormData);
+    edit ? props?.setPlan({...plan,plus:updatedFormData}) : setPlus(updatedFormData);
   };
   const handleEdit = async (obj) => {
     try {
         let response = await httpCommon.patch(`/updatePlan/${props?.id}`, obj);
         let { data } = response;
-        router.push(`/admin/user`);
+        router.push(`/admin/plan`);
     } catch (err) {
         console.log(err);
     }
 }
   const handleSubmit = (e) => {
     e.preventDefault();
-   edit ? handleEdit() : addPlan();
+
+   edit ? handleEdit(plan) : addPlan();
     // Process and submit the form data, which is stored in 'formData'
   };
   const addPlan=async()=>{
@@ -97,13 +104,13 @@ const AddPlan = (props) => {
       <div className='row'>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Name </div>
-          <input type='text' className='form-control' placeholder='Plan Name' name="name" value={edit ?plan?.planName : name} onChange={(e)=>setName(e.currentTarget.value)} />
+          <input type='text' className='form-control' placeholder='Plan Name' name="name" value={edit ? plan?.planName : name} onChange={(e)=>handleName(e)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
         <div className='col-6  '></div>
         <div className='col-6  '>
           <div className='mt-2 mb-2'>Plan Price </div>
-          <input type='number' className='form-control' placeholder='Plan Price' name="price" value={edit ? plan?.price : price} onChange={(e)=>setPrice(e.currentTarget.value)} />
+          <input type='number' className='form-control' placeholder='Plan Price' name="price" value={edit ? plan?.price : price} onChange={(e)=>handlePrice(e)} />
           {/* <div className='text-danger'> {errors.location?.message}</div> */}
         </div>
       </div>
@@ -111,7 +118,7 @@ const AddPlan = (props) => {
         <div className='mt-3 mb-2'>Appliances </div>
         <div>
           <div  >
-            {(edit ? plan?.appliances :appliances)?.map((field, index) => (
+            {(edit ? plan?.appliances : appliances)?.map((field, index) => (
               <div className='d-flex mb-3'>
                 <div key={index}>
                   <input
