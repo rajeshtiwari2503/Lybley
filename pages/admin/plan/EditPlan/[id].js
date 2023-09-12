@@ -22,7 +22,7 @@ const EditPlan = () => {
     }
     return (
       <div>
-          <AddPlan edit={true} id={id} plan={plan} />
+          <AddPlan edit={true} id={id} setPlan={setPlan} plan={plan} />
       </div>
     )
   }
