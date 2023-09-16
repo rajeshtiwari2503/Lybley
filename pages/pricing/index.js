@@ -140,7 +140,8 @@ const Pricing = () => {
     }
 
     const handlePlan=(planName,price)=>{
-       let data={...homeData,planName:planName,planPrice:price};
+       let plan=plans?.find(p1=>p1?.planName===planName);
+       let data={...homeData,planDetail:plan,planName:planName,planPrice:price};
        saveData(data);
        router.push("/subscriber-signup");
     }
