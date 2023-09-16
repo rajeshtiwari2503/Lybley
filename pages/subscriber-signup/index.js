@@ -21,7 +21,7 @@ const SubscriberSignup = () => {
 
   const subscribePlan = async () => {
     try {
-      let body={realEstateAgentName:formData.fname+" "+formData.lname,closingDate:formData.closingDate,location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,planName:data?.planName,planPrice:+data?.planPrice};
+      let body={realEstateAgentName:formData.fname+" "+formData.lname,planDetail:data?.planDetail,closingDate:formData.closingDate,location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,planName:data?.planName,planPrice:+data?.planPrice};
       let response = await httpCommon.post("/registration",body);
       let data1 = response.data;
       alert("Plan subscribed");

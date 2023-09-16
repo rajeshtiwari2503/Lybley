@@ -61,7 +61,7 @@ const SubscriberDetail = () => {
               <div className='col-3'>Real Estate Agent Name : </div><div className='col-9'>{subscriber?.realEstateAgentName}</div>
               </div> 
               <div className='d-flex mt-3 row' >
-              <div className='col-3'>Price : </div><div className='col-9'>{subscriber?.price}</div>
+              <div className='col-3'>Price : </div><div className='col-9'>{subscriber?.planPrice}</div>
               </div> 
               <div className='d-flex mt-3 row'> <div className='col-3'>CreatedAT : </div><div className='col-9'>{ new Date(subscriber?.createdAt).toLocaleString()}</div>  </div> 
               <div className='d-flex mt-3 row'> <div className='col-3'>UpdatedAt : </div><div className='col-9'>{ new Date(subscriber?.updatedAt).toLocaleString()}</div>  </div> 
