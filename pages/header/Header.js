@@ -8,6 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse } from 'react-bootstrap';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import ViewSidebarIcon from '@mui/icons-material/ViewSidebar';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
  
 
@@ -73,22 +76,30 @@ const Header = () => {
   return (
     <>
     <div className='sticky-top'>
-      <div className="bg-dark text-white ">
-        <div className="row w-100 ">
+      <div className="bg-dark text-white">
+        <div className="row w-100">
           <div className="col-12 col-md-3 col-lg-3"></div>
-          <div className="col-12 col-md-6 col-lg-6">
+          <div className="col-12 col-md-6 col-lg-6 d-none d-md-block">
             <div className='d-flex justify-content-around text-center ms-4'>
-            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>HOMEOWNER</small></Link>
+            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 p-1 text-white'} > <small className='hover headerNavFont fw-bold p-md-2 p-1'>HOMEOWNER</small></Link>
               {/* <small className='hover fw-bold p-2'>REALTOR</small> */}
-              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className='hover fw-bold p-2'>SERVICER</small></Link>
-             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-2  ' :  'text-decoration-none hover fw-bold p-2 text-white'} > <small className=''>TIPS</small></Link>
+              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='hover headerNavFont fw-bold p-md-2 p-1'>SERVICER</small></Link>
+             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='headerNavFont'>TIPS</small></Link>
+            </div>
+          </div>
+          <div className="col-12 col-md-6 col-lg-6 d-md-none d-block">
+            <div className='d-flex justify-content-between text-center  '>
+            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 p-1 text-white'} > <small className='hover headerNavFont fw-bold p-md-2   p-1'>HOMEOWNER</small></Link>
+              {/* <small className='hover fw-bold p-2'>REALTOR</small> */}
+              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='hover headerNavFont fw-bold p-md-2   p-1'>SERVICER</small></Link>
+             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white  p-1'} > <small className='headerNavFont  '>TIPS</small></Link>
             </div>
           </div>
           <div className="col-12 col-md-3 col-lg-3"></div>
         </div>
       </div>
       
-      <div className='' style={{ backgroundColor: "#c8d8e4", }}>
+      <div className='d-none d-md-block' style={{ backgroundColor: "#c8d8e4", }}>
         <div className='container '>
  
         <div className="row  d-flex justify-content-center ">
@@ -131,6 +142,61 @@ const Header = () => {
               </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className='d-md-none d-block' style={{ backgroundColor: "#c8d8e4", }}>
+        <div className='container '>
+ 
+        <div className="row d-flex justify-content-between align-items-center p-2 ">
+ 
+            {/* <div className="col-12 col-md-5 col-lg-5 d-flex justify-content-center p-4">
+             <Link className='text-decoration-none' href={"/requestService"}>
+               <button className='header-btn mx-3 py-1 rounded-pill'><small className='fw-bold headerNavFont'>REQUEST SERVICE</small></button>
+             </Link>
+              <button onClick={() => setModalShow(true)} className='header-btn py-1 rounded-pill'><small className='fw-bold headerNavFont'>CHECK CLAIM STATUS</small>
+              </button>
+            </div> */}
+            <div className="col-4">
+            <MenuIcon fontSize="large" />
+            {/* <CloseIcon fontSize='large' /> */}
+            </div>
+            <div className="col-4 text-center">
+              {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
+              <div className='space fw-bold'>L3BLEY</div> */}
+              <img className='card-img-top1 rounded' height={60} width={60} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
+            </div>
+            <div className="col-4 text-end">
+            <Link className='text-decoration-none ' href={"/login"}>
+                <button className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                </Link>
+            </div>
+            {/* <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-center align-items-center">
+              <div className='d-flex'>
+              <div className='pe-4'>
+              <small className='fw-bold headerNavFont' style={{cursor: "pointer"}}
+               onClick={() =>{setOpen1(false); setOpen(!open); }}
+               aria-controls="collapse-example"
+               aria-expanded={open}
+              >PLANS</small>
+              </div>
+              <div>
+              <small className='fw-bold headerNavFont me-2' style={{cursor: "pointer",}} 
+              onClick={() =>{setOpen(false); setOpen1(!open1); }}
+              aria-controls="collapse-example1"
+              aria-expanded={open1}
+              >WHAT IS LYBLEY</small>
+              </div>
+              <div className='d-flex' >
+              <Link className='text-decoration-none' href={"/login"}>
+                <button className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                </Link>
+                <Link className='text-decoration-none' href={"/pricing"}>
+                  <button className='py-1 price-btn rounded-pill'><small className='fw-bold headerNavFont'>SEE PRICING</small></button>
+              </Link>
+              </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
