@@ -61,6 +61,14 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
+        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+          <Link href={"/admin/complaint"} className='text-decoration-none'>
+            <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
+              <h5 className='fw-bold'>TOTAL Complaints</h5>
+              <h5 className='fw-bold'>{data?.complaint}</h5>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   )

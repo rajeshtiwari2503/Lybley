@@ -25,7 +25,7 @@ import { useDataContext } from '../api/userData';
 import ToastMessage from '../admin/common/ToastMessage';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
- 
+
 // import { makeStyles } from '@mui/styles';
 
 // const useStyles = makeStyles({
@@ -39,38 +39,162 @@ import { useRouter } from 'next/router';
 // });
 function MyVerticallyCenteredModal(props) {
 
- 
+
 
     return (
-      <Modal
-        {...props}
-        size="md"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <div className='text-center pt-3 rounded' style={{ backgroundColor: "aliceblue" }}>
-          <Modal.Body className='p-4'>
-           {props.showMax ?<> <div className='fw-bold fs-4 text-center'>Max Limits Upgrade</div>
-            <div className='mt-4'>Increased coverage limits for all major appliances and key systems.</div> </>:
-           <> <div className='fw-bold fs-4 text-center'>It's Covered upgrade</div>
-            <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></>}
-            <div className='mt-4'><button className='btn btn-primary rounded-pill' onClick={() =>{ props.setModalShow(false); props.setShowMax(false)}}><small>GOT IT</small></button></div>
-  
-          </Modal.Body>
-        </div >
-      </Modal >
+        <Modal
+            {...props}
+            size="md"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <div className='text-center pt-3 rounded' style={{ backgroundColor: "aliceblue" }}>
+                <Modal.Body className='p-4'>
+                    {props.showMax ? <> <div className='fw-bold fs-4 text-center'>Max Limits Upgrade</div>
+                        <div className='mt-4'>Increased coverage limits for all major appliances and key systems.</div> </> :
+                        <> <div className='fw-bold fs-4 text-center'>It's Covered upgrade</div>
+                            <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></>}
+                    <div className='mt-4'><button className='btn btn-primary rounded-pill' onClick={() => { props.setModalShow(false); props.setShowMax(false) }}><small>GOT IT</small></button></div>
+
+                </Modal.Body>
+            </div >
+        </Modal >
     );
-  }
+}
 
 const Pricing = () => {
     const { data } = useDataContext();
-    const [homeData,setHomeData]=React.useState({});
-    const [plans,setPlans]=React.useState([]);
+    const [homeData, setHomeData] = React.useState({});
+    const [plans, setPlans] = React.useState([
+
+        {
+            _id: '64f1c4ea1eb82a1659c7241e', planName: 'Home Shield Lite', price: 100, appliances: [{ value: 'Air Conditions', checked: false },
+
+            { value: 'Refrigerator', checked: false },
+
+            { value: 'TV', checked: false },
+
+            { value: 'Dishwasher', checked: true },
+
+            { value: 'Gas Stove', checked: true },
+
+            { value: 'Washing Machine', checked: true },
+
+            { value: 'RO', checked: true },
+
+            { value: 'Ceiling Fan', checked: true },
+
+            { value: 'Mixer', checked: true },
+
+            { value: 'Induction', checked: true },
+
+            { value: 'Taster', checked: true },
+
+            { value: 'Geyser', checked: true },
+
+            { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+            
+            {value: 'Plumbering', checked: false},
+            
+            {value: 'Electrician work', checked: false}]
+        },
+
+        { _id: '64f1e93e81ee741b5de6ca84', planName: 'Home Shield Basic', price: 108,  appliances: [{ value: 'Air Conditions', checked: false },
+
+        { value: 'Refrigerator', checked: false },
+
+        { value: 'TV', checked: false },
+
+        { value: 'Dishwasher', checked: true },
+
+        { value: 'Gas Stove', checked: true },
+
+        { value: 'Washing Machine', checked: true },
+
+        { value: 'RO', checked: true },
+
+        { value: 'Ceiling Fan', checked: true },
+
+        { value: 'Mixer', checked: true },
+
+        { value: 'Induction', checked: true },
+
+        { value: 'Taster', checked: true },
+
+        { value: 'Geyser', checked: true },
+
+        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+        
+        {value: 'Plumbering', checked: false},
+        
+        {value: 'Electrician work', checked: false}] },
+
+        { _id: '64f1eadc81ee741b5de6ca88', planName: 'Home Shield Plus', price: 200,  appliances: [{ value: 'Air Conditions', checked: true },
+
+        { value: 'Refrigerator', checked: false },
+
+        { value: 'TV', checked: false },
+
+        { value: 'Dishwasher', checked: true },
+
+        { value: 'Gas Stove', checked: true },
+
+        { value: 'Washing Machine', checked: true },
+
+        { value: 'RO', checked: true },
+
+        { value: 'Ceiling Fan', checked: true },
+
+        { value: 'Mixer', checked: true },
+
+        { value: 'Induction', checked: true },
+
+        { value: 'Taster', checked: true },
+
+        { value: 'Geyser', checked: true },
+
+        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+        
+        {value: 'Plumbering', checked: false},
+        
+        {value: 'Electrician work', checked: false}]  },
+
+        { _id: '64f1ec8281ee741b5de6ca8c', planName: 'Home Shield Pro Plus', price: 250,  appliances: [{ value: 'Air Conditions', checked: true },
+
+        { value: 'Refrigerator', checked: true },
+
+        { value: 'TV', checked: true },
+
+        { value: 'Dishwasher', checked: true },
+
+        { value: 'Gas Stove', checked: true },
+
+        { value: 'Washing Machine', checked: true },
+
+        { value: 'RO', checked: true },
+
+        { value: 'Ceiling Fan', checked: true },
+
+        { value: 'Mixer', checked: true },
+
+        { value: 'Induction', checked: true },
+
+        { value: 'Taster', checked: true },
+
+        { value: 'Geyser', checked: true },
+
+        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+        
+        {value: 'Plumbering', checked: true},
+        
+        {value: 'Electrician work', checked: true}]  }
+
+    ]);
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
 
-    const router=useRouter();
+    const router = useRouter();
 
 
     const { saveData } = useDataContext();
@@ -80,37 +204,37 @@ const Pricing = () => {
     const handleChange = (panel) => (event, newExpanded) => {
         panel === "panel1" ? setExpanded(newExpanded ? panel : false) : panel === "panel2" ? setExpanded2(newExpanded ? panel : false) : setExpanded3(newExpanded ? panel : false);
     };
-  
+
     const [modalShow, setModalShow] = useState(false);
-    const [showMax,setShowMax]=useState(false);
-    useEffect(()=>{
-     getPlans();
-    },[]);
-    const openModel=()=>{
+    const [showMax, setShowMax] = useState(false);
+    useEffect(() => {
+        // getPlans();
+    }, []);
+    const openModel = () => {
         setShowMax(true)
         setModalShow(true);
     }
 
     const validationSchema = Yup.object().shape({
         location: Yup.string()
-        .required('Location is required')
-        .min(4, 'location must be at least 4 characters')
-        .max(40, 'location must not exceed 40 characters'),
+            .required('Location is required')
+            .min(4, 'location must be at least 4 characters')
+            .max(40, 'location must not exceed 40 characters'),
         firstName: Yup.string()
-        .required('FirstName is required')
-        .min(3, 'firstName must be at least 3 characters')
-        .max(40, 'firstName must not exceed 40 characters'),
+            .required('FirstName is required')
+            .min(3, 'firstName must be at least 3 characters')
+            .max(40, 'firstName must not exceed 40 characters'),
         lastName: Yup.string()
-        .required('LastName is required')
-        .min(3, 'lastName must be at least 3 characters')
-        .max(40, 'lastName must not exceed 40 characters'),
+            .required('LastName is required')
+            .min(3, 'lastName must be at least 3 characters')
+            .max(40, 'lastName must not exceed 40 characters'),
         unit: Yup.string().required("Unit number is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
-        homeSize:Yup.string().required("Home Size is required in sqft"),
+        homeSize: Yup.string().required("Home Size is required in sqft"),
         email: Yup.string()
             .required('Email is required')
             .email('Email is invalid'),
-            contact: Yup.string().required("Mobile number is required").min(10, "Min 10 digit is required").max(10, "Max 10 digit is required"),
-      
+        contact: Yup.string().required("Mobile number is required").min(10, "Min 10 digit is required").max(10, "Max 10 digit is required"),
+
 
     });
     const {
@@ -121,15 +245,15 @@ const Pricing = () => {
     } = useForm({
         resolver: yupResolver(validationSchema)
     });
-    
 
-      const handleRegistration = async (data) => {
+
+    const handleRegistration = async (data) => {
 
         setHomeData(data);
         // alert(data.homeSize);
         // let regData={location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,}
         // try {
-             
+
         //     let response = await httpCommon.post("/registration",regData)
         //     let { data } = response;
         //     ToastMessage(data)
@@ -139,146 +263,148 @@ const Pricing = () => {
         // }
     }
 
-    const handlePlan=(planName,price)=>{
-       let plan=plans?.find(p1=>p1?.planName===planName);
-       let data={...homeData,planDetail:plan,planName:planName,planPrice:price};
-       saveData(data);
-       router.push("/subscriber-signup");
+    const handlePlan = (planName, price) => {
+        let plan = plans?.find(p1 => p1?.planName === planName);
+        let data = { ...homeData, planDetail: plan, planName: planName, planPrice: price };
+        saveData(data);
+        router.push("/subscriber-signup");
     }
 
-    const getPlans=async()=>{
-        try{
-          let response=await httpCommon.get("/getPlans");
-          let {data}=response;
-          setPlans(data);
-        }catch(err){
-          console.log(err);
+    const getPlans = async () => {
+        try {
+            let response = await httpCommon.get("/getPlans");
+            let { data } = response;
+            setPlans(data);
+        } catch (err) {
+            console.log(err);
         }
     }
-    let homeShieldLite=plans?.find(p1=>p1?.planName==="Home Shield Lite");
-    let homeShieldBasic=plans?.find(p1=>p1?.planName==="Home Shield Basic");
-    let homeShieldPlus=plans?.find(p1=>p1?.planName==="Home Shield Plus");
-    let homeShieldProPlus=plans?.find(p1=>p1?.planName==="Home Shield Pro Plus");
+    let homeShieldLite = plans?.find(p1 => p1?.planName === "Home Shield Lite");
+    let homeShieldBasic = plans?.find(p1 => p1?.planName === "Home Shield Basic");
+    let homeShieldPlus = plans?.find(p1 => p1?.planName === "Home Shield Plus");
+    let homeShieldProPlus = plans?.find(p1 => p1?.planName === "Home Shield Pro Plus");
+
     
+
     return (
         <>
             <div  >
                 <div className='container'>
-                   {!(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?  <div className='row pt-5'>
+                    {!(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ? <div className='row pt-5'>
                         <div className='col-12 col-md-3  col-lg-3'></div>
                         <div className='col-12 col-md-6 col-lg-6 shadow rounded' style={{ backgroundColor: "#5396B9" }}>
-                            
-                                <div className='row p-5'>
-                                    <div className='col-8 col-md-8 col-lg-8 '>
-                                        <input type='text' className='form-control' placeholder='Enter Location'value={data?.city} name="location" {...register('location')} />
-                                        <div className='text-danger'> {errors.location?.message}</div>
-                                    </div>
-                                    <div className='col-4 col-md-4 col-lg-4 '>
-                                        <input type='number' className='form-control' placeholder='Unit' value={data?.unit} name="unit" {...register('unit')} />
-                                        <div className='text-danger'> {errors.unit?.message}</div>
-                                    </div>
-                                    <div className='col-12 mt-4'>
-                                        <input type='number' className='form-control' placeholder='Home Size in sqft' name="homeSize"  {...register('homeSize')}/>
-                                        <div className='text-danger'> {errors.homeSize?.message}</div>
-                                    </div>
-                                    <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                                        <input type='text' className='form-control' placeholder='First Name' name="firstName"  {...register('firstName')}/>
-                                        <div className='text-danger'> {errors.firstName?.message}</div>
-                                    </div>
-                                    <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                                        <input type='text' className='form-control' placeholder='Last Name' name="lastName"
-                                             {...register('lastName')}
-                                        />
-                                   
-                                  <div className='text-danger'> {errors.lastName?.message}</div>
 
-                                   
+                            <div className='row p-5'>
+                                <div className='col-8 col-md-8 col-lg-8 '>
+                                    <input type='text' className='form-control' placeholder='Enter Location' value={data?.city} name="location" {...register('location')} />
+                                    <div className='text-danger'> {errors.location?.message}</div>
+                                </div>
+                                <div className='col-4 col-md-4 col-lg-4 '>
+                                    <input type='number' className='form-control' placeholder='Unit' value={data?.unit} name="unit" {...register('unit')} />
+                                    <div className='text-danger'> {errors.unit?.message}</div>
+                                </div>
+                                <div className='col-12 mt-4'>
+                                    <input type='number' className='form-control' placeholder='Home Size in sqft' name="homeSize"  {...register('homeSize')} />
+                                    <div className='text-danger'> {errors.homeSize?.message}</div>
                                 </div>
                                 <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                                    <input type='email' className='form-control' placeholder=' Enter Email address'  name="email"{...register('email')} />
+                                    <input type='text' className='form-control' placeholder='First Name' name="firstName"  {...register('firstName')} />
+                                    <div className='text-danger'> {errors.firstName?.message}</div>
+                                </div>
+                                <div className='col-12 col-md-6 col-lg-6 mt-4'>
+                                    <input type='text' className='form-control' placeholder='Last Name' name="lastName"
+                                        {...register('lastName')}
+                                    />
+
+                                    <div className='text-danger'> {errors.lastName?.message}</div>
+
+
+                                </div>
+                                <div className='col-12 col-md-6 col-lg-6 mt-4'>
+                                    <input type='email' className='form-control' placeholder=' Enter Email address' name="email"{...register('email')} />
                                     <div className='text-danger'> {errors.email?.message}</div>
                                 </div>
                                 <div className='col-12 col-md-6 col-lg-6 mt-4'>
-                                    <input type='number' className='form-control' placeholder='Enter Mobile Number'  name="contact" {...register('contact')}/>
+                                    <input type='number' className='form-control' placeholder='Enter Mobile Number' name="contact" {...register('contact')} />
                                     <div className='text-danger'> {errors.contact?.message}</div>
                                 </div>
                                 <div className='col-12 text-center text-white mt-5'>
                                     Is this a home you are purchasing or have purchased within the last 15 days?
                                 </div>
                                 <div className='col-12 mt-3 mb-3 text-center'>
-                                    <button className='btn btn-primary' type='button'onClick={handleSubmit(handleRegistration)} >SHOW PRICES</button>
+                                    <button className='btn btn-primary' type='button' onClick={handleSubmit(handleRegistration)} >SHOW PRICES</button>
                                 </div>
                                 <div className='col-12 text-center text-white'>
                                     Don't worry - this is all we need to show your customized prices below
                                 </div>
-                        </div>
- 
-                </div>
-                <div className='col-12 col-md-3  col-lg-3'></div>
-            </div> :
-            <div className="text-center mt-3">
-            <h4 >{homeData?.location || homeData?.city}</h4>
-            <div><small>Home size: {homeData?.homeSize} sq ft</small></div>
-            <div><small>More than 100 Lybley subscribers already in your neigborhood </small> </div>
-            <h4>{homeData?.firstName}, here are plans tailored for your home in {homeData?.location || homeData?.city}</h4>
-            </div>
-            }
-            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ? "" :
-            <div className='row mt-2'>
-                <div className="col-md-3 col-lg-3 col-12"></div>
-                <div className="col-md-6 col-lg-6 col-12 text-center">
-                    <small>By clicking SHOW PRICES, you consent to receiving communication from Lybley Home Inc. through calls, emails, and/or text messages, and acknowledge your acceptance of our Terms and Conditions & Privacy Policy. Standard messaging and data rates may apply.</small>
-                    <div className="col-md-3 col-lg-3 col-12"></div>
-                </div>
-            </div>}
-            <div className="row mt-5">
-                <div className="col-12 col-md-1 col-lg-1"></div>
-                <div className="col-12 col-md-10 col-lg-10">
-                    <div className="row">
+                            </div>
 
-                        <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName}</h6>
-                            <div className='text-center'>our plan for protecting vital home systems</div>
-                             
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                            <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0)} INR</h2>
-                            <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldLite?.price))} INR paid annually</small></div>
-                            <div className='p-3'>
-                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldLite?.planName,((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
-                            </div></div>
-                                  :
-                            <div className="p-3">
-                                <div className='rounded mt-3 bg-light rounded-5 pt-3'>
-                                    <h5 className='text-center'> Want to see your price?</h5>
-                                    <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                    <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
-                                </div>
+                        </div>
+                        <div className='col-12 col-md-3  col-lg-3'></div>
+                    </div> :
+                        <div className="text-center mt-3">
+                            <h4 >{homeData?.location || homeData?.city}</h4>
+                            <div><small>Home size: {homeData?.homeSize} sq ft</small></div>
+                            <div><small>More than 100 Lybley subscribers already in your neigborhood </small> </div>
+                            <h4>{homeData?.firstName}, here are plans tailored for your home in {homeData?.location || homeData?.city}</h4>
+                        </div>
+                    }
+                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ? "" :
+                        <div className='row mt-2'>
+                            <div className="col-md-3 col-lg-3 col-12"></div>
+                            <div className="col-md-6 col-lg-6 col-12 text-center">
+                                <small>By clicking SHOW PRICES, you consent to receiving communication from Lybley Home Inc. through calls, emails, and/or text messages, and acknowledge your acceptance of our Terms and Conditions & Privacy Policy. Standard messaging and data rates may apply.</small>
+                                <div className="col-md-3 col-lg-3 col-12"></div>
                             </div>
-}
-                            <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={()=>setModalShow(true)} />
-                            </div>
-                            <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
-                            </div>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                     { homeShieldLite?.appliances?.map(a1=>
-                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
-                                     )
-                                     }
-                                    {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
+                        </div>}
+                    <div className="row mt-5">
+                        <div className="col-12 col-md-1 col-lg-1"></div>
+                        <div className="col-12 col-md-10 col-lg-10">
+                            <div className="row">
+
+                                <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName}</h6>
+                                    <div className='text-center'>our plan for protecting vital home systems</div>
+
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='pt-3'>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0)} INR</h2>
+                                            <div className='text-center'><small>paid monthly</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldLite?.price))} INR paid annually</small></div>
+                                            <div className='p-3'>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldLite?.planName, ((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                            </div></div>
+                                        :
+                                        <div className="p-3">
+                                            <div className='rounded mt-3 bg-light rounded-5 pt-3'>
+                                                <h5 className='text-center'> Want to see your price?</h5>
+                                                <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                            </div>
+                                        </div>
+                                    }
+                                    <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={() => setModalShow(true)} />
+                                    </div>
+                                    <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
+                                    </div>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldLite?.appliances?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                                )
+                                                }
+                                                {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
                                     <div className='text-muted'> <CancelIcon   /> Refrigerator</div> 
                                     <div className='text-muted'> <CancelIcon   /> T V</div>
                                         <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -291,10 +417,10 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
                                         <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            {/* <Accordion expanded={expanded2 === 'panel2'} onChange={handleChange('panel2')} style={{ border: "0px", boxShadow: "none" }}>
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    {/* <Accordion expanded={expanded2 === 'panel2'} onChange={handleChange('panel2')} style={{ border: "0px", boxShadow: "none" }}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
@@ -318,76 +444,76 @@ const Pricing = () => {
                                 </AccordionDetails>
                             </Accordion> */}
 
-                            <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Plus</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldLite?.plus?.map(a1=>
-                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
-                                     )
-                                     }
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
-                            <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
-                            <hr />
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldLite?.planName,((+homeData?.homeSize*(+homeShieldLite?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldLite?.plus?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                )
+                                                }
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                                    <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                                    <hr />
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldLite?.planName, ((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
 
-                           :
-                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                            }
-                            <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
-                        </div>
-                        <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
-                            <div className='text-center'>our plan for protecting vital home systems</div>
-
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                            <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0)} INR</h2>
-                            <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldBasic?.price))} INR paid annually</small></div>
-                            <div className='p-3'>
-                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldBasic?.planName,((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
-                            </div></div> :
-                            <div className="p-3">
-                                <div className='rounded mt-3 bg-light rounded-5 pt-3'>
-                                    <h5 className='text-center'> Want to see your price?</h5>
-                                    <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                    <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                        :
+                                        <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                                    }
+                                    <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                                 </div>
-                            </div>}
-                            <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={()=>setModalShow(true)} />
-                            </div>
-                            <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
-                            </div>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldBasic?.appliances?.map(a1=>
-                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
-                                     )
-                                     }
-                                    {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
+                                <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
+                                    <div className='text-center'>our plan for protecting vital home systems</div>
+
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='pt-3'>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0)} INR</h2>
+                                            <div className='text-center'><small>paid monthly</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldBasic?.price))} INR paid annually</small></div>
+                                            <div className='p-3'>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                            </div></div> :
+                                        <div className="p-3">
+                                            <div className='rounded mt-3 bg-light rounded-5 pt-3'>
+                                                <h5 className='text-center'> Want to see your price?</h5>
+                                                <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                            </div>
+                                        </div>}
+                                    <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={() => setModalShow(true)} />
+                                    </div>
+                                    <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
+                                    </div>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldBasic?.appliances?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                                )
+                                                }
+                                                {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
                                     <div className='text-muted'> <CancelIcon   /> Refrigerator</div> 
                                     <div className='text-muted'> <CancelIcon   /> T V</div> 
                                         <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -400,82 +526,82 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
                                         <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
 
-                            <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Plus</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldBasic?.plus?.map(a1=>
-                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
-                                     )
-                                     }
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
-                            <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
-                            <hr />
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                           <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldBasic?.planName,((+homeData?.homeSize*(+homeShieldBasic?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
-                           :
-                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                            }
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldBasic?.plus?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                )
+                                                }
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                                    <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                                    <hr />
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
 
-                            <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
-                        </div>
-                        <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
-                            <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
-                            <h6 className='text-center  pb-2 pt-3'>{homeShieldPlus?.planName}</h6>
-                            <div className='text-center'>Just the right coverage for extra busy homes</div>
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                            <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0)} INR</h2>
-                            <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldPlus?.price))} INR paid annually</small></div>
-                            <div className='p-3'>
-                         <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldPlus?.planName,((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
-                            </div></div>:
-                            <div className="p-3">
-                                <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
-                                    <h5 className='text-center'> Want to see your price?</h5>
-                                    <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                    <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                        :
+                                        <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                                    }
+
+                                    <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                                 </div>
-                            </div>}
-                            <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2 text-white'>In Upgraded</div><InfoIcon color='disabled' onClick={()=>setModalShow(true)}/>
-                            </div>
-                            <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
-                                <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled' onClick={openModel}/>
-                            </div>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldPlus?.appliances?.map(a1=>
-                                     a1?.checked===false ? <div> <CancelIcon color='disable'  />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
-                                     )
-                                     }
-                                    {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
+                                <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
+                                    <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
+                                    <h6 className='text-center  pb-2 pt-3'>{homeShieldPlus?.planName}</h6>
+                                    <div className='text-center'>Just the right coverage for extra busy homes</div>
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='pt-3'>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0)} INR</h2>
+                                            <div className='text-center'><small>paid monthly</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldPlus?.price))} INR paid annually</small></div>
+                                            <div className='p-3'>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                            </div></div> :
+                                        <div className="p-3">
+                                            <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
+                                                <h5 className='text-center'> Want to see your price?</h5>
+                                                <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                            </div>
+                                        </div>}
+                                    <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
+                                        <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2 text-white'>In Upgraded</div><InfoIcon color='disabled' onClick={() => setModalShow(true)} />
+                                    </div>
+                                    <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
+                                        <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled' onClick={openModel} />
+                                    </div>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldPlus?.appliances?.map(a1 =>
+                                                    a1?.checked === false ? <div> <CancelIcon color='disable' />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                                )
+                                                }
+                                                {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
                                     <div> <CancelIcon color='disable' /> Refrigerator</div> 
                                     <div> <CancelIcon color='disable' /> T V</div> 
                                      <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -488,79 +614,79 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
                                         <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
 
-                            <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Plus</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldPlus?.plus?.map(a1=>
-                                     a1?.checked===false ? <div> <CancelIcon color='disable'   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
-                                     )
-                                     }
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
-                            <div className='ps-2 '><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
-                            <hr />
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                         <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldPlus?.planName,((+homeData?.homeSize*(+homeShieldPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
 
-                           :
-                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                            }
-                            <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
-                        </div>
-                        <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
-                            <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldProPlus?.planName}</h6>
-                            <div className='text-center'>Maximum coverage for major peace of mind</div>
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                            <div className='pt-3'>
-                            <h2 className='text-center'>{((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0)} INR</h2>
-                            <div className='text-center'><small>paid monthly</small></div>
-                            <div className='text-center'><small>{(+homeData?.homeSize*(+homeShieldProPlus?.price))} INR paid annually</small></div>
-                            <div className='p-3'>
-                             <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldProPlus?.planName,((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
-                            </div></div> :
-                            <div className="p-3">
-                                <div className='rounded mt-3 bg-light rounded-5 pt-3'>
-                                    <h5 className='text-center'> Want to see your price?</h5>
-                                    <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                    <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldPlus?.plus?.map(a1 =>
+                                                    a1?.checked === false ? <div> <CancelIcon color='disable' />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                )
+                                                }
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                                    <div className='ps-2 '><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                                    <hr />
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+
+                                        :
+                                        <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                                    }
+                                    <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
                                 </div>
-                            </div>}
-                            <div className=" mt-3 d-flex justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>In Upgrade</div><InfoIcon onClick={()=>setModalShow(true)} />
-                            </div>
-                            <div className="mt-2 d-flex pb-3 justify-content-start ms-3">
-                                <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon onClick={openModel} />
-                            </div>
-                            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldProPlus?.appliances?.map(a1=>
-                                     (a1?.checked && <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>)
-                                     )
-                                     }
-                                    {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
+                                <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
+                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldProPlus?.planName}</h6>
+                                    <div className='text-center'>Maximum coverage for major peace of mind</div>
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='pt-3'>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0)} INR</h2>
+                                            <div className='text-center'><small>paid monthly</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldProPlus?.price))} INR paid annually</small></div>
+                                            <div className='p-3'>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                            </div></div> :
+                                        <div className="p-3">
+                                            <div className='rounded mt-3 bg-light rounded-5 pt-3'>
+                                                <h5 className='text-center'> Want to see your price?</h5>
+                                                <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2'><small>FILL OUT THE FORM</small></div>
+                                            </div>
+                                        </div>}
+                                    <div className=" mt-3 d-flex justify-content-start ms-3">
+                                        <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>In Upgrade</div><InfoIcon onClick={() => setModalShow(true)} />
+                                    </div>
+                                    <div className="mt-2 d-flex pb-3 justify-content-start ms-3">
+                                        <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon onClick={openModel} />
+                                    </div>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldProPlus?.appliances?.map(a1 =>
+                                                    (a1?.checked && <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>)
+                                                )
+                                                }
+                                                {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
                                     <div> <CheckCircleIcon color='primary' /> Refrigerator</div> 
                                     <div> <CheckCircleIcon color='primary' /> T V</div> 
                                     <div> <CheckCircleIcon color='primary' />  Dishwasher</div>
@@ -573,11 +699,11 @@ const Pricing = () => {
                                         <div> <CheckCircleIcon color="primary" />  Induction </div>
                                         <div> <CheckCircleIcon color="primary" />  Taster </div>
                                         <div> <CheckCircleIcon color="primary" />  Geyser </div> */}
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                           
-                            {/* <Accordion style={{ border: "0px", boxShadow: "none" }}>
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+
+                                    {/* <Accordion style={{ border: "0px", boxShadow: "none" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -592,46 +718,46 @@ const Pricing = () => {
                                             </Typography>
                                         </AccordionDetails>
                                     </Accordion> */}
-                            <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
 
-                                >
-                                    <Typography><h5 className='fw-bold'>Plus</h5></Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Typography>
-                                    { homeShieldProPlus?.plus?.map(a1=>
-                                     a1?.checked===false ? <div className='text-muted'> <CancelIcon   />{a1?.value} </div> :
-                                      <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
-                                     )
-                                     }
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                            <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
-                            <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
-                            <hr />
-                            {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                            <div className='bg-primary rounded-5 text-center text-white p-2' onClick={()=>handlePlan(homeShieldProPlus?.planName,((+homeData?.homeSize*(+homeShieldProPlus?.price))/12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                        >
+                                            <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Typography>
+                                                {homeShieldProPlus?.plus?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                )
+                                                }
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <h5 className='fw-bold ps-2 mt-2'>Optional Coverage</h5>
+                                    <div className='ps-2'><small>You can add Optional Coverage to your plan. <a href="" className='text-decoration-none'>See Details and Pricing</a></small></div>
+                                    <hr />
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
 
-                           :
-                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
-                            }
+                                        :
+                                        <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2'><small>FILL OUT THE FORM</small></div></div>
+                                    }
 
-                            <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                                    <div className='text-center pb-2'><a href="" className='text-decoration-none'><small>SEE COVERAGE LIMITS</small></a></div>
+                                </div>
+                                <div className='shadow mt-4 rounded-4 text-center p-3'><h5>A $95 copay applies to covered services and is payable at the time a service appointment is scheduled.</h5></div>
+                                <div className='shadow mt-3 rounded-4 text-center p-3'><h5>Real Estate Agent?  <a href="" className='text-decoration-none'>Click here</a></h5></div>
+
+                            </div>
                         </div>
-                        <div className='shadow mt-4 rounded-4 text-center p-3'><h5>A $95 copay applies to covered services and is payable at the time a service appointment is scheduled.</h5></div>
-                        <div className='shadow mt-3 rounded-4 text-center p-3'><h5>Real Estate Agent?  <a href="" className='text-decoration-none'>Click here</a></h5></div>
-
                     </div>
-                </div>
-            </div>
-            <div className="col-12 col-md-1 col-lg-1"></div>
+                    <div className="col-12 col-md-1 col-lg-1"></div>
 
-        </div >
+                </div >
                 <Subscription />
                 <div
                 // style={{ backgroundColor: "#D4E2D4" }}
@@ -659,7 +785,7 @@ const Pricing = () => {
                                 <EventIcon color='primary' fontSize='large' />
                                 <h5 className='p-2'>Reminders</h5>
                                 <p>
-                                Amidst your busy life, we're here to help. Regular maintenance reminders on our Tips page cover tasks like air filter changes and dryer vent cleaning. Choose between DIY or tapping into our Maintenance Marketplace for assistance.
+                                    Amidst your busy life, we're here to help. Regular maintenance reminders on our Tips page cover tasks like air filter changes and dryer vent cleaning. Choose between DIY or tapping into our Maintenance Marketplace for assistance.
                                 </p>
                             </div>
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
@@ -1070,12 +1196,12 @@ const Pricing = () => {
                 <Available />
             </div >
             <MyVerticallyCenteredModal
-           show={modalShow}
-        // onHide={() => setModalShow(false)}
-        showMax={showMax}
-        setShowMax={setShowMax}
-           setModalShow={setModalShow}
-      />
+                show={modalShow}
+                // onHide={() => setModalShow(false)}
+                showMax={showMax}
+                setShowMax={setShowMax}
+                setModalShow={setModalShow}
+            />
         </>
     )
 }
