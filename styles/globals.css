@@ -116,6 +116,11 @@ body{
   width:500px ;
   height: 400px;
 }
+.servicerImgWdth1{
+  width:300px ;
+  height: 300px;
+  margin-top: -240px;
+}
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -210,6 +215,9 @@ body{
 .headerNavFont{
   font-size: 11px;
 }
+.headerSize{
+  height: 10px;
+}
  
 .serviceTechImg{
   width: 100px;
@@ -222,6 +230,11 @@ body{
 .servicerImgWdth{
   width:270px ;
   height: 200px;
+}
+.servicerImgWdth1{
+  width:120px ;
+  height: 120px;
+  margin-top: -90px;
 }
 }
 

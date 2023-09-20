@@ -104,7 +104,9 @@ const Search = () => {
               <div className={`${!showUnit ? "ms-2 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
                 <button style={{ border: "3px solid white" }} className='btn   rounded-pill p-3' onClick={handlePrice}><span style={{ color: "white" }}>GET QUOTE</span></button>
               </div>
+             
             </div>
+             
           </div>
 
           {/* {search ? <div className={`${style.categoryList} shadow`}>
