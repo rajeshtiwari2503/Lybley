@@ -14,6 +14,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import StoreIcon from '@mui/icons-material/Store';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 
 const Sidebar = () => {
     const router = useRouter();
@@ -66,6 +67,13 @@ const Sidebar = () => {
                             <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <ShoppingBagIcon />
                                 Plan Subscribers
+                            </Link>
+                        </li>
+                        <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
+
+                            <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                <ForwardToInboxIcon />
+                                Complaints
                             </Link>
                         </li>
                     </ul>
