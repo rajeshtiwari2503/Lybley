@@ -13,7 +13,7 @@ import { useDataContext } from '../api/userData';
 
 function MyVerticallyCenteredModal(props) {
 
- 
+
 
   return (
     <Modal
@@ -41,9 +41,9 @@ const Search = () => {
   const [search, setSearch] = useState("");
   const [unit, setUnit] = useState("");
   const [modalShow, setModalShow] = useState(false);
-  const [showUnit,setShowUnit]=useState(false);
- 
-  const router=useRouter();
+  const [showUnit, setShowUnit] = useState(false);
+
+  const router = useRouter();
   // const getAllCity=async()=>{
   //      try{
   //       let response=await axios.get("https://backstage.taboola.com/backstage/api/1.0/resources/countries/us/cities");
@@ -58,20 +58,20 @@ const Search = () => {
   //     getAllCity();
   // },[]);
 
-  const handlePrice=()=>{
-    if(search.toUpperCase() === "NOIDA" && unit){
-      const newData = {city:search,unit:unit} ;
-      saveData(newData);  
+  const handlePrice = () => {
+    if (search.toUpperCase() === "NOIDA" && unit) {
+      const newData = { city: search, unit: unit };
+      saveData(newData);
       router.push("/pricing");
     }
   }
 
-  const handleEnter=(e)=>{
-    if(e.key==="Enter"){
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
       handleSearch();
     }
   }
- 
+
 
   const handleSearch = (e) => {
     if (search.toUpperCase() !== "NOIDA") {
@@ -79,32 +79,34 @@ const Search = () => {
       setShowUnit(false);
     } else {
       setShowUnit(true);
-     
+
     }
   }
 
   return (
     <>
+      <div className='d-none d-md-block'>
+        <div className={`${style.searchBody}  `}>
 
-      <div className={`${style.searchBody}  `}>
+          <div className='container'>
+            <div style={{ width: "100%" }} className="  d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
 
-        <div className='container'>
-          <div style={{width:"100%"}} className="d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
-            
-            <div className={`${style.searchBox} ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
-              
-              <input   onChange={(e) => setSearch(e.currentTarget.value)} name='search'   type="text" placeholder="City" onKeyPress={handleEnter} />
+              <div className={`${style.searchBox} ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
 
-              <SearchIcon style={{color:"white" ,cursor:"pointer"}} className='me-md-2' fontSize='large' onClick={handleSearch} />
-             
-            </div>
-            {showUnit ? <div className={`${style.unitBox} mt-md-0 mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
-              <input style={{ width: "80px" }} name='unit' onChange={(e)=>setUnit(e.currentTarget.value)}   type="number" placeholder="Unit" />
-            </div> : " " }
-            <div className={`${!showUnit ? "ms-2 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-              <button style={{border:"3px solid white"}} className='btn   rounded-pill p-3' onClick={handlePrice}><span  style={{color:"white"}}>GET QUOTE</span></button>
+                <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' type="text" placeholder="City" onKeyPress={handleEnter} />
+
+                <SearchIcon style={{ color: "white", cursor: "pointer" }} className='me-md-2' fontSize='large' onClick={handleSearch} />
+
+              </div>
+              {showUnit ? <div className={`${style.unitBox} mt-md-0 mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
+                <input style={{ width: "80px" }} name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Unit" />
+              </div> : " "}
+              <div className={`${!showUnit ? "ms-2 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
+                <button style={{ border: "3px solid white" }} className='btn   rounded-pill p-3' onClick={handlePrice}><span style={{ color: "white" }}>GET QUOTE</span></button>
+              </div>
             </div>
           </div>
+
           {/* {search ? <div className={`${style.categoryList} shadow`}>
             <div className='ps-2' > Fan</div>
             <div className='ps-2' > Cooler</div>
@@ -115,7 +117,13 @@ const Search = () => {
           } */}
         </div>
       </div>
-      <div  >
+      <div className={`${style.searchBody} d-block d-md-none `}>
+        <div className='container'>
+          <div className={`  ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
+
+            <div>&nbsp;</div>
+          </div>
+        </div>
         {/* <Carousel>
           <Carousel.Item >
             <img
