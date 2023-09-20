@@ -18,7 +18,9 @@ const Servicer = () => {
                         <div className={`${style.whatText} pt-5 text-white`}  >
                             WHAT A TEAM
                         </div>
+                        <img className='img-card-top servicerImgWdth1' src="/technician.png" alt="" /> 
                         <div>
+                        
                     <Link href={"/servicer-signup"}>     <button className='btn btn-primary'>GET STARTED</button></Link>
                         </div>
                     </div>
@@ -36,7 +38,7 @@ const Servicer = () => {
                                 <div className='text-center'>
                                     <img className='img-card-top  servicerImgWdth'
                                     //  src='https://e7.pngegg.com/pngimages/400/819/png-clipart-car-maintenance-automobile-repair-shop-motor-vehicle-service-air-conditioning-professional-tshirt-swimming-pool.png' alt='tips'
-                                     src='/technician.png' alt='tips'
+                                     src='/technician1.png' alt='tips'
                                       />
                                 </div>
                             </div>

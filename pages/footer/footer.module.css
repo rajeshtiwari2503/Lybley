@@ -21,6 +21,115 @@
         height: 200px;
         width: 100vw;
     }
+    .searchBox {
+        display: flex;
+        align-items: center;
+        /* background-color: #fff; */
+        width: 250px !important;
+        padding: 1px !important;
+        border: 3px solid white;
+        border-radius: 30px;
+    
+   
+    }
+    .unitBox {
+       display: flex;
+       align-items: center;
+       /* background-color: #fff; */
+       background: transparent;
+       width: 100px;
+       padding: 1px !important;
+       border: 3px solid white;
+       border-radius: 30px;
+   
+   
+   }
+   .unitBox input {
+       flex: 1;
+       padding: 8px;
+       border: none;
+       outline: none;
+       font-size: 16px;
+       background: transparent;
+       color: black;
+   }
+   .unitBox ::placeholder{
+       color: black;
+   }
+    .searchBoxClick {
+        display: flex;
+        align-items: center;
+        /* background-color: #fff; */
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px ;
+        /* border: 1px solid #fff; */
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+   
+   
+    }
+   
+    .categoryList {
+        /* display: flex; */
+        position: absolute;
+        align-items: center;
+        background-color: #fff;
+        width: 400px;
+        margin: 0 auto;
+        padding: 0px 0px 10px 10px;
+        /* border: 1px solid #fff; */
+        /* border-radius: 40px; */
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+   
+    .searchBox input {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: transparent;
+        color: black;
+      
+    }
+    .searchBox ::placeholder {
+       color: white;
+    }
+    .searchBox button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 5px;
+        /* background-color: #007bff; */
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+   
+    .searchBoxClick input {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+   
+    .searchBoxClick button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+   
+    .searchBox button:hover {
+        background-color: #0056b3;
+    }
 }
 
  /* SearchBox.css */
@@ -155,7 +264,7 @@
  @media only screen and (max-width: 768px) {
     .searchBody {
         width:100% ;
-         height: auto;
+         height: 210px;
          /* background-color: #15939a; */
          background-image: url("https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg");
          display: flex;
