@@ -10,6 +10,7 @@ import httpCommon from '@/http-common';
 import axios from 'axios';
 import { Router, useRouter } from 'next/router';
 import { useDataContext } from '../api/userData';
+import Link from 'next/link';
 
 function MyVerticallyCenteredModal(props) {
 
@@ -121,9 +122,20 @@ const Search = () => {
       </div>
       <div className={`${style.searchBody} d-block d-md-none `}>
         <div className='container'>
-          <div className={`  ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
+          <div className={` pt-4 ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
 
-            <div>&nbsp;</div>
+            <div className='fw-bold fs-3 text-black'>
+               {/* HOME WARRANTY. */} &nbsp;
+                </div>
+            <div className='fw-bold fs-3 text-black'> 
+            {/* REINVENTED. */}&nbsp;
+             </div>
+            <div className='fw-bold fs-5 text-black'> Lybley covers home appliances breakdown and maintenance </div>
+            <div className='mt-5'>
+              <Link className='text-decoration-none' href={"/pricing"}>
+              <button  className='btn rounded-5 bg-white fw-bold'>SEE PRICING</button>
+              </Link>
+            </div>
           </div>
         </div>
         {/* <Carousel>

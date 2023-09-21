@@ -264,7 +264,7 @@
  @media only screen and (max-width: 768px) {
     .searchBody {
         width:100% ;
-         height: 210px;
+         height: 250px;
          /* background-color: #15939a; */
          background-image: url("https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg");
          display: flex;
