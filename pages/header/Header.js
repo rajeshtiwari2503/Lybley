@@ -70,7 +70,7 @@ const Header = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
-   
+  const [open2, setOpen2] = React.useState(false);
 
  
   return (
@@ -158,8 +158,8 @@ const Header = () => {
               </button>
             </div> */}
             <div className="col-4">
-            <MenuIcon fontSize="large" />
-            {/* <CloseIcon fontSize='large' /> */}
+           {open2===false ? <MenuIcon fontSize="large" onClick={(()=>setOpen2(true))} />
+           : <CloseIcon fontSize='large' onClick={(()=>setOpen2(false))} />}
             </div>
             <div className="col-4 text-center">
               {/* <div className='pt-1'><DraftsIcon color='primary' fontSize='large' /></div>
@@ -289,6 +289,35 @@ const Header = () => {
               <a href="#" className='text-decoration-none'>See More</a>
             </div>
            </div>
+          </div>
+        </div>
+      </Collapse>
+      <Collapse in={open2} 
+      style={{position:"absolute",backgroundColor: "white",width:"100%"}}
+      >
+        <div id="collapse-example" 
+        onMouseLeave={()=> setOpen2(false)}
+        aria-controls="collapse-example"
+        aria-expanded={open2}
+        >
+          <div className="container vh-100" style={{position: "relative"}} >
+            <div>
+           <div className='p-4 fw-bold text-primary border-bottom'>PLAN</div>
+           <div className='p-4 fw-bold text-primary'>WHAT IS LYBLEY</div>
+           </div>
+           <div style={{position:"absolute",bottom:150,left:"50%"}} className='d-flex justify-content-center'>
+            <div>
+          <div className="text-center" style={{textAlign:"center",alignItems:"center"}}>
+             <button className='btn btn-secondary rounded-pill p-3'>REQUEST SERVICE</button>
+             </div>
+             <div className="text-center p-2">
+             <button className='btn btn-secondary rounded-pill p-3'>CHECK CLAIM STATUS</button>
+             </div>
+             <div className="text-center">
+             <button className='btn btn-primary rounded-pill p-3'>SEE PRICING</button>
+             </div>
+             </div>
+             </div>
           </div>
         </div>
       </Collapse>
