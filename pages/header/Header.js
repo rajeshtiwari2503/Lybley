@@ -302,19 +302,27 @@ const Header = () => {
         >
           <div className="container vh-100" style={{position: "relative"}} >
             <div>
-           <div className='p-4 fw-bold text-primary border-bottom'>PLAN</div>
-           <div className='p-4 fw-bold text-primary'>WHAT IS LYBLEY</div>
+            <Link  className='text-decoration-none' href={"/plans"}>
+           <div className='p-4 fw-bold text-primary border-bottom'onClick={()=> setOpen2(false)} >PLAN</div>
+           </Link>
+           <Link  className='text-decoration-none' href={"/lybley"}>
+           <div className='p-4 fw-bold text-primary'onClick={()=> setOpen2(false)} >WHAT IS LYBLEY</div>
+           </Link>
            </div>
-           <div style={{position:"absolute",bottom:150,left:"50%"}} className='d-flex justify-content-center'>
+           <div style={{position:"absolute",bottom:150,left:"22%"}} className='d-flex justify-content-center'>
             <div>
           <div className="text-center" style={{textAlign:"center",alignItems:"center"}}>
-             <button className='btn btn-secondary rounded-pill p-3'>REQUEST SERVICE</button>
+            <Link  className='text-decoration-none' href={"/requestService"}>
+             <button onClick={()=> setOpen2(false)} className='btn btn-secondary rounded-pill p-3'>REQUEST SERVICE</button>
+             </Link>
              </div>
              <div className="text-center p-2">
-             <button className='btn btn-secondary rounded-pill p-3'>CHECK CLAIM STATUS</button>
+             <button onClick={() => setModalShow(true)} className='btn btn-secondary rounded-pill p-3'>CHECK CLAIM STATUS</button>
              </div>
              <div className="text-center">
-             <button className='btn btn-primary rounded-pill p-3'>SEE PRICING</button>
+             <Link className='text-decoration-none' href={"/pricing"}>
+             <button onClick={()=> setOpen2(false)}  className='btn btn-primary rounded-pill p-3'>SEE PRICING</button>
+             </Link>
              </div>
              </div>
              </div>
