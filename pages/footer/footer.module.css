@@ -263,10 +263,10 @@
 
  @media only screen and (max-width: 768px) {
     .searchBody {
-        width:100% ;
-         height: 250px;
+        /* width:100% !important ; */
+         height: 550px;
          /* background-color: #15939a; */
-         background-image: url("https://apollostore.blob.core.windows.net/forestmdws/uploads/assets/resources-banner.5686b8ca-98a6-4cba-9a43-b23c309ddacd.jpg");
+         background-image: url("https://images.pexels.com/photos/7415064/pexels-photo-7415064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
          display: flex;
          align-items: center;
          justify-content: center;
@@ -275,6 +275,9 @@
          /* background-color: #c8d8e4; */
         /* background-color: #fff; */
         background-size: 100% 100%;
+        text-align: center;
+        position: relative;
+        color:  white;
      }
      .bannerHome{
         height: 170px;

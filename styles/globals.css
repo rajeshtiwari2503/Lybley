@@ -112,6 +112,10 @@ body{
   font-family: "Proxima Nova",sans-serif !important;
 }
 
+.title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .servicerImgWdth{
   width:500px ;
   height: 400px;
