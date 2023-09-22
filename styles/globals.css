@@ -123,7 +123,8 @@ body{
 .servicerImgWdth1{
   width:300px ;
   height: 300px;
-  margin-top: -240px;
+  margin-top: -70px;
+  margin-left: 70px ;
 }
 .marquee {
   width: 100%;
@@ -238,7 +239,8 @@ body{
 .servicerImgWdth1{
   width:120px ;
   height: 120px;
-  margin-top: -90px;
+  margin-top: -25px;
+  margin-left: 25px;
 }
 }
 

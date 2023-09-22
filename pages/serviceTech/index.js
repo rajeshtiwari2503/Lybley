@@ -8,7 +8,7 @@ const ServiceTech = () => {
             <div className='marquee'>
                 <div className='content'>
                     <div className='row d-flex'>
-                        <div className='col-12 col-md-4 col-lg-4 mt-5  '>
+                        <div className='col-4 col-md-4 col-lg-4 mt-5  '>
                             <div className='row align-items-center '>
                                 <div className='col-12 col-md-4 text-md-start text-center'>
                                 <img className='rounded-circle   serviceTechImg' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
