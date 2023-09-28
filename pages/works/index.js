@@ -8,7 +8,7 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 const Works = (props) => {
   return (
     <div style={{backgroundColor:"#D4E2D4"}}>
-    <div className='container pt-5'>
+    <div className='container '>
       {props?.servicer ? 
       <> <div className="row">
       <div className="col-12 text-center">
@@ -52,24 +52,24 @@ const Works = (props) => {
               <p>Lybley offers a subscription-based home care solution that encompasses appliance and system repair or replacement for our members. Simply choose the plan that suits you, complete the registration, and experience peace of mind as we take over from that point onward. Dealing with unexpected breakdowns can be hassle-free with us, ensuring you don't have to deal with unnecessary complications during such times.</p>
             </div>
         </div>
-        <div className="row text-center pt-5 pb-5 mt-2 mt-md-5 mt-lg-5">
+        <div className="row text-center   pb-3 mt-2 mt-md-5 mt-lg-5">
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
             <SystemSecurityUpdateGoodIcon color='primary' fontSize='large' />
-            <h5 className='p-2'>Sign Up</h5>
+            <div className='fw-bold fs-4 p-2'>Sign Up</div>
             <p>Explore plans tailored to your needs, whether safeguarding essentials or prioritizing key elements, we've got you covered.</p>
          </div>
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
          <VerifiedIcon color='primary' fontSize='large' />
-         <h5 className='p-2'>Rest Easy</h5>
+         <div className='fw-bold fs-4 p-2'>Rest Easy</div>
          <p>
          Whenever you require assistance, our team of expert Certified Lybley Service technicians is prepared to step in and lend a hand.
          </p>
          </div>
          <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
         <InputIcon color='primary' fontSize='large' />
-        <h5 className='p-2'> 
+        <div className='fw-bold fs-4 p-2'> 
             We're ready
-        </h5>
+        </div>
         <p>Access your account by logging in or utilize the convenient Lybley app to inform us about the situation and set up a schedule that suits you.</p>
          </div>
         </div>
