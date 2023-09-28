@@ -109,7 +109,7 @@ a {
 /* Marquee.module.css */
 
 body{
-  font-family: "Proxima Nova",sans-serif !important;
+  font-family: "Inter",sans-serif !important;
 }
 
 .title{
@@ -624,4 +624,5 @@ body {
     margin-right: 250px;
   }
 }
+ 
  
