@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import Loader from '../common/Loading'
 import DataTable from 'react-data-table-component';
 import httpCommon from '@/http-common';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ConfirmBox from '../common/ConfirmBox';
-import ToastMessage from '../common/ToastMessage';
-import DashboardHeader from '../common/DashboardHeader';
 import Link from 'next/link';
 import AddIcon from '@mui/icons-material/Add';
 import VisibilityIcon from '@mui/icons-material/Visibility';
- 
+import ConfirmBox from '../../common/ConfirmBox';
+import ToastMessage from '../../common/ToastMessage';
+import DashboardHeader from '../../common/DashboardHeader';
+import Loader from '../../common/Loading';
 
-const MyComplaints = () => {
+const CompletedComplaints = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [randomValue, setRandomValue] = useState("");
@@ -79,7 +78,6 @@ const MyComplaints = () => {
         selector: (row) => row?.status,
         sortable: true, 
       },
-      
       {
         name: "CREATEDAT",
         selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),
@@ -96,14 +94,14 @@ const MyComplaints = () => {
           <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link> */}
           <div>
-         {row?.status==="PENDING"? <button className='btn btn-success '>Assign</button> :<button disabled={true} className='btn btn-danger '>Assigned</button>}
+          {/* <button className='btn btn-warning '>Assign</button> */}
           </div>
           <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
           </Link>
           {/* <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' /> */}
         </div>,
-        sortable: true,  width:"170px"
+        sortable: true,  
 
       }
     ]
@@ -114,7 +112,8 @@ const MyComplaints = () => {
       setLoading(true)
       let response = await httpCommon.get("/getAllComplaint");
       let { data } = response;
-      setData(data);
+     const filterData=data?.filter(f1=>f1?.status==="CLOSE")
+      setData(filterData);
       setLoading(false)
 
     } catch (err) {
@@ -128,7 +127,7 @@ const MyComplaints = () => {
   const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
-        <DashboardHeader pagetitle={"Complaints"}
+        <DashboardHeader pagetitle={"Completed Complaints"}
                 // modalbutton={() => {
                 //     return <div className="col-auto d-flex w-sm-100">
                 //         <Link href={"/admin/plan/AddPlan"} className='text-decoration-none'>
@@ -167,4 +166,4 @@ const MyComplaints = () => {
   )
 }
 
-export default MyComplaints
+export default CompletedComplaints
