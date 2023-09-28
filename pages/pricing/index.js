@@ -765,7 +765,7 @@ const Pricing = () => {
                     <div className='container pt-5'>
                         <div className="row">
                             <div className="col-12">
-                                <div className='text-center'>
+                                <div className='text-center fw-bold'>
                                     <h1>Keep your home humming</h1>
                                 </div>
                                 <div className="row">
@@ -778,21 +778,21 @@ const Pricing = () => {
                         <div className="row text-center pt-5 pb-5 mt-2 mt-md-5 mt-lg-5">
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                                 <MonetizationOnIcon color='primary' fontSize='large' />
-                                <h5 className='p-2'>Copay</h5>
+                                <h4 className='p-2 fw-bold'>Copay</h4>
                                 <p>When scheduling service for a covered repair, a standard copay is applicable. Irrespective of the duration the technician spends at your residence or whether the repair necessitates multiple visits, only one charge per claim will be incurred.</p>
                             </div>
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                                 <EventIcon color='primary' fontSize='large' />
-                                <h5 className='p-2'>Reminders</h5>
+                                <h4 className='p-2 fw-bold'>Reminders</h4>
                                 <p>
                                     Amidst your busy life, we're here to help. Regular maintenance reminders on our Tips page cover tasks like air filter changes and dryer vent cleaning. Choose between DIY or tapping into our Maintenance Marketplace for assistance.
                                 </p>
                             </div>
                             <div className="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center col-lg-4">
                                 <GradeIcon color='primary' fontSize='large' />
-                                <h5 className='p-2'>
+                                <h4 className='p-2 fw-bold'>
                                     Maintenance Rewards
-                                </h5>
+                                </h4>
                                 <p>Spread the Lybley love, and we're here to show our gratitude when you refer friends, family, or neighbors to our home warranty subscription. Your referrals earn you Maintenance Rewards applied directly to your account.</p>
                             </div>
                         </div>
@@ -801,7 +801,7 @@ const Pricing = () => {
                                 <div className='text-center'>
                                     <LocalGroceryStoreIcon color='primary' fontSize='large' />
                                 </div>
-                                <h5 className='text-center p-2'>Maintenance Marketplace</h5>
+                                <h4 className='text-center fw-bold p-2'>Maintenance Marketplace</h4>
                                 <div className="row">
                                     <div class="col-12 col-md-2 col-lg-2"></div>
                                     <div class="col-12 col-md-8 col-lg-8 text-center">Count on our Lybley Certified technicians to assist with tasks essential for maintaining your home's prime condition and preventing future expensive issues. Here's a glimpse of what we offer*:</div>
@@ -849,7 +849,7 @@ const Pricing = () => {
                                 <img src="https://static.vecteezy.com/system/resources/previews/023/986/318/original/an-open-gift-box-containing-photo-frames-and-graduation-caps-perfect-for-congratulation-png.png" className='card-img-top' alt="..." />
                             </div>
                             <div className="col-12 col-md-6 d-flex justify-content-center flex-column col-lg-6">
-                                <h2 className='py-3'>Congratulations on your new home!</h2>
+                                <h2 className='py-3 fw-bold'>Congratulations on your new home!</h2>
                                 <p>Whether you're embarking on the journey of homeownership for the first time or stepping into your next abode, Lybley's In the Clear plan is designed to alleviate the apprehension of encountering hidden appliance or system complications that might have slipped through the cracks during the purchase process.</p>
                                 <p>Opting for the In the Clear plan is a seamless process: share the home inspection report you acquired during the house purchase, and our team will meticulously review it to identify the eligible appliances and systems that successfully passed inspection.</p>
                                 <p>For subscribers who come across malfunctioning appliances or systems not covered by their existing plan, there's no need for undue concern. We generously augment your account with 50 INR in Maintenance Rewards, underscoring our commitment to providing a worry-free experience.</p>

@@ -7,7 +7,7 @@ const Mobile= (props) => {
                 <div className="row ">
                     <div className="col-12 col-md-6 py-5">
                         <div className="ps-5">
-                        <h1>Home maintenance meets high tech</h1>
+                        <h1 className='fw-bold'>Home maintenance meets high tech</h1>
                         <p className='mt-5'>
 We bring the commitment of Lybley to life via a user-friendly app and website portal designed for clarity, ease, and friendliness. Whether you're seeking assistance through the app or the website, we'll inquire about your needs, location, and preferred timeframe. Following this, a Lybley Certified expert will be dispatched, swiftly restoring a hassle-free living experience.</p>
                         {/* <div className="form-group d-flex">

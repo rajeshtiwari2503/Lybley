@@ -4,7 +4,7 @@ import React from 'react'
 const ServiceTech = () => {
     return (
         <>
-            <h2 className='text-center pt-5'>Our service techs have a heart</h2>
+            <h2 className='text-center pt-5 fw-bold'>Our service techs have a heart</h2>
             <div className='marquee'>
                 <div className='content'>
                     <div className='row d-flex'>

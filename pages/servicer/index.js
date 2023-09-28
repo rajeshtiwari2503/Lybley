@@ -57,17 +57,17 @@ const Servicer = () => {
                         <div className='row pt-5 '>
                             <div className='col-12 col-md-2 col-lg-2'></div>
                             <div className='col-12 col-md-8 col-lg-8 text-center'>
-                                <div className='fw-bold fs-2 '>
+                                <div className='fw-bold fs-2'>
                                     Is Lybley right for me?
                                 </div>
-                                <div>
+                                <div className='pt-3'>
                                 An excellent query. Service technicians across the nation affirm that Lybley is the most seamless method they've employed to expand their business. It streamlines their marketing efforts, saving both time and money, while also minimizing collection-related challenges and risks, since we manage these aspects comprehensively.
                                 </div>
                             </div>
                             <div className='col-12 col-md-2 col-lg-2'></div>
                         </div>
                     </div>
-                    <div className='container '>
+                    <div className='container'>
                         <div className='row mt-5 pb-5'>
                             <div className='col-12 col-md-4 col-lg-4 text-center'>
                                 <div>
