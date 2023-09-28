@@ -78,13 +78,13 @@ const Header = () => {
     <div className='sticky-top'>
       <div className="bg-dark text-white">
         <div className="row w-100">
-          <div className="col-12 col-md-3 col-lg-3"></div>
-          <div className="col-12 col-md-6 col-lg-6 d-none d-md-block">
-            <div className='d-flex justify-content-around text-center ms-4'>
-            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 p-1 text-white'} > <small className='hover headerNavFont fw-bold p-md-2 p-1'>HOMEOWNER</small></Link>
+          <div className="col-12 col-md-7 col-lg-7"></div>
+          <div className="col-12 col-md-4 col-lg-4 d-none d-md-block">
+            <div className='d-flex justify-content-around ms-4'>
+            <Link href={"/"}   className={ router.pathname==="/" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 p-1 text-white'} > <small className='hover headerNavFont fw-bold p-md-2 p-1' style={{fontSize:"11px"}}>HOMEOWNER</small></Link>
               {/* <small className='hover fw-bold p-2'>REALTOR</small> */}
-              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='hover headerNavFont fw-bold p-md-2 p-1'>SERVICER</small></Link>
-             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='headerNavFont'>TIPS</small></Link>
+              <Link  href={"/servicer"} className={ router.pathname==="/servicer" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='hover headerNavFont fw-bold p-md-2 p-1' style={{fontSize:"11px"}}>SERVICER</small></Link>
+             <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='headerNavFont' style={{fontSize:"11px"}}>TIPS</small></Link>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-6 d-md-none d-block">
@@ -95,7 +95,7 @@ const Header = () => {
              <Link   href={"/tips"} className={ router.pathname==="/tips" ?'text-decoration-none selectNav fw-bold p-md-2 p-1 ' :  'text-decoration-none hover fw-bold p-md-2 text-white  p-1'} > <small className='headerNavFont  '>TIPS</small></Link>
             </div>
           </div>
-          <div className="col-12 col-md-3 col-lg-3"></div>
+          <div className="col-12 col-md-1 col-lg-1"></div>
         </div>
       </div>
       

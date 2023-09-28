@@ -3,7 +3,7 @@ import React from 'react'
 const Subscription = () => {
     return (
         <div className='container'>
-            <h1 className='text-center mt-5 mb-5'>Some love from our subscribers</h1>
+            <h1 className='text-center mt-5 mb-5 fw-bold'>Some love from our subscribers</h1>
             <div className='row mb-5'>
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
                     <div className='shadow p-3 commonTransition'>

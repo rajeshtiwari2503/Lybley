@@ -4,8 +4,9 @@ import Carousel from 'react-bootstrap/Carousel'
 const ServiceTech = () => {
     return (
         <>
-            <h2 className='text-center pt-5'>Our service techs have a heart</h2>
-            {/* <div className='marquee'>
+            <h2 className='text-center pt-5 fw-bold'>Our service techs have a heart</h2>
+            <div className='marquee'>
+
                 <div className='content'>
                     <div className='row d-flex'>
                         <div className='col- col-md-4 col-lg-4 mt-5  '>

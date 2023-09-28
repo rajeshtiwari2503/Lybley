@@ -87,7 +87,7 @@ const Search = () => {
   return (
     <>
       <div className='d-none d-md-block'>
-        <div className={`${style.searchBody}  `}>
+        <div className={`${style.searchBody}`}>
 
           <div className='container'>
             <div style={{ width: "100%" }} className="  d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
@@ -96,14 +96,14 @@ const Search = () => {
 
                 <input onChange={(e) => setSearch(e.currentTarget.value)} name='search' type="text" placeholder="City" onKeyPress={handleEnter} />
 
-                <SearchIcon style={{ color: "white", cursor: "pointer" }} className='me-md-2' fontSize='large' onClick={handleSearch} />
+                <SearchIcon style={{ color: "black", cursor: "pointer" }} className='me-md-2' fontSize='large' onClick={handleSearch} />
 
               </div>
               {showUnit ? <div className={`${style.unitBox} mt-md-0 mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
                 <input style={{ width: "80px" }} name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Unit" />
               </div> : " "}
               <div className={`${!showUnit ? "ms-2 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-                <button style={{ border: "3px solid white" }} className='btn   rounded-pill p-3' onClick={handlePrice}><span style={{ color: "white" }}>GET QUOTE</span></button>
+                <button style={{ border: "3px  white" }} className='btn bg-white fw-bold rounded-pill p-3' onClick={handlePrice}><span>GET QUOTE</span></button>
               </div>
              
             </div>
