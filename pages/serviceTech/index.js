@@ -5,7 +5,7 @@ const ServiceTech = () => {
     return (
         <>
             <h2 className='text-center pt-5 fw-bold'>Our service techs have a heart</h2>
-            <div className='marquee'>
+            {/* <div className='marquee'>
 
                 <div className='content'>
                     <div className='row d-flex'>
@@ -43,7 +43,7 @@ const ServiceTech = () => {
 
                     </div>
                 </div>
-            </div> */}
+            </div>  */}
             <div>
                 <Carousel>
                     <Carousel.Item >
