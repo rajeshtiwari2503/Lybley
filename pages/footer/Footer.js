@@ -97,7 +97,7 @@ const Footer = () => {
                 <div className='bg-light  p-2'>
                 <h5 className="h1 text-white text-center mt-3"><Link href="/"><img className='rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s" alt="logo" height="90px" width="90px" />
                 </Link></h5>
-                <p className="small text-center"  >India's biggest online marketplaces for spare parts.</p>
+                <p className="small text-center"  >India's most trusted home warranty Company.</p>
                 {/* <p className="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a className="text-primary" href="#">Bootstrapious.com</a></p> */}
                 <div className="mt-md-3 text-center mt-lg-3">
                    <Link href={"https://twitter.com/SpareTradeIN"} target="_blank"><img className="p-1 bg-white rounded-circle" src="https://cdn-icons-png.flaticon.com/512/1051/1051382.png" alt="logo" height="40px" width="40px"  /></Link>  
