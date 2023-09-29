@@ -9,23 +9,26 @@ const Plan = () => {
             <div className={`${style.planWd}`}>
                 <div className={`${style.bg_black}`}>
                     <div className="text-white text-center ps-2 pe-2 mt-5">
-                        <h2 className="fw-bold">We have a plan (for your home)</h2>
+                        <h1 className="fw-bold">We have a plan (for your home)</h1>
                         <div className="row w-100  mt-3">
                             <div className="col-12 col-md-3 col-lg-3"></div>
-                            <div className="col-12 col-md-6 col-lg-6 ">
-                                <p className="text-center ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
+                            <div className="col-12  d-block d-md-none  ">
+                                <p   className="text-md-center text-start ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
+                            </div>
+                            <div className="col-12 mt-3 d-md-block d-none  ">
+                                <p  style={{marginLeft:"200px",marginRight:"200px"}} className="text-center ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
                             </div>
                             <div className="col-12 col-md-3 col-lg-3"></div>
                         </div>
                     </div>
-                    <div className={`shadow bg-body p-2 mt-3 mt-md-0 ${style.popUp}`}>
+                    <div className={`shadow bg-body p-2 mt-5 mt-md-0 ${style.popUp}`}>
                         <h5 className="text-center text-white mt-4 fw-bold">Saving Estimator</h5>
-                        <div className="row text-white mt-3 ">
-                            <div className="col-12 col-md-6 col-lg-6">
+                        <div className="row text-white mt-4 ">
+                            <div className="col-12 col-md-8 col-lg-8">
                                 <h1 className="text-center">Save an average of 8 INR</h1>
                                 <h1 className="text-center">with a Lybley Signature plan.</h1></div>
 
-                            <div className="col-12 col-md-6 col-lg-6"></div>
+                            <div className="col-12 col-md-4 col-lg-4"></div>
                         </div>
                         <div className="container d-none d-md-block d-lg-block">
                             <div className="row text-white mt-5  m-0">
