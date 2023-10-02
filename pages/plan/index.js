@@ -10,7 +10,7 @@ const Plan = () => {
                 <div className={`${style.bg_black}`}>
                     <div className="text-white text-center ps-2 pe-2 mt-5">
                         <h1 className="fw-bold">We have a plan (for your home)</h1>
-                        <div className="row w-100  mt-3">
+                        <div className="row    mt-3">
                             <div className="col-12 col-md-3 col-lg-3"></div>
                             <div className="col-12  d-block d-md-none  ">
                                 <p   className="text-md-center text-start ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
@@ -113,9 +113,9 @@ const Plan = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" container  text-center d-block d-md-none d-lg-none">
-                            <div className="row text-center">
-                                <div className="col-12 d-flex  ">
+                        <div className=" container   d-block d-md-none d-lg-none">
+                            <div className="row d-flex justify-content-center ">
+                                <div className="col-12 d-flex justify-content-center  ">
                                     <div className={`${style.upArrow}  `}>
 
                                     </div>
@@ -124,14 +124,14 @@ const Plan = () => {
                                     <img src="Ac .png" width="90px" height="" alt="" />
 
                                 </div>
-                                <div className="col-6 text-end  " style={{ marginTop: "-6px" }}>
+                                <div className="col-6 text-end  " style={{ marginTop: "-5px" }}>
                                    
                                 <div className="bg-white text-center pt-4 pb-4">
                                     <img src="4526667.png" width="130px" height="130px" alt="..." />
                                 </div>
                                 </div>
 
-                                <div className="col-6  " style={{ marginLeft: "-21px", marginTop: "-6px" }}>
+                                <div className="col-6  " style={{ marginLeft: "-21px", marginTop: "-5px" }}>
                                 <div className="bg-white   text-center pt-4 pb-4">
                                     
                                     <img src= "2486313.png" width="130px" height="130px" alt="..." />
@@ -139,7 +139,7 @@ const Plan = () => {
                                 </div>
 
                             </div>
-                            <div className="row  " style={{ marginTop: "2px" }}>
+                            <div className="row d-flex justify-content-center  " style={{ marginTop: "3px" }}>
                                 <div className="col-6 text-end  ">
                                     <div className="bg-white text-center pt-4 pb-4">
                                         <img src="Microwave.png" width="130px" height="130px" alt="..." />
