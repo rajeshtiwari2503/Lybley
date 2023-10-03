@@ -1,6 +1,6 @@
  
 .whatHead{
-    height: 400px;
+    height: 570px;
     background-color: #73a2d3;
 }
 .whatText{
@@ -9,7 +9,7 @@
 
 @media only screen and (max-width: 768px) {
     .whatHead{
-        height: 220px;
+        height: 280px;
         background-color: #73a2d3;
     }
     .whatText{

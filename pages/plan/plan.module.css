@@ -35,13 +35,13 @@
     .upArrow {
         width: 0;
           height: 0;
-          border-left: 153px solid transparent;
-          border-right: 153px solid transparent;
+          border-left: 150px solid transparent;
+          border-right: 150px solid transparent;
           border-bottom: 130px solid white;
         margin-bottom: 8px;
         }
     .planWd{
-        height: 1200px;
+        height: 1520px;
 
     }
     .bg_black{
@@ -55,10 +55,10 @@
     .popUp{
      
        background-color: white;
-        height: 1100px;
+        height: 1200px;
         width: 360px;
         /* position: absolute; */
-        top: 280px;
+        top: 320px;
         border: 2px gray;
         border-radius: 15px;
     }
