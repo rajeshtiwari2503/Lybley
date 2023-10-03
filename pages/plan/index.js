@@ -8,17 +8,19 @@ const Plan = () => {
         <>
             <div className={`${style.planWd}`}>
                 <div className={`${style.bg_black}`}>
-                    <div className="text-white text-center ps-2 pe-2 mt-5">
+                    <div className="text-white text-center mt-5">
+                        <div className=" ps-2 pe-2">
                         <h1 className="fw-bold">We have a plan (for your home)</h1>
-                        <div className="row    mt-3">
-                            <div className="col-12 col-md-3 col-lg-3"></div>
+                        </div>
+                        <div className="row  w-100  mt-3">
+                             
                             <div className="col-12  d-block d-md-none  ">
                                 <p   className="text-md-center text-start ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
                             </div>
                             <div className="col-12 mt-3 d-md-block d-none  ">
-                                <p  style={{marginLeft:"200px",marginRight:"200px"}} className="text-center ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
+                                <p  style={{ paddingLeft:"200px",paddingRight:"200px"}} className="text-center ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
                             </div>
-                            <div className="col-12 col-md-3 col-lg-3"></div>
+                            
                         </div>
                     </div>
                     <div className={`shadow bg-body p-2 mt-5 mt-md-0 ${style.popUp}`}>
