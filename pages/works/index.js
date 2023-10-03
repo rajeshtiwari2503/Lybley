@@ -4,6 +4,7 @@ import SystemSecurityUpdateGoodIcon from '@mui/icons-material/SystemSecurityUpda
 import VerifiedIcon from '@mui/icons-material/Verified';
 import InputIcon from '@mui/icons-material/Input';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import Link from 'next/link';
 
 const Works = (props) => {
   return (
@@ -37,7 +38,7 @@ const Works = (props) => {
   <p>Recognizing the significance of your efforts, we offer compensation at an equitable rate and schedule. It's a mutually beneficial arrangement.</p>
    </div>
   </div>
-  <div className='text-center pb-5'><button className='btn rounded-pill btn-primary fw-bold'><small>LEARN MORE</small></button></div>
+  <Link href="/pricing"><div className='text-center pb-5'><button className='btn rounded-pill btn-dark'><small style={{fontSize:"13px"}}>LEARN MORE</small></button></div></Link>
   </>
       :
        <> <div className="row">
