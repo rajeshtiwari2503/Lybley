@@ -8,10 +8,10 @@ const Subscription = () => {
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
                     <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
-                        <img className='rounded-circle' src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={60} width={60} alt='' />
+                        <img className='rounded-circle' src="https://media.istockphoto.com/id/1180206823/photo/old-man-sitting-on-chair.webp?b=1&s=170667a&w=0&k=20&c=aqqn2AEWv-8UkWn5mnDFiVo0SUYPNwjvqCWly9dCTyM=" height={60} width={60} alt='' />
                         <div >
                             <div className='ps-3'>
-                                <div className='fw-bold'>Mukesh</div>
+                                <div className='fw-bold'>Mukesh Gupta</div>
                                 {/* <div> I'm  Certified LYBLEY</div> */}
                             </div>
                         </div>
@@ -24,10 +24,10 @@ const Subscription = () => {
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
                     <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
-                        <img className='rounded-circle' src="https://www.shutterstock.com/shutterstock/photos/2069457431/display_1500/stock-photo-handsome-smiling-young-man-with-folded-arms-beautiful-portrait-of-laughing-joyful-cheerful-men-2069457431.jpg" height={60} width={60} alt='' />
+                        <img className='rounded-circle' src="https://media.istockphoto.com/id/1336230140/photo/portrait-of-a-happy-mature-man-of-indian-ethnicity.jpg?s=612x612&w=0&k=20&c=TNFicavabSAoGlBtx0RaQxPObIX-O50CCGLO-dvuaD8=" height={60} width={60} alt='' />
                         <div >
                             <div className='ps-3'>
-                                <div className='fw-bold'>Rahul</div>
+                                <div className='fw-bold'>Rahul Tripathi</div>
                                 {/* <div> I'm  Certified LYBLEY</div> */}
                             </div>
                         </div>
@@ -40,10 +40,10 @@ const Subscription = () => {
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
                     <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
-                        <img className='rounded-circle' src="https://img.freepik.com/premium-photo/indian-young-happy-man-image_181020-2462.jpg" height={60} width={60} alt='' />
+                        <img className='rounded-circle' src="https://thumbs.dreamstime.com/b/middle-aged-asian-woman-7176011.jpg" height={60} width={60} alt='' />
                         <div >
                             <div className='ps-3'>
-                                <div className='fw-bold'>Sachin</div>
+                                <div className='fw-bold'>Rinki Rai</div>
                                 {/* <div> I'm  Certified LY3LEY</div> */}
                             </div>
                         </div>
@@ -56,10 +56,10 @@ const Subscription = () => {
                 <div className='col-12 col-md-3 col-lg-3 p-2 '>
                     <div className='shadow p-3 commonTransition'>
                     <div className='d-flex align-items-center '>
-                        <img className='rounded-circle' src="https://media.istockphoto.com/id/664572810/photo/portrait-of-a-young-man.webp?b=1&s=170667a&w=0&k=20&c=lO0r0iOZjrqYoRzFaoIMvqJr4zS40Iy6hKYYyMQmc_g=" height={60} width={60} alt='' />
+                        <img className='rounded-circle' src="https://t3.ftcdn.net/jpg/04/14/54/32/360_F_414543223_4b28OpvOQpZzopnHf1TTW0jFxIftgvhb.jpg" height={60} width={60} alt='' />
                         <div >
                             <div className='ps-3'>
-                                <div className='fw-bold'>Vivek</div>
+                                <div className='fw-bold'>Vivek Sharma</div>
                                 {/* <div> I'm  Certified LY3LEY</div> */}
                             </div>
                         </div>
