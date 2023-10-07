@@ -65,134 +65,135 @@ function MyVerticallyCenteredModal(props) {
 const Pricing = () => {
     const { data } = useDataContext();
     const [homeData, setHomeData] = React.useState({});
-    const [plans, setPlans] = React.useState([
+    // const [plans, setPlans] = React.useState([
 
-        {
-            _id: '64f1c4ea1eb82a1659c7241e', planName: 'Home Shield Lite', price: 100, appliances: [{ value: 'Air Conditions', checked: false },
+    //     {
+    //         _id: '64f1c4ea1eb82a1659c7241e', planName: 'Home Shield Lite', price: 100, appliances: [{ value: 'Air Conditions', checked: false },
 
-            { value: 'Refrigerator', checked: false },
+    //         { value: 'Refrigerator', checked: false },
 
-            { value: 'TV', checked: false },
+    //         { value: 'TV', checked: false },
 
-            { value: 'Dishwasher', checked: true },
+    //         { value: 'Dishwasher', checked: true },
 
-            { value: 'Gas Stove', checked: true },
+    //         { value: 'Gas Stove', checked: true },
 
-            { value: 'Washing Machine', checked: true },
+    //         { value: 'Washing Machine', checked: true },
 
-            { value: 'RO', checked: true },
+    //         { value: 'RO', checked: true },
 
-            { value: 'Ceiling Fan', checked: true },
+    //         { value: 'Ceiling Fan', checked: true },
 
-            { value: 'Mixer', checked: true },
+    //         { value: 'Mixer', checked: true },
 
-            { value: 'Induction', checked: true },
+    //         { value: 'Induction', checked: true },
 
-            { value: 'Taster', checked: true },
+    //         { value: 'Taster', checked: true },
 
-            { value: 'Geyser', checked: true },
+    //         { value: 'Geyser', checked: true },
 
-            { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+    //         { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
             
-            {value: 'Plumbering', checked: false},
+    //         {value: 'Plumbering', checked: false},
             
-            {value: 'Electrician work', checked: false}]
-        },
+    //         {value: 'Electrician work', checked: false}]
+    //     },
 
-        { _id: '64f1e93e81ee741b5de6ca84', planName: 'Home Shield Basic', price: 108,  appliances: [{ value: 'Air Conditions', checked: false },
+    //     { _id: '64f1e93e81ee741b5de6ca84', planName: 'Home Shield Basic', price: 108,  appliances: [{ value: 'Air Conditions', checked: false },
 
-        { value: 'Refrigerator', checked: false },
+    //     { value: 'Refrigerator', checked: false },
 
-        { value: 'TV', checked: false },
+    //     { value: 'TV', checked: false },
 
-        { value: 'Dishwasher', checked: true },
+    //     { value: 'Dishwasher', checked: true },
 
-        { value: 'Gas Stove', checked: true },
+    //     { value: 'Gas Stove', checked: true },
 
-        { value: 'Washing Machine', checked: true },
+    //     { value: 'Washing Machine', checked: true },
 
-        { value: 'RO', checked: true },
+    //     { value: 'RO', checked: true },
 
-        { value: 'Ceiling Fan', checked: true },
+    //     { value: 'Ceiling Fan', checked: true },
 
-        { value: 'Mixer', checked: true },
+    //     { value: 'Mixer', checked: true },
 
-        { value: 'Induction', checked: true },
+    //     { value: 'Induction', checked: true },
 
-        { value: 'Taster', checked: true },
+    //     { value: 'Taster', checked: true },
 
-        { value: 'Geyser', checked: true },
+    //     { value: 'Geyser', checked: true },
 
-        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+    //     { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
         
-        {value: 'Plumbering', checked: false},
+    //     {value: 'Plumbering', checked: false},
         
-        {value: 'Electrician work', checked: false}] },
+    //     {value: 'Electrician work', checked: false}] },
 
-        { _id: '64f1eadc81ee741b5de6ca88', planName: 'Home Shield Plus', price: 200,  appliances: [{ value: 'Air Conditions', checked: true },
+    //     { _id: '64f1eadc81ee741b5de6ca88', planName: 'Home Shield Plus', price: 200,  appliances: [{ value: 'Air Conditions', checked: true },
 
-        { value: 'Refrigerator', checked: false },
+    //     { value: 'Refrigerator', checked: false },
 
-        { value: 'TV', checked: false },
+    //     { value: 'TV', checked: false },
 
-        { value: 'Dishwasher', checked: true },
+    //     { value: 'Dishwasher', checked: true },
 
-        { value: 'Gas Stove', checked: true },
+    //     { value: 'Gas Stove', checked: true },
 
-        { value: 'Washing Machine', checked: true },
+    //     { value: 'Washing Machine', checked: true },
 
-        { value: 'RO', checked: true },
+    //     { value: 'RO', checked: true },
 
-        { value: 'Ceiling Fan', checked: true },
+    //     { value: 'Ceiling Fan', checked: true },
 
-        { value: 'Mixer', checked: true },
+    //     { value: 'Mixer', checked: true },
 
-        { value: 'Induction', checked: true },
+    //     { value: 'Induction', checked: true },
 
-        { value: 'Taster', checked: true },
+    //     { value: 'Taster', checked: true },
 
-        { value: 'Geyser', checked: true },
+    //     { value: 'Geyser', checked: true },
 
-        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+    //     { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
         
-        {value: 'Plumbering', checked: false},
+    //     {value: 'Plumbering', checked: false},
         
-        {value: 'Electrician work', checked: false}]  },
+    //     {value: 'Electrician work', checked: false}]  },
 
-        { _id: '64f1ec8281ee741b5de6ca8c', planName: 'Home Shield Pro Plus', price: 250,  appliances: [{ value: 'Air Conditions', checked: true },
+    //     { _id: '64f1ec8281ee741b5de6ca8c', planName: 'Home Shield Pro Plus', price: 250,  appliances: [{ value: 'Air Conditions', checked: true },
 
-        { value: 'Refrigerator', checked: true },
+    //     { value: 'Refrigerator', checked: true },
 
-        { value: 'TV', checked: true },
+    //     { value: 'TV', checked: true },
 
-        { value: 'Dishwasher', checked: true },
+    //     { value: 'Dishwasher', checked: true },
 
-        { value: 'Gas Stove', checked: true },
+    //     { value: 'Gas Stove', checked: true },
 
-        { value: 'Washing Machine', checked: true },
+    //     { value: 'Washing Machine', checked: true },
 
-        { value: 'RO', checked: true },
+    //     { value: 'RO', checked: true },
 
-        { value: 'Ceiling Fan', checked: true },
+    //     { value: 'Ceiling Fan', checked: true },
 
-        { value: 'Mixer', checked: true },
+    //     { value: 'Mixer', checked: true },
 
-        { value: 'Induction', checked: true },
+    //     { value: 'Induction', checked: true },
 
-        { value: 'Taster', checked: true },
+    //     { value: 'Taster', checked: true },
 
-        { value: 'Geyser', checked: true },
+    //     { value: 'Geyser', checked: true },
 
-        { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
+    //     { value: 'Chimney', checked: true }], plus:  [{value: 'Smart Home Devices', checked: true},
         
-        {value: 'Plumbering', checked: true},
+    //     {value: 'Plumbering', checked: true},
         
-        {value: 'Electrician work', checked: true}]  }
+    //     {value: 'Electrician work', checked: true}]  }
 
-    ]);
+    // ]);
     const [expanded, setExpanded] = React.useState('panel1');
     const [expanded2, setExpanded2] = React.useState('panel2');
     const [expanded3, setExpanded3] = React.useState('panel3');
+    const [plans, setPlans] = React.useState([]);
 
     const router = useRouter();
 
@@ -208,7 +209,7 @@ const Pricing = () => {
     const [modalShow, setModalShow] = useState(false);
     const [showMax, setShowMax] = useState(false);
     useEffect(() => {
-        // getPlans();
+        getPlans();
     }, []);
     const openModel = () => {
         setShowMax(true)
@@ -328,10 +329,10 @@ const Pricing = () => {
                                     <input type='number' className='form-control' placeholder='Enter Mobile Number' name="contact" {...register('contact')} />
                                     <div className='text-danger'> {errors.contact?.message}</div>
                                 </div>
-                                <div className='col-12 text-center text-white mt-5'>
+                                {/* <div className='col-12 text-center text-white mt-5'>
                                     Is this a home you are purchasing or have purchased within the last 15 days?
-                                </div>
-                                <div className='col-12 mt-3 mb-3 text-center'>
+                                </div> */}
+                                <div className='col-12 mt-5 mb-3 text-center'>
                                     <button className='btn btn-primary' type='button' onClick={handleSubmit(handleRegistration)} >SHOW PRICES</button>
                                 </div>
                                 <div className='col-12 text-center text-white'>
@@ -400,7 +401,7 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldLite?.appliances?.map(a1 =>
-                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
                                                         <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
                                                 )
                                                 }
@@ -455,8 +456,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldLite?.plus?.map(a1 =>
-                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                             </Typography>
@@ -509,8 +510,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldBasic?.appliances?.map(a1 =>
-                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                                 {/* <div className='text-muted'> <CancelIcon    />  Air Condition</div> 
@@ -542,8 +543,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldBasic?.plus?.map(a1 =>
-                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                             </Typography>
@@ -597,8 +598,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldPlus?.appliances?.map(a1 =>
-                                                    a1?.checked === false ? <div> <CancelIcon color='disable' />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>
+                                                    a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                                 {/* <div> <CheckCircleIcon color='primary' />  Air Condition</div> 
@@ -630,8 +631,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldPlus?.plus?.map(a1 =>
-                                                    a1?.checked === false ? <div> <CancelIcon color='disable' />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                    a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                             </Typography>
@@ -730,8 +731,8 @@ const Pricing = () => {
                                         <AccordionDetails>
                                             <Typography>
                                                 {homeShieldProPlus?.plus?.map(a1 =>
-                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon />{a1?.value} </div> :
-                                                        <div> <CheckCircleIcon color='primary' />{a1?.value}</div>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
                                                 )
                                                 }
                                             </Typography>

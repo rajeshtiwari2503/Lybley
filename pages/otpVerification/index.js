@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import httpCommon from '@/http-common';
 import { useRouter } from 'next/router';
+
 const OtpVerification = () => {
     const [otp, setOtp] = useState('');
     const [error, setError] = useState('');
@@ -15,8 +16,12 @@ const OtpVerification = () => {
         try {
             let response = await httpCommon.post("/otpPhoneVerification", otpData)
             let { data } = response;
+            const logData = JSON.stringify(data)
+            localStorage.setItem('userInfo', logData);
             if (data?.status === true) {
-                router.push("/pricing")
+                 router.reload( )
+                 window.location.href="/pricing"
+                 
             }
         }
         catch (err) {
@@ -65,10 +70,11 @@ const OtpVerification = () => {
                                         value={otp}
                                         onChange={setOtp}
                                         // inputType='number'
-                                        numInputs={6}
+                                        numInputs={5}
                                         renderSeparator={<span style={{ margin: "7px" }}>-</span>}
                                         renderInput={(props) => <input   {...props} />}
                                     />
+
                                     <Button
                                         type="button"
                                         variant="contained"
