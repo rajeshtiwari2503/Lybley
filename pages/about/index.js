@@ -84,46 +84,52 @@ const About = () => {
             <h6 className='text-primary mt-4 text-center'><small>OUR PEOPLE</small></h6>
             <div className="container mt-5">
                 <div className='row'  >
-                    
-                        <div className='row align-items-center '>
-                            <div className='col-12 d-flex align-items-center'>
-                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
-                            
-                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
-                                    <h3>Hi , I'm Raj</h3>
-                                    <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
-                               
+
+                    <div className='row align-items-center '>
+                        <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
+                            <img className='rounded-circle   serviceTechImg' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            </div>
+                            <div className='col-12 col-md-8  d-flex align-items-center'>
+                         
+                            <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
+                                <h3>Hi , I'm Raj</h3>
+                                <h3> I'm  Certified LY3LEY</h3>
+                                <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='row mt-3'  >
-                    
-                        <div className='row align-items-center '>
-                            <div className='col-12 d-flex align-items-center'>
-                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
-                            
-                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
-                                    <h3>Hi , I'm Raj</h3>
-                                    <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
-                               
+
+                    <div className='row align-items-center '>
+                    <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
+                            <img className='rounded-circle   serviceTechImg' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            </div>
+                            <div className='col-12 col-md-8  d-flex align-items-center'>
+                         
+                            <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
+                                <h3>Hi , I'm Raj</h3>
+                                <h3> I'm  Certified LY3LEY</h3>
+                                <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='row mt-3'  >
-                    
-                        <div className='row align-items-center '>
-                            <div className='col-12 d-flex align-items-center'>
-                                <img className='rounded-circle' width={"200"} src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
-                            
-                                <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
-                                    <h3>Hi , I'm Raj</h3>
-                                    <h3> I'm  Certified LY3LEY</h3>
-                                    <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
-                               
+
+                    <div className='row align-items-center '>
+                    <div className='col-12 col-md-4  d-flex justify-content-center align-items-center'>
+                            <img className='rounded-circle   serviceTechImg' src="https://hairstylecamp.com/wp-content/uploads/straight-hairstyle-for-men-with-glasses.jpg.webp" alt='' />
+                            </div>
+                            <div className='col-12 col-md-8  d-flex align-items-center'>
+                         
+                            <div className=' p-3 ps-md-5 mt-md-0 mt-3 text-md-start text-center'>
+                                <h3>Hi , I'm Raj</h3>
+                                <h3> I'm  Certified LY3LEY</h3>
+                                <p className=''>Jorey drives the company’s strategic vision and growth. Before Lybley, he was Founder and Senior Vice President of Emerging Business at Jumptap, which was acquired by Millennial Media (NYSE: MM) for over $200 million. He began his career helping start two business units of Trilogy Software, one of the world’s largest privately-held software companies, based in Austin, Texas. At Trilogy, he was part of a dedicated team that spun off a company acquired by Fortune 500 member Marsh & McLennan. He’s the first-named inventor on over 90 issued patents in the U.S., Japan, and Korea.</p>
+
                             </div>
                         </div>
                     </div>
@@ -132,10 +138,10 @@ const About = () => {
             <div className='row p-4' style={{ backgroundColor: "#c8d8e4", }}>
                 <div class="col-12 col-md-3 col-lg-3"></div>
                 <div class="col-12 col-md-6 col-lg-6">
-                
-            <h6 className='text-primary mt-4 text-center'><small>LOCATIONS</small></h6>
-            <h3 className='fw-bold text-center py-3'>Where you can find us</h3>
-                <div className='text-center'>Lybley headquarters are in San Francisco, California. The company has additional offices in Phoenix, Arizona, and Belgrade, Serbia. We currently offer services in 14 regions across eight states.</div>
+
+                    <h6 className='text-primary mt-4 text-center'><small>LOCATIONS</small></h6>
+                    <h3 className='fw-bold text-center py-3'>Where you can find us</h3>
+                    <div className='text-center'>Lybley headquarters are in San Francisco, California. The company has additional offices in Phoenix, Arizona, and Belgrade, Serbia. We currently offer services in 14 regions across eight states.</div>
                 </div>
                 <div class="col-12 col-md-3 col-lg-3"></div>
             </div>
