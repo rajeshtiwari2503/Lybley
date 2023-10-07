@@ -27,18 +27,19 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-      </Head>
-      <main className='' >
-        <Search />
-        <Works />
-        <Waranty />
-        <ServiceTech />
-        <Plan />
-        <Subscription />
-        <Mobile />
-        <Faqs />
-        <Available />
-      </main>
-    </>
-  )
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet" />
+          </Head>
+          <main className='' >
+            <Search />
+            <Works />
+            <Waranty />
+            <ServiceTech />
+            <Plan />
+            <Subscription />
+            <Mobile />
+            <Faqs />
+            <Available />
+          </main>
+        </>
+        )
 }

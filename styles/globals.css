@@ -113,6 +113,10 @@ body{
 
 }
 
+.homeFontFamily{
+  font-family: "Poppins", sans-serif !important;
+}
+
 .title{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
