@@ -4,9 +4,9 @@ const Mobile = (props) => {
     return (
         <div className='' style={{ backgroundColor: "#FFFCE1" }}>
             <div className="container" >
-                <div className="row ">
-                    <div className="col-12 col-md-6 py-5w mt-5 pt-5">
-                        <div className="ps-5 pt-4">
+                <div className="row w-100">
+                    <div className="col-12 col-md-6 py-5w mt-md-5 pt-5">
+                        <div className="ps-md-5 pt-md-4">
                             <h1 className='fw-bold'>Home maintenance meets high tech</h1>
                             <p className='mt-5'>
                                 We bring the commitment of Lybley to life via a user-friendly app and website portal designed for clarity, ease, and friendliness. Whether you're seeking assistance through the app or the website, we'll inquire about your needs, location, and preferred timeframe. Following this, a Lybley Certified expert will be dispatched, swiftly restoring a hassle-free living experience.</p>
