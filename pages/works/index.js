@@ -74,7 +74,11 @@ const Works = (props) => {
                 <p>Access your account by logging in or utilize the convenient Lybley app to inform us about the situation and set up a schedule that suits you.</p>
               </div>
             </div>
-            <div className='text-center pb-5'><button className='btn rounded-pill btn-primary fw-bold'><small>LEARN MORE</small></button></div>
+            <div className='text-center pb-5'>
+              <Link className='text-decoration-none' href={"/pricing"}>
+              <button className='btn rounded-pill btn-primary fw-bold'><small>LEARN MORE</small></button>
+              </Link>
+              </div>
           </>}
       </div>
     </div>
