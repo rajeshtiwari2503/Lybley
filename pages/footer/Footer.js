@@ -100,8 +100,9 @@ const Footer = () => {
                 <p className="small text-center"  >India's most trusted home warranty Company.</p>
                 {/* <p className="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a className="text-primary" href="#">Bootstrapious.com</a></p> */}
                 <div className="mt-md-3 text-center mt-lg-3">
-                   <Link href={"https://twitter.com/SpareTradeIN"} target="_blank"><img className="p-1 bg-white rounded-circle" src="https://cdn-icons-png.flaticon.com/512/1051/1051382.png" alt="logo" height="40px" width="40px"  /></Link>  
-                   <Link className="ms-2" href={"https://www.linkedin.com/company/94805456/admin/"} target="_blank"><img className="p-1 bg-white rounded-circle" src="https://img.icons8.com/?size=512&id=60443&format=png" alt="logo" height="40px" width="40px" /> </Link> 
+                   <Link href={"https://m.facebook.com/lybley/photos/a.361705534523649/702715043756028/?type=3&_rdrs"} target="_blank"><img style={{marginRight:"10px"}} className="p-1  bg-white rounded-circle" src="https://static.vecteezy.com/system/resources/previews/022/227/316/non_2x/facebook-logo-icon-free-png.png" alt="logo" height="40px" width="40px"  /></Link>  
+                   <Link href={"https://twitter.com/i/flow/login?redirect_after_login=%2FRLybley"} target="_blank"><img className="p-1 bg-white rounded-circle" src="https://cdn-icons-png.flaticon.com/512/1051/1051382.png" alt="logo" height="40px" width="40px"  /></Link>  
+                   <Link className="ms-2" href={"https://in.linkedin.com/company/lybley"} target="_blank"><img className="p-1 bg-white rounded-circle" src="https://img.icons8.com/?size=512&id=60443&format=png" alt="logo" height="40px" width="40px" /> </Link> 
                     {/* <img className="p-1" src="https://lybley-webapp-collection.s3.amazonaws.com/whatsapp-icon-3933.png-1683869804569-439943255" alt="logo" height="30px" width="30px" /> 
                     <img className="p-1" src="https://lybley-webapp-collection.s3.amazonaws.com/pngegg.png-1683869876816-914477302" alt="logo" height="30px" width="30px" />  */}
                 </div>

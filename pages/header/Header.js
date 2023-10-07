@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DraftsIcon from '@mui/icons-material/Drafts';
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import ViewSidebarIcon from '@mui/icons-material/ViewSidebar';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+
 
 
 
@@ -66,12 +67,25 @@ function MyVerticallyCenteredModal(props) {
 }
 const Header = () => {
 
+   
   const router = useRouter()
   const [modalShow, setModalShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
+  const [loginData, setLoginData] = useState({})
+  useEffect(() => {
+    const dataFromLocalStorage = localStorage.getItem('userInfo');
+    const data = JSON.parse(dataFromLocalStorage)
+    setLoginData(data);
+  }, []);
 
+  const handleLogout = () => {
+    
+    localStorage.removeItem("userInfo")
+    router.reload( );
+    window.location.href="/";
+  }
 
   return (
     <>
@@ -136,9 +150,14 @@ const Header = () => {
                     >WHAT IS LYBLEY</small>
                   </div>
                   <div className='d-flex' >
-                    <Link className='text-decoration-none' href={"/login"}>
-                      <button className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
-                    </Link>
+
+                    {loginData?.status === true ?
+                      <button onClick={() => handleLogout()} className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGOUT</small></button>
+                      : <Link className='text-decoration-none' href={"/login"}>
+                        <button className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                      </Link>
+                    }
+
                     <Link className='text-decoration-none' href={"/pricing"}>
                       <button className='py-1 price-btn rounded-pill'><small className='fw-bold headerNavFont'>SEE PRICING</small></button>
                     </Link>
@@ -170,9 +189,13 @@ const Header = () => {
                 <img className='card-img-top1 rounded' height={60} width={60} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s"} />
               </div>
               <div className="col-4 text-end">
-                <Link className='text-decoration-none ' href={"/login"}>
-                  <button className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
-                </Link>
+                {loginData?.status === true ?
+                  <button onClick={() => handleLogout()} className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGOUT</small></button>
+
+                  : <Link className='text-decoration-none ' href={"/login"}>
+                    <button className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
+                  </Link>
+                }
               </div>
               {/* <div className="col-12 col-md-5 col-lg-5 d-flex p-4 justify-content-center align-items-center">
               <div className='d-flex'>
