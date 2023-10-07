@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./plan.module.css"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Link from "next/link";
 
 
 const Plan = () => {
@@ -27,7 +28,7 @@ const Plan = () => {
                         <h5 className="text-center text-white mt-4 fw-bold">Saving Estimator</h5>
                         <div className="row text-white mt-4 ">
                             <div className="col-12 col-md-8 col-lg-8">
-                                <h1 className="text-center">Save an average of 8 INR</h1>
+                                <h1 className="text-center">Save an average of 3 Lacs</h1>
                                 <h1 className="text-center">with a Lybley Signature plan.</h1></div>
 
                             <div className="col-12 col-md-4 col-lg-4"></div>
@@ -48,8 +49,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-end align-items-center flex-column">
                                         <h5>AC</h5>
 
-                                        <small>Replacement cost: 2,500 INR <br />
-                                            Lybley cost: 65 INR/month
+                                        <small>Replacement cost: 40,000 INR <br />
+                                            Lybley cost: 340 INR/month
                                         </small>
 
 
@@ -60,8 +61,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-2 align-items-center flex-column">
                                         <h5>Washing Machine</h5>
 
-                                        <small>Replacement cost: 2,500 INR <br />
-                                            Lybley cost: 65 INR/month
+                                        <small>Replacement cost: 25,000 INR <br />
+                                            Lybley cost: 200 INR/month
                                         </small>
 
                                     </div>
@@ -78,8 +79,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Refrigerator</h5>
 
-                                        <small>Replacement cost: 2,500 INR <br />
-                                            Lybley cost: 65 INR/month
+                                        <small>Replacement cost: 30,000 INR <br />
+                                            Lybley cost: 210 INR/month
                                         </small>
 
                                     </div>
@@ -90,8 +91,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Microwave</h5>
 
-                                        <small>Replacement cost: 2,500 INR <br />
-                                            Lybley cost: 65 INR/month
+                                        <small>Replacement cost: 15,000 INR <br />
+                                            Lybley cost: 150 INR/month
                                         </small>
 
                                     </div>
@@ -107,8 +108,8 @@ const Plan = () => {
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Geyser</h5>
 
-                                        <small>Replacement cost: 2,500 INR <br />
-                                            Super cost: 65 INR/month
+                                        <small>Replacement cost: 10,000 INR <br />
+                                            Lybley cost: 70 INR/month
                                         </small>
 
                                     </div>
@@ -160,48 +161,48 @@ const Plan = () => {
                                 <div className="col-5 text-end">
                                     <h4 className="fw-bold mt-2">AC</h4>
                                 </div>
-                                <div className="col-7 text-start"><small>Replacement cost: 2,500 INR <br />
-                                    Lybley cost: 65 INR/month</small>
+                                <div className="col-7 text-start"><small>Replacement cost: 40,000 INR <br />
+                                    Lybley cost: 340 INR/month</small>
                                 </div>
                             </div>
                             <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
-                                    <h4 className="fw-bold mt-2">Stovetop</h4>
+                                    <h4 className="fw-bold mt-2">Washing Machine</h4>
                                 </div>
-                                <div className="col-7 text-start"><small>Replacement cost: 2,500 INR <br />
-                                    Lybley cost: 65 INR/month</small>
+                                <div className="col-7 text-start"><small>Replacement cost: 25,000 INR <br />
+                                    Lybley cost: 200 INR/month</small>
                                 </div>
                             </div>
                             <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                     <h4 className="fw-bold mt-2">Refrigerator</h4>
                                 </div>
-                                <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
-                                    Lybley cost: 65 INR/month</small>
+                                <div className="col-7 text-start"><small>Replacement cost: 30,000 INR<br />
+                                    Lybley cost: 210 INR/month</small>
                                 </div>
                             </div>
                             <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
-                                    <h4 className="fw-bold mt-2">Air Cooler</h4>
+                                    <h4 className="fw-bold mt-2">Microwave</h4>
                                 </div>
-                                <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
-                                    Lybley cost: 65 INR/month</small>
+                                <div className="col-7 text-start"><small>Replacement cost: 15,000 INR<br />
+                                    Lybley cost: 150 INR/month</small>
                                 </div>
                             </div>
                             <div className="row text-white mt-2">
                                 <div className="col-5 text-end">
                                     <h4 className="fw-bold mt-2">Geyser</h4>
                                 </div>
-                                <div className="col-7 text-start"><small>Replacement cost: 2,500 INR<br />
-                                    Lybley cost: 65 INR/month</small>
+                                <div className="col-7 text-start"><small>Replacement cost: 10,000 INR<br />
+                                    Lybley cost: 70 INR/month</small>
                                 </div>
                             </div>
                             <div className="d-block d-md-none d-lg-none text-end mt-3 ">
-                                <button className="btn btn-warning rounded-pill  ">Learn More</button>
+                               <Link href="/pricing"> <button className="btn btn-warning rounded-pill  ">Learn More</button></Link>
                             </div>
                         </div>
                         <div className=" d-none d-md-block d-lg-block text-end px-3 mt-4 me-5">
-                            <button className="btn btn-warning rounded-pill px-3">Learn More</button>
+                        <Link href="/pricing">  <button className="btn btn-warning rounded-pill px-3">Learn More</button></Link>
                         </div>
                     </div>
 
