@@ -16,7 +16,7 @@ const Plan = () => {
                         <div className="row  w-100  mt-3">
                              
                             <div className="col-12  d-block d-md-none  ">
-                                <p   className="text-md-center text-start ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
+                                <p   className="text-md-center text-start ps-3">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
                             </div>
                             <div className="col-12 mt-3 d-md-block d-none  ">
                                 <p  style={{ paddingLeft:"200px",paddingRight:"200px"}} className="text-center ">Shield the vital appliances and systems within your home, or extend coverage to encompass practically every aspect of your property with Lybley's diverse range of home subscription plans. Survey your living space, consider the level of coverage that suits your needs, and initiate the straightforward registration process to get started.</p>
