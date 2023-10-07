@@ -122,12 +122,12 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-6">
                 <h5 className="text-white mb-3">Policy</h5>
                 <ul className="list-unstyled text-muted">
-                <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/returnPolicy" >  <li style={{color:"#acabad"}}>Return Policy</li></Link>
+                {/* <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/returnPolicy" >  <li style={{color:"#acabad"}}>Return Policy</li></Link> */}
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/privacyPolicy" >  <li style={{color:"#acabad"}}>Privacy Policy</li></Link>
-                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/disclaimer" >  <li style={{color:"#acabad"}}>Disclaimer</li></Link>
+                    {/* <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/disclaimer" >  <li style={{color:"#acabad"}}>Disclaimer</li></Link>
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/termOfUse" > <li style={{color:"#acabad"}}>Terms of Use</li></Link>
                     <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/buyersPolicy" >  <li style={{color:"#acabad"}}>Buyers Policy</li></Link>
-                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/sellersPolicy" >  <li style={{color:"#acabad"}}>Sellers Policy</li></Link>
+                    <Link className={`${style.footerLink} text-decoration-none text-muted`} href="/sellersPolicy" >  <li style={{color:"#acabad"}}>Sellers Policy</li></Link> */}
                 </ul>
             </div>
             <div className="col-lg-2 col-md-6 col-6">
