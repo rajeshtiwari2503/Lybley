@@ -128,11 +128,11 @@ const Search = () => {
             <div className="fw-bold">
               {/* <h2 className='fw-bold title '> Lybley covers home appliances breakdown and maintenance </h2> */}
               </div>
-            <div className='mt-3'>
-            <div style={{marginTop:"390px",fontSize:"30px"}} className='homeFontFamily fw-bold text-white'> HOME WARRANTY. REINVENTED. </div>
+            <div className='mt-3 '>
+            <div style={{marginTop:"390px",fontSize:"30px",lineHeight:"1em"}} className='homeFontFamily fw-bold text-white'> HOME WARRANTY. REINVENTED. </div>
 
-              <Link className='text-decoration-none mt-5' href={"/pricing"}>
-              <button  className='btn rounded-5 bg-white fw-bold'>See Pricing</button>
+              <Link className='text-decoration-none  ' href={"/pricing"}>
+              <button  className='btn rounded-5 mt-3 bg-white fw-bold'>See Pricing</button>
               </Link>
             </div>
           </div>
