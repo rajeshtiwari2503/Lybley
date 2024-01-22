@@ -32,14 +32,12 @@ const Login = () => {
     }
     return (
         <>
-            <div className="text-center container" >
+            <div className="  container " >
 
-                <div className='row py-5 m-2'>
-                    <div className='col-12 col-md-4 col-lg-4 '>
+                <div className='row  flex justify-content-center py-5 m-2'>
+                    
 
-                    </div>
-
-                    <div className='col-12 col-md-4 col-lg-4 shadow rounded '
+                    <div className='col-12 col-md-6  col-lg-6  shadow rounded '
                     //  style={{ backgroundColor: "#caaef3" }}
                     >
 
@@ -74,15 +72,15 @@ const Login = () => {
                                         margin="normal"
                                         required
                                         fullWidth
-                                        id="mobileNo"
-                                        label="Mobile Number"
-                                        name="mobileNo"
-                                        type='number'
-                                        autoComplete="mobileNo"
+                                        id="userName"
+                                        label="User Name"
+                                        name="userName"
+                                        type='text'
+                                        autoComplete="userName"
                                         autoFocus
                                         onChange={(e) => setLogin(e.currentTarget.value)}
                                     />
-                                    {/* <TextField
+                                    <TextField
                                     margin="normal"
                                     required
                                     fullWidth
@@ -93,7 +91,7 @@ const Login = () => {
                                     autoComplete="current-password"
                                     // onChange={handleChange}
                                     // onKeyPress={handleEnter}
-                                /> */}
+                                />
                                     {/* <FormControlLabel   
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
@@ -107,30 +105,14 @@ const Login = () => {
                                     >
                                         Sign In
                                     </Button>
-                                    <Grid justifyContent={"start"} container>
-                                        <Grid item  className='d-flex' >
-                                            <Link href="#" variant="body2">
-                                                Forgot password?
-                                            </Link>
-                                            <Link className="ms-4 " href="/admin/login" variant="body2"  >
-                                                Login as Admin
-                                            </Link>
-                                        </Grid>
-                                        <Grid item>
-                                            <Link href="/pricing" variant="body2">
-                                                {"Don't have an account? Sign Up"}
-                                            </Link>
-                                        </Grid>
-                                    </Grid>
+                                     
 
                                 </Box>
                             </div>
                         </Box>
 
                     </div>
-                    <div className='col-12 col-md-4 col-lg-4  '>
-
-                    </div>
+                    
                 </div>
             </div>
         </>
