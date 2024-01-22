@@ -17,7 +17,7 @@ const AdminLayout = ({ children }) => {
   // },[]);
   return (
     <div>
-      {showSidebar && <Sidebar />} {/* Render the sidebar if showSidebar is true */}
+      {showSidebar && <Sidebar />} 
       {showSidebar ?
         <div  id="wrapper1">
           <section className="bg-light  " id="content-wrapper">
