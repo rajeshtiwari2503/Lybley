@@ -14,21 +14,18 @@ import httpCommon from '@/http-common';
 import { useRouter } from 'next/router';
 const Login = () => {
     const router = useRouter();
-    const [login, setLogin] = useState("")
+    const [login, setLogin] = useState({userName:"adminLybley12@gmail.com",password:"adminLybley"});
+    const [checkLogin,setCheckLogin]=useState({user:"",pass:""});
     const [error, setError] = useState("")
-    const handleLogin = async () => {
-        let logData = { contact: +login }
-        
-        try {
-            let response = await httpCommon.post("/login", logData)
-            let { data } = response;
-            if (data?.status === true) {
-                router.push("/otpVerification")
-            }
-        }
-        catch (err) {
-            setError(err?.response?.data?.msg)
-        }
+    const handleLogin = () => {
+          const {userName,password}=login;
+          const {user,pass}=checkLogin;
+          console.log(login,checkLogin);
+          if(userName===user && password===pass){
+            router.push("/admin/dashboard");
+          }else{
+            setError("Username and password is incorrect!");
+          }
     }
     return (
         <>
@@ -78,7 +75,7 @@ const Login = () => {
                                         type='text'
                                         autoComplete="userName"
                                         autoFocus
-                                        onChange={(e) => setLogin(e.currentTarget.value)}
+                                        onChange={(e) =>{ setCheckLogin({...checkLogin,user:e.currentTarget.value}); setError("") }}
                                     />
                                     <TextField
                                     margin="normal"
@@ -89,7 +86,7 @@ const Login = () => {
                                     type="password"
                                     id="password"
                                     autoComplete="current-password"
-                                    // onChange={handleChange}
+                                    onChange={(e) =>{ setCheckLogin({...checkLogin,pass:e.currentTarget.value});setError("")}}
                                     // onKeyPress={handleEnter}
                                 />
                                     {/* <FormControlLabel   

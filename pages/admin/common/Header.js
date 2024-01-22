@@ -29,7 +29,7 @@ const CRMHeader = () => {
   };
   const handleLogout=()=>{
     localStorage.removeItem("crmUser");
-    router.push("/sign-in");
+    router.push("/");
   }
 
   return (
