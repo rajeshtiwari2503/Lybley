@@ -3,10 +3,11 @@ import Sidebar from '../common/Sidebar';
 import { useRouter } from 'next/router';
 import Header from '@/pages/header/Header';
 import Footer from '@/pages/footer/Footer';
-import Login from '../login';
+ 
 
 const AdminLayout = ({ children }) => {
   const router = useRouter();
+  // console.log(router.pathname);
    const showSidebar = router.pathname.startsWith('/admin');
    const [user,setUser]=useState("");
 
@@ -15,13 +16,18 @@ const AdminLayout = ({ children }) => {
         const user1=localStorage.getItem("admin");
         const data=JSON?.parse(user1)
         setUser(data);
+       
         if(user?.admin==="Admin"){
           router.push("/admin/dashboard")
           window.location.reload() 
         }
-       
     }
-  },[ ]);
+
+   
+     
+  },[  ]);
+  
+
   
 
   // console.log("admin",user);
@@ -45,14 +51,14 @@ const AdminLayout = ({ children }) => {
         </div>
         </>
         :
-        <Login />
+       <div></div>
       }
         </>
         :
         <div>
-         <Header />
+       {router.pathname==="/dashboardLogin" ? " " :  <Header />}
          {children}
-          <Footer />
+         {router.pathname==="/dashboardLogin" ? " " :  <Footer />}
         </div>}
     </div>
   );

@@ -20,11 +20,11 @@ const Login = () => {
     const handleLogin = () => {
           const {userName,password}=login;
           const {user,pass}=checkLogin;
-          console.log(login,checkLogin);
+        //   console.log(login,checkLogin);
           if(userName===user && password===pass){
             localStorage.setItem("admin",JSON.stringify(checkLogin))
             router.push("/admin/dashboard");
-            window.location.reload()
+            // window.location.reload()
           }else{
             setError("Username and password is incorrect!");
           }
