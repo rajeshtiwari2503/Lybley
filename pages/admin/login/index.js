@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -15,23 +15,28 @@ import { useRouter } from 'next/router';
 const Login = () => {
     const router = useRouter();
     const [login, setLogin] = useState({userName:"adminLybley12@gmail.com",password:"adminLybley"});
-    const [checkLogin,setCheckLogin]=useState({user:"",pass:""});
+    const [checkLogin,setCheckLogin]=useState({user:"",pass:"",admin:"Admin"});
     const [error, setError] = useState("")
     const handleLogin = () => {
           const {userName,password}=login;
           const {user,pass}=checkLogin;
           console.log(login,checkLogin);
           if(userName===user && password===pass){
+            localStorage.setItem("admin",JSON.stringify(checkLogin))
             router.push("/admin/dashboard");
+            window.location.reload()
           }else{
             setError("Username and password is incorrect!");
           }
     }
+
+    
+
     return (
         <>
             <div className="  container " >
 
-                <div className='row  flex justify-content-center py-5 m-2'>
+                <div className='row  flex justify-content-center  py-5 m-2'>
                     
 
                     <div className='col-12 col-md-6  col-lg-6  shadow rounded '

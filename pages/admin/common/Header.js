@@ -28,7 +28,7 @@ const CRMHeader = () => {
     setAnchorEl(null);
   };
   const handleLogout=()=>{
-    localStorage.removeItem("crmUser");
+    localStorage.removeItem("admin");
     router.push("/");
   }
 
