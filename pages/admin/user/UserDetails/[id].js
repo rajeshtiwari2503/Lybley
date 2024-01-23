@@ -25,7 +25,7 @@ const UserDetail = () => {
     <div> 
         <DashboardHeader pagetitle={ "User Details "} />
         <div className='row'>
-            <div className='col-12 ms-5'>
+            <div className='col-12  '>
             <div className='d-flex mt-3 row'>
               <div className='col-3'>UserName : </div><div className='col-9'>{user?.name}</div>
               </div>

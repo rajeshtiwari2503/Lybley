@@ -23,7 +23,7 @@ const Login = () => {
         //   console.log(login,checkLogin);
           if(userName===user && password===pass){
             localStorage.setItem("admin",JSON.stringify(checkLogin))
-            router.push("/admin/dashboard");
+            window.location.href="/admin/dashboard";
             // window.location.reload()
           }else{
             setError("Username and password is incorrect!");
