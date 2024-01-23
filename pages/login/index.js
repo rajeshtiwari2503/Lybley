@@ -112,7 +112,7 @@ const Login = () => {
                                             <Link href="#" variant="body2">
                                                 Forgot password?
                                             </Link>
-                                            <Link className="ms-4 " href="/admin/login" variant="body2"  >
+                                            <Link className="ms-4 " href="/dashboardLogin" variant="body2"  >
                                                 Login as Admin
                                             </Link>
                                         </Grid>
