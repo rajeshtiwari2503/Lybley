@@ -33,59 +33,69 @@ const Contact = () => {
         sortable: true, width: "90px"
       },
       {
-        name: "PLAN NAME",
-        selector: (row) => row?.planName,
-        cell: row => row?.planName,
+        name: "USER NAME",
+        selector: (row) => row?.name,
+        cell: row => row?.name,
         sortable: true,  
       },
       {
-        name: "PRICE",
-        selector: (row) => row?.price,
+        name: "CONTACT NO.",
+        selector: (row) => row?.contact,
         sortable: true
       },
 
-      // {
-      //   name: "APPLIANCES",
-      //   selector: (row) => row.location,
-      //   sortable: true,  
-      // },
-      
-      // {
-      //   name: "PLUS",
-      //   selector: (row) => row.location,
-      //   sortable: true, 
-      // },
-      
       {
-        name: "CREATEDAT",
+        name: "EMAIL",
+        selector: (row) => row?.email,
+        sortable: true, width: "220px"
+      },
+
+      {
+        name: "MESSAGE",
+        selector: (row) => row?.message,
+        cell: row => row?.message,
+        sortable: true
+      },
+      {
+        name: "WEBSITE",
+        selector: (row) => row?.website,
+        sortable: true
+      },
+      {
+        name: "RESUME",
+        selector: (row) => row?.resume,
+        sortable: true
+      },
+      {
+        name: "CREATED_AT",
         selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),
         sortable: true,  
 
       },
 
 
-      {
-        name: "ACTION",
-        selector: (row) => { },
-        cell: (row) => <div className="d-flex justify-content-between"  >
-          <Link href={`/admin/plan/EditPlan/${row?._id}`} >
-          <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
-          </Link>
-          <Link href={`/admin/plan/PlanDetails/${row?._id}`}>
-          <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
-          </Link>
-          <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' />
-        </div>,
-        sortable: true, width: "100px"
+    //   {
+    //     name: "ACTION",
+    //     selector: (row) => { },
+    //     cell: (row) => <div className="d-flex justify-content-between"  >
+    //       <Link href={`/admin/plan/EditPlan/${row?._id}`} >
+    //       <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
+    //       </Link>
+    //       <Link href={`/admin/plan/PlanDetails/${row?._id}`}>
+    //       <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
+    //       </Link>
+    //       <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' />
+    //     </div>,
+    //     sortable: true, width: "100px"
 
-      }
+    //   }
     ]
   }
 
   const getContacts= async () => {
     try {
       setLoading(true)
-      let response = await httpCommon.get("/getAllContacts");
+      let response = await httpCommon.get("/getContactDetails");
       let { data } = response;
       
       setData(data?.reverse());

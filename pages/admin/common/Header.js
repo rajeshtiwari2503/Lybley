@@ -29,7 +29,7 @@ const CRMHeader = () => {
   };
   const handleLogout=()=>{
     localStorage.removeItem("admin");
-    router.push("/");
+    window.location.href="/";
   }
 
   return (
