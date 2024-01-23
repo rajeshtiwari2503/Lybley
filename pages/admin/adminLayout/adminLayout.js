@@ -3,6 +3,7 @@ import Sidebar from '../common/Sidebar';
 import { useRouter } from 'next/router';
 import Header from '@/pages/header/Header';
 import Footer from '@/pages/footer/Footer';
+import Login from '../login';
 
 const AdminLayout = ({ children }) => {
   const router = useRouter();
@@ -11,15 +12,28 @@ const AdminLayout = ({ children }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        const user=localStorage.getItem("user");
-        setUser(user);
+        const user1=localStorage.getItem("admin");
+        const data=JSON?.parse(user1)
+        setUser(data);
+        if(user?.admin==="Admin"){
+          router.push("/admin/dashboard")
+          window.location.reload() 
+        }
+       
     }
-  },[]);
-  //  const user=localStorage?.getItem("user");
+  },[ ]);
+  
+
+  // console.log("admin",user);
+
   return (
     <div>
-      {showSidebar && <Sidebar />} 
+     
       {showSidebar ?
+      <>
+        {user?.admin==="Admin" ?
+        <>
+         {user?.admin==="Admin"  &&   <Sidebar />} 
         <div  id="wrapper1">
           <section className="bg-light" id="content-wrapper">
             <div className="row ">
@@ -29,6 +43,11 @@ const AdminLayout = ({ children }) => {
             </div>
           </section>
         </div>
+        </>
+        :
+        <Login />
+      }
+        </>
         :
         <div>
          <Header />
