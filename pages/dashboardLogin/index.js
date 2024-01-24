@@ -14,30 +14,33 @@ import httpCommon from '@/http-common';
 import { useRouter } from 'next/router';
 const Login = () => {
     const router = useRouter();
-    const [login, setLogin] = useState({userName:"adminLybley12@gmail.com",password:"adminLybley"});
-    const [checkLogin,setCheckLogin]=useState({user:"",pass:"",admin:"Admin"});
+    
+    const [checkLogin, setCheckLogin] = useState({ email: "", password: "", });
     const [error, setError] = useState("")
-    const handleLogin = () => {
-          const {userName,password}=login;
-          const {user,pass}=checkLogin;
-        //   console.log(login,checkLogin);
-          if(userName===user && password===pass){
-            localStorage.setItem("admin",JSON.stringify(checkLogin))
-            window.location.href="/admin/dashboard";
-            // window.location.reload()
-          }else{
-            setError("Username and password is incorrect!");
-          }
+    const handleLogin = async () => {
+     
+         
+        try {
+            let response = await httpCommon.post("/loginAdmin", checkLogin)
+            let { data } = response
+                localStorage.setItem("admin", JSON.stringify(data))
+                window.location.href = "/admin/dashboard"       
+        }
+        catch (err) {
+            console.log(err);
+             setError("Username and password is incorrect!");
+        }
+
     }
 
-    
+
 
     return (
         <>
             <div className="  container " >
 
                 <div className='row  flex justify-content-center  py-5 m-2'>
-                    
+
 
                     <div className='col-12 col-md-6  col-lg-6  shadow rounded '
                     //  style={{ backgroundColor: "#caaef3" }}
@@ -80,20 +83,20 @@ const Login = () => {
                                         type='text'
                                         autoComplete="userName"
                                         autoFocus
-                                        onChange={(e) =>{ setCheckLogin({...checkLogin,user:e.currentTarget.value}); setError("") }}
+                                        onChange={(e) => { setCheckLogin({ ...checkLogin, email: e.currentTarget.value }); setError("") }}
                                     />
                                     <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                    id="password"
-                                    autoComplete="current-password"
-                                    onChange={(e) =>{ setCheckLogin({...checkLogin,pass:e.currentTarget.value});setError("")}}
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="password"
+                                        label="Password"
+                                        type="password"
+                                        id="password"
+                                        autoComplete="current-password"
+                                        onChange={(e) => { setCheckLogin({ ...checkLogin, password: e.currentTarget.value }); setError("") }}
                                     // onKeyPress={handleEnter}
-                                />
+                                    />
                                     {/* <FormControlLabel   
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
@@ -107,14 +110,14 @@ const Login = () => {
                                     >
                                         Sign In
                                     </Button>
-                                     
+
 
                                 </Box>
                             </div>
                         </Box>
 
                     </div>
-                    
+
                 </div>
             </div>
         </>
