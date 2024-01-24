@@ -110,7 +110,7 @@ const AddBlog = (props) => {
                 </div>
                 <div className='col-6 mt-5'>
                     <input type='file' className='form-control'  onChange={ handleImage} defaultValue={edit ? blog?.image : ""} name="image"   />
-                    
+                    {!edit  && selectedImage===null ? <div className='text-danger'>Please Select Image  </div> :""}
                 </div>
                 {edit ?  <div className='col-6 mt-5'>
                     <img height={200} width={200}  src={blog?.image} alt='image'    />
