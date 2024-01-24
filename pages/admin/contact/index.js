@@ -61,11 +61,11 @@ const Contact = () => {
         selector: (row) => row?.website,
         sortable: true
       },
-      {
-        name: "RESUME",
-        selector: (row) => row?.resume,
-        sortable: true
-      },
+      // {
+      //   name: "RESUME",
+      //   selector: (row) => row?.resume,
+      //   sortable: true
+      // },
       {
         name: "CREATED_AT",
         selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),

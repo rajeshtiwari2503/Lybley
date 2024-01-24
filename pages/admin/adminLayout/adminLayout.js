@@ -17,7 +17,7 @@ const AdminLayout = ({ children }) => {
         const data=JSON?.parse(user1)
         setUser(data);
        
-        if(user?.admin==="Admin"){
+        if(user?.role==="ADMIN"){
           router.push("/admin/dashboard")
           window.location.reload() 
         }
@@ -37,9 +37,9 @@ const AdminLayout = ({ children }) => {
      
       {showSidebar ?
       <>
-        {user?.admin==="Admin" ?
+        {user?.role==="ADMIN" ?
         <>
-         {user?.admin==="Admin"  &&   <Sidebar />} 
+         {user?.role==="ADMIN"  &&   <Sidebar />} 
         <div  id="wrapper1">
           <section className="bg-light" id="content-wrapper">
             <div className="row ">
