@@ -38,7 +38,11 @@ const AddBlog = (props) => {
         }
     }
   const handleImage=(e)=>{
-    setSelectedImage(e.target.files[0]);
+    if(edit){
+        editImage(e.target.files[0]);
+    }else{
+        setSelectedImage(e.target.files[0]);
+    }
   }
 
     const handleEdit = async (obj) => {
@@ -46,6 +50,18 @@ const AddBlog = (props) => {
             let response = await httpCommon.patch(`/updateBlog/${props?.id}`, obj);
             let { data } = response;
             setSelectedImage(data?.image)
+            router.push(`/admin/blog`);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    const editImage = async (img) => {
+        try {
+            const formData = new FormData();
+            formData.append('image', img);
+            let response = await httpCommon.patch(`/updateBlogImage/${props?.id}`, formData);
+            let { data } = response;
             router.push(`/admin/blog`);
         } catch (err) {
             console.log(err);
@@ -92,10 +108,15 @@ const AddBlog = (props) => {
                     <textarea  type='text' rows={4} className='form-control' placeholder='description' defaultValue={edit ? blog?.description : ""} name="description" {...register('description')} ></textarea>
                     <div className='text-danger'> {errors.description?.message}</div>
                 </div>
-                <div className='col-12 mt-5'>
+                <div className='col-6 mt-5'>
                     <input type='file' className='form-control'  onChange={ handleImage} defaultValue={edit ? blog?.image : ""} name="image"   />
-                   { !selectedImage && <div className='text-danger'> Please Select Image </div>}
+                    
                 </div>
+                {edit ?  <div className='col-6 mt-5'>
+                    <img height={200} width={200}  src={blog?.image} alt='image'    />
+                    
+                </div>
+                :""}
                 <div className='mt-5'>
 
                     {!edit ? <button type="submit" disabled={loading} className="btn btn-primary mb-3" onClick={handleSubmit(onRegister)}>{loading ? "Adding..." : "Add Blog"}</button>
