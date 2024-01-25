@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import { useDataContext } from '../api/userData';
 import httpCommon from '@/http-common';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 
 const SubscriberSignup = () => {
   const { data } = useDataContext();
+  const userData=data;
   const [btn, setBtn] = useState("1");
-  const [price,setPrice]=useState("");
+  const [price,setPrice]=useState(data?.planPrice);
+ 
+  const router=useRouter()
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -20,20 +25,69 @@ const SubscriberSignup = () => {
     setFormData(formData1);
   }
 
-  const subscribePlan = async () => {
-    try {
-      let body={realEstateAgentName:formData.fname+" "+formData.lname,planDetail:data?.planDetail,closingDate:formData.closingDate,location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,planName:data?.planName,planPrice:btn==="1" ? +data?.planPrice : +price,planTime:btn==="1" ? "Monthly" : "Annually"};
-      let response = await httpCommon.post("/registration",body);
-      let data1 = response.data;
-      alert("Plan subscribed");
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // const subscribePlan = async () => {
+  //   try {
+  //     let body={realEstateAgentName:formData.fname+" "+formData.lname,planDetail:data?.planDetail,closingDate:formData.closingDate,location:data?.location,unit:+data?.unit,name:data?.firstName +" "+ data?.lastName,email:data?.email,contact:+data?.contact,planName:data?.planName,planPrice:btn==="1" ? +data?.planPrice : +price,planTime:btn==="1" ? "Monthly" : "Annually"};
+  //     let response = await httpCommon.post("/registration",body);
+  //     let data1 = response.data;
+  //     alert("Plan subscribed");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+
+
   const handlePlan=(btn,price)=>{
         setBtn(btn);
         setPrice(price);
    }
+
+   const payment = async ( ) => {
+    try {
+      const userId = localStorage.getItem("userId");
+      const totalPrice=    +price 
+      let response = await httpCommon.post("/payment", { amount: totalPrice   });
+      let { data } = response;
+     
+      const options = {
+        key: "rzp_live_yEWZ902y0STtSb", // Enter the Key ID generated from the Dashboard
+        amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: "INR",
+        name: "Lybley Home Appliances", //your business name
+        description: "Payment for order",
+        image: "https://lybley-webapp-collection.s3.amazonaws.com/PNG-031.png-1684751868223-284237810",
+        order_id: data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        handler: async function (orderDetails) {
+          try {
+            let body={realEstateAgentName:formData.fname+" "+formData.lname,planDetail:userData?.planDetail,closingDate:formData.closingDate,location:userData?.location,unit:+userData?.unit,name:userData?.firstName +" "+ userData?.lastName,email:userData?.email,contact:+userData?.contact,planName:userData?.planName,planPrice:btn==="1" ? +userData?.planPrice : +price,planTime:btn==="1" ? "Monthly" : "Annually"};
+            
+            let response = await axios.post("https://lybleybackend-production.up.railway.app/registrationAndPayment", { response: orderDetails, customerData:body });
+            let { data } = response;
+            if (data?.status === true) {
+              router.push("/");
+            }
+          } catch (err) {
+            console.log(err);
+          }
+        },
+        prefill: {
+          name: formData.fname+" "+formData.lname, //your customer's name
+          email: userData.email,
+          contact: userData.contact
+        },
+        notes: {
+          "address": "Razorpay Corporate Office"
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <div className='bg-light'>
       <div className="row py-3 w-100">
@@ -64,7 +118,7 @@ const SubscriberSignup = () => {
               <span>Your credit card won't be charged until then.</span>
             </div>
             <div className="mt-5 col-5 pb-5 d-flex justify-content-between">
-              <button className="btn btn-primary rounded-pill" onClick={subscribePlan}>NEXT</button><button className="btn btn-secondary rounded-pill" onClick={subscribePlan}>SKIP</button>
+              <button className="btn btn-primary rounded-pill" onClick={payment}>Payment</button>  
             </div>
           </div>
         </div>

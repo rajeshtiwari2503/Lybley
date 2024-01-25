@@ -120,7 +120,7 @@ const MySubscribers = () => {
       let response = await httpCommon.get("/getAllSubscription");
       let { data } = response;
       
-      setData(data);
+      setData(data?.reverse());
       setLoading(false)
 
     } catch (err) {
@@ -129,10 +129,9 @@ const MySubscribers = () => {
 
     }
   }
-  const rvsData = data?.reverse();
-
- console.log(data);
-  const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
+  
+ 
+  const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
         <DashboardHeader pagetitle={"Subscribers"}
