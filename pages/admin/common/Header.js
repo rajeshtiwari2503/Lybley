@@ -11,25 +11,25 @@ import { useRouter } from 'next/router';
 
 const CRMHeader = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const router=useRouter();
-  const [user,setUser]=useState(null);
+  const router = useRouter();
+  const [user, setUser] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  useEffect(()=>{
+  useEffect(() => {
     if (typeof window !== 'undefined') {
-      const obj=localStorage.getItem("crmUser");
-      const user=JSON.parse(obj);
+      const obj = localStorage.getItem("admin");
+      const user = JSON.parse(obj);
       setUser(user);
     }
-},[])
+  }, [])
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleLogout=()=>{
+  const handleLogout = () => {
     localStorage.removeItem("admin");
-    window.location.href="/";
+    window.location.href = "/";
   }
 
   return (
@@ -41,10 +41,10 @@ const CRMHeader = () => {
       <div className="px-2">
       <NotificationsIcon fontSize='large' style={{cursor:"pointer",color:"white"}} />
       </div> */}
-      <div className="px-2 d-flex">
-     {user &&  <div className='text-white me-2 '>{user.name}</div>}
-      <AccountCircleIcon fontSize='large' style={{cursor:"pointer",color:"white"}} onClick={handleClick} />
-      {/* <div className="d-flex align-items-center text-center">
+        <div className="px-2 d-flex">
+          {user && <div className='text-white me-2 '>{user?.name}</div>}
+          <AccountCircleIcon fontSize='large' style={{ cursor: "pointer", color: "white" }} onClick={handleClick} />
+          {/* <div className="d-flex align-items-center text-center">
                 <Button
                   id="basic-button"
                   aria-controls={open ? 'basic-menu' : undefined}
@@ -56,26 +56,26 @@ const CRMHeader = () => {
                 </Button>
 
               </div> */}
-              <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                  'aria-labelledby': 'basic-button',
-                }}
-              >
-                <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" href="#">Profile</Link></MenuItem>
-                <hr className="m-0 p-0"></hr>
-                <MenuItem onClick={handleLogout} >Logout</MenuItem>
-              </Menu>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
+          >
+            {/* <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" href="#">Profile</Link></MenuItem> */}
+            {/* <hr className="m-0 p-0"></hr> */}
+            <MenuItem onClick={handleLogout} >Logout</MenuItem>
+          </Menu>
 
+        </div>
+        <div className="px-2">
+          <SettingsIcon fontSize='large' style={{ cursor: "pointer", color: "white" }} />
+        </div>
       </div>
-      <div className="px-2">
-      <SettingsIcon fontSize='large' style={{cursor:"pointer",color:"white"}} />
-      </div>
-      </div>
-      </div>
+    </div>
   )
 }
 
