@@ -58,7 +58,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                       {user?.role==="USER" || user?.role==="ADMIN"  ?
+                       {  user?.role==="ADMIN"  ?
                         <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
                             <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <StoreIcon />
@@ -84,7 +84,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                        {user?.role==="ADMIN" ? 
+                        {(user?.role==="USER"  || user?.role==="ADMIN" )?
                         <li className={currentPath.startsWith("/admin/subscriber") ? "active" : ""}>
 
                             <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -93,7 +93,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                        {user?.role==="USER"  || user?.role==="ADMIN" ?
+                        {(user?.role==="USER"  || user?.role==="ADMIN" )?
                          <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 
                             <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
