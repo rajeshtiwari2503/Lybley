@@ -32,20 +32,18 @@ const Sidebar = () => {
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
-          const user1=localStorage.getItem("user");
+          const user1=localStorage.getItem("admin");
           const data=JSON?.parse(user1)
-          setUser(data);
-         
-          
+          setUser(data);        
       }
 
     },[  ]);
   
     return (
         <div>
-            <div clas id="wrapper">
+            <div   id="wrapper">
 
-                <aside id="sidebar-wrapper" >
+                <aside id="sidebar-wrapper" >-
                     <div className="sidebar-brand">
                         <h2>LY3LEY</h2>
 
@@ -60,7 +58,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                       {user?.role==="user" ?
+                       {user?.role==="USER" || user?.role==="ADMIN"  ?
                         <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
                             <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <StoreIcon />
@@ -95,7 +93,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                        {user?.role==="user" ? 
+                        {user?.role==="USER"  || user?.role==="ADMIN" ?
                          <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 
                             <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
