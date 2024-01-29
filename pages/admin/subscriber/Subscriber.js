@@ -116,10 +116,17 @@ const MySubscribers = () => {
 
   const getsubscribers = async () => {
     try {
+      let user=localStorage.getItem("admin");
+      let obj=JSON.parse(user);
       setLoading(true)
-      let response = await httpCommon.get("/getAllSubscription");
+      let response=[];
+      setLoading(true)
+      if(obj?.role==="ADMIN"){
+        response = await httpCommon.get("/getAllSubscription");
+      }else{
+        response = await httpCommon.get(`/getSubscriptionByUserId/${obj?._id}`);
+      }
       let { data } = response;
-      
       setData(data?.reverse());
       setLoading(false)
 
