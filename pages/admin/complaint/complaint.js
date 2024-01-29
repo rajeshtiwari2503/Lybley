@@ -122,7 +122,7 @@ const MyComplaints = () => {
       if(obj?.role==="ADMIN"){
        response = await httpCommon.get("/getAllComplaint");
       }else{
-       response = await httpCommon.get(`/getComplaintByUser/64ddffd6100c2b949cd6adcb`);
+       response = await httpCommon.get(`/getComplaintByUser/${obj?._id}`);
       }
       let { data } = response;
       setData(data);
