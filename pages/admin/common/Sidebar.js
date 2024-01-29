@@ -49,7 +49,7 @@ const Sidebar = () => {
 
                     </div>
                     <ul className="sidebar-nav mt-4">
-                    {user?.role==="ADMIN" ? 
+                    {(user?.role==="USER"  || user?.role==="ADMIN" )?
                         <li className={currentPath.startsWith("/admin/dashboard") ? "active" : ""}>
 
                             <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>

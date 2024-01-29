@@ -19,8 +19,8 @@ const ComplaintDetail = () => {
         try {
             let response = await httpCommon.get(`/getComplaintBy/${id}`);
             let { data } = response;
-            console.log(data?.user?._id);
-            getSubscriber(data?.user?._id);
+             
+            getSubscriber(data?.userId);
             setComplaint(data);
         } catch (err) {
             console.log(err);
@@ -30,7 +30,7 @@ const ComplaintDetail = () => {
         try{
          let response = await httpCommon.get(`/getSubscriptionByUserId/${userId}`);
          let {data}=response;
-         console.log(data)
+        
          setSubscriber(data);
         }catch(err){
          console.log(err);
@@ -78,18 +78,18 @@ const ComplaintDetail = () => {
                                 <div className='col-4'>Plan Name : </div><div className='col-8 fw-bold'>{subscriber?.length>0?subscriber[0]?.planName:""}</div>
                             </div>
                             <div className='d-flex mt-3  row'>
-                                <div className='col-4'>User Name : </div><div className='col-8'>{complaint?.user?.name}</div>
+                                <div className='col-4'>User Name : </div><div className='col-8'>{subscriber[0]?.name}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Contact No. : </div><div className='col-8'>{complaint?.user?.contact}</div>
+                                <div className='col-4'>Contact No. : </div><div className='col-8'>{subscriber[0]?.contact}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Address : </div><div className='col-8'>{complaint?.user?.location}</div>
+                                <div className='col-4'>Address : </div><div className='col-8'>{subscriber[0]?.location}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Email : </div><div className='col-8'>{complaint?.user?.email}</div>
+                                <div className='col-4'>Email : </div><div className='col-8'>{subscriber[0]?.email}</div>
                             </div>
-                            <div className='d-flex mt-3 row'> <div className='col-4'>CreatedAt : </div><div className='col-8'>{new Date(complaint?.user?.createdAt).toLocaleString()}</div>  </div>
+                            <div className='d-flex mt-3 row'> <div className='col-4'>CreatedAt : </div><div className='col-8'>{new Date(subscriber[0]?.createdAt).toLocaleString()}</div>  </div>
  
                         </div>
                     </div>
