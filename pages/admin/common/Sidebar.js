@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import CRMHeader from './Header';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
@@ -27,6 +27,20 @@ const Sidebar = () => {
         sideBar1.classList.toggle('toggled');
     }
     const currentPath = router.pathname;
+
+    const [user,setUser]=useState("");
+
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+          const user1=localStorage.getItem("user");
+          const data=JSON?.parse(user1)
+          setUser(data);
+         
+          
+      }
+
+    },[  ]);
+  
     return (
         <div>
             <div clas id="wrapper">
@@ -37,6 +51,7 @@ const Sidebar = () => {
 
                     </div>
                     <ul className="sidebar-nav mt-4">
+                    {user?.role==="ADMIN" ? 
                         <li className={currentPath.startsWith("/admin/dashboard") ? "active" : ""}>
 
                             <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -44,12 +59,16 @@ const Sidebar = () => {
                                 Dashboard
                             </Link>
                         </li>
+                        : ""}
+                       {user?.role==="user" ?
                         <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
                             <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <StoreIcon />
                                 Plan
                             </Link>
                         </li>
+                        : ""}
+                            {user?.role==="ADMIN" ? 
                         <li className={currentPath.startsWith("/admin/user") ? "active" : ""}>
 
                             <Link href="/admin/user" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -57,6 +76,8 @@ const Sidebar = () => {
                                 User
                             </Link>
                         </li>
+                        : ""}
+                        {user?.role==="ADMIN" ? 
                         <li className={currentPath.startsWith("/admin/technician") ? "active" : ""}>
 
                             <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -64,6 +85,8 @@ const Sidebar = () => {
                                 Technician
                             </Link>
                         </li>
+                        : ""}
+                        {user?.role==="ADMIN" ? 
                         <li className={currentPath.startsWith("/admin/subscriber") ? "active" : ""}>
 
                             <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -71,13 +94,17 @@ const Sidebar = () => {
                                 Plan Subscribers
                             </Link>
                         </li>
-                        <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
+                        : ""}
+                        {user?.role==="user" ? 
+                         <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 
                             <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <ForwardToInboxIcon />
                                 Complaints
                             </Link>
                         </li>
+                        :"" }
+                       {user?.role==="ADMIN" ?  
                         <li className={currentPath.startsWith("/admin/blog") ? "active" : ""}>
 
                             <Link href="/admin/blog" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -85,6 +112,8 @@ const Sidebar = () => {
                                 Blogs
                             </Link>
                         </li>
+                        :""}
+                            {user?.role==="ADMIN" ? 
                         <li className={currentPath.startsWith("/admin/contact") ? "active" : ""}>
 
                             <Link href="/admin/contact" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
@@ -92,6 +121,7 @@ const Sidebar = () => {
                                 Contact us
                             </Link>
                         </li>
+                         :""}
                     </ul>
 
 
