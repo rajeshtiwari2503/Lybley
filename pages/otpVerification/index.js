@@ -16,11 +16,11 @@ const OtpVerification = () => {
         try {
             let response = await httpCommon.post("/otpPhoneVerification", otpData)
             let { data } = response;
-            const logData = JSON.stringify(data)
-            localStorage.setItem('userInfo', logData);
+            const logData = JSON.stringify(data?.user)
+          
             if (data?.status === true) {
-                 router.reload( )
-                 window.location.href="/pricing"
+                localStorage.setItem('admin', logData);
+                 window.location.href="/admin/dashboard"
                  
             }
         }
