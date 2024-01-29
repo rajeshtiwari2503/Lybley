@@ -18,8 +18,12 @@ const MyComplaints = () => {
   const [randomValue, setRandomValue] = useState("");
   const [userId, setUserId] = useState("");
   const [confirmBoxView, setConfirmBoxView] = useState(false);
+  const [localUser,setLocalUser]=useState("");
 
   useEffect(() => {
+    const data = localStorage.getItem('admin');
+    const user = JSON.parse(data)
+    setLocalUser(user);
     getPlans()
   }, [randomValue])
   const handleUser = (id) => {
@@ -95,9 +99,9 @@ const MyComplaints = () => {
           {/* <Link href={`/admin/plan/EditPlan/${row?._id}`} >
           <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link> */}
-          <div>
+         {localUser?.role==="ADMIN" && (<div>
          {row?.status==="PENDING"? <button className='btn btn-success '>Assign</button> :<button disabled={true} className='btn btn-danger '>Assigned</button>}
-          </div>
+          </div>)}
           <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
           </Link>
@@ -111,8 +115,15 @@ const MyComplaints = () => {
 
   const getPlans = async () => {
     try {
+      let user=localStorage.getItem("admin");
+      let obj=JSON.parse(user);
       setLoading(true)
-      let response = await httpCommon.get("/getAllComplaint");
+      let response=[];
+      if(obj?.role==="ADMIN"){
+       response = await httpCommon.get("/getAllComplaint");
+      }else{
+       response = await httpCommon.get(`/getComplaintByUser/64ddffd6100c2b949cd6adcb`);
+      }
       let { data } = response;
       setData(data);
       setLoading(false)

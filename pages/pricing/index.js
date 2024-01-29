@@ -285,7 +285,7 @@ const Pricing = () => {
     let homeShieldPlus = plans?.find(p1 => p1?.planName === "Home Shield Plus");
     let homeShieldProPlus = plans?.find(p1 => p1?.planName === "Home Shield Pro Plus");
 
-    
+   
 
     return (
         <>

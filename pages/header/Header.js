@@ -75,16 +75,14 @@ const Header = () => {
   const [open2, setOpen2] = React.useState(false);
   const [loginData, setLoginData] = useState({})
   useEffect(() => {
-    const dataFromLocalStorage = localStorage.getItem('userInfo');
+    const dataFromLocalStorage = localStorage.getItem('admin');
     const data = JSON.parse(dataFromLocalStorage)
     setLoginData(data);
   }, []);
 
-  const handleLogout = () => {
+  const handleDashboard = () => {
 
-    localStorage.removeItem("userInfo")
-    router.reload();
-    window.location.href = "/";
+    window.location.href = "/admin/dashboard";
   }
 
   return (
@@ -153,8 +151,8 @@ const Header = () => {
                 </div>
                 <div className='d-flex' >
 
-                  {loginData?.status === true ?
-                    <button onClick={() => handleLogout()} className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGOUT</small></button>
+                  {(loginData?.role==="ADMIN" || loginData?.role==="USER") ?
+                    <button onClick={() => handleDashboard()} className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>Dashboard</small></button>
                     : <Link className='text-decoration-none' href={"/login"}>
                       <button className='header-btn py-1 ms-2 me-3 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
                     </Link>
@@ -193,8 +191,8 @@ const Header = () => {
             
               </Link></div>
             <div className="col-4 text-end">
-              {loginData?.status === true ?
-                <button onClick={() => handleLogout()} className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGOUT</small></button>
+              {(loginData?.role==="ADMIN" || loginData?.role==="USER")  ?
+                <button onClick={() => handleDashboard()} className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>Dashboard</small></button>
 
                 : <Link className='text-decoration-none ' href={"/login"}>
                   <button className='header-btn py-2 rounded-pill'><small className='fw-bold headerNavFont'>LOGIN</small></button>
