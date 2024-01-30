@@ -62,7 +62,7 @@ const Sidebar = () => {
                         <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
                             <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <StoreIcon />
-                                Plan
+                                Plans
                             </Link>
                         </li>
                         : ""}
@@ -89,7 +89,7 @@ const Sidebar = () => {
 
                             <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
                                 <ShoppingBagIcon />
-                                Plan Subscribers
+                                Subscribed Plans
                             </Link>
                         </li>
                         : ""}
