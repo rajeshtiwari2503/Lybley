@@ -6,15 +6,22 @@ import httpCommon from '@/http-common'
 const Dashboard = () => {
 
   const [data, setData] = useState({})
+  const [user, setUser] = useState("")
   useEffect(() => {
     getDashboardDetails()
-      
+    if (typeof window !== 'undefined') {
+      const user1=localStorage.getItem("admin");
+      const data=JSON?.parse(user1)
+      setUser(data);
+     
+  }
   }, [])
 
   const getDashboardDetails = async () => {
     try {
       let response = await httpCommon.get("/dashboardDetail")
       const { data } = response;
+     
       setData(data)
     }
     catch (err) {
@@ -22,6 +29,12 @@ const Dashboard = () => {
     }
   }
 
+
+  const pendingComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "PENDING") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "PENDING")) ;
+  const asignComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "ASSIGNED") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "ASSIGNED")) ;
+  const closeComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "CLOSE") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "CLOSE")) ;
+
+ 
   
   return (
     <div>
@@ -33,7 +46,7 @@ const Dashboard = () => {
           <Link href={"/admin/complaint/Pending"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h5 className='fw-bold'>PENDING COMPLAINTS</h5>
-              <h5 className='fw-bold'>0</h5>
+              <h5 className='fw-bold'>{pendingComplaints?.length}</h5>
             </div>
           </Link>
         </div>
@@ -41,7 +54,7 @@ const Dashboard = () => {
           <Link href={"/admin/complaint/Assign"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h5 className='fw-bold'>ASSIGN COMPLAINTS</h5>
-              <h5 className='fw-bold'>0</h5>
+              <h5 className='fw-bold'>{asignComplaints?.length}</h5>
             </div>
           </Link>
         </div>
@@ -49,11 +62,13 @@ const Dashboard = () => {
           <Link href={"/admin/complaint/Complete"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h5 className='fw-bold'>CLOSE COMPLAINTS</h5>
-              <h5 className='fw-bold'>0</h5>
+              <h5 className='fw-bold'>{closeComplaints?.length}</h5>
             </div>
           </Link>
         </div>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+      {  user?.role==="ADMIN"  ?
+      <>
+       <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/complaint"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h5 className='fw-bold'>TOTAL Complaints</h5>
@@ -93,8 +108,11 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
-        
+        </>  
+        :""
+        }
       </div>
+      
     </div>
   )
 }

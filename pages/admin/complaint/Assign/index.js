@@ -17,8 +17,11 @@ const AssignComplaints = () => {
   const [randomValue, setRandomValue] = useState("");
   const [userId, setUserId] = useState("");
   const [confirmBoxView, setConfirmBoxView] = useState(false);
+ 
 
   useEffect(() => {
+   
+  
     getPlans()
   }, [randomValue])
   const handleUser = (id) => {
@@ -109,11 +112,15 @@ const AssignComplaints = () => {
 
   const getPlans = async () => {
     try {
+      const user1=localStorage.getItem("admin");
+      const userData=JSON?.parse(user1)
       setLoading(true)
+
       let response = await httpCommon.get("/getAllComplaint");
       let { data } = response;
-     const filterData=data?.filter(f1=>f1?.status==="ASSIGNED")
-      setData(filterData);
+      
+     const filterData= userData?.role ==="ADMIN" ? data?.filter(f1=>f1?.status==="ASSIGNED"): data?.filter((f1) =>(f1?.status==="ASSIGNED" && f1?.userId===userData?._id));
+      setData(filterData?.reverse());
       setLoading(false)
 
     } catch (err) {
@@ -122,9 +129,9 @@ const AssignComplaints = () => {
 
     }
   }
-  const rvsData = data?.reverse();
+   
 
-  const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
+  const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
         <DashboardHeader pagetitle={"Assign Complaints"}
