@@ -109,11 +109,15 @@ const CompletedComplaints = () => {
 
   const getPlans = async () => {
     try {
+      const user1=localStorage.getItem("admin");
+      const userData=JSON?.parse(user1)
       setLoading(true)
       let response = await httpCommon.get("/getAllComplaint");
       let { data } = response;
-     const filterData=data?.filter(f1=>f1?.status==="CLOSE")
-      setData(filterData);
+   
+     const filterData= userData?.role ==="ADMIN" ? data?.filter(f1=>f1?.status==="CLOSE"): data?.filter((f1) =>(f1?.status==="CLOSE" && f1?.userId===userData?._id));
+
+      setData(filterData?.reverse());
       setLoading(false)
 
     } catch (err) {
@@ -122,9 +126,9 @@ const CompletedComplaints = () => {
 
     }
   }
-  const rvsData = data?.reverse();
+  
 
-  const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
+  const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
   return (
     <div>
         <DashboardHeader pagetitle={"Completed Complaints"}

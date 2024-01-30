@@ -45,7 +45,7 @@ const Login = () => {
 
                         <Box
                             sx={{
-                                my: 8,
+                                my: 4,
                                 px: 4,
                                 //    background:"white",
 
@@ -109,11 +109,16 @@ const Login = () => {
                                     </Button>
                                     <Grid justifyContent={"start"} container>
                                         <Grid item  className='d-flex' >
-                                            <Link href="#" variant="body2">
-                                                Forgot password?
+                                            <Link href="/servicer-signup" variant="body2">
+                                            Technician Sign Up 
                                             </Link>
                                             <Link className="ms-4 " href="/dashboardLogin" variant="body2"  >
                                                 Login as Admin
+                                            </Link>
+                                        </Grid>
+                                        <Grid item className='mt-4' >
+                                        <Link href="#" variant="body2">
+                                                Forgot password?
                                             </Link>
                                         </Grid>
                                         <Grid item>
