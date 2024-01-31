@@ -17,11 +17,13 @@ const AssignComplaints = () => {
   const [randomValue, setRandomValue] = useState("");
   const [userId, setUserId] = useState("");
   const [confirmBoxView, setConfirmBoxView] = useState(false);
- 
+ const [techData,setTechData]=useState("")
 
   useEffect(() => {
    
-  
+    const user1=localStorage.getItem("admin");
+    const userData=JSON?.parse(user1)
+    setTechData(userData)
     getPlans()
   }, [randomValue])
   const handleUser = (id) => {
@@ -45,40 +47,47 @@ const AssignComplaints = () => {
       return obj._id === id
     })
   }
-  const columns = () => {
-
+  
+ const columns = () => {
+ 
     return [
       {
         name: "SR No.",
-        selector: (row) => row.i,
+        selector: (row) =>  row?.i,
         sortable: true, width: "90px"
       },
       {
         name: "APPLIANCES NAME",
         selector: (row) => row?.applianceName,
-        cell: row => row?.applianceName,
+        cell: (row) => (row?.technicianId===techData?._id ? row?.complaintInfo?.applianceName : row?.applianceName),
+        // cell: row => row?.applianceName,
         sortable: true,  
       },
       {
         name: "PART NAME ",
         selector: (row) => row?.partName,
+        cell: (row) => (row?.technicianId===techData?._id ? row?.complaintInfo?.partName : row?.partName),
         sortable: true
       },
 
       {
         name: "DESCRIPTION",
         selector: (row) => row?.description,
+        cell: (row) => (row?.technicianId===techData?._id ? row?.complaintInfo?.description : row?.description),
+
         sortable: true,  
       },
       
       {
         name: "PART IMAGE",
-        cell: (row) => <img src={row?.image} className='m-2' alt="Image" width="50" height="50" />,
+        cell: (row) => <img src={(row?.technicianId===techData?._id ? row?.complaintInfo?.image : row?.image)} className='m-2' alt="Image" width="50" height="50" />,
         sortable: true, 
       },
       {
         name: "STATUS",
         selector: (row) => row?.status,
+        cell: (row) => (row?.technicianId===techData?._id ? row?.complaintInfo?.status : row?.status),
+
         sortable: true, 
       },
       {
@@ -109,20 +118,24 @@ const AssignComplaints = () => {
       }
     ]
   }
-
   const getPlans = async () => {
     try {
       const user1=localStorage.getItem("admin");
       const userData=JSON?.parse(user1)
       setLoading(true)
-
+      if(userData?.role==="TECHNICIAN"){
+        let response = await httpCommon.get(`/getAssinedComplaintByTechnician/${userData?._id}`)
+        let { data } = response;
+        setData(data?.reverse());
+        setLoading(false)
+      }else{
       let response = await httpCommon.get("/getAllComplaint");
       let { data } = response;
       
      const filterData= userData?.role ==="ADMIN" ? data?.filter(f1=>f1?.status==="ASSIGNED"): data?.filter((f1) =>(f1?.status==="ASSIGNED" && f1?.userId===userData?._id));
       setData(filterData?.reverse());
       setLoading(false)
-
+      }
     } catch (err) {
       console.log(err);
       setLoading(false)
@@ -132,6 +145,7 @@ const AssignComplaints = () => {
    
 
   const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
+ 
   return (
     <div>
         <DashboardHeader pagetitle={"Assign Complaints"}

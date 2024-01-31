@@ -50,7 +50,7 @@ const Dashboard = () => {
   const pendingComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "PENDING") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "PENDING")) ;
   const asignComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "ASSIGNED") : user?.role==="TECHNICIAN" ? techAssignComplaints  : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "ASSIGNED")) ;
   const closeComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "CLOSE") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "CLOSE")) ;
-  const totalComplaints = user?.role==="ADMIN"  ? techAssignComplaints?.length : data?.complaintData?.filter((f1) => (f1?.userId === user?._id ));
+  const totalComplaints = user?.role==="ADMIN"  ? techAssignComplaints  : data?.complaintData?.filter((f1) => (f1?.userId === user?._id ));
 
  
   
@@ -60,71 +60,74 @@ const Dashboard = () => {
       />
 
       <div className="row ">
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+      {  user?.role==="TECHNICIAN"  ? ""
+      :
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/complaint/Pending"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>PENDING COMPLAINTS</h5>
-              <h5 className='fw-bold'>{pendingComplaints?.length}</h5>
+              <h7 className='fw-bold'>PENDING COMPLAINTS</h7>
+              <h7 className='fw-bold'>{pendingComplaints?.length}</h7>
             </div>
           </Link>
         </div>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+}
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/complaint/Assign"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>ASSIGN COMPLAINTS</h5>
-              <h5 className='fw-bold'>{asignComplaints?.length}</h5>
+              <h7 className='fw-bold'>ASSIGN COMPLAINTS</h7>
+              <h7 className='fw-bold'>{asignComplaints?.length}</h7>
             </div>
           </Link>
         </div>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/complaint/Complete"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>CLOSE COMPLAINTS</h5>
-              <h5 className='fw-bold'>{closeComplaints?.length}</h5>
+              <h7 className='fw-bold'>CLOSE COMPLAINTS</h7>
+              <h7 className='fw-bold'>{closeComplaints?.length}</h7>
             </div>
           </Link>
         </div>
        
-       <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+       <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/complaint"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>TOTAL Complaints</h5>
-              <h5 className='fw-bold'>{totalComplaints}</h5>
+              <h7 className='fw-bold'>TOTAL Complaints</h7>
+              <h7 className='fw-bold'>{user?.role==="ADMIN" ? totalComplaints :totalComplaints?.length }</h7>
             </div>
           </Link>
         </div>
         {  user?.role==="ADMIN"  ?
       <>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/plan"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>TOTAL PLAN</h5>
-              <h5 className='fw-bold'>{data?.plans}</h5>
+              <h7 className='fw-bold'>TOTAL PLAN</h7>
+              <h7 className='fw-bold'>{data?.plans}</h7>
             </div>
           </Link>
         </div>
       
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/user"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>TOTAL USER</h5>
-              <h5 className='fw-bold'>{data?.users}</h5>
+              <h7 className='fw-bold'>TOTAL USER</h7>
+              <h7 className='fw-bold'>{data?.users}</h7>
             </div>
           </Link>
         </div>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/technician"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>TOTAL TECHNICIAN</h5>
-              <h5 className='fw-bold'>{data?.servicer}</h5>
+              <h7 className='fw-bold'>TOTAL TECHNICIAN</h7>
+              <h7 className='fw-bold'>{data?.servicer}</h7>
             </div>
           </Link>
         </div>
-        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/subscriber"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h5 className='fw-bold'>TOTAL SUBSCRIBER</h5>
-              <h5 className='fw-bold'>{data?.subscribedPlan}</h5>
+              <h7 className='fw-bold'>TOTAL SUBSCRIBER</h7>
+              <h7 className='fw-bold'>{data?.subscribedPlan}</h7>
             </div>
           </Link>
         </div>
