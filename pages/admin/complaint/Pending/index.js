@@ -95,7 +95,7 @@ const PendingComplaints = () => {
           <EditIcon onClick={() => { handlePlanEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link> */}
           <div>
-          <button className='btn btn-warning '>Assign</button>
+          {/* <button className='btn btn-warning '>Assign</button> */}
           </div>
           <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>

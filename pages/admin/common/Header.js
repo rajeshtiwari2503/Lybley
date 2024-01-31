@@ -41,8 +41,8 @@ const CRMHeader = () => {
       <div className="px-2">
       <NotificationsIcon fontSize='large' style={{cursor:"pointer",color:"white"}} />
       </div> */}
-        <div className="px-2 d-flex">
-          {user && <div className='text-white me-2 '>{user?.name}</div>}
+        <div className="px-2 d-flex align-items-center">
+          {user && <div style={{ fontSize:"15px" ,fontWeight:"bold" }} className='text-white   me-2 '>{user?.name}</div>}
           <AccountCircleIcon fontSize='large' style={{ cursor: "pointer", color: "white" }} onClick={handleClick} />
           {/* <div className="d-flex align-items-center text-center">
                 <Button

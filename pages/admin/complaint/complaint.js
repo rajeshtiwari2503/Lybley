@@ -27,9 +27,11 @@ const MyComplaints = () => {
   const [location,setLocation]=useState("");
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     const data = localStorage.getItem('admin');
     const user = JSON.parse(data)
     setLocalUser(user);
+    }
     getPlans()
   }, [randomValue])
   const handleUser = (id) => {
@@ -48,6 +50,7 @@ const MyComplaints = () => {
       console.log(err);
     }
   }
+   
   const handlePlanEdit = (id) => {
     const findData = data?.find(obj => {
       return obj._id === id
@@ -61,32 +64,39 @@ const MyComplaints = () => {
         selector: (row) => row.i,
         sortable: true, width: "90px"
       },
+      
       {
         name: "APPLIANCES NAME",
         selector: (row) => row?.applianceName,
-        cell: row => row?.applianceName,
+        cell: (row) => (row?.technicianId===localUser  ?._id ? row?.complaintInfo?.applianceName : row?.applianceName),
+        // cell: row => row?.applianceName,
         sortable: true,  
       },
       {
         name: "PART NAME ",
         selector: (row) => row?.partName,
+        cell: (row) => (row?.technicianId===localUser  ?._id ? row?.complaintInfo?.partName : row?.partName),
         sortable: true
       },
 
       {
         name: "DESCRIPTION",
         selector: (row) => row?.description,
+        cell: (row) => (row?.technicianId===localUser  ?._id ? row?.complaintInfo?.description : row?.description),
+
         sortable: true,  
       },
       
       {
         name: "PART IMAGE",
-        cell: (row) => <img src={row?.image} className='m-2' alt="Image" width="50" height="50" />,
+        cell: (row) => <img src={(row?.technicianId===localUser  ?._id ? row?.complaintInfo?.image : row?.image)} className='m-2' alt="Image" width="50" height="50" />,
         sortable: true, 
       },
       {
         name: "STATUS",
         selector: (row) => row?.status,
+        cell: (row) => (row?.technicianId===localUser  ?._id ? row?.complaintInfo?.status : row?.status),
+
         sortable: true, 
       },
       
@@ -99,6 +109,8 @@ const MyComplaints = () => {
       {
         name: "LOCATION",
         selector: (row) => row?.user?.location,
+        cell: (row) => (row?.technicianId===localUser  ?._id ? row?.complaintInfo?.user?.location : row?.user?.location),
+
         sortable: true,  
 
       },
@@ -114,6 +126,10 @@ const MyComplaints = () => {
          {localUser?.role==="ADMIN" && (<div>
          {row?.status==="PENDING"? <button className='btn btn-success ' onClick={()=>getTechnician(row)}>Assign</button> :<button disabled={true} className='btn btn-danger '>Assigned</button>}
           </div>)}
+          {localUser?.role==="TECHNICIAN" && (<div> 
+            <button   className='btn btn-danger '>Close </button>
+          </div>) 
+          }
           <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
           </Link>
@@ -165,9 +181,12 @@ const MyComplaints = () => {
       let response=[];
       if(obj?.role==="ADMIN"){
        response = await httpCommon.get("/getAllComplaint");
-      }else{
+      }else if(obj?.role==="USER"){
        response = await httpCommon.get(`/getComplaintByUser/${obj?._id}`);
       }
+      else{
+        response = await httpCommon.get(`/getAssinedComplaintByTechnician/${localUser?._id}`);
+       }
       let { data } = response;
       setData(data?.reverse());
       setLoading(false)
