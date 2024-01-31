@@ -106,7 +106,7 @@ const CompletedComplaints = () => {
           <div>
             {/* <button className='btn btn-warning '>Assign</button> */}
           </div>
-          <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
+          <Link href={`/admin/complaint/ComplaintDetails/${techData?.role==="TECHNICIAN" ? row?.complaintId : row?._id}`}>
             <VisibilityIcon className='ms-2 me-2' style={{ cursor: "pointer" }} />
           </Link>
           {/* <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' /> */}

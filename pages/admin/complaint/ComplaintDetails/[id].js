@@ -26,19 +26,7 @@ const ComplaintDetail = () => {
             console.log(err);
         }
     }
-    const getSubscriber = async (userId) => {
-        try {
-            let response = await httpCommon.get(`/getSubscriptionByUserId/${userId}`);
-            let { data } = response;
-
-            setSubscriber(data);
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-
-    //    console.log(subscriber);
+    
     console.log(complaint);
 
     return (

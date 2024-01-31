@@ -131,7 +131,7 @@ const MyComplaints = () => {
             <button className='btn btn-danger' disabled={row?.status==="CLOSE" ? true : false} onClick={()=>closeComplaint(row?._id,row?.complaintId)}>{row?.status==="CLOSE" ? "Closed" : "Close"}</button>
           </div>) 
           }
-          <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
+          <Link href={`/admin/complaint/ComplaintDetails/${localUser?.role==="TECHNICIAN" ? row?.complaintId : row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
           </Link>
           {/* <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' /> */}
@@ -212,7 +212,7 @@ const MyComplaints = () => {
   let technicians1=location ? technicians.filter(t1=>t1?.businessAddress?.toLowerCase()?.includes(location?.toLowerCase())) : technicians;
 
   const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
-   
+
   return (
     <div>
         <DashboardHeader pagetitle={"Complaints"}
