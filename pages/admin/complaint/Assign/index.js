@@ -126,7 +126,8 @@ const AssignComplaints = () => {
       if(userData?.role==="TECHNICIAN"){
         let response = await httpCommon.get(`/getAssinedComplaintByTechnician/${userData?._id}`)
         let { data } = response;
-        setData(data?.reverse());
+        const filterData=data?.filter(f1=>f1?.status==="ASSIGNED")
+        setData(filterData?.reverse());
         setLoading(false)
       }else{
       let response = await httpCommon.get("/getAllComplaint");
