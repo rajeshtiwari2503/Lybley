@@ -50,6 +50,7 @@ const Dashboard = () => {
   const pendingComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "PENDING") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "PENDING")) ;
   const asignComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "ASSIGNED") : user?.role==="TECHNICIAN" ? techAssignComplaints  : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "ASSIGNED")) ;
   const closeComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "CLOSE") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "CLOSE")) ;
+  const totalComplaints = user?.role==="ADMIN"  ? techAssignComplaints?.length : data?.complaintData?.filter((f1) => (f1?.userId === user?._id ));
 
  
   
@@ -83,17 +84,17 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
-        {  user?.role==="ADMIN"  ?
-      <>
+       
        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/complaint"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h5 className='fw-bold'>TOTAL Complaints</h5>
-              <h5 className='fw-bold'>{data?.complaint}</h5>
+              <h5 className='fw-bold'>{totalComplaints}</h5>
             </div>
           </Link>
         </div>
-       
+        {  user?.role==="ADMIN"  ?
+      <>
         <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/plan"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
