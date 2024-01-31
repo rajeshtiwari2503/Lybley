@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const ComplaintDetail = () => {
     const [complaint, setComplaint] = useState({});
-    const [subscriber,setSubscriber]=useState({});
+    const [subscriber, setSubscriber] = useState({});
 
     const router = useRouter();
     const { id } = router.query;
@@ -19,25 +19,28 @@ const ComplaintDetail = () => {
         try {
             let response = await httpCommon.get(`/getComplaintBy/${id}`);
             let { data } = response;
-             
-            getSubscriber(data?.userId);
+
+            // getSubscriber(data?.userId);
             setComplaint(data);
         } catch (err) {
             console.log(err);
         }
     }
-    const getSubscriber=async(userId)=>{
-        try{
-         let response = await httpCommon.get(`/getSubscriptionByUserId/${userId}`);
-         let {data}=response;
-        
-         setSubscriber(data);
-        }catch(err){
-         console.log(err);
-        }
-   }
+    const getSubscriber = async (userId) => {
+        try {
+            let response = await httpCommon.get(`/getSubscriptionByUserId/${userId}`);
+            let { data } = response;
 
-   
+            setSubscriber(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    //    console.log(subscriber);
+    console.log(complaint);
+
     return (
         <>
             <div className='row'>
@@ -71,26 +74,40 @@ const ComplaintDetail = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-6'>
+                    <DashboardHeader pagetitle={"Appliances Cover  "} />
+                    <div className='row w-100 mb-5'>
+                        <div className='col-12 ms-4'>
+                            <div className='d-flex mt-3  row'>
+                                {complaint?.appliancesDetail?.planDetail?.appliances?.filter((f)=>f?.checked===true )?.map((item, i) =>
+                                    <div key={i} className='col-12 col-md-6'>
+                                        <div className='p-2 bg-success m-1 text-white text-center'>{item?.value}</div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='col-12 col-md-6'>
                     <DashboardHeader pagetitle={"User Details "} />
                     <div className='row w-100 mb-5'>
                         <div className='col-12 ms-4'>
-                        <div className='d-flex mt-3  row'>
-                                <div className='col-4'>Plan Name : </div><div className='col-8 fw-bold'>{subscriber?.length>0?subscriber[0]?.planName:""}</div>
+                            <div className='d-flex mt-3  row'>
+                                <div className='col-4'>Plan Name : </div><div className='col-8 fw-bold'>{complaint?.appliancesDetail?.planName}</div>
                             </div>
                             <div className='d-flex mt-3  row'>
-                                <div className='col-4'>User Name : </div><div className='col-8'>{subscriber[0]?.name}</div>
+                                <div className='col-4'>User Name : </div><div className='col-8'>{complaint?.appliancesDetail?.name}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Contact No. : </div><div className='col-8'>{subscriber[0]?.contact}</div>
+                                <div className='col-4'>Contact No. : </div><div className='col-8'>{complaint?.appliancesDetail?.contact}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Address : </div><div className='col-8'>{subscriber[0]?.location}</div>
+                                <div className='col-4'>Address : </div><div className='col-8'>{complaint?.appliancesDetail?.location}</div>
                             </div>
                             <div className='d-flex mt-3 row' >
-                                <div className='col-4'>Email : </div><div className='col-8'>{subscriber[0]?.email}</div>
+                                <div className='col-4'>Email : </div><div className='col-8'>{complaint?.appliancesDetail?.email}</div>
                             </div>
-                            <div className='d-flex mt-3 row'> <div className='col-4'>CreatedAt : </div><div className='col-8'>{new Date(subscriber[0]?.createdAt).toLocaleString()}</div>  </div>
- 
+                            <div className='d-flex mt-3 row'> <div className='col-4'>CreatedAt : </div><div className='col-8'>{new Date(complaint?.appliancesDetail?.createdAt).toLocaleString()}</div>  </div>
+
                         </div>
                     </div>
                 </div>
