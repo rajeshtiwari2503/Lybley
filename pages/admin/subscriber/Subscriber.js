@@ -99,16 +99,17 @@ const MySubscribers = () => {
       {
         name: "ACTION",
         selector: (row) => { },
-        cell: (row) => <div className="d-flex justify-content-between"  >
+        cell: (row) => <div className="d-flex align-items-center justify-content-between"  >
           {/* <Link href={`/admin/subscriber/Editsubscriber/${row?._id}`} >
           <EditIcon onClick={() => { handlesubscriberEdit(row?._id) }} style={{ cursor: "pointer" }} color='success' />
           </Link> */}
           <Link href={`/admin/subscriber/SubscriberDetails/${row?._id}`}>
           <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
           </Link>
+         <div><Link href={`/admin/complaint/AddComplaint?id=${row?._id}`}> <button className='btn btn-sm btn-primary'>Add Complaint</button></Link></div>
           {/* <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' /> */}
         </div>,
-        sortable: true, width: "100px"
+        sortable: true, width: "200px"
 
       }
     ]

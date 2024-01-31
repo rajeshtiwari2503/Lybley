@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashboardHeader from "../../common/DashboardHeader";
 import httpCommon from "@/http-common";
 import { useRouter } from "next/router";
 
 const AddComplaint = () => {
     const router = useRouter();
+    const {id}=router.query;
+
     const [complaint, setComplaint] = useState({
         applianceName: "",
         partName: "",
         description: "",
     })
+
+    const [plan,setPlan]=useState({});
+
+    useEffect(()=>{
+       getSubscribed();
+    },[id])
+
     const [loading,setLoading]=useState(false);
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -22,6 +31,16 @@ const AddComplaint = () => {
         const file = e.target.files[0];
         setSelectedFile(file);
     };
+
+    const getSubscribed=async()=>{
+        try{
+           let response=await httpCommon.get(`/getSubscriptionBy/${id}`);
+           let {data}=response;
+           setPlan(data);
+        }catch(err){
+            console.log(err);
+        }
+    }
 
     const addComplaint = async (body) => {
         try {
@@ -48,19 +67,28 @@ const AddComplaint = () => {
         formData.append("partName", complaint.partName);
         formData.append("description", complaint.description);
         formData.append("userId", user1._id);
+        formData.append("appliancesDetail",JSON.stringify(plan));
         formData.append("user", JSON.stringify(user1));
+        formData.append("planId",id);
       
         addComplaint(formData);
       };
-
+   const appliances=plan?.planDetail?.appliances?.concat(plan?.planDetail?.plus);
+   const appliances1=appliances?.filter(a1=>a1?.checked===true);
     return (
         <div>
             <DashboardHeader pagetitle="Add Complaint" />
             <div className='row'>
                 <div className='col-6 '>
                     <div className='mt-2 mb-2'>Appliance Name </div>
-                    <input type='text' className='form-control' placeholder='Appliance Name' name="applianceName" value={complaint.applianceName} onChange={(e) => handleChange(e)} />
+                    {/* <input type='text' className='form-control' placeholder='Appliance Name' name="applianceName" value={complaint.applianceName} onChange={(e) => handleChange(e)} /> */}
                     {/* <div className='text-danger'> {errors.location?.message}</div> */}
+                    <div className="form-group">
+                      <select className="form-select" name="applianceName" value={complaint.applianceName} onChange={(e) => handleChange(e)}>
+                       <option>Choose Appliance</option>
+                      {appliances1?.map(a1=> <option>{a1?.value}</option>)}
+                      </select>
+                    </div>
                 </div>
             </div>
             <div className="row">
