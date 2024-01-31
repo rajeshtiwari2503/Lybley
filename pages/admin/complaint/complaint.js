@@ -31,6 +31,7 @@ const MyComplaints = () => {
     const data = localStorage.getItem('admin');
     const user = JSON.parse(data)
     setLocalUser(user);
+    
     }
     getPlans()
   }, [randomValue])
@@ -127,7 +128,7 @@ const MyComplaints = () => {
          {row?.status==="PENDING"? <button className='btn btn-success ' onClick={()=>getTechnician(row)}>Assign</button> :<button disabled={true} className='btn btn-danger '>Assigned</button>}
           </div>)}
           {localUser?.role==="TECHNICIAN" && (<div> 
-            <button   className='btn btn-danger '>Close </button>
+            <button className='btn btn-danger' disabled={row?.status==="CLOSE" ? true : false} onClick={()=>closeComplaint(row?._id,row?.complaintId)}>{row?.status==="CLOSE" ? "Closed" : "Close"}</button>
           </div>) 
           }
           <Link href={`/admin/complaint/ComplaintDetails/${row?._id}`}>
@@ -142,7 +143,18 @@ const MyComplaints = () => {
   }
 
   
-    
+  const closeComplaint=async(assign,complaint)=>{
+    try{
+      setLoading(true);
+      let response=await httpCommon.post("/updateAssignComplaint",{assignId:assign,complaintId:complaint});
+      let {data}=response;
+      setLoading(false)
+      setRandomValue(data);
+    }catch(err){
+      console.log(err);
+      setLoading(false);
+    }
+  }
    
 
   const getTechnician = async (cmp) => {
@@ -183,9 +195,8 @@ const MyComplaints = () => {
        response = await httpCommon.get("/getAllComplaint");
       }else if(obj?.role==="USER"){
        response = await httpCommon.get(`/getComplaintByUser/${obj?._id}`);
-      }
-      else{
-        response = await httpCommon.get(`/getAssinedComplaintByTechnician/${localUser?._id}`);
+      }else{
+        response = await httpCommon.get(`/getAssinedComplaintByTechnician/${obj?._id}`);
        }
       let { data } = response;
       setData(data?.reverse());
