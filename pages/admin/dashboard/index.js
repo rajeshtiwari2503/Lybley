@@ -7,15 +7,21 @@ const Dashboard = () => {
 
   const [data, setData] = useState({})
   const [user, setUser] = useState("")
+  const [techAssignComplaints,setTechAssignComplaints]=useState([]);
   useEffect(() => {
     getDashboardDetails()
     if (typeof window !== 'undefined') {
       const user1=localStorage.getItem("admin");
       const data=JSON?.parse(user1)
       setUser(data);
-     
+      if(data?.role==="TECHNICIAN"){
+      getTechnicianComplaints(data?._id);
+      }
   }
+  
   }, [])
+
+
 
   const getDashboardDetails = async () => {
     try {
@@ -29,9 +35,20 @@ const Dashboard = () => {
     }
   }
 
+  const getTechnicianComplaints = async (id) => {
+    try {
+      let response = await httpCommon.get(`/getAssinedComplaintByTechnician/${id}`)
+      const { data } = response;
+     
+      setTechAssignComplaints(data);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 
   const pendingComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "PENDING") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "PENDING")) ;
-  const asignComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "ASSIGNED") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "ASSIGNED")) ;
+  const asignComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "ASSIGNED") : user?.role==="TECHNICIAN" ? techAssignComplaints  : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "ASSIGNED")) ;
   const closeComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "CLOSE") : data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "CLOSE")) ;
 
  
@@ -66,7 +83,7 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
-      {  user?.role==="ADMIN"  ?
+        {  user?.role==="ADMIN"  ?
       <>
        <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/complaint"} className='text-decoration-none'>
@@ -76,6 +93,7 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
+       
         <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/plan"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
@@ -84,6 +102,7 @@ const Dashboard = () => {
             </div>
           </Link>
         </div>
+      
         <div className="col-6 text-center col-md-4 col-lg-4 mt-5">
           <Link href={"/admin/user"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
