@@ -91,16 +91,16 @@ const SubscriberSignup = () => {
   return (
     <div className='bg-light'>
       <div className='container'>
-        <div className="row py-3 px-3">
-          <div className=" d-block d-md-none col-12 col-md-3 col-lg-3 bg-dark rounded-4 px-3">
+        <div className="row justify-content-center py-3 px-3">
+          {/* <div className=" d-block d-md-none col-12 col-md-3 col-lg-3 bg-dark rounded-4 px-3">
             <div className="d-flex align-items-center p-2 mt-3"> <img height={70} width={70} className='rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s" alt="" /> <h4 className='text-white ms-3'>LYBLEY</h4></div>
             <div className='bg-secondary rounded-pill p-1 d-flex justify-content-between mt-3'><button className={`btn text-white px-3 ${btn === "1" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("1", data?.planPrice)}>Monthly</button><button className={`btn text-white px-3 ${btn === "2" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("2", +data?.planPrice * 12)}>Annually</button></div>
             <div className="border text-white mt-3 rounded d-flex justify-content-between align-items-center p-2"><div>{data?.planName}</div> <div>{btn === "1" ? `${data?.planPrice} INR/mo` : `${price} INR/an`}</div></div>
             <div className='mt-2'> <a href="#" className='text-decoration-none'>Quick overview of the plan</a></div>
             <div className='border-bottom mt-2'></div>
             <div className="d-flex justify-content-between text-white align-items-center mt-3 mb-2"> <h6>Total</h6> <h4>{btn === "1" ? `${data?.planPrice} INR/mo` : `${price} INR/an`}</h4></div>
-          </div>
-          <div className="col-12  col-md-8 col-lg-8">
+          </div> */}
+          {/* <div className="col-12  col-md-8 col-lg-8">
             <div className='mt-5'  >
               <h4>Tell us about your home purchase</h4>
               <div className="form-group mt-5">
@@ -130,14 +130,18 @@ const SubscriberSignup = () => {
                 <button className="btn btn-primary rounded-pill" onClick={payment}>Skip</button>
               </div>
             </div>
-          </div>
-          <div className=" d-none d-md-block col-12 col-md-4 col-lg-4 bg-dark rounded-4 px-3">
+          </div> */}
+          <div className="   col-12 col-md-4 col-lg-4 bg-dark rounded-4 px-3">
             <div className="d-flex align-items-center p-2"> <img height={70} width={70} className='rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexHlqnS8PIODGRgSNEj4ipDKcC4b7CbV8_z8ozsgerA&s" alt="" /> <h4 className='text-white ms-3'>LYBLEY</h4></div>
             <div className="border text-white mt-5 rounded d-flex justify-content-between align-items-center p-2"><div>{data?.planName}</div> <div>{btn === "1" ? `${data?.planPrice} INR/mo` : `${price} INR/an`}</div></div>
             <div className='mt-2'> <a href="#" className='text-decoration-none'>Quick overview of the plan</a></div>
             <div className='border-bottom mt-2'></div>
             <div className="d-flex justify-content-between text-white align-items-center mt-3"> <h6>Total</h6> <h4>{btn === "1" ? `${data?.planPrice} INR/mo` : `${price} INR/an`}</h4></div>
             <div className='bg-secondary rounded-pill p-1 d-flex justify-content-between'><button className={`btn text-white px-5 ${btn === "1" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("1", data?.planPrice)}>Monthly</button><button className={`btn text-white px-5 ${btn === "2" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("2", +data?.planPrice * 12)}>Annually</button></div>
+            <div className="mt-5 col-5 pb-5 d-flex justify-content-center">
+                <button className="btn btn-primary rounded-pill" onClick={payment}>Payment</button>
+              
+              </div>
           </div>
         </div>
       </div>

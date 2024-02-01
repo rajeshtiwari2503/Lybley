@@ -12,6 +12,7 @@ const ServicerSignup = () => {
     servicerName: "",
     businessPhone: "",
     businessAddress: "",
+    businessPincode: "",
     yearOfStartBusniess: "",
     servicerWebsite: "",
     betterBusinessBureauReviewPage: "",
@@ -19,7 +20,7 @@ const ServicerSignup = () => {
 
   const registration = async () => {
     try {
-      let response = await httpCommon.post("/servicerRegistration", { ...formData, businessPhone: +formData?.businessPhone });
+      let response = await httpCommon.post("/servicerRegistration", { ...formData, businessPincode: +formData?.businessPincode, businessPhone: +formData?.businessPhone });
       let { data } = response;
       if (data?.status === true) {
         router.push("/login")
@@ -61,6 +62,12 @@ const ServicerSignup = () => {
                 <label for="" className='text-muted mb-2'>BUSINESS ADDRESS</label>
                 <div className="col-12 col-md-6">
                   <input type="text" className='form-control' name='businessAddress' value={formData.businessAddress} placeholder='Business Address' onChange={handleChange} />
+                </div>
+              </div>
+              <div className="form-group mt-4">
+                <label for="" className='text-muted mb-2'>BUSINESS PINCODE</label>
+                <div className="col-12 col-md-6">
+                  <input type="text" className='form-control' name='businessPincode' value={formData.businessPincode} placeholder='Business pincode' onChange={handleChange} />
                 </div>
               </div>
               <div className="form-group mt-4">
