@@ -27,7 +27,7 @@ const ComplaintDetail = () => {
         }
     }
     
-    console.log(complaint);
+   
 
     return (
         <>
