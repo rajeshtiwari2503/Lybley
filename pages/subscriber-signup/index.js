@@ -59,7 +59,7 @@ const SubscriberSignup = () => {
         order_id: data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
         handler: async function (orderDetails) {
           try {
-            let body = { realEstateAgentName: formData.fname + " " + formData.lname, planDetail: userData?.planDetail, closingDate: formData.closingDate, location: userData?.location, unit: +userData?.unit, name: userData?.firstName + " " + userData?.lastName, email: userData?.email, contact: +userData?.contact, planName: userData?.planName, planPrice: btn === "1" ? +userData?.planPrice : +price, planTime: btn === "1" ? "Monthly" : "Annually" };
+            let body = { realEstateAgentName: formData.fname + " " + formData.lname, planDetail: userData?.planDetail, closingDate: formData.closingDate, location: userData?.location, unit: +userData?.unit, name: userData?.firstName + " " + userData?.lastName, email: userData?.email, contact: +userData?.contact,pincode: +userData?.pincode, planName: userData?.planName, planPrice: btn === "1" ? +userData?.planPrice : +price, planTime: btn === "1" ? "Monthly" : "Annually" };
 
             let response = await axios.post("https://lybleybackend-production.up.railway.app/registrationAndPayment", { response: orderDetails, customerData: body });
             let { data } = response;
