@@ -1,9 +1,9 @@
 import axios from "axios"
 
  
-const baseUrl= "http://localhost:5000"
+// const baseUrl= "http://localhost:5000"
 //hosted on railway
-// const baseUrl="https://lybleybackend-production.up.railway.app"
+const baseUrl="https://lybleybackend-production.up.railway.app"
  
 
 const get=(url)=>{
