@@ -356,9 +356,9 @@ const Pricing = () => {
                     <div className="row mt-5">
                         <div className="col-12 col-md-1 col-lg-1"></div>
                         <div className="col-12 col-md-10 col-lg-10">
-                            <div className="row">
+                            <div className="row justify-content-center">
 
-                                <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                                {/* <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName}</h6>
                                     <div className='text-center'>our plan for protecting vital home systems</div>
 
@@ -439,7 +439,7 @@ const Pricing = () => {
                                         </>
                                     }
 
-                                </div>
+                                </div> */}
                                 <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
                                     <div className='text-center'>our plan for protecting vital home systems</div>
@@ -450,13 +450,13 @@ const Pricing = () => {
                                             <div className='text-center'><small>paid monthly</small></div>
                                             <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldBasic?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -511,11 +511,11 @@ const Pricing = () => {
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}> SELECT PLAN </div>
 
                                         : <>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                            {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3'  onClick={scrollToTop} style={{fontSize:"12px"}}> FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
@@ -530,13 +530,13 @@ const Pricing = () => {
                                             <div className='text-center'><small>paid monthly</small></div>
                                             <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldPlus?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -591,11 +591,11 @@ const Pricing = () => {
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN </div>
 
                                         : <>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                            {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop}style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
@@ -609,13 +609,13 @@ const Pricing = () => {
                                             <div className='text-center'><small>paid monthly</small></div>
                                             <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldProPlus?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex justify-content-start ms-3">
@@ -664,16 +664,16 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"}style={{fontSize:"12px",cursor:"pointer"}} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small>SELECT PLAN</small></div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN </div>
                                         : <>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div>
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small>FILL OUT THE FORM</small></div></div>
+                                            {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
