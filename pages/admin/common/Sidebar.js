@@ -93,6 +93,15 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
+                          {/* {(user?.role==="TECHNICIAN"  || user?.role==="ADMIN" )?
+                        <li className={currentPath.startsWith("/admin/verificationSubscriber") ? "active" : ""}>
+
+                            <Link href="/admin/verificationSubscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                <ShoppingBagIcon />
+                                Subscriber Verification
+                            </Link>
+                        </li>
+                        : ""} */}
                         {(user?.role==="USER"  || user?.role==="ADMIN" || user?.role==="TECHNICIAN" )?
                          <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 

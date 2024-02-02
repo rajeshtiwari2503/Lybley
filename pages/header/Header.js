@@ -244,13 +244,13 @@ const Header = () => {
                   <h6>Irrespective of the plan you select, our certified Lybley service technicians stand prepared to swiftly repair or replace your home's appliances and systems whenever unexpected issues arise.</h6>
                 </div>
                 <div className="col-12 col-md-4 col-lg-4 p-4 text-center border-end border-1 border-dark">
-                  <div className='fw-bold fs-5'>Home Shield Lite</div>
-                  <small>Your plan for protecting vital home system</small>
-                  <div className='fw-bold fs-5 mt-1'>Home Shield Basic</div>
+                  {/* <div className='fw-bold fs-5'>Home Shield Lite</div>
+                  <small>Your plan for protecting vital home system</small> */}
+                  <div className='fw-bold fs-5'>Home Shield Basic</div>
                   <small>Just the right coverage for extra busy home</small>
-                  <div className='fw-bold fs-5 mt-1'>Home Shield Plus</div>
+                  <div className='fw-bold fs-5 mt-3'>Home Shield Plus</div>
                   <small>Maximum coverage for major peace of mind</small>
-                  <div className='fw-bold fs-5 mt-1'>Home Shield Pro Plus</div>
+                  <div className='fw-bold fs-5 mt-3'>Home Shield Pro Plus</div>
                   <small>Maximum coverage for major peace of mind</small>
                   <button className='mt-4 btn btn-outline-primary rounded-pill' onClick={() => setOpen(false)}><Link href={"pricing"} className='text-decoration-none' >SEE PLAN</Link> </button>
                 </div>
