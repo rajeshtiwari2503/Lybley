@@ -30,7 +30,7 @@ const Available = () => {
                                 Pune
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
-                                Haidrabad
+                            Hyderabad
                             </div>
                             <div className='col-12 col-md-2 col-lg-2 mt-5  '>
                                 Lucknow

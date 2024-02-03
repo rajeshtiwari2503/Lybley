@@ -138,7 +138,7 @@ const SubscriberSignup = () => {
             <div className='border-bottom mt-2'></div>
             <div className="d-flex justify-content-between text-white align-items-center mt-3"> <h6>Total</h6> <h4>{btn === "1" ? `${data?.planPrice} INR/mo` : `${price} INR/an`}</h4></div>
             <div className='bg-secondary rounded-pill p-1 d-flex justify-content-between'><button className={`btn text-white px-5 ${btn === "1" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("1", data?.planPrice)}>Monthly</button><button className={`btn text-white px-5 ${btn === "2" ? "btn-dark rounded-pill" : ""}`} onClick={() => handlePlan("2", +data?.planPrice * 12)}>Annually</button></div>
-            <div className="mt-5 col-5 pb-5 d-flex justify-content-center">
+            <div className="mt-5 col-12 pb-5 d-flex justify-content-center">
                 <button className="btn btn-primary rounded-pill" onClick={payment}>Payment</button>
               
               </div>
