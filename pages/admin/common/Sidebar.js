@@ -17,6 +17,8 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 import PagesIcon from '@mui/icons-material/Pages';
 import ContactsIcon from '@mui/icons-material/Contacts';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+
 
 const Sidebar = () => {
     const router = useRouter();
@@ -93,15 +95,15 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         : ""}
-                          {/* {(user?.role==="TECHNICIAN"  || user?.role==="ADMIN" )?
+                          {(user?.role==="TECHNICIAN"  || user?.role==="ADMIN" )?
                         <li className={currentPath.startsWith("/admin/verificationSubscriber") ? "active" : ""}>
 
                             <Link href="/admin/verificationSubscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <ShoppingBagIcon />
+                                <FactCheckIcon />
                                 Subscriber Verification
                             </Link>
                         </li>
-                        : ""} */}
+                        : ""}
                         {(user?.role==="USER"  || user?.role==="ADMIN" || user?.role==="TECHNICIAN" )?
                          <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 

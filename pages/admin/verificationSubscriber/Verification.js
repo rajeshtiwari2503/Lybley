@@ -10,6 +10,7 @@ import ToastMessage from '../common/ToastMessage';
 import DashboardHeader from '../common/DashboardHeader';
 import Loader from '../common/Loading';
 import ConfirmBox from '../common/ConfirmBox';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
 
 const Verification = () => {
   const [data, setData] = useState([])
@@ -108,8 +109,9 @@ const Verification = () => {
           <div>
           {/* <button className='btn btn-warning '>Assign</button> */}
           </div>
-          <Link href={`/admin/complaint/ComplaintDetails/${techData?.role==="TECHNICIAN" ? row?.complaintId : row?._id}`}>
-          <VisibilityIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
+          <Link href={`/admin/verificationSubscriber/addVerifyDetails/${row?._id}`}>
+          <FactCheckIcon  className='ms-2 me-2' style={{ cursor: "pointer" }}/>
+
           </Link>
           {/* <DeleteIcon onClick={() => { handleUser(row?._id) }} style={{ cursor: "pointer" }} color='error' /> */}
         </div>,
@@ -146,7 +148,7 @@ const Verification = () => {
    
 
   const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
- console.log(srData);
+  
   return (
     <div>
         <DashboardHeader pagetitle={"Subcriber Verification"}
