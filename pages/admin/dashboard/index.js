@@ -107,6 +107,22 @@ const Dashboard = () => {
         </div>
       
         <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
+          <Link href={"/admin/verificationSubscriber"} className='text-decoration-none'>
+            <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
+              <h7 className='fw-bold'> UNVERIFIED SUBSCRIBER</h7>
+              <h7 className='fw-bold'>{data?.subscribedPlan}</h7>
+            </div>
+          </Link>
+        </div>
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
+          <Link href={"/admin/subscriber"} className='text-decoration-none'>
+            <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
+              <h7 className='fw-bold'>TOTAL SUBSCRIBER</h7>
+              <h7 className='fw-bold'>{data?.subscribedPlan}</h7>
+            </div>
+          </Link>
+        </div>
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
           <Link href={"/admin/user"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h7 className='fw-bold'>TOTAL USER</h7>
@@ -119,14 +135,6 @@ const Dashboard = () => {
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h7 className='fw-bold'>TOTAL TECHNICIAN</h7>
               <h7 className='fw-bold'>{data?.servicer}</h7>
-            </div>
-          </Link>
-        </div>
-        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
-          <Link href={"/admin/subscriber"} className='text-decoration-none'>
-            <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
-              <h7 className='fw-bold'>TOTAL SUBSCRIBER</h7>
-              <h7 className='fw-bold'>{data?.subscribedPlan}</h7>
             </div>
           </Link>
         </div>

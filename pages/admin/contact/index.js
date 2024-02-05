@@ -68,8 +68,8 @@ const Contact = () => {
       // },
       {
         name: "CREATED_AT",
-        selector: (row) => new Date(row?.createdAt)?.toLocaleDateString(),
-        sortable: true,  
+        selector: (row) => new Date(row?.createdAt)?.toLocaleString(),
+        sortable: true, width: "170px" 
 
       },
 

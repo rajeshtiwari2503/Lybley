@@ -109,7 +109,7 @@ const User = () => {
       setLoading(true)
       let response = await httpCommon.get("/getAllUsers");
       let { data } = response;
-      setData(data);
+      setData(data?.reverse());
       setLoading(false)
 
     } catch (err) {
@@ -118,10 +118,10 @@ const User = () => {
 
     }
   }
-  const rvsData = data?.reverse();
+  
 
 
-  const srData = rvsData?.map((item, i) => ({ ...item, i: i + 1 }))
+  const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
 
   return (
     <div className="body d-flex  py-lg-3 py-md-2">

@@ -31,7 +31,7 @@ const Mobile = (props) => {
                         <img src="https://crdms.images.consumerreports.org/prod/products/cr/models/407621-smartphones-apple-iphone-14-pro-10032754.png" className='card-img-top' width="600px" alt="" />
                         <p className='mt-4'>Effortlessly schedule services or seek assistance for projects through the Lybley app. Just inform us about the service you require, along with the location and preferred time, and experience the convenience firsthand. It's as simple as that.</p>
                         <div className="pb-4 text-center mt-4">
-                            <h6 className='fw-bold'><i> DOWNLOAD LYBLEY APP</i></h6>
+                            <h6 className='fw-bold'><i>COMMING SOON DOWNLOAD LYBLEY APP</i></h6>
                             <div>
                                 <img className='me-2 bg-dark rounded' src="https://d2js0267gg4oqb.cloudfront.net/static/images/home/playstore_trans.png?w=256&q=75" width="150px" alt="" />
                                 <img className='bg-dark rounded' src="https://d2js0267gg4oqb.cloudfront.net/static/images/home/appstore_trans.png?w=256&q=75" width="150px" alt="" />
