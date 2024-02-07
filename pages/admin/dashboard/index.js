@@ -22,7 +22,6 @@ const Dashboard = () => {
   }, [])
 
 
-
   const getDashboardDetails = async () => {
     try {
       let response = await httpCommon.get("/dashboardDetail")
@@ -52,7 +51,7 @@ const Dashboard = () => {
   const closeComplaints = user?.role==="ADMIN"  ? data?.complaintData?.filter((f1) => f1?.status === "CLOSE") : user?.role==="TECHNICIAN" ? techAssignComplaints?.filter((f1) => (f1?.technicianId === user?._id && f1?.status === "CLOSE"))  :data?.complaintData?.filter((f1) => (f1?.userId === user?._id && f1?.status === "CLOSE")) ;
   const totalComplaints = user?.role==="ADMIN"  ? data?.complaintData?.length  : user?.role==="TECHNICIAN" ? techAssignComplaints?.filter((f1) => (f1?.technicianId === user?._id  ))  : data?.complaintData?.filter((f1) => (f1?.userId === user?._id ));
 
-  
+   
   return (
     <div>
       <DashboardHeader pagetitle={"Dashboard"}
@@ -110,7 +109,15 @@ const Dashboard = () => {
           <Link href={"/admin/verificationSubscriber"} className='text-decoration-none'>
             <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
               <h7 className='fw-bold'> UNVERIFIED SUBSCRIBER</h7>
-              <h7 className='fw-bold'>{data?.subscribedPlan}</h7>
+              <h7 className='fw-bold'>{data?.unVerificationData}</h7>
+            </div>
+          </Link>
+        </div>
+        <div className="col-6 text-center col-md-3  col-lg-3  mt-5">
+          <Link href={"/admin/verificationSubscriber"} className='text-decoration-none'>
+            <div className="card shadow py-4" style={{ cursor: "pointer", backgroundColor: "#FFE4C4" }}>
+              <h7 className='fw-bold'>   VERIFIED SUBSCRIBER</h7>
+              <h7 className='fw-bold'>{data?.verificationData}</h7>
             </div>
           </Link>
         </div>

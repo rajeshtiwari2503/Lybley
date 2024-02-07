@@ -440,7 +440,7 @@ const Pricing = () => {
                                     }
 
                                 </div> */}
-                                <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
+                                <div className="col-12 col-md-4 col-lg-4 mt-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
                                     <div className='text-center'>our plan for protecting vital home systems</div>
 
@@ -520,7 +520,7 @@ const Pricing = () => {
                                     }
 
                                 </div>
-                                <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
+                                <div className="col-12 col-md-4 text-white col-lg-4 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
                                     <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
                                     <h6 className='text-center  pb-2 pt-3'>{homeShieldPlus?.planName}</h6>
                                     <div className='text-center'>Just the right coverage for extra busy homes</div>
@@ -600,7 +600,7 @@ const Pricing = () => {
                                     }
 
                                 </div>
-                                <div className="col-12 col-md-3 col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
+                                <div className="col-12 col-md-4 col-lg-4 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldProPlus?.planName}</h6>
                                     <div className='text-center'>Maximum coverage for major peace of mind</div>
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
@@ -696,7 +696,7 @@ const Pricing = () => {
                 </div>
                 <Breakdown />
                 <Faqs />
-                <PlanCoveredTable />
+                {/* <PlanCoveredTable /> */}
                 <Available />
             </div >
             <MyVerticallyCenteredModal

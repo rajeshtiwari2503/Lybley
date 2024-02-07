@@ -134,11 +134,11 @@ const AddVerificationDetails = () => {
     }
   }
 
-  const handleVerify = async (id) => {
+  const handleVerify = async (userId,planId) => {
     try {
       setLoading1(true);
 
-      let response = await httpCommon.post(`/updateVerificationDetails`, { userId: id })
+      let response = await httpCommon.post(`/updateVerificationDetails`, { userId: userId ,planId:planId})
       let { data } = response
       setLoading1(false);
     }
@@ -148,7 +148,7 @@ const AddVerificationDetails = () => {
 
     }
   }
-
+ 
   return (
     <>
       {loading ? <div className='d-flex justify-content-center align-items-center' > <Loader /> </div> :
@@ -229,7 +229,7 @@ const AddVerificationDetails = () => {
               </div>
               <div className='col-12 col-md-9  '>
                 <div className='d-flex justify-content-center mb-5'>
-                  <button className='btn btn-success' disabled={loading1} onClick={() => handleVerify(data1?.userId)} >Verify</button>
+                  <button className='btn btn-success' disabled={loading1} onClick={() => handleVerify(data1?.userId,data1?.planId)} >Verify</button>
                 </div>
               </div>
             </div>
