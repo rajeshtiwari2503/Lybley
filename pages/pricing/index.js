@@ -40,9 +40,12 @@ function MyVerticallyCenteredModal(props) {
             <div className='text-center pt-3 rounded' style={{ backgroundColor: "aliceblue" }}>
                 <Modal.Body className='p-4'>
                     {props.showMax ? <> <div className='fw-bold fs-4 text-center'>Max Limits Upgrade</div>
-                        <div className='mt-4'>Increased coverage limits for all major appliances and key systems.</div> </> :
+                        {/* <div className='mt-4'>Increased coverage limits for all major appliances and key systems.</div> </> : */}
+                        <div className='mt-4'>We regret to inform you that we are unable to offer direct brand-for-brand replacements for certain products.</div> </> :
                         <> <div className='fw-bold fs-4 text-center'>It's Covered upgrade</div>
-                            <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></>}
+                            {/* <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></> */}
+                            <div className='mt-4'>We're thrilled to offer you an exclusive opportunity to   your home appliances plan,to repair completely free of cost. </div></>
+                            }
                     <div className='mt-4'><button className='btn btn-primary rounded-pill' onClick={() => { props.setModalShow(false); props.setShowMax(false) }}><small>GOT IT</small></button></div>
 
                 </Modal.Body>
@@ -207,10 +210,10 @@ const Pricing = () => {
 
     const validationSchema = Yup.object().shape({
         location: Yup.string()
-            .required('Location is required')
-            .min(4, 'location must be at least 4 characters')
-            .max(40, 'location must not exceed 40 characters'),
-        unit: Yup.string().required("Unit number is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
+            .required('City is required')
+            .min(4, 'City must be at least 4 characters')
+            .max(40, 'City must not exceed 40 characters'),
+        unit: Yup.string().required("Number of houses is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
         homeSize: Yup.string().required("Home Size is required in sqft"),
         pincode: Yup.string()
             .required('Pincode is required')
@@ -287,11 +290,11 @@ const Pricing = () => {
 
                             <div className='row p-5'>
                                 <div className='col-12 col-md-8 col-lg-8 mt-4'>
-                                    <input type='text' className='form-control' placeholder='Enter Location' value={data?.city} name="location" {...register('location')} />
+                                    <input type='text' className='form-control' placeholder='Enter City' value={data?.city} name="location" {...register('location')} />
                                     <div className='text-danger'> {errors.location?.message}</div>
                                 </div>
                                 <div className='col-12 col-md-4 col-lg-4  mt-4'>
-                                    <input type='number' className='form-control' placeholder='Unit' value={data?.unit} name="unit" {...register('unit')} />
+                                    <input type='number' className='form-control' placeholder='Number of houses' value={data?.unit} name="unit" {...register('unit')} />
                                     <div className='text-danger'> {errors.unit?.message}</div>
                                 </div>
                                 <div className='col-12 col-md-8 col-lg-8  mt-4'>
@@ -442,7 +445,7 @@ const Pricing = () => {
                                 </div> */}
                                 <div className="col-12 col-md-4 col-lg-4 mt-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
-                                    <div className='text-center'>our plan for protecting vital home systems</div>
+                                    <div className='text-center'>Our plan for protecting vital home systems</div>
 
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                                         <div className='pt-3'>
@@ -456,16 +459,16 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
-                                        <CancelIcon /> <div className='ps-2 pe-2'>In Upgraded</div><InfoIcon onClick={() => setModalShow(true)} />
+                                        <CancelIcon /> <div className='ps-2 pe-2'> Upgraded</div><InfoIcon onClick={() => setModalShow(true)} />
                                     </div>
                                     <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
                                         <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" ,marginTop:"-1px"}}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -473,7 +476,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldBasic?.appliances?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -486,7 +489,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" ,marginTop:"-20px"}}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -494,7 +497,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldBasic?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -505,17 +508,17 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                        <Link style={{fontSize:"11px"}} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}> SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}> SELECT PLAN </div>
 
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3'  onClick={scrollToTop} style={{fontSize:"12px"}}> FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3'  onClick={scrollToTop} style={{fontSize:"11px"}}> FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
@@ -536,7 +539,7 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -545,7 +548,7 @@ const Pricing = () => {
                                     <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
                                         <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled' onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" ,marginTop:'-1px'}} className='bg-dark text-white'>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
                                             aria-controls="panel1a-content"
@@ -553,7 +556,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldPlus?.appliances?.map(a1 =>
                                                     a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
@@ -566,7 +569,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }} className='bg-dark text-white'>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none",marginTop:"-20px" }} className='bg-dark text-white'>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
                                             aria-controls="panel1a-content"
@@ -574,7 +577,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldPlus?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
@@ -585,17 +588,17 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                        <Link style={{fontSize:"11px"}} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}>SELECT PLAN </div>
 
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop}style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop}style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
@@ -615,7 +618,7 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex justify-content-start ms-3">
@@ -624,7 +627,7 @@ const Pricing = () => {
                                     <div className="mt-2 d-flex pb-3 justify-content-start ms-3">
                                         <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" }}>
+                                    <Accordion expanded={expanded === 'panel1'}  onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none",marginTop:"-1px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -632,7 +635,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldProPlus?.appliances?.map(a1 =>
                                                     (a1?.checked && <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>)
@@ -644,7 +647,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" }}>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none",marginTop:"-20px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -653,7 +656,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails>
+                                        <AccordionDetails style={{marginTop:"-20px"}}>
                                             <Typography>
                                                 {homeShieldProPlus?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -664,16 +667,16 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"}style={{fontSize:"12px",cursor:"pointer"}} >
+                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"}style={{fontSize:"11px",cursor:"pointer"}} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))} style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}>SELECT PLAN </div>
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{fontSize:"12px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 

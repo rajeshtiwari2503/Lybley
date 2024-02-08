@@ -99,8 +99,8 @@ const Search = () => {
                 <SearchIcon style={{ color: "white", cursor: "pointer" }} className='me-md-2' fontSize='large' onClick={handleSearch} />
 
               </div>
-              {showUnit ? <div className={`${style.unitBox} mt-md-0 text-white  mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
-                <input style={{ width: "80px" }} name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Unit" />
+              {showUnit ? <div style={{ width: "170px" }} className={`${style.unitBox} mt-md-0 text-white  mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
+                <input   name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Number of houses" />
               </div> : " "}
               <div className={`${!showUnit ? "ms-4 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
                 <button style={{ border: "1px solid white" }} className='btn text-white  fw-bold rounded-pill p-3' onClick={handlePrice}><span>GET QUOTE</span></button>
