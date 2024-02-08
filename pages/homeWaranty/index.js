@@ -9,7 +9,7 @@ const Waranty = () => {
                     <div className='p-5 shadowCard '>
                     <div className='fw-bold fs-1 text-center'> 3% </div>
                     <div>Know your costs.</div>
-                    <div>Each year, people spend about 3% of their home's value on untimely repairs or replacements. Super's subscription brings predictability to your budgeting.</div>
+                    <div>Each year, people spend about 3% of their home's value on untimely repairs or replacements. Lybley's subscription brings predictability to your budgeting.</div>
                 </div>
                 </div>
                 <div className='col-12 col-md-4 mt col-lg-4 mt-md-0 mt-lg-0 mt-4 '>
