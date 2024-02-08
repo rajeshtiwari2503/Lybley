@@ -15,6 +15,7 @@ const AddVerificationDetails = () => {
   const [loading1, setLoading1] = useState(false)
   const [applianceName, setApplianceName] = useState("")
   const [subcrData, setSubsData] = useState("")
+  const [details, setDetails] = useState(false)
 
 
 
@@ -22,7 +23,7 @@ const AddVerificationDetails = () => {
     getVerificationDetails()
     getSubscriptionDetailsById()
 
-  }, [id, data1?._id === id])
+  }, [id ,details])
 
   const getVerificationDetails = async () => {
     try {
@@ -31,7 +32,7 @@ const AddVerificationDetails = () => {
       let { data } = response
       setData(data)
       const filterAppliaces = data && data?.planInfo?.appliances?.find((f1) => f1?.checked === true)
-      setCoverValue(filterAppliaces?.value)
+      // setCoverValue(filterAppliaces?.value)
 
       setLoading(false)
     }
@@ -149,6 +150,10 @@ const AddVerificationDetails = () => {
     }
   }
  
+  const handleCover=(value)=>{
+    setCoverValue(value)
+    setDetails(true)
+  }
   return (
     <>
       {loading ? <div className='d-flex justify-content-center align-items-center' > <Loader /> </div> :
@@ -194,7 +199,7 @@ const AddVerificationDetails = () => {
                     <div style={{ cursor: "pointer" }}
                       className={`d-flex justify-content-center p-2 rounded-pill border ${coverValue === item?.value ? "bg-black text-white active" : ""}`}
                     >
-                      <div className='fw-bold' onClick={() => setCoverValue(item?.value)}>{item?.value}</div>
+                      <div className='fw-bold' onClick={() =>handleCover(item?.value)} >{item?.value}</div>
                     </div>
                   </div>
                 )}
