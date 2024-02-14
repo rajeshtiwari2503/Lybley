@@ -25,16 +25,18 @@ const Plan = () => {
                         </div>
                     </div>
                     <div className={`shadow bg-body p-2 mt-5 mt-md-0 ${style.popUp}`}>
-                        <h5 className="text-center text-white mt-4 fw-bold">Saving Estimator</h5>
+                        <h1 className="text-center text-white mt-4 fw-bold">Saving Estimator</h1>
                         <div className="row text-white mt-4 ">
-                            <div className="col-12 col-md-8 col-lg-8">
-                                <h1 className="text-center">Save an average of 3 Lacs</h1>
-                                <h1 className="text-center">with a Lybley Signature plan.</h1></div>
+                            <div className="col-12   md-pb-0 pb-4">
+                                <h1 className="text-center">Save an average of </h1>
+                                <h1 className="text-center">3 Lacs</h1>
+                                {/* <h1 className="text-center">with a Lybley Signature plan.</h1> */}
+                                </div>
 
                             <div className="col-12 col-md-4 col-lg-4"></div>
                         </div>
-                        <div className="container d-none d-md-block d-lg-block">
-                            <div className="row text-white mt-5  m-0">
+                        <div className="container d-none d-md-block d-lg-block ">
+                            <div className="row text-white mt-5   m-0">
                                 <div className="col-12 d-flex justify-content-center">
                                     <div className={`${style.upArrow} text-center`}>
 
