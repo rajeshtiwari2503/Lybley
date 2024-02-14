@@ -124,20 +124,20 @@ const Plan = () => {
                                     </div>
                                 </div>
                                 <div style={{ marginTop: "-100px" }} className="col-12 d-flex justify-content-center" >
-                                    <img src="Ac .png" width="90px" height="" alt="" />
+                                    <img src="ac.svg" width="70px" height="" alt="" />
 
                                 </div>
                                 <div className="col-6 text-end  " style={{ marginTop: "-5px" }}>
                                    
                                 <div className="bg-white text-center pt-4 pb-4">
-                                    <img src="4526667.png" width="130px" height="130px" alt="..." />
+                                    <img src="washingM.svg" width="130px" height="70px" alt="..." />
                                 </div>
                                 </div>
 
                                 <div className="col-6  " style={{ marginLeft: "-21px", marginTop: "-5px" }}>
                                 <div className="bg-white   text-center pt-4 pb-4">
                                     
-                                    <img src= "2486313.png" width="130px" height="130px" alt="..." />
+                                    <img src= "fridge.svg" width="130px" height="70px" alt="..." />
                                 </div>
                                 </div>
 
@@ -145,14 +145,14 @@ const Plan = () => {
                             <div className="row d-flex justify-content-center  " style={{ marginTop: "3px" }}>
                                 <div className="col-6 text-end  ">
                                     <div className="bg-white text-center pt-4 pb-4">
-                                        <img src="Microwave.png" width="130px" height="130px" alt="..." />
+                                        <img src="microwave.svg" width="130px" height="70px" alt="..." />
 
                                     </div>
                                 </div>
                                 <div className="col-6 text-start  " style={{ marginLeft: "-21px" }}>
-                                    <div className="bg-white text-center pt-4 pb-4">
+                                    <div className="bg-white text-center   pb-2" style={{paddingTop:"10px"}}>
 
-                                        <img src="Geyser .png" width="130px" height="130px" alt="..." />
+                                        <img src="6749976.png" width="130px" height="100px" alt="..." />
 
                                     </div>
                                 </div>
