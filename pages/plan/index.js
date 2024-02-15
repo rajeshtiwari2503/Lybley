@@ -44,7 +44,7 @@ const Plan = () => {
                                 </div>
 
                                 <div style={{ marginTop: "-100px" }} className="col-12 d-flex justify-content-center" >
-                                    <img className="card-img-top" style={{ width: "150px", height: "120px", paddingBottom: "20px" }} src="Ac .png" alt="" />
+                                    <img className="card-img-top" style={{ width: "150px", height: "120px", paddingBottom: "20px" }} src="ac.svg" alt="" />
 
                                 </div>
                                 <div style={{ marginTop: "-140px", paddingLeft: "620px" }} className="col-12 ">
@@ -70,13 +70,13 @@ const Plan = () => {
                                     </div>
                                     <div className="bg-white p-3">
 
-                                        <img src="4526667.png" width="170px" height="120px" alt="..." />
+                                        <img src="washingM.svg" width="170px" height="120px" alt="..." />
                                     </div>
                                 </div>
 
                                 <div style={{ marginTop: "-26px", marginLeft: "-6px" }} className="col-12 col-md-6    ps-1   d-flex justify-content-start align-items-center col-lg-6">
                                     <div className="bg-white p-3">
-                                        <img src="2486313.png" width="170px" height="120px" alt="..." />
+                                        <img src="fridge.svg" width="170px" height="120px" alt="..." />
                                     </div>
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Refrigerator</h5>
@@ -99,13 +99,13 @@ const Plan = () => {
 
                                     </div>
                                     <div className="bg-white p-3">
-                                        <img src="Microwave.png" width="170px" height="120px" alt="..." />
+                                        <img src="microwave.svg" width="170px" height="120px" alt="..." />
                                     </div>
                                 </div>
                                 <div style={{ marginLeft: "-14px" }} className="col-12 col-md-6   mt-4 mt-md-0 mt-lg-0 d-flex justify-content-start align-items-center col-lg-6">
                                     <div className="bg-white p-3">
 
-                                        <img src="Geyser .png" width="170px" height="120px" alt="..." />
+                                        <img src="6749976.png" width="170px" height="120px" alt="..." />
                                     </div>
                                     <div className="d-flex justify-content-center px-3 align-items-center flex-column">
                                         <h5>Geyser</h5>
