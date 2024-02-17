@@ -96,7 +96,7 @@ const Header = () => {
                 <Link href={"/"} className={router.pathname === "/" ? 'text-decoration-none selectNav fw-bold p-md-2 p-1 ' : 'text-decoration-none hover fw-bold p-md-2 p-1 text-white'} > <small className='hover headerNavFont fw-bold p-md-2 p-1' style={{ fontSize: "11px" }}>HOMEOWNER</small></Link>
 
                 <Link href={"/servicer"} className={router.pathname === "/servicer" ? 'text-decoration-none selectNav fw-bold p-md-2 p-1 ' : 'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='hover headerNavFont fw-bold p-md-2 p-1' style={{ fontSize: "11px" }}>SERVICER</small></Link>
-                <Link href={"/tips"} className={router.pathname === "/tips" ? 'text-decoration-none selectNav fw-bold p-md-2 p-1 ' : 'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='headerNavFont' style={{ fontSize: "11px" }}>TIPS</small></Link>
+                {/* <Link href={"/tips"} className={router.pathname === "/tips" ? 'text-decoration-none selectNav fw-bold p-md-2 p-1 ' : 'text-decoration-none hover fw-bold p-md-2 text-white p-1'} > <small className='headerNavFont' style={{ fontSize: "11px" }}>TIPS</small></Link> */}
               </div>
             </div>
             <div style={{ height: "40px" }} className="col-12   d-md-none d-block">
@@ -106,7 +106,7 @@ const Header = () => {
 
                 <Link href={"/servicer"} className={router.pathname === "/servicer" ? 'text-decoration-none selectNav fw-bold    p-2' : 'text-decoration-none hover fw-bold   text-white  p-2 '} > <small className='hover headerNavFont fw-bold p-md-2   p-1'>SERVICER</small></Link>
 
-                <Link href={"/tips"} className={router.pathname === "/tips" ? 'text-decoration-none selectNav fw-bold   p-2' : 'text-decoration-none hover fw-bold   text-white   p-2'} > <small className='headerNavFont  '>TIPS</small></Link>
+                {/* <Link href={"/tips"} className={router.pathname === "/tips" ? 'text-decoration-none selectNav fw-bold   p-2' : 'text-decoration-none hover fw-bold   text-white   p-2'} > <small className='headerNavFont  '>TIPS</small></Link> */}
 
               </div>
             </div>
@@ -292,11 +292,11 @@ const Header = () => {
                       <small>We're a technology company that offer subscribers care for the home</small> <br />
                       <Link href="about" className='text-decoration-none'><small onClick={() => setOpen1(false)}>Read More</small></Link>
                     </div>
-                    <div className="col-6">
+                    {/* <div className="col-6">
                       <h6 className='p-0 m-0'>Tips</h6>
                       <small>Top winter pruning tips for healthy trees and shrubs</small> <br />
                       <Link href="tips" className='text-decoration-none'><small onClick={() => setOpen1(false)}>Read More</small></Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="row mt-2">
                     <div className="col-6">
