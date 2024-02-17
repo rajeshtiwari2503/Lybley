@@ -8,7 +8,7 @@ const Breakdown = () => {
                         <div className="row align-items-center">
                             <div className="col-12 col-md-6 col-lg-6">
                                 {/* <img src="https://static.vecteezy.com/system/resources/previews/023/986/318/original/an-open-gift-box-containing-photo-frames-and-graduation-caps-perfect-for-congratulation-png.png" className='card-img-top' alt="..." /> */}
-                               <div style={{width:"400px"  }}>  <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXARaOCorl57-s-rAczclD9SJ-v3VIvd_Zag&usqp=CAU" className='card-img-top' alt="..." />
+                               <div  className=' me-5'>  <img   src="Home SVG.svg" className='card-img-top' alt="..." />
                                </div>  
                                 </div>
                             <div className="col-12 col-md-6 d-flex justify-content-center flex-column col-lg-6">
