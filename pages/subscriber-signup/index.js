@@ -50,7 +50,7 @@ const SubscriberSignup = () => {
       let { data } = response;
 
       const options = {
-        key: "rzp_live_yEWZ902y0STtSb", // Enter the Key ID generated from the Dashboard
+        key: "rzp_live_XyovAK0BmNvrWI", // Enter the Key ID generated from the Dashboard
         amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         currency: "INR",
         name: "Lybley Home Appliances", //your business name
