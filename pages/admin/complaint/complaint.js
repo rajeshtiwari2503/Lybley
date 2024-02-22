@@ -212,38 +212,15 @@ const MyComplaints = () => {
     }
   }
   
-  const ddd = technicians.filter(t1 => 
+  const ddd = technicians?.filter(t1 => 
     (t1?.businessAddress?.toLowerCase()?.includes(location?.toLowerCase()) ||
-     t1?.businessPincode === location)
+    t1?.businessPincode?.split(',').includes(location))
 );
- 
-let technicians1 = ddd.length > 0 && (location === ddd[0]?.businessAddress || pincode === +ddd[0]?.businessPincode) 
+  
+let technicians1 = ddd?.length > 0 && (location === ddd[0]?.businessAddress ||  +ddd[0]?.businessPincode?.split(',')?.includes(location)) 
     ? ddd
     : technicians;
  
-// const ddd2 = technicians?.filter(t1 =>
-//   (t1?.businessAddress?.toLowerCase()?.includes(location?.toLowerCase()) ||
-//   t1?.businessPincode)
-// );
-// console.log(ddd2);
-
-// const pincodeString = ddd2[0]?.businessPincode;
-// console.log(pincodeString);
-
-// const pincodes = pincodeString?.split(',').map(code => parseInt(code.trim(), 10));
-// console.log(pincodes);
-
-// const ddd = technicians?.filter(t1 =>
-//   (t1?.businessAddress?.toLowerCase()?.includes(location?.toLowerCase()) ||
-//   pincodes?.includes(t1?.businessPincode))
-// );
-// console.log(ddd);
-
-
-// let technicians1 = ddd?.length > 0 && (location === ddd[0]?.businessAddress || pincodes?.includes(+ddd[0]?.businessPincode))
-//     ? ddd
-//     : technicians;
-// console.log(technicians1);
 
   const srData = data?.map((item, i) => ({ ...item, i: i + 1 }))
 
