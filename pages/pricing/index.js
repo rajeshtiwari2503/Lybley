@@ -213,7 +213,7 @@ const Pricing = () => {
             .required('City is required')
             .min(4, 'City must be at least 4 characters')
             .max(40, 'City must not exceed 40 characters'),
-        unit: Yup.string().required("Number of houses is required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
+        unit: Yup.string().required("Number of House years old required").min(1, "Min 1 digit is required").max(10, "Max 10 digit is required"),
         homeSize: Yup.string().required("Home Size is required in sqft"),
         pincode: Yup.string()
             .required('Pincode is required')
@@ -289,19 +289,19 @@ const Pricing = () => {
                         <div className='col-12 col-md-6 col-lg-6 shadow rounded' style={{ backgroundColor: "#5396B9" }}>
 
                             <div className='row p-5'>
-                                <div className='col-12 col-md-8 col-lg-8 mt-4'>
+                                <div className='col-12 col-md-7 col-lg-7 mt-4'>
                                     <input type='text' className='form-control' placeholder='Enter City' value={data?.city} name="location" {...register('location')} />
                                     <div className='text-danger'> {errors.location?.message}</div>
                                 </div>
-                                <div className='col-12 col-md-4 col-lg-4  mt-4'>
-                                    <input type='number' className='form-control' placeholder='Number of houses' value={data?.unit} name="unit" {...register('unit')} />
+                                <div className='col-12 col-md-5 col-lg-5  mt-4'>
+                                    <input type='number' className='form-control' placeholder='House years old' value={data?.unit} name="unit" {...register('unit')} />
                                     <div className='text-danger'> {errors.unit?.message}</div>
                                 </div>
-                                <div className='col-12 col-md-8 col-lg-8  mt-4'>
+                                <div className='col-12 col-md-7 col-lg-7  mt-4'>
                                     <input type='number' className='form-control' placeholder='Home Size in sqft' name="homeSize"  {...register('homeSize')} />
                                     <div className='text-danger'> {errors.homeSize?.message}</div>
                                 </div>
-                                <div className='col-12 col-md-4 col-lg-4 mt-4'>
+                                <div className='col-12 col-md-7 col-lg-5 mt-4'>
                                     <input type='number' className='form-control' placeholder='Pincode' name="pincode"  {...register('pincode')} />
                                     <div className='text-danger'> {errors.pincode?.message}</div>
                                 </div>
@@ -349,14 +349,14 @@ const Pricing = () => {
                         </div>
                     }
                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ? "" :
-                        <div className='row mt-2'>
+                        <div className='row mt-2 '>
                             <div className="col-md-3 col-lg-3 col-12"></div>
                             <div className="col-md-6 col-lg-6 col-12 text-center">
                                 <small>By clicking SHOW PRICES, you consent to receiving communication from Lybley Home Inc. through calls, emails, and/or text messages, and acknowledge your acceptance of our Terms and Conditions & Privacy Policy. Standard messaging and data rates may apply.</small>
                                 <div className="col-md-3 col-lg-3 col-12"></div>
                             </div>
                         </div>}
-                    <div className="row mt-5">
+                    <div className="row mt-5  pt-5 pb-5 rounded-4" style={{backgroundColor:"#c8d8e4"}}>
                         <div className="col-12 col-md-1 col-lg-1"></div>
                         <div className="col-12 col-md-10 col-lg-10">
                             <div className="row justify-content-center">
