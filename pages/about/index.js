@@ -8,16 +8,79 @@ const About = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center p-5">
-                            <h2 className='fw-bold'>We dedicate each day to changing the home maintenance and repair industry one home at a time</h2>
+                            <div>
+                                <h3 className='fw-bold'>Welcome to Lybley Home Warranty - Your Shield of Home Protection</h3>
+                                <h4 className='fw-bold mt-3'>At Lybley, we believe that every home should be a haven of peace and security. That's why we're dedicated to providing comprehensive home warranty plans designed to safeguard your home and elevate your living experience.</h4>
+                            </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-6 px-5 pt-md-5 pt-lg-5 pt-2">
                             <img src="https://www.pngall.com/wp-content/uploads/8/Woman-PNG-High-Quality-Image.png" className='card-img-top' alt="" />
                         </div>
+
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="row">
+                    <div className='col-12 ps-5 pe-5 pt-5 pb-4'>
+                        <div className='fw-bold'>
+                            Who We Are:
+                        </div>
+                        <div className='mt-3'>
+                            Lybley Home Warranty is a trusted name in the industry, committed to redefining the way homeowners approach protection for their most valuable asset—their home. With a focus on reliability, transparency, and unparalleled service, we have become a go-to choice for those seeking peace of mind in their homeownership journey.
+                        </div>
+                    </div>
+                    <div className='col-12 ps-5 pe-5'>
+                        <div className='fw-bold'>
+                            Our Mission:
+                        </div>
+                        <div className='mt-3'>
+                            Our mission is simple yet powerful: to empower homeowners with the assurance that their homes are well-protected. We aim to be the trusted partner on every homeowner's side, offering comprehensive coverage and a network of skilled professionals to ensure swift resolutions to unexpected issues.
+                        </div>
+                    </div>
+                    <div className='col-12  ps-5 pe-5 pt-4  '>
+                        <div className='fw-bold'>
+                            <h3>  What Sets Us Apart:</h3>
+                        </div>
+                        <div className='mt-3'>
+                            <span className='fw-bold'>Comprehensive Coverage:</span>  From essential appliances to critical home systems, our plans are designed to cover a wide range of components, providing you with holistic protection.
+                        </div>
+                        <div className='mt-3'>
+                            <span className='fw-bold'>Prompt Service:</span>   When the unexpected happens, we're here for you. Our dedicated team ensures prompt and efficient service, minimizing disruptions to your daily life.
+                        </div>
+                        <div className='mt-3'>
+                            <span className='fw-bold'>Trusted Network:</span>   We take pride in our partnerships with skilled technicians and service providers, creating a network you can rely on for quality repairs and maintenance.
+                            <div className='mt-3'>
+                                <span className='fw-bold'>Tailored Plans:</span>   We understand that every home is unique. That's why our plans are flexible, allowing you to choose coverage that aligns with your specific needs and lifestyle.
+
+                            </div>
+                            <div className='col-12   mt-3'>
+                                <div className='fw-bold'>
+                                    Our Commitment:
+                                </div>
+                                <div className='mt-3'>
+                                    At Lybley, we are committed to transparency, integrity, and exceptional customer service. We believe in building lasting relationships with our customers, ensuring that they not only feel secure in their homes but also confident in their choice of Lybley as their home warranty provider.
+                                </div>
+                            </div>
+                            <div className='col-12   mt-3'>
+                                <div className='fw-bold'>
+                                    Join the Lybley Family:
+                                </div>
+                                <div className='mt-3'>
+                                    Discover the peace of mind that comes with Lybley Home Warranty. Join thousands of homeowners who have chosen Lybley as their trusted partner in home protection. Let us be the shield for your home, so you can focus on creating cherished moments within its walls.
+                                </div>
+                            </div>
+                            <div className='col-12   mt-5'>
+                                <div className='fw-bold'>
+                                    Welcome to Lybley Home Warranty—where protection meets peace of mind.
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     <div className="col-12 col-md-6 p-5 col-lg-6">
                         <div>
                             <small>
@@ -81,7 +144,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <h6 className='text-primary mt-4 text-center'><small>OUR PEOPLE</small></h6>
+            {/* <h6 className='text-primary mt-4 text-center'><small>OUR PEOPLE</small></h6>
             <div className="container mt-5">
                 <div className='row'  >
 
@@ -134,16 +197,32 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='row p-4' style={{ backgroundColor: "#c8d8e4", }}>
-                <div class="col-12 col-md-3 col-lg-3"></div>
-                <div class="col-12 col-md-6 col-lg-6">
+            </div> */}
+            <div className='  ' style={{ backgroundColor: "#c8d8e4", }}>
+                <div className=' container'  >
+                    <div className='row p-4'>
+                        <div class="col-12 col-md-3 col-lg-3"></div>
+                        <div class="col-12 col-md-6 col-lg-6">
 
-                    <h6 className='text-primary mt-4 text-center'><small>LOCATIONS</small></h6>
-                    <h3 className='fw-bold text-center py-3'>Where you can find us</h3>
-                    <div className='text-center'>Lybley headquarters are in San Francisco, California. The company has additional offices in Phoenix, Arizona, and Belgrade, Serbia. We currently offer services in 14 regions across eight states.</div>
+                            <h6 className='text-primary mt-4 text-center'><small>LOCATIONS</small></h6>
+                            <h3 className='fw-bold text-center py-3'>Where you can find us</h3>
+                            <div className='text-center'>   A-9, A Block, Sector 59, Noida, Uttar Pradesh 201309</div>
+                        </div>
+                        <div className="rounded-xl mt-4 mb-4  ">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.783672779409!2d77.36534197457178!3d28.606265885274766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef5e6156c623%3A0xfc1292095a4933f9!2sLYBLEY!5e0!3m2!1sen!2sin!4v1704344578953!5m2!1sen!2sin"
+                                height="360"
+                                width={"100%"}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                style={{ borderRadius: "20px" }}
+                            ></iframe>
+
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3"></div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-3 col-lg-3"></div>
             </div>
         </div>
     )

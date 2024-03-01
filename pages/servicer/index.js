@@ -15,13 +15,13 @@ const Servicer = () => {
             <div>
                 <div className={`${style.whatHead}`}>
                     <div className='align-items-center text-center'>
-                        <div className={`${style.whatText} pt-md-0 pt-3 text-white`}  >
+                        <div className={`${style.whatText} pt-md-0 pt-3 mb-5 text-white`}  >
                             WHAT A TEAM
                         </div>
                         <img className='img-card-top servicerImgWdth1' src="/technician.png" alt="" /> 
                         <div>
                         
-                    <Link href={"/servicer-signup"}>     <button className='btn btn-primary mt-4'>GET STARTED</button></Link>
+                    <Link href={"/servicer-signup"}>     <button className='btn btn-primary text-center '>GET STARTED</button></Link>
                         </div>
                     </div>
                 </div>

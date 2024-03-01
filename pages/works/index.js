@@ -41,15 +41,17 @@ const Works = (props) => {
             <div className='text-center pb-5'><button className='btn rounded-pill btn-primary fw-bold'><small>LEARN MORE</small></button></div>
           </>
           :
-          <> <div className="row">
-            <div className="col-12  col-md-6 col-lg-6 ">
-              <div className='text-center'>
+          <> <div className="row align-items-center">
+            <div className="col-12  col-md-6 col-lg-6 d-flex align-items-center">
+              <div className='text-center mt-md-5'>
                 {/* <img src="https://www.nicepng.com/png/detail/182-1827086_home-appliances-transparent-images-panasonic-ne-1054f-1000w.png" alt="..." className='img-fluid' width="400px" height="400px" /> */}
-                <img src="/appliances.png" alt="..." className='img-fluid' width="400px" height="400px" />
+                {/* <img src="/appliances.png" alt="..." className='img-fluid' width="400px" height="400px" /> */}
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/NQN8S5Ro2ZQ?si=ZSWjSdsNE1SNA0uS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br />
+
               </div>
             </div>
             <div className="col-12 mt-4 mt-md-0 mt-lg-0 d-flex justify-content-center flex-column col-md-6 col-lg-6">
-              <div className='fs-2 fw-bold mb-4'>How It Works</div>
+              <div className='fs-2 fw-bold mt-5 mb-4'>How It Works</div>
               <p>Lybley offers a subscription-based home care solution that encompasses appliance and system repair or replacement for our members. Simply choose the plan that suits you, complete the registration, and experience peace of mind as we take over from that point onward. Dealing with unexpected breakdowns can be hassle-free with us, ensuring you don't have to deal with unnecessary complications during such times.</p>
             </div>
           </div>
