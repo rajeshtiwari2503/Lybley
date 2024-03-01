@@ -459,7 +459,7 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -539,7 +539,7 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -618,7 +618,7 @@ const Pricing = () => {
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex justify-content-start ms-3">
