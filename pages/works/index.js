@@ -42,8 +42,8 @@ const Works = (props) => {
           </>
           :
           <> <div className="row align-items-center">
-            <div className="col-12  col-md-6 col-lg-6 d-flex align-items-center">
-              <div className='text-center mt-md-5'>
+            <div className="col-12  col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+              <div className='d-flex justify-content-center  mt-5'>
                 {/* <img src="https://www.nicepng.com/png/detail/182-1827086_home-appliances-transparent-images-panasonic-ne-1054f-1000w.png" alt="..." className='img-fluid' width="400px" height="400px" /> */}
                 {/* <img src="/appliances.png" alt="..." className='img-fluid' width="400px" height="400px" /> */}
                 <iframe width="300" height="200" src="https://www.youtube.com/embed/NQN8S5Ro2ZQ?si=ZSWjSdsNE1SNA0uS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br />
