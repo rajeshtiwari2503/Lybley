@@ -28,8 +28,8 @@ const Plan = () => {
                         <h1 className="text-center text-white mt-4 fw-bold">Saving Estimator</h1>
                         <div className="row text-white mt-4 ">
                             <div className="col-12   md-pb-0 pb-4">
-                                <h1 className="text-center">Save an average of </h1>
-                                <h1 className="text-center">3 Lacs</h1>
+                                <h3 className="text-center">Save an average of </h3>
+                                <h3 className="text-center">3 Lakh</h3>
                                 {/* <h1 className="text-center">with a Lybley Signature plan.</h1> */}
                                 </div>
 

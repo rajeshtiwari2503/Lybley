@@ -87,23 +87,26 @@ const Search = () => {
   return (
     <>
       <div className='d-none d-md-block'>
+          
+        <div className='d-flex justify-content-center align-items-center'>
         <div className={`${style.searchBody}`}>
 
           <div className='container'>
-            <div style={{ width: "100%" }} className="  d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
-
-              <div className={`${style.searchBox} ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
+            <div style={{  marginTop:"640px",background:"white",borderRadius:"10px",height:"250px" }} className="  d-flex align-items-center justify-content-center row py-3 py-md-0 py-lg-0 ">
+              <div style={{textAlign:"center" ,fontWeight:"bold",fontSize:"35px"}}>Hassle-Free Home Care with Lybley Home Warranty</div>
+              <div style={{textAlign:"center" ,fontWeight:"bold",marginTop:"-70px"}}>Comprehensive Appliance and System Repair Solutions</div>
+              <div style={{marginTop:"-70px"}} className={`${style.searchBox} ms-4 ms-md-0 shadow col-12 col-md-9 col-lg-9 text-center`}>
 
                 <input className='fw-bold' onChange={(e) => setSearch(e.currentTarget.value)} name='search' type="text" placeholder="City" onKeyPress={handleEnter} />
 
                 <SearchIcon style={{ color: "white", cursor: "pointer" }} className='me-md-2' fontSize='large' onClick={handleSearch} />
 
               </div>
-              {showUnit ? <div style={{ width: "170px" }} className={`${style.unitBox} mt-md-0 text-white  mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
-                <input   name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Number of houses" />
-              </div> : " "}
-              <div className={`${!showUnit ? "ms-4 mt-md-0 mt-2" : ""} col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
-                <button style={{ border: "1px solid white" }} className='btn text-white  fw-bold rounded-pill p-3' onClick={handlePrice}><span>GET QUOTE</span></button>
+              {/* {showUnit ? <div style={{ width: "200px",marginBottom:"70px" }} className={`${style.unitBox} mt-md-0 text-white  mt-2 shadow mx-2 col-12 col-md-1 col-lg-1`}>
+                <input     name='unit' onChange={(e) => setUnit(e.currentTarget.value)} type="number" placeholder="Number of houses" />
+              </div> : " "} */}
+              <div className={`${!showUnit ? "ms-4 mt-md-0 mt-2" : ""} ms-5 col-12 col-md-2  col-lg-2 m-0 p-0 text-md-start text-lg-start text-center`}>
+                <button style={{ border: "1px solid black",marginTop:"-70px" }} className='btn text-black  fw-bold rounded-pill p-3' onClick={handlePrice}><span>GET QUOTE</span></button>
               </div>
              
             </div>
@@ -119,6 +122,7 @@ const Search = () => {
             : ""
           } */}
         </div>
+      </div>
       </div>
       <div className={`${style.searchBody} d-block d-md-none `}>
         <div className='container'>

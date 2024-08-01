@@ -30,107 +30,111 @@ const Sidebar = () => {
     }
     const currentPath = router.pathname;
 
-    const [user,setUser]=useState("");
+    const [user, setUser] = useState("");
 
     useEffect(() => {
-      if (typeof window !== 'undefined') {
-          const user1=localStorage.getItem("admin");
-          const data=JSON?.parse(user1)
-          setUser(data);        
-      }
+        if (typeof window !== 'undefined') {
+            const user1 = localStorage.getItem("admin");
+            const data = JSON?.parse(user1)
+            setUser(data);
+        }
 
-    },[  ]);
-  
+    }, []);
+
     return (
         <div>
-            <div   id="wrapper">
+            <div id="wrapper">
 
                 <aside id="sidebar-wrapper" >-
-                    <div className="sidebar-brand">
-                        <h2>LY3LEY</h2>
-
+                    <div className="sidebar-brand ps-3 pe-3 d-flex justify-content-between justify-content-md-center  align-items-center">
+                        <h2 className=' '>LY3LEY</h2>
+                        <div style={{height:"30px"}} className='d-block d-md-none ms-auto' onClick={handleSideBar}>
+                            
+                                <span className="fs-2 font-bold text-white">X</span>
+                            
+                        </div>
                     </div>
-                    <ul className="sidebar-nav mt-4">
-                    {(user?.role==="USER"  || user?.role==="ADMIN" || user?.role==="TECHNICIAN" )?
-                        <li className={currentPath.startsWith("/admin/dashboard") ? "active" : ""}>
+                    <ul className="sidebar-nav mt-4" onClick={handleSideBar}>
+                        {(user?.role === "USER" || user?.role === "ADMIN" || user?.role === "TECHNICIAN") ?
+                            <li className={currentPath.startsWith("/admin/dashboard") ? "active" : ""}>
 
-                            <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <DashboardIcon />
-                                Dashboard
-                            </Link>
-                        </li>
-                        : ""}
-                       {  user?.role==="ADMIN"  ?
-                        <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
-                            <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <StoreIcon />
-                                Plans
-                            </Link>
-                        </li>
-                        : ""}
-                            {user?.role==="ADMIN" ? 
-                        <li className={currentPath.startsWith("/admin/user") ? "active" : ""}>
+                                <Link href="/admin/dashboard" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <DashboardIcon />
+                                    Dashboard
+                                </Link>
+                            </li>
+                            : ""}
+                        {user?.role === "ADMIN" ?
+                            <li className={currentPath.startsWith("/admin/plan") ? "active" : ""}>
+                                <Link href="/admin/plan" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <StoreIcon />
+                                    Plans
+                                </Link>
+                            </li>
+                            : ""}
+                        {user?.role === "ADMIN" ?
+                            <li className={currentPath.startsWith("/admin/user") ? "active" : ""}>
 
-                            <Link href="/admin/user" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <PeopleIcon />
-                                User
-                            </Link>
-                        </li>
-                        : ""}
-                        {user?.role==="ADMIN" ? 
-                        <li className={currentPath.startsWith("/admin/technician") ? "active" : ""}>
+                                <Link href="/admin/user" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <PeopleIcon />
+                                    User
+                                </Link>
+                            </li>
+                            : ""}
+                        {user?.role === "ADMIN" ?
+                            <li className={currentPath.startsWith("/admin/technician") ? "active" : ""}>
 
-                            <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <ConstructionIcon />
-                                Technician
-                            </Link>
-                        </li>
-                        : ""}
-                        {(user?.role==="USER"  || user?.role==="ADMIN" )?
-                        <li className={currentPath.startsWith("/admin/subscriber") ? "active" : ""}>
+                                <Link href="/admin/technician" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <ConstructionIcon />
+                                    Technician
+                                </Link>
+                            </li>
+                            : ""}
+                        {(user?.role === "USER" || user?.role === "ADMIN") ?
+                            <li className={currentPath.startsWith("/admin/subscriber") ? "active" : ""}>
 
-                            <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <ShoppingBagIcon />
-                                Subscribed Plans
-                            </Link>
-                        </li>
-                        : ""}
-                          {(user?.role==="TECHNICIAN"  || user?.role==="ADMIN" )?
-                        <li className={currentPath.startsWith("/admin/verificationSubscriber") ? "active" : ""}>
+                                <Link href="/admin/subscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <ShoppingBagIcon />
+                                    Subscribed Plans
+                                </Link>
+                            </li>
+                            : ""}
+                        {(user?.role === "TECHNICIAN" || user?.role === "ADMIN") ?
+                            <li className={currentPath.startsWith("/admin/verificationSubscriber") ? "active" : ""}>
 
-                            <Link href="/admin/verificationSubscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <FactCheckIcon />
-                                Subscriber Verification
-                            </Link>
-                        </li>
-                        : ""}
-                        {(user?.role==="USER"  || user?.role==="ADMIN" || user?.role==="TECHNICIAN" )?
-                         <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
+                                <Link href="/admin/verificationSubscriber" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <FactCheckIcon />
+                                    Subscriber Verification
+                                </Link>
+                            </li>
+                            : ""}
+                        {(user?.role === "USER" || user?.role === "ADMIN" || user?.role === "TECHNICIAN") ?
+                            <li className={currentPath.startsWith("/admin/complaint") ? "active" : ""}>
 
-                            <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <ForwardToInboxIcon />
-                                Complaints
-                            </Link>
-                        </li>
-                        :"" }
-                       {user?.role==="ADMIN" ?  
-                        <li className={currentPath.startsWith("/admin/blog") ? "active" : ""}>
+                                <Link href="/admin/complaint" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <ForwardToInboxIcon />
+                                    Complaints
+                                </Link>
+                            </li>
+                            : ""}
+                        {user?.role === "ADMIN" ?
+                            <li className={currentPath.startsWith("/admin/blog") ? "active" : ""}>
 
-                            <Link href="/admin/blog" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <PagesIcon />
-                                Blogs
-                            </Link>
-                        </li>
-                        :""}
-                            {user?.role==="ADMIN" ? 
-                        <li className={currentPath.startsWith("/admin/contact") ? "active" : ""}>
+                                <Link href="/admin/blog" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <PagesIcon />
+                                    Blogs
+                                </Link>
+                            </li>
+                            : ""}
+                        {user?.role === "ADMIN" ?
+                            <li className={currentPath.startsWith("/admin/contact") ? "active" : ""}>
 
-                            <Link href="/admin/contact" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
-                                <ContactsIcon />
-                                Contact us
-                            </Link>
-                        </li>
-                         :""}
+                                <Link href="/admin/contact" className='d-flex anchor align-items-center ps-3 text-decoration-none'>
+                                    <ContactsIcon />
+                                    Contact us
+                                </Link>
+                            </li>
+                            : ""}
                     </ul>
 
 

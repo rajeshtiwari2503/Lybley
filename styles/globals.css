@@ -107,10 +107,11 @@ a {
 } */
 
 /* Marquee.module.css */
+/* src/index.css or src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-body{
-  font-family:"Inter", sans-serif !important;
-
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .homeFontFamily{
@@ -577,7 +578,8 @@ body {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    width: 51px;
+    /* width: 51px; */
+    width: 250px;
     /* width: 250px; */
   }
   #wrapper1.toggled #sidebar-wrapper {
