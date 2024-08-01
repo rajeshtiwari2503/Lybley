@@ -25,7 +25,7 @@ import MarketPlace from '@/components/MarketPlace';
 import Breakdown from '@/components/Breakdown';
 import PlanCoveredTable from '@/components/PlanCoveredTable';
 
- 
+
 function MyVerticallyCenteredModal(props) {
 
 
@@ -45,7 +45,7 @@ function MyVerticallyCenteredModal(props) {
                         <> <div className='fw-bold fs-4 text-center'>It's Covered upgrade</div>
                             {/* <div className='mt-4'>Extended coverage for a variety of parts and components—from garage door springs to oven knobs.</div></> */}
                             <div className='mt-4'>We're thrilled to offer you an exclusive opportunity to   your home appliances plan,to repair completely free of cost. </div></>
-                            }
+                    }
                     <div className='mt-4'><button className='btn btn-primary rounded-pill' onClick={() => { props.setModalShow(false); props.setShowMax(false) }}><small>GOT IT</small></button></div>
 
                 </Modal.Body>
@@ -268,7 +268,7 @@ const Pricing = () => {
     let homeShieldLite = plans?.find(p1 => p1?.planName === "Home Shield Lite");
     let homeShieldBasic = plans?.find(p1 => p1?.planName === "Home Shield Basic");
     let homeShieldPlus = plans?.find(p1 => p1?.planName === "Home Shield Plus");
-    let homeShieldProPlus = plans?.find(p1 => p1?.planName === "Home Shield Pro Plus");
+    let homeShieldProPlus = plans?.find(p1 => p1?.planName === "Home Shield All In One");
 
     const scrollToTop = () => {
 
@@ -356,10 +356,8 @@ const Pricing = () => {
                                 <div className="col-md-3 col-lg-3 col-12"></div>
                             </div>
                         </div>}
-                    <div className="row mt-5  pt-5 pb-5 rounded-4" style={{backgroundColor:"#c8d8e4"}}>
-                        <div className="col-12 col-md-1 col-lg-1"></div>
-                        <div className="col-12 col-md-10 col-lg-10">
-                            <div className="row justify-content-center">
+                    <div className="row mt-5  p-5 rounded-4" style={{ backgroundColor: "#c8d8e4" }}>
+                        
 
                                 {/* <div className="col-12 col-md-3 col-lg-3 mt-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName}</h6>
@@ -443,23 +441,23 @@ const Pricing = () => {
                                     }
 
                                 </div> */}
-                                <div className="col-12 col-md-4 col-lg-4 mt-5 shadow bg-white rounded-4">
-                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
+                                <div className="col-12 col-md-3  col-lg-3 mt-5 shadow bg-white rounded-4">
+                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldLite?.planName} </h6>
                                     <div className='text-center'>Our plan for protecting vital home systems</div>
 
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
                                         <div className='pt-3'>
-                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0)} INR</h2>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0)} INR</h2>
                                             <div className='text-center'><small>paid monthly</small></div>
-                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldBasic?.price))} INR paid annually</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldLite?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldLite?.planName, ((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0))}><small style={{ fontSize: "12px", cursor: "pointer" }}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -468,7 +466,7 @@ const Pricing = () => {
                                     <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
                                         <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" ,marginTop:"-1px"}}>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none", marginTop: "-1px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -476,7 +474,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldBasic?.appliances?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -489,7 +487,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none" ,marginTop:"-20px"}}>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none", marginTop: "-20px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -497,7 +495,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldBasic?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -508,22 +506,102 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link style={{fontSize:"11px"}} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                        <Link style={{ fontSize: "11px" }} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}> SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldLite?.planName, ((+homeData?.homeSize * (+homeShieldLite?.price)) / 12).toFixed(0))} style={{ fontSize: "11px", cursor: "pointer" }}> SELECT PLAN </div>
 
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3'  onClick={scrollToTop} style={{fontSize:"11px"}}> FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3' onClick={scrollToTop} style={{ fontSize: "11px" }}> FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
                                 </div>
-                                <div className="col-12 col-md-4 text-white col-lg-4 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
+                                <div className="col-12 col-md-3  col-lg-3 mt-5 shadow bg-white rounded-4">
+                                    <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldBasic?.planName} </h6>
+                                    <div className='text-center'>Our plan for protecting vital home systems</div>
+
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='pt-3'>
+                                            <h2 className='text-center'>{((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0)} INR</h2>
+                                            <div className='text-center'><small>paid monthly</small></div>
+                                            <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldBasic?.price))} INR paid annually</small></div>
+                                            <div className='p-3'>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))}><small style={{ fontSize: "12px", cursor: "pointer" }}>SELECT PLAN</small></div>
+                                            </div></div> :
+                                        <div className="p-3">
+                                            <div className='rounded mt-3 bg-light rounded-5 pt-3'>
+                                                <h5 className='text-center'> Want to see your price?</h5>
+                                                <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM</small></div></div>
+                                            </div>
+                                        </div>}
+                                    <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'> Upgraded</div><InfoIcon onClick={() => setModalShow(true)} />
+                                    </div>
+                                    <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
+                                        <CancelIcon /> <div className='ps-2 pe-2'>Brand for Brand</div><InfoIcon onClick={openModel} />
+                                    </div>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none", marginTop: "-1px" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
+                                            <Typography>
+                                                {homeShieldBasic?.appliances?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
+                                                )
+                                                }
+
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+
+
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none", marginTop: "-20px" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography><h5 className='fw-bold'>Plus</h5></Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
+                                            <Typography>
+                                                {homeShieldBasic?.plus?.map(a1 =>
+                                                    a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
+                                                        <div> <CheckCircleIcon color='primary' /> {a1?.value}</div>
+                                                )
+                                                }
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <div className='text-center '>
+                                        <Link style={{ fontSize: "11px" }} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                            Plan Details
+                                        </Link>
+                                    </div>
+                                    <hr />
+                                    {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldBasic?.planName, ((+homeData?.homeSize * (+homeShieldBasic?.price)) / 12).toFixed(0))} style={{ fontSize: "11px", cursor: "pointer" }}> SELECT PLAN </div>
+
+                                        : <>
+                                            {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center  text-white p-2 mb-3' onClick={scrollToTop} style={{ fontSize: "11px" }}> FILL OUT THE FORM </div></div>
+                                        </>
+                                    }
+
+                                </div>
+                                <div className="col-12 col-md-3 text-white col-lg-3 mt-3 mt-md-0 mt-lg-0 bg-dark shadow rounded-4">
                                     <div className="px-3"><h5 className='fw-bold text-center bg-warning p-1 text-dark rounded-bottom '>MOST POPULER</h5></div>
                                     <h6 className='text-center  pb-2 pt-3'>{homeShieldPlus?.planName}</h6>
                                     <div className='text-center'>Just the right coverage for extra busy homes</div>
@@ -533,13 +611,13 @@ const Pricing = () => {
                                             <div className='text-center'><small>paid monthly</small></div>
                                             <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldPlus?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))}><small style={{ fontSize: "12px", cursor: "pointer" }}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-secondary rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex text-muted justify-content-start ms-3">
@@ -548,7 +626,7 @@ const Pricing = () => {
                                     <div className="mt-2 d-flex text-muted pb-3 justify-content-start ms-3">
                                         <CancelIcon color='disabled' /> <div className='ps-2 pe-2 text-secondary'>Brand for Brand</div><InfoIcon color='disabled' onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none" ,marginTop:'-1px'}} className='bg-dark text-white'>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none", marginTop: '-1px' }} className='bg-dark text-white'>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
                                             aria-controls="panel1a-content"
@@ -556,7 +634,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldPlus?.appliances?.map(a1 =>
                                                     a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
@@ -569,7 +647,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none",marginTop:"-20px" }} className='bg-dark text-white'>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none", marginTop: "-20px" }} className='bg-dark text-white'>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
                                             aria-controls="panel1a-content"
@@ -577,7 +655,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldPlus?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div> <CancelIcon color='disable' /> {a1?.value} </div> :
@@ -588,22 +666,22 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link style={{fontSize:"11px"}} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
+                                        <Link style={{ fontSize: "11px" }} className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}>SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldPlus?.planName, ((+homeData?.homeSize * (+homeShieldPlus?.price)) / 12).toFixed(0))} style={{ fontSize: "11px", cursor: "pointer" }}>SELECT PLAN </div>
 
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop}style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
                                 </div>
-                                <div className="col-12 col-md-4 col-lg-4 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
+                                <div className="col-12 col-md-3  col-lg-3 mt-3 mt-md-5 mt-lg-5 shadow bg-white rounded-4">
                                     <h6 className='text-center fw-bold rounded-3 bg-dark pt-2 pb-2 text-white'>{homeShieldProPlus?.planName}</h6>
                                     <div className='text-center'>Maximum coverage for major peace of mind</div>
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
@@ -612,13 +690,13 @@ const Pricing = () => {
                                             <div className='text-center'><small>paid monthly</small></div>
                                             <div className='text-center'><small>{(+homeData?.homeSize * (+homeShieldProPlus?.price))} INR paid annually</small></div>
                                             <div className='p-3'>
-                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small style={{fontSize:"12px",cursor:"pointer"}}>SELECT PLAN</small></div>
+                                                <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))}><small style={{ fontSize: "12px", cursor: "pointer" }}>SELECT PLAN</small></div>
                                             </div></div> :
                                         <div className="p-3">
                                             <div className='rounded mt-3 bg-light rounded-5 pt-3'>
                                                 <h5 className='text-center'> Want to see your price?</h5>
                                                 <div className='text-center p-2'>Please complete the form above to see a custom quote for your home.</div>
-                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM</small></div></div>
+                                                <div className="  text-center"> <div className=' btn btn-primary rounded-pill text-center text-white ps-2 pe-2 mb-4' onClick={scrollToTop}><small style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM</small></div></div>
                                             </div>
                                         </div>}
                                     <div className=" mt-3 d-flex justify-content-start ms-3">
@@ -627,7 +705,7 @@ const Pricing = () => {
                                     <div className="mt-2 d-flex pb-3 justify-content-start ms-3">
                                         <CheckCircleIcon color='primary' /> <div className='ps-2 pe-2'>Brands for Brands</div><InfoIcon onClick={openModel} />
                                     </div>
-                                    <Accordion expanded={expanded === 'panel1'}  onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none",marginTop:"-1px" }}>
+                                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ border: "0px", boxShadow: "none", marginTop: "-1px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -635,7 +713,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Appliances</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldProPlus?.appliances?.map(a1 =>
                                                     (a1?.checked && <div> <CheckCircleIcon color='primary' />  {a1?.value}</div>)
@@ -647,7 +725,7 @@ const Pricing = () => {
                                     </Accordion>
 
 
-                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none",marginTop:"-20px" }}>
+                                    <Accordion expanded={expanded3 === 'panel3'} onChange={handleChange('panel3')} style={{ border: "0px", boxShadow: "none", marginTop: "-20px" }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
@@ -656,7 +734,7 @@ const Pricing = () => {
                                         >
                                             <Typography><h5 className='fw-bold'>Plus</h5></Typography>
                                         </AccordionSummary>
-                                        <AccordionDetails style={{marginTop:"-20px"}}>
+                                        <AccordionDetails style={{ marginTop: "-20px" }}>
                                             <Typography>
                                                 {homeShieldProPlus?.plus?.map(a1 =>
                                                     a1?.checked === false ? <div className='text-muted'> <CancelIcon /> {a1?.value} </div> :
@@ -667,16 +745,16 @@ const Pricing = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     <div className='text-center '>
-                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"}style={{fontSize:"11px",cursor:"pointer"}} >
+                                        <Link className='text-decoration-none text-white bg-primary p-2 rounded-pill' href={"/planDetails"} style={{ fontSize: "11px", cursor: "pointer" }} >
                                             Plan Details
                                         </Link>
                                     </div>
                                     <hr />
                                     {(homeData && homeData?.location && homeData?.firstName && homeData?.homeSize) ?
-                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))} style={{fontSize:"11px",cursor:"pointer"}}>SELECT PLAN </div>
+                                        <div className='bg-primary rounded-5 text-center text-white p-2' onClick={() => handlePlan(homeShieldProPlus?.planName, ((+homeData?.homeSize * (+homeShieldProPlus?.price)) / 12).toFixed(0))} style={{ fontSize: "11px", cursor: "pointer" }}>SELECT PLAN </div>
                                         : <>
                                             {/* <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2' onClick={handleModal}><small>QUICK OVERVIEW</small></div></div> */}
-                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{fontSize:"11px",cursor:"pointer"}}>FILL OUT THE FORM </div></div>
+                                            <div className="p-3 text-center"> <div className=' btn btn-primary rounded-pill text-center text-white p-2 mb-3' onClick={scrollToTop} style={{ fontSize: "11px", cursor: "pointer" }}>FILL OUT THE FORM </div></div>
                                         </>
                                     }
 
@@ -684,9 +762,8 @@ const Pricing = () => {
                                 </div>
 
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-1 col-lg-1"></div>
+                      
+                    
 
                 </div >
                 <Subscription />
